@@ -20,10 +20,9 @@ $.fn.equialHeight = function() {
 
 // Header numbers click
 $(document).ready( function () {
-  $('.phone__link--hidden').hide();
   $(document).on("click", ".phone__click", (function(e) {
     e.preventDefault();
-    $('.phone__link--hidden').show();
+    $('.phone__link--hidden').toggleClass('phone__link--visibility');
   }));
 });
 

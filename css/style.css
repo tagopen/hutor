@@ -584,7 +584,11 @@ a:focus {
   padding: 0 0 5px !important;
 }
 .navbar__point a:hover {
-  border-bottom: 1px solid #fff;
+  -webkit-box-shadow: 0 -1px 0 0 #fff inset;
+  -moz-box-shadow: 0 -1px 0 0 #fff inset;
+  -ms-box-shadow: 0 -1px 0 0 #fff inset;
+  -o-box-shadow: 0 -1px 0 0 #fff inset;
+  box-shadow: 0 -1px 0 0 #fff inset;
 }
 .navbar__call {
   font: 400 14px/18px "Open Sans", sans-serif;
@@ -632,6 +636,26 @@ a:focus {
 }
 .phone__link--small {
   font-size: 14px;
+}
+.phone__link--hidden {
+  visibility: 0;
+  opacity: 0;
+  display: none;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.phone__link--visibility {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .content {

@@ -48,7 +48,7 @@ a:focus
       color: inherit
       padding: 0 0 5px !important
       &:hover
-        border-bottom: 1px solid #fff
+        +bs(0 -1px 0 0 #fff inset)
   &__call
     font: 400 14px/18px $os
     color: $btn_color
@@ -84,7 +84,17 @@ a:focus
     &--number
       font: 400 18px/20px $os 
     &--small
-      font-size: 14px      
+      font-size: 14px    
+    &--hidden
+      visibility: 0
+      opacity: 0
+      display: none
+      +transition(all .5s ease-out)    
+    &--visibility
+      visibility: visible
+      opacity: 1  
+      display: block
+      +transition(all .5s ease-out)
 .content
   padding: 90px 0
   &__heading
