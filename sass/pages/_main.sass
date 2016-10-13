@@ -1,0 +1,122 @@
++comment('general style')
++font('GothamPro', 'GothamPro')
++font('GothamProBold', 'GothamProBold')
++font('GothamProLight', 'GothamProLight')
++font('GothamProMedium', 'GothamProMedium')
++font('GothamProNarrowMedium', 'GothamProNarrowMedium')
++ic
++comment("home page style")
+html
+  overflow-x: hidden
+  height: 100%
+body
+  padding-right: 0 !important  
+  color: #000
+a,
+a:hover,
+a:focus
+  color: inherit
+  text-decoration: none
+  outline: none  
+.btn
+  &__call
+    color: #fff
+    font: 400 18px/20px $os
+    padding: 25px    
+    background-color: $btn_color
+    +br(50px)
+    border: 0  
+    +bs(0 -4px 0 2px #e8560c inset)
+    &:hover
+      background-color: $btn_color__hover
+      +bs(0 -4px 0 2px #e88d0c inset)
++comment("header style")
+.header
+  background: url(../img/headerbg.png) no-repeat
+  +cover
+  height: 800px
+  padding: 20px 0
+.navbar
+  &__logo
+    height: auto
+    padding: 0
+  &__point
+    font: 300 14px/16px $os 
+    color: #fff 
+    padding: 15px
+    a
+      color: inherit
+      padding: 0 0 5px !important
+      &:hover
+        border-bottom: 1px solid #fff
+  &__call
+    font: 400 14px/18px $os
+    color: $btn_color
+    background: none
+    border: 0
+    padding: 0
+    &:hover
+      color: $btn_color__hover
+  &__right
+    text-align: right    
+    height: 80px
+.phone
+  position: relative
+  &__click
+    position: absolute
+    display: inline-block
+    top: 4px
+    left: -25px
+    cursor: pointer
+    .fa
+      color: $btn_color 
+    &:hover
+      .fa
+        color: $btn_color__hover
+  &__box
+    display: inline-block
+  &__link
+    display: block  
+    color: #fff
+    &:hover,
+    &:focus
+      color: #fff
+    &--number
+      font: 400 18px/20px $os 
+    &--small
+      font-size: 14px      
+.content
+  padding: 90px 0
+  &__heading
+    color: #fff
+    font: 400 40px/50px $gpb  
+    text-transform: uppercase 
+    margin: 0 0 35px
+    &--text
+      display: inline-block
+      font: 400 30px/32px $gpb  
+      margin-top: 15px
+      text-transform: none
+      &:after
+        content: ''
+        display: inline-block
+        width: 75%
+        border-bottom: 3px solid #fff
+  &__list  
+    padding-left: 0
+    margin-bottom: 50px
+    &--text
+      float: left
+      width: 90%
+      margin: 0
+      color: #fff
+    &--item
+      list-style-type: none
+      font: 400 20px/22px $os  
+      margin-bottom: 15px
+      &:before 
+        content: '\f00c'
+        font-family: $fa
+        float: left
+        margin-right: 10px
+        color: $btn_color__hover
