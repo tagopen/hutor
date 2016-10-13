@@ -1,10 +1,19 @@
+// Menu anchor scroll
+$(document).ready(function(){
+    $(".navbar").on("click",".nav__point a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top -$('.navbar').outerHeight()+180}, 1500);
+    });
+});
 // Header numbers click
-/*$(document).ready( function () {
-  $('.navbar__right').hover(function() {
-   $('.phone__link--hidden').toggleClass('phone__link--visibility');
-   $('.phone__click .fa').toggleClass('phone__click--icon');
- });
-});*/
+$(document).ready(function(){
+  $('.phone__group').hover( function () {
+    $('.phone__link .fa').toggleClass('phone__icon--hidden');
+    $('.phone__slide').toggleClass('phone__slide--visibility');
+  });
+});  
 // Old browser notification
 $(function() { 
   $.reject({
@@ -77,6 +86,7 @@ $(window).on('resize', function(){
   if( $( window ).width() >= 768 ) {
     setEqualHeight($('.create__name'));
     setEqualHeight($('.create__box'));
+    setEqualHeight($('.process__box'));
   }
 
 }).trigger('resize');

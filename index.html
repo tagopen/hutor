@@ -67,32 +67,39 @@
             </div>
 
             <div class="nav navbar-nav navbar-right navbar__right">
+
               <div class="phone">
-           
-                <div class="phone__box">
-                  <a class="phone__link phone__click" href="tel:380675009955">
-                  <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                  <i class="fa fa-times phone__click--icon" aria-hidden="true"></i>
-                    <span class="phone__link--small">(067)</span> 500 99 55
-                  </a>
-                  <a class="phone__link phone__link--hidden" href="tel:380507297280">
-                    <span class="phone__link--small">(050)</span> 729 72 80
-                  </a>
-                  <a class="phone__link phone__link--hidden" href="tel:380444965918">
-                    <span class="phone__link--small">(044)</span> 496 59 18
-                  </a>
+                <div class="phone__group">
+                  <div class="phone__linke">
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    <i class="fa fa-times phone__icon--hidden" aria-hidden="true"></i>
+                    <a class="phone__link phone__click" href="tel:380675009955">
+                      <span class="phone__link--small">(067)</span> 500 99 55
+                    </a>
+
+                  </div>
+                  <div class="phone__slide">
+                    <a class="phone__link" href="tel:380507297280">
+                      <span class="phone__link--small">(050)</span> 729 72 80
+                    </a>
+                    <a class="phone__link" href="tel:380444965918">
+                      <span class="phone__link--small">(044)</span> 496 59 18
+                    </a>
+                  </div>
+                  <button class="phone__btn" data-toggle="modal" data-target="#header_modal">Заказать звонок</button>
                 </div>
               </div>
-              <button class="navbar__call" data-toggle="modal" data-target="#header_modal">Заказать звонок</button>
+
+              
             </div>
 
             <div class="collapse navbar-collapse" id="example-navbar-collapse">
               <ul class="nav navbar-nav">
-                <li class="navbar__point active"><a href="#">Расположение</a></li>
-                <li class="navbar__point"><a href="#">Каталог домов</a></li>
-                <li class="navbar__point"><a href="#">Генплан</a></li>
-                <li class="navbar__point"><a href="#">Инженерные сети</a></li>
-                <li class="navbar__point"><a href="#">Преимущества</a></li>
+                <li class="nav__point active"><a href=".address">Расположение</a></li>
+                <li class="nav__point"><a href=".catalog">Каталог домов</a></li>
+                <li class="nav__point"><a href=".plan">Генплан</a></li>
+                <li class="nav__point"><a href=".create">Инженерные сети</a></li>
+                <li class="nav__point"><a href=".about">Преимущества</a></li>
               </ul>
             </div>
           </nav>
@@ -106,11 +113,11 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="content__box">
-                <h1 class="content__heading">“Лелечий Хутір”<br> Коттеджный городок <div class="content__heading--text"> в 17 км от Киева</div></h1>
+                <h1 class="content__heading">“Лелечий Хутір”<br> Коттеджный городок <span class="content__heading--text"> в 17 км от Киева</span></h1>
                 <ul class="content__list list">
-                  <li class="clearfix list__item"><p class="content__list--text">Экологическая территория;</p></li>
-                  <li class="clearfix list__item"><p class="content__list--text">Единая концепция домов</p></li>
-                  <li class="clearfix list__item"><p class="content__list--text">На всех участках подведены:<br> газ, вода, свет, интернет</p></li>
+                  <li class="clearfix list__item"><span class="content__text">Экологическая территория;</span></li>
+                  <li class="clearfix list__item"><span class="content__text">Единая концепция домов</span></li>
+                  <li class="clearfix list__item"><span class="content__text">На всех участках подведены:<br> газ, вода, свет, интернет</span></li>
                 </ul>
                 <button class="g-btn content__btn" data-toggle="modal" data-target="#modal_call">Получить каталог коттеджей</button>
               </div>
@@ -132,7 +139,6 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="about__box">
               <ul class="about__list">
                 <li class="about__point">
                   <div class="point__name">Экологичная местность</div>
@@ -151,7 +157,6 @@
                   <div class="point__info">Поселок подключен ко всем благам цивилизации: газ, вода, электричество, интернет</div>
                 </li>
               </ul>
-            </div>
           </div>
         </div>
       </div>
@@ -160,19 +165,21 @@
     <section class="address">
       <div class="container">
         <div class="row">
-          <div class="col-lg-5 address__col">
+          <div class="col-lg-5">
            <div class="address__box">
-             <div class="address__info">Лелечный хутор находится</div>
-             <span class="address__place"><i class="fa fa-map-marker" aria-hidden="true"></i>возле с.Березовка,</span>
+            <div class="address__location location">
+              <div class="location__info">Лелечный хутор находится</div>
+              <div class="location__place"><i class="fa fa-map-marker" aria-hidden="true"></i>возле с.Березовка,</div>     
            </div>
-           <div class="address__box">
-             <div class="address__info">на расстоянии всего 17-ти километров езды от Киева по скоростной трассе</div>
-             <span class="address__place"><i class="fa fa-map-signs" aria-hidden="true"></i>Киев - Житомир</span>
+           <div class="address__location location">
+              <div class="location__info">на расстоянии всего 17-ти километров езды от Киева по скоростной трассе</div>
+              <div class="location__place"><i class="fa fa-map-signs" aria-hidden="true"></i>Киев - Житомир</div>
+           </div>
            </div>
           </div>
           <div class="col-lg-7">
-            <div class="address__img">
-              <a href="" class="address__btn">
+            <div class="address__btn">
+              <a href="" class="address__img">
                 <img src="img/addressimg.png" alt="" class="img-responsive address__img--static">
                 <img src="img/addressimghover.png" alt="" class="img-responsive address__img--hover">
               </a>
@@ -386,7 +393,7 @@
             <h2 class="g-title scheme__title">Схема дома</h2>
           </div>
           <div class="text-center col-xs-12 col-lg-6 col-lg-offset-3">
-            <div class="clearfix address__border scheme--border">
+            <div class="clearfix scheme__border">
               <div class="scheme__text">При строительстве используются только экологичные материалы и технологии</div>
             </div>
           </div>
@@ -452,6 +459,7 @@
               <div class="clearfix create__name">Электричество<i class="ic ic-create1"></i></div>
               <div class="create__info">15 кВт на дом по трехфазной системе 
               подключения. Электрическая разводка по домовладениям осуществляется по подземным кабельным сетям.</div>
+              <div class="create__caret"></div>
             </div>
           </div>
           <div class="col-lg-6 create__col--incolor">
@@ -467,6 +475,7 @@
               <div class="clearfix create__name">Центральный водопровод<i class="ic ic-create3"></i></div>
               <div class="create__info">Водопровод осуществляет забор воды из чистейшего Бучакского водоносного слоя Киевщины. Вода поступает из артезианской скважины глубиною 85м в систему водоподготовки и очистки.
               </div>
+              <div class="create__caret create__caret--color"></div>
             </div>
           </div>
           <div class="col-lg-6 create__col--color">
@@ -506,7 +515,140 @@
         </div>
       </div>
     </section>
+    <!--     ADVICE SECTION BEGIN    -->
+    <section class="advice">
+      <div class="container">
+        <div class="row">
+          <div class="text-center col-xs-12 col-sm-8 col-sm-offset-2">
+            <h2 class="g-title advice__title">Узнайте как избежать ошибок при покупке дома!</h2>
+            <h3 class="g-subtitle advice__subtitle">Скачайте три статьи с рекомендациями о покупке дома, чтобы стать профессиональным покупателем и не допустить ошибку при выборе жилья:</h3>
+            <ul class="advice__list">
+              <li class="clearfix advice__point">
+                <div class="advice__name">5 советов для выбора идеальной местности для покупки дома</div>
+              </li>
+              <li class="clearfix advice__point">
+                <div class="advice__name">Из каких материалов должен быть дом, чтобы в нём было комфортно жить</div>
+              </li>
+              <li class="clearfix advice__point">
+                <div class="advice__name">Как продают дома недобросовестные коттеджные городки</div>
+              </li>
+            </ul>
+            <button class="g-btn advice__btn" data-toggle="modal" data-target="#advice__modal">Получить рекомендации о покупке дома</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--     PROCESS SECTION BEGIN    -->
+    <section class="process">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 process__col process__col--1">
+            <div class="process__box">Все юридические процессы законны и прозрачны
+              <div class="process__line"></div>
+          </div>
+          </div>
+          <div class="col-lg-6 process__col process__col--2">
+            <div class="process__box">Територия городка ограждена и находится под охраной
+              <div class="process__line"></div>
+            </div>
+          </div>
+          <div class="col-lg-6 process__col process__col--3">
+            <div class="process__box">Дома по договору подряда строятся за ~5 месяцев
+              <div class="process__line"></div>
+            </div>
+          </div>
+          <div class="col-lg-6 process__col process__col--4">
+            <div class="process__box">Коттеджный поселок «Лелечий Хутор» расчитан на постоянное проживание
+              <div class="process__line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--     MAP SECTION BEGIN    -->
+   <div class="map">
+   <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.5006815619363!2d30.52515571871267!3d50.45040060547203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce56b2456d3b%3A0xd062ae171b57e947!2z0LLRg9C70LjRhtGPINCl0YDQtdGJ0LDRgtC40LosINCa0LjRl9CyLCDQo9C60YDQsNC40L3QsA!5e0!3m2!1sru!2sru!4v1476375775699" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+     <div class="container map__container">
+       <div class="row">
+          <div class="col-lg-6 pull-right">
+           <div class="clearfix map__box">
 
+            <div class="col-lg-6">
+              <div class="map__heading">Контакты</div>
+              <div class="map__contact contact">
+                <div class="clearfix contact__info">
+                  <i class="fa fa-map-marker"></i>
+                  <div class="contact__text">с. Березовка</div>
+                </div>
+                <div class="clearfix contact__info">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <div class="contact__text">l.hutir@gmail.com</div>
+                </div>
+                <div class="clearfix contact__info">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <div class="contact__text">
+                    <a class="contact__link" href="tel:380675009955">
+                      (067) 500 99 55
+                    </a>
+                    <a class="contact__link" href="tel:380675009955">
+                      (067) 500 99 55
+                    </a>
+                    <a class="contact__link" href="tel:380675009955">
+                      (067) 500 99 55
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <img src="img/contactimg.jpg" alt="" class="img-responsive">
+            </div>
+
+             <div class="col-lg-6">
+               <div class="map__heading">Форма обратной связи</div>
+               <div class="map__subheading">Вы можете оставить свои контактные данные в этой форме и наши менеджеры свяжутся с вами в ближайшее время</div>
+               <form name="Карта_форма" class="clearfix contactForm" method="post" action="mail/mail.php">
+                 <div class="form-group map__group col-xs-12">
+                  <input aria-invalid="false" class="form-control form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+                </div>
+                <div class="form-group map__group col-xs-12">
+                  <input aria-invalid="false" class="form-control form__phone" placeholder="Ваш номер телефона" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                </div>
+                <div class="form-group map__group col-xs-12">
+                  <input aria-invalid="false" class="form-control form__mail" placeholder="Ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
+                </div>
+                <div class="map__subheading--small">В течении нескольких минут на указаный email прийдет подтверждение о заполненой форме</div>
+                
+                  <button type="submit" class="g-btn map__btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Отправить заявку</button>
+             
+              </form>
+             </div>
+
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+    <!--     FOOTER SECTION BEGIN    -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2">
+            <a href="" class="navbar-brand navbar__logo">
+              <img src="img/logo/logo.png" alt="" class="hidden-xs logo__img">
+            </a>
+          </div>
+          <div class="text-center col-lg-8 footer__copy">
+            <a href="">Сделано с душой студией WELL DONE</a>
+          </div>
+          <div class="col-lg-2 pull-right">
+             <a class="phone__link phone__click" href="tel:380675009955">
+                    <span class="phone__link--small">(067)</span> 500 99 55
+                  </a>
+            <button class="phone__btn" data-toggle="modal" data-target="#header_modal">Заказать звонок</button>
+          </div>
+
+        </div>
+      </div>
+    </footer>
 
     <!-- jQuery -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
