@@ -530,7 +530,7 @@ a:focus {
   outline: none;
 }
 
-.btn__call {
+.g-btn {
   color: #fff;
   font: 400 18px/20px "Open Sans", sans-serif;
   padding: 25px;
@@ -546,7 +546,7 @@ a:focus {
   -o-box-shadow: 0 -4px 0 2px #e8560c inset;
   box-shadow: 0 -4px 0 2px #e8560c inset;
 }
-.btn__call:hover {
+.g-btn:hover {
   background-color: #e8560c;
   -webkit-box-shadow: 0 -4px 0 2px #e88d0c inset;
   -moz-box-shadow: 0 -4px 0 2px #e88d0c inset;
@@ -566,8 +566,7 @@ a:focus {
   -o-background-size: cover;
   background-size: cover;
   background-position: 50% 50%;
-  height: 800px;
-  padding: 20px 0;
+  padding: 20px 0 160px;
 }
 
 .navbar__logo {
@@ -579,9 +578,19 @@ a:focus {
   color: #fff;
   padding: 15px;
 }
+.navbar__point:last-child a:after {
+  content: "";
+}
 .navbar__point a {
   color: inherit;
   padding: 0 0 5px !important;
+}
+.navbar__point a:after {
+  content: "";
+  display: inline-block;
+  font-family: "FontAwesome";
+  font-size: 5px;
+  margin: -2px -15px 0 12px;
 }
 .navbar__point a:hover {
   -webkit-box-shadow: 0 -1px 0 0 #fff inset;
@@ -603,23 +612,28 @@ a:focus {
 .navbar__right {
   text-align: right;
   height: 80px;
+  padding: 0 15px;
 }
 
 .phone {
   position: relative;
 }
 .phone__click {
+  position: relative;
+  cursor: pointer;
+}
+.phone__click .fa {
   position: absolute;
   display: inline-block;
   top: 4px;
   left: -25px;
-  cursor: pointer;
-}
-.phone__click .fa {
   color: #e88d0c;
 }
 .phone__click:hover .fa {
   color: #e8560c;
+}
+.phone__click--icon {
+  display: none !important;
 }
 .phone__box {
   display: inline-block;
@@ -627,39 +641,23 @@ a:focus {
 .phone__link {
   display: block;
   color: #fff;
+  font: 400 18px/20px "Open Sans", sans-serif;
 }
 .phone__link:hover, .phone__link:focus {
   color: #fff;
-}
-.phone__link--number {
-  font: 400 18px/20px "Open Sans", sans-serif;
 }
 .phone__link--small {
   font-size: 14px;
 }
 .phone__link--hidden {
-  visibility: 0;
-  opacity: 0;
   display: none;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  -webkit-transition: all 0.5s ease-out;
-  -ms-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
 }
 .phone__link--visibility {
-  visibility: visible;
-  opacity: 1;
   display: block;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  -webkit-transition: all 0.5s ease-out;
-  -ms-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
 }
 
 .content {
-  padding: 90px 0;
+  padding-top: 75px;
 }
 .content__heading {
   color: #fff;
@@ -689,12 +687,13 @@ a:focus {
   margin: 0;
   color: #fff;
 }
-.content__list--item {
+
+.list__item {
   list-style-type: none;
   font: 400 20px/22px "Open Sans", sans-serif;
   margin-bottom: 15px;
 }
-.content__list--item:before {
+.list__item:before {
   content: "";
   font-family: "FontAwesome";
   float: left;

@@ -18,8 +18,8 @@ a:focus
   color: inherit
   text-decoration: none
   outline: none  
-.btn
-  &__call
+.g
+  &-btn
     color: #fff
     font: 400 18px/20px $os
     padding: 25px    
@@ -34,8 +34,7 @@ a:focus
 .header
   background: url(../img/headerbg.png) no-repeat
   +cover
-  height: 800px
-  padding: 20px 0
+  padding: 20px 0 160px
 .navbar
   &__logo
     height: auto
@@ -44,9 +43,19 @@ a:focus
     font: 300 14px/16px $os 
     color: #fff 
     padding: 15px
+    &:last-child
+      a
+        &:after
+          content: '' 
     a
       color: inherit
       padding: 0 0 5px !important
+      &:after
+        content: '\f0c8'
+        display: inline-block
+        font-family: $fa
+        font-size: 5px
+        margin: -2px -15px 0 12px 
       &:hover
         +bs(0 -1px 0 0 #fff inset)
   &__call
@@ -60,43 +69,40 @@ a:focus
   &__right
     text-align: right    
     height: 80px
+    padding: 0 15px
 .phone
   position: relative
   &__click
-    position: absolute
-    display: inline-block
-    top: 4px
-    left: -25px
+    position: relative
     cursor: pointer
     .fa
+      position: absolute
+      display: inline-block
+      top: 4px
+      left: -25px
       color: $btn_color 
     &:hover
       .fa
         color: $btn_color__hover
+    &--icon
+      display: none !important 
   &__box
     display: inline-block
   &__link
     display: block  
     color: #fff
+    font: 400 18px/20px $os 
     &:hover,
     &:focus
       color: #fff
-    &--number
-      font: 400 18px/20px $os 
     &--small
       font-size: 14px    
     &--hidden
-      visibility: 0
-      opacity: 0
-      display: none
-      +transition(all .5s ease-out)    
+      display: none  
     &--visibility
-      visibility: visible
-      opacity: 1  
       display: block
-      +transition(all .5s ease-out)
 .content
-  padding: 90px 0
+  padding-top: 75px
   &__heading
     color: #fff
     font: 400 40px/50px $gpb  
@@ -120,13 +126,14 @@ a:focus
       width: 90%
       margin: 0
       color: #fff
-    &--item
-      list-style-type: none
-      font: 400 20px/22px $os  
-      margin-bottom: 15px
-      &:before 
-        content: '\f00c'
-        font-family: $fa
-        float: left
-        margin-right: 10px
-        color: $btn_color__hover
+.list
+  &__item
+    list-style-type: none
+    font: 400 20px/22px $os  
+    margin-bottom: 15px
+    &:before 
+      content: '\f00c'
+      font-family: $fa
+      float: left
+      margin-right: 10px
+      color: $btn_color__hover

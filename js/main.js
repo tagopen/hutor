@@ -1,8 +1,3 @@
-/*!
- * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
 // Equal Height function
 $.fn.equialHeight = function() {
   var $tallestcolumn = 0;
@@ -19,13 +14,12 @@ $.fn.equialHeight = function() {
 }
 
 // Header numbers click
-$(document).ready( function () {
-  $(document).on("click", ".phone__click", (function(e) {
-    e.preventDefault();
-    $('.phone__link--hidden').toggleClass('phone__link--visibility');
-  }));
-});
-
+/*$(document).ready( function () {
+  $('.navbar__right').hover(function() {
+   $('.phone__link--hidden').toggleClass('phone__link--visibility');
+   $('.phone__click .fa').toggleClass('phone__click--icon');
+ });
+});*/
 // Old browser notification
 $(function() { 
   $.reject({
@@ -113,10 +107,3 @@ $('.dropdown, .dropup').each(function() {
 // Equal height
 /*$('.equial').equialHeight();*/
 
-/*$('.slider').slick({
-  dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  adaptiveHeight: true
-});*/
