@@ -5,6 +5,9 @@
 +font('GothamProMedium', 'GothamProMedium')
 +font('GothamProNarrowMedium', 'GothamProNarrowMedium')
 +ic
+@each $ic in logo, warranty, arrow, zoom, catalogic, scheme, create1, create2, create3, create4
+  .ic-#{$ic}
+    +sb(#{$ic})
 +comment("home page style")
 html
   overflow-x: hidden
@@ -21,20 +24,44 @@ a:focus
 .g
   &-btn
     color: #fff
-    font: 400 18px/20px $os
-    padding: 25px    
+    font: 400 17px/20px $os
+    padding: 21px 15px    
     background-color: $btn_color
     +br(50px)
     border: 0  
     +bs(0 -4px 0 2px #e8560c inset)
+    width: 100%
     &:hover
       background-color: $btn_color__hover
       +bs(0 -4px 0 2px #e88d0c inset)
+  &-title
+    display: inline-block
+    font: 400 36px/40px $gpb
+    color: #222
+    margin: 0
+  &-subtitle
+    display: inline-block
+    font: 400 24px/28px $gp
+    color: #222
+    margin: 0  
+.form
+  &__input
+    padding: 20px 60px
+    height: auto    
+    +br(0)
+    font: 400 18px/20px $os
+    color: #000
+    &:focus
+      border-color: $btn_color
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(232, 141, 12, 0.8)
 +comment("header style")
 .header
+  position: relative
+  z-index: 15
   background: url(../img/headerbg.png) no-repeat
-  +cover
+  +cover(50% 100%)
   padding: 20px 0 160px
+  margin-bottom: -130px
 .navbar
   &__logo
     height: auto
@@ -126,6 +153,9 @@ a:focus
       width: 90%
       margin: 0
       color: #fff
+  &__btn
+    padding: 25px   
+    width: auto 
 .list
   &__item
     list-style-type: none
@@ -136,4 +166,329 @@ a:focus
       font-family: $fa
       float: left
       margin-right: 10px
+      color: $btn_color__hover   
++comment("about style")
+.about
+  position: relative
+  z-index: 14
+  margin-bottom: -130px
+  padding: 165px 0 120px
+  background: url(../img/aboutbg.png) no-repeat
+  +cover(50% 100%)
+  &__title
+    margin-bottom: 70px
+  &__point
+    list-style-type: none
+    margin-bottom: 40px
+    &:before
+      content: '\f0a3'
+      font-family: $fa
+      margin-right: 15px
+      font-size: 20px
+      color: $btn_color__hover
+.point
+  &__name
+    display: inline-block    
+    font: 400 22px/24px $os
+    color: #222  
+    margin-bottom: 10px
+  &__info
+    font: 400 18px/24px $os 
+    color: #222
++comment("address style") 
+.address
+  padding: 160px 0 100px
+  position: relative
+  z-index: 13
+  margin-bottom: -130px
+  background: url(../img/addressbg.png) no-repeat
+  +cover(50% 100%)
+  &__col
+    padding: 120px 0 0 85px
+  &__box
+    text-align: center  
+    margin-bottom: 40px
+  &__info
+    font: 400 20px/22px $os
+    color: #222
+    margin-bottom: 10px
+  &__place
+    font: 600 24px/26px $os  
+    color: #222
+    .fa
+      margin-right: 10px  
+      color: $btn_color__hover
+  &__btn
+    &:hover
+      .address__img
+        &--static
+          display: none
+        &--hover 
+          display: block   
+  &__img
+    &--hover
+      display: none  
+  &__border
+    padding: 15px 35px
+    border: 2px dashed $btn_color__hover
+    +br(10px)
+  &__text
+    display: inline-block
+    font: 400 18px/22px $os
+    padding-top: 20px
+    color: #222  
++comment("register style")   
+.register
+  position: relative
+  z-index: 12
+  padding: 200px 0 140px
+  margin-bottom: -110px
+  background: url(../img/registerbg.png) no-repeat
+  +cover(50% 100%)
+  &__title
+    margin-bottom: 105px
+    color: #fff    
++comment("project style")   
+.project
+  position: relative
+  z-index: 11
+  margin-bottom: -130px
+  padding: 170px 0 100px
+  background: url(../img/projectbg.png) no-repeat
+  +cover(50% 100%)
+  &__title
+    margin-bottom: 80px
+  &__heading
+    font: 400 24px/30px $os
+    color: #222
+    margin: 35px 0 45px
+  &__subheading
+    font: 400 18px/24px $os
+    color: #222
+    margin-bottom: 55px   
+  &__contact  
+    position: relative
+    font: 400 24px/32px $os
+    color: #222
+    margin-bottom: 40px
+    .ic
+      position: absolute
+      right: 115px
+    &--text
+      background-color: #fceeb3
+  &__slider
+    &--small
+      .slick
+        &-slide
+          text-align: center
+          img
+            display: inline-block   
+        &-arrow
+          height: auto
+          width: auto
+          z-index: 20
+          font-size: 50px
+          color: #000
+          &:hover
+            color: $btn_color
+          &:before
+            content: ''    
++comment("catalog style")
+.catalog
+  position: relative
+  z-index: 10
+  margin-bottom: -130px
+  padding: 200px 0 100px 
+  background: url(../img/catalogbg.png) no-repeat
+  +cover(50% 100%)
+  &__title
+    margin-bottom: 30px
+  &__subtitle
+    margin-bottom: 70px  
+  &__box
+    padding: 0 35px     
+  &__img
+    position: relative
+    display: inline-block
+    margin-bottom: 15px 
+    overflow: hidden
+    &:hover
+      .catalog__link
+        opacity: 1
+        visibility: visible
+        +transition(all .3s ease-out)
+  &__link
+    position: absolute
+    right: -15px
+    bottom: -15px  
+    background-color: $btn_color
+    padding: 50px
+    +br(100% 25% 0 25%)
+    opacity: 0
+    visibility: hidden
+    +transition(all .3s ease-out)
+  &__info
+    text-align: left
+  &__name
+    font: 400 20px/22px $os
+    text-transform: uppercase
+    margin-bottom: 10px
+    color: #000
+  &__about
+    font: 400 18px/20px $os
+    color: #858686 
+    margin-bottom: 30px
+  &__btn
+    margin-bottom: 70px
+    border: 1px solid #858686
+    +br(25px)
+    padding: 5px 20px
+    background: transparent
+    +transition(all .3s ease-out)
+    &:hover
+      background-color: $btn_color
+      border-color: $btn_color
+      color: #fff
+      +transition(all .3s ease-out)
+  &__pager
+    margin-bottom: 40px    
+.pager
+  &__item
+    a
+      padding: 5px !important
+      border: 0  
++comment("scheme style")  
+.scheme    
+  position: relative
+  z-index: 9
+  padding: 180px 0 50px
+  margin-bottom: -100px
+  background: url(../img/schemebg.png) no-repeat
+  +cover(50% 100%)
+  .row
+    position: relative
+  &__title
+    padding: 12px 40px
+    background-color: #fceeb3 
+  &__text   
+    display: inline-block
+    font: 400 18px/22px $os
+    color: #222
+  &--border
+    margin-top: 600px
+    padding: 15px 20px
+    background-color: rgba(255,255,255,0.85) 
+  &__btn
+    display: inline-block
+    position: relative
+    line-height: 42px
+    .ic
+      position: absolute
+      left: -20px
+      top: -20px  
+      background-color: #fff
+      +br(25px)
+      border: 5px solid $btn_color
+      height: 50px
+      width: 50px
+      cursor: pointer
+      z-index: 15
+    &--3
+      .ic
+        right: -20px
+        bottom: -20px  
+        left: auto
+        top: auto
+    &--4
+      .ic
+        right: -20px
+        left: auto
+  &__info
+    display: inline-block
+    padding: 15px 25px
+    font: 400 14px/22px $os
+    color: #222
+    background-color: #fff
+    +br(25px)
+    border: 5px solid $btn_color
+    visibility: hidden
+    opacity: 0
+    +transition(all .5s ease-out)
+    &--visibility
+      visibility: visible
+      opacity: 1
+      +transition(all .5s ease-out)
+  &__box
+    position: absolute    
+    &--1
+      left: 225px
+      top: 225px
+    &--2
+      right: 100px
+      top: 230px  
+    &--3
+      left: 85px
+      top: 350px  
+    &--4
+      right: 100px
+      top: 450px  
+.ic-scheme--visibility
+  display: none 
++comment("create style")
+.create
+  position: relative
+  z-index: 8
+  padding: 150px 0
+  margin-bottom: -130px
+  background: url(../img/createbg.png) no-repeat
+  +cover(50% 100%)
+  &__title
+    margin-bottom: 80px
+    color: #fff
+  &__col
+    &--color
+      background-color: #fff  
+    &--incolor
+      background-color: $btn_color
+      .create__box
+        color: #fff
+  &__row
+    margin-bottom: 35px      
+  &__box
+    padding: 25px 35px
+    text-align: right
+    .ic
+      float: left 
+    &--textpos
+      text-align: left        
+      .ic
+        float: right
+  &__name
+    font: 400 24px/26px $os  
+    margin-bottom: 10px
+    line-height: 48px
+  &__info
+    font: 400 18px/22px $os      
++comment("plan style")
+.plan
+  position: relative
+  z-index: 7
+  background: url(../img/planbg.png) no-repeat
+  +cover(50% 100%)
+  padding: 180px 0 130px
+  &__title
+    margin-bottom: 70px
+  &__col
+    padding: 220px 0 0 85px
+  &__box
+    text-align: center  
+  &__info
+    font: 400 20px/22px $os
+    color: #222
+    margin-bottom: 10px
+  &__place
+    font: 600 24px/26px $os  
+    color: #222
+    .fa
+      margin-right: 10px  
       color: $btn_color__hover

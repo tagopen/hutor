@@ -1,18 +1,3 @@
-// Equal Height function
-$.fn.equialHeight = function() {
-  var $tallestcolumn = 0;
-  var $currentHeight = 0;
-  $.each($(this), function (index, value) {
-    $currentHeight = $(this).height();
-    if($currentHeight > $tallestcolumn)
-    {
-      $tallestcolumn = $currentHeight;
-    }
-  });
-  $(this).height($tallestcolumn);
-  return $(this);
-}
-
 // Header numbers click
 /*$(document).ready( function () {
   $('.navbar__right').hover(function() {
@@ -40,70 +25,58 @@ $(function() {
   });
 });
 
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-/*$(function() {
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
-});*/
+$('.project__slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  asNavFor: '.project__slider--small'
+});
+$('.project__slider--small').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.project__slider',
+  dots: false,
+  arrows: true,
+  centerPadding: '10',
+  centerMode: true,
+  focusOnSelect: true,
+  prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
+  nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
+});
 
+// Scheme info click
+$(document).ready( function () {
+  $('.scheme__btn').click(function() {
+    $(this).find('.ic').toggleClass('ic-scheme--visibility');
+    $(this).find('.scheme__info').toggleClass('scheme__info--visibility');
+ });
+});
 
-// Fixed navbar on Scroll
-/*if(!$('.navbar-toggle').is(':visible')) {
-  $('.navbar').affix({
-    offset: {
-      top: $('header').innerHeight()
+ // Equal Height
+function setEqualHeight(columns)
+{
+  var tallestcolumn = 0;
+  columns.each(
+    function()
+    {
+      currentHeight = $(this).height();
+      if(currentHeight > tallestcolumn)
+      {
+        tallestcolumn = currentHeight;
+      }
     }
-  }); 
-}*/
-
-// Highlight the top nav as scrolling occurs
-/*$('body').scrollspy({
-    target: '.navbar-fixed-top'
-})*/
-
-// Navbar class active
-/*$(document).ready( function () {
-  $(".nav li").click( function () {
-    $(".nav li").removeClass("active");
-    $(this).addClass("active");
-  });
-});*/
-
-// Dropdowns on hover on desktop
-/*var navbarToggle = '.navbar-toggle'; // name of navbar toggle, BS3 = '.navbar-toggle', BS4 = '.navbar-toggler'  
-$('.dropdown, .dropup').each(function() {
-  var dropdown = $(this),
-    dropdownToggle = $('[data-toggle="dropdown"]', dropdown),
-    dropdownHoverAll = dropdownToggle.data('dropdown-hover-all') || false;
-  
-  // Mouseover
-  dropdown.hover(function(){
-    var notMobileMenu = $(navbarToggle).size() > 0 && $(navbarToggle).css('display') === 'none' && $(document).width() >= 992 ;
-    if ((dropdownHoverAll === true || (dropdownHoverAll === false && notMobileMenu))) { 
-      dropdownToggle.trigger('click');
-    }
-  });
-});*/
-
-
-// Close dropdowns on "esc"
-/*$('.dropdown-menu').bind('keydown',function(event) {
-  // ESC = Keycode 27
-  if (event.keyCode == 27) {
-    $(this).parrent().find('.dropdown-toggle').dropdown('toggle');
-  }
-});*/
-
-// Closes the Responsive Menu on Menu Item Click
-/*$('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
-});*/
-
+    );
+  columns.height(tallestcolumn);
+}
 // Equal height
-/*$('.equial').equialHeight();*/
+$(window).on('resize', function(){
+  // For all screen
+  //setEqualHeight($(".work-item"));
 
+  // Only 767px-
+  if( $( window ).width() >= 768 ) {
+    setEqualHeight($('.create__name'));
+    setEqualHeight($('.create__box'));
+  }
+
+}).trigger('resize');
