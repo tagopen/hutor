@@ -53,31 +53,31 @@ $('.project__slider--small').slick({
   nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
 });
 
-// Scheme info click
-$(document).ready( function () {
-  $('.scheme__btn .scheme__icon').hover(function() {
-    $(this).toggleClass('scheme__icon--hover');
-    $(this('.scheme__info').toggleClass('scheme__info--visibility');
- });
+// Scheme info animation
+
+$(document).ready ( function() {
+	$('.scheme__icon, .scheme__info').hover( function() {
+		$(this).parent().toggleClass('scheme__btn--active');
+	});
 });
 
- // Equal Height
+// Equal Height function
 function setEqualHeight(columns)
 {
-  var tallestcolumn = 0;
-  columns.each(
-    function()
-    {
-      currentHeight = $(this).height();
-      if(currentHeight > tallestcolumn)
-      {
-        tallestcolumn = currentHeight;
-      }
-    }
-    );
-  columns.height(tallestcolumn);
+	var tallestcolumn = 0;
+	columns.each(
+		function()
+		{
+			currentHeight = $(this).height();
+			if(currentHeight > tallestcolumn)
+			{
+				tallestcolumn = currentHeight;
+			}
+		}
+		);
+	columns.height(tallestcolumn);
 }
-// Equal height
+// Set equal height
 $(window).on('resize', function(){
   // For all screen
   //setEqualHeight($(".work-item"));

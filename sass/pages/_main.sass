@@ -394,17 +394,16 @@ a:focus
     display: inline-block
     position: relative
     line-height: 42px
-    .ic
-      position: absolute
-      left: -20px
-      top: -20px  
-      background-color: #fff
-      +br(25px)
-      border: 5px solid $btn_color
-      height: 50px
-      width: 50px
-      cursor: pointer
-      z-index: 15
+    &--active
+      .scheme__info
+        display: block
+        visibility: visible
+        opacity: 1
+        +transition(all .5s ease-out)
+      .scheme__icon
+        display: none
+        &--hover
+          display: inline-block
     &--3
       .ic
         right: -20px
@@ -415,8 +414,21 @@ a:focus
       .ic
         right: -20px
         left: auto
+  &__icon
+    position: absolute
+    left: -20px
+    top: -20px  
+    background-color: #fff
+    +br(25px)
+    border: 5px solid $btn_color
+    height: 50px
+    width: 50px
+    cursor: pointer
+    z-index: 15
+    &--hover
+      display: none
   &__info
-    display: inline-block
+    display: none
     padding: 15px 25px
     font: 400 14px/22px $os
     color: #222
@@ -426,10 +438,6 @@ a:focus
     visibility: hidden
     opacity: 0
     +transition(all .5s ease-out)
-    &--visibility
-      visibility: visible
-      opacity: 1
-      +transition(all .5s ease-out)
   &__box
     position: absolute    
     &--1
@@ -444,8 +452,6 @@ a:focus
     &--4
       right: 100px
       top: 450px    
-.scheme__icon--hover
-  display: none 
 +comment("create style")
 .create
   position: relative

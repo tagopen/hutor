@@ -320,7 +320,7 @@
 /* S L I C K - S L I D E R    T H E M E    S T Y L E  */
 /* -------------------------------------------------- */
 .slick-loading .slick-list {
-  background: #fff url('../img/ajax-loader.gif?1471293948') center center no-repeat;
+  background: #fff url('../img/ajax-loader.gif?1476332234') center center no-repeat;
 }
 
 /* Arrows */
@@ -1145,7 +1145,33 @@ a:focus {
   position: relative;
   line-height: 42px;
 }
-.scheme__btn .ic {
+.scheme__btn--active .scheme__info {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.scheme__btn--active .scheme__icon {
+  display: none;
+}
+.scheme__btn--active .scheme__icon--hover {
+  display: inline-block;
+}
+.scheme__btn--3 .ic {
+  right: -20px;
+  bottom: -20px;
+  left: auto;
+  top: auto;
+}
+.scheme__btn--4 .ic {
+  right: -20px;
+  left: auto;
+}
+.scheme__icon {
   position: absolute;
   left: -20px;
   top: -20px;
@@ -1160,18 +1186,11 @@ a:focus {
   cursor: pointer;
   z-index: 15;
 }
-.scheme__btn--3 .ic {
-  right: -20px;
-  bottom: -20px;
-  left: auto;
-  top: auto;
-}
-.scheme__btn--4 .ic {
-  right: -20px;
-  left: auto;
+.scheme__icon--hover {
+  display: none;
 }
 .scheme__info {
-  display: inline-block;
+  display: none;
   padding: 15px 25px;
   font: 400 14px/22px "Open Sans", sans-serif;
   color: #222;
@@ -1183,15 +1202,6 @@ a:focus {
   border: 5px solid #e88d0c;
   visibility: hidden;
   opacity: 0;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  -webkit-transition: all 0.5s ease-out;
-  -ms-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-}
-.scheme__info--visibility {
-  visibility: visible;
-  opacity: 1;
   -moz-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
   -webkit-transition: all 0.5s ease-out;
@@ -1216,10 +1226,6 @@ a:focus {
 .scheme__box--4 {
   right: 100px;
   top: 450px;
-}
-
-.scheme__icon--hover {
-  display: none;
 }
 
 /* ---------------------------------------- */
