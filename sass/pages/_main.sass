@@ -167,7 +167,12 @@ a:focus
       font-family: $fa
       float: left
       margin-right: 10px
-      color: $btn_color__hover   
+      color: $btn_color__hover  
+.icon__bar
+  background-color: #fff
+  width: 36px !important
+  height: 5px !important
+  border-radius: 10px      
 +comment("about style")
 .about
   position: relative
@@ -281,6 +286,7 @@ a:focus
       line-height: 1.6
   &__slider
     &--small
+      cursor: pointer
       .slick
         &-slide
           text-align: center
@@ -347,6 +353,7 @@ a:focus
     +br(25px)
     padding: 5px 20px
     background: transparent
+    color: #858686
     +transition(all .3s ease-out)
     &:hover
       background-color: $btn_color
@@ -636,7 +643,7 @@ a:focus
     display: block
 +comment("footer style") 
 .footer
-  background: url(../img/footerbg.jpg) no-repeat
+  background: url(../img/footerbg.png) no-repeat
   +cover   
   padding: 180px 0 30px
   &__copy

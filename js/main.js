@@ -55,7 +55,7 @@ $('.project__slider--small').slick({
 
 // Scheme info click
 $(document).ready( function () {
-  $('.scheme__btn').click(function() {
+  $('.scheme__btn').hover(function() {
     $(this).find('.ic').toggleClass('ic-scheme--visibility');
     $(this).find('.scheme__info').toggleClass('scheme__info--visibility');
  });

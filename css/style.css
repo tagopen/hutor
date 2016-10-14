@@ -798,6 +798,13 @@ a:focus {
   color: #e8560c;
 }
 
+.icon__bar {
+  background-color: #fff;
+  width: 36px !important;
+  height: 5px !important;
+  border-radius: 10px;
+}
+
 /* ---------------------------------------- */
 /* A B O U T    S T Y L E                   */
 /* ---------------------------------------- */
@@ -965,6 +972,9 @@ a:focus {
   background-color: #fceeb3;
   line-height: 1.6;
 }
+.project__slider--small {
+  cursor: pointer;
+}
 .project__slider--small .slick-slide {
   text-align: center;
 }
@@ -1066,6 +1076,7 @@ a:focus {
   border-radius: 25px;
   padding: 5px 20px;
   background: transparent;
+  color: #858686;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
@@ -1535,7 +1546,7 @@ a:focus {
 /* F O O T E R    S T Y L E                 */
 /* ---------------------------------------- */
 .footer {
-  background: url(../img/footerbg.jpg) no-repeat;
+  background: url(../img/footerbg.png) no-repeat;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
