@@ -55,9 +55,9 @@ $('.project__slider--small').slick({
 
 // Scheme info click
 $(document).ready( function () {
-  $('.scheme__btn').hover(function() {
-    $(this).find('.ic').toggleClass('ic-scheme--visibility');
-    $(this).find('.scheme__info').toggleClass('scheme__info--visibility');
+  $('.scheme__btn .scheme__icon').hover(function() {
+    $(this).toggleClass('scheme__icon--hover');
+    $(this('.scheme__info').toggleClass('scheme__info--visibility');
  });
 });
 
