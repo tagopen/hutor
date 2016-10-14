@@ -1146,7 +1146,6 @@ a:focus {
   line-height: 42px;
 }
 .scheme__btn--active .scheme__info {
-  display: block;
   visibility: visible;
   opacity: 1;
   -moz-transition: all 0.5s ease-out;
@@ -1160,6 +1159,7 @@ a:focus {
 }
 .scheme__btn--active .scheme__icon--hover {
   display: inline-block;
+  vertical-align: middle;
 }
 .scheme__btn--3 .ic {
   right: -20px;
@@ -1190,7 +1190,8 @@ a:focus {
   display: none;
 }
 .scheme__info {
-  display: none;
+  position: absolute;
+  width: 400px;
   padding: 15px 25px;
   font: 400 14px/22px "Open Sans", sans-serif;
   color: #222;
@@ -1208,6 +1209,14 @@ a:focus {
   -ms-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
+.scheme__info--left {
+  top: 0;
+  left: 0;
+}
+.scheme__info--right {
+  top: 0;
+  right: 0;
+}
 .scheme__box {
   position: absolute;
 }
@@ -1216,12 +1225,12 @@ a:focus {
   top: 225px;
 }
 .scheme__box--2 {
-  right: 100px;
-  top: 230px;
+  left: 700px;
+  top: 220px;
 }
 .scheme__box--3 {
-  left: 85px;
-  top: 350px;
+  left: 400px;
+  top: 450px;
 }
 .scheme__box--4 {
   right: 100px;
