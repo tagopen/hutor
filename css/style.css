@@ -320,7 +320,7 @@
 /* S L I C K - S L I D E R    T H E M E    S T Y L E  */
 /* -------------------------------------------------- */
 .slick-loading .slick-list {
-  background: #fff url('../img/ajax-loader.gif?1476332234') center center no-repeat;
+  background: #fff url('../img/ajax-loader.gif?1471293948') center center no-repeat;
 }
 
 /* Arrows */
@@ -1552,6 +1552,8 @@ a:focus {
 /* F O O T E R    S T Y L E                 */
 /* ---------------------------------------- */
 .footer {
+  position: relative;
+  z-index: 8;
   background: url(../img/footerbg.png) no-repeat;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -1560,6 +1562,7 @@ a:focus {
   background-size: cover;
   background-position: 50% 50%;
   padding: 180px 0 30px;
+  margin-top: -150px;
 }
 .footer__copy {
   padding-top: 25px;
