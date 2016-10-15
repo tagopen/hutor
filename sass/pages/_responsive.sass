@@ -1,0 +1,46 @@
++r(768)
+  +comment('general style')
+  +comment("header style")
+  .header
+    padding: 20px 0 160px
+  .navbar
+    &__logo
+      position: static
+    &__collapse
+      background: transparent
+      width: auto  
+  .nav
+    &__point
+      &:last-child
+        a
+          &:after
+            content: '' 
+      a
+        &:hover
+          +bs(0 -1px 0 0 #fff inset)
+        &:after
+          content: '\f0c8'
+          display: inline-block
+          font-family: $fa
+          font-size: 5px
+          margin: -2px -15px 0 12px 
+  .phone
+    &__link
+      font: 400 18px/20px $os 
+      &--small
+        font-size: 14px    
+  .content
+    padding-top: 75px
+    &__heading
+      font: 400 40px/50px $gpb  
+      margin: 0 0 35px
+      &--text
+        font: 400 30px/32px $gpb  
+        margin-top: 15px   
+  .list
+    &__item
+      font: 400 20px/22px $os  
+      margin-bottom: 15px      
++r(992)  
+  +comment('general style')
+  +comment("home page style")

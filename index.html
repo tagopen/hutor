@@ -54,8 +54,15 @@
 
           <nav class="navbar" role="navigation">
             <div class="col-xs-6 col-lg-3 navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar icon__bar"></span>
+                <span class="icon-bar icon__bar"></span>
+                <span class="icon-bar icon__bar"></span>
+            </button>
               <a href="" class="navbar-brand navbar__logo">
-                <img src="img/logo/logo.png" alt="" class="logo__img">
+                <img src="img/logo/logo320.png" alt="" class="visible-xs logo__img">
+                <img src="img/logo/logo.png" alt="" class="hidden-xs logo__img">
               </a>
             </div>
 
@@ -83,16 +90,11 @@
                 </div>
               </div>
 
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar icon__bar"></span>
-                <span class="icon-bar icon__bar"></span>
-                <span class="icon-bar icon__bar"></span>
-            </button>
+            
               
             </div>
 
-            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <div class="collapse navbar-collapse navbar__collapse" id="example-navbar-collapse">
               <ul class="nav navbar-nav">
                 <li class="nav__point active"><a href=".address">Расположение</a></li>
                 <li class="nav__point"><a href=".catalog">Каталог домов</a></li>
@@ -646,12 +648,47 @@
              <a class="phone__link phone__click" href="tel:380675009955">
                     <span class="phone__link--small">(067)</span> 500 99 55
                   </a>
-            <button class="phone__btn" data-toggle="modal" data-target="#header_modal">Заказать звонок</button>
+            <button class="phone__btn" data-toggle="modal" data-target="#header__modal">Заказать звонок</button>
           </div>
 
         </div>
       </div>
     </footer>
+
+    <!--   HEADER MODAL  -->
+
+      <div class="modal fade" id="header__modal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog modal__size">
+
+          <div class="modal-content modal__content">
+            
+              <button type="button" class="close modal__close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+
+              <div class="modal__head">
+                <p class="modal__heading">Форма обратной связи</p>
+                <span class="modal__subheading">Вы можете оставить свои контактные данные в этой форме и наши менеджеры свяжутся с вами в ближайшее время</span>
+              </div>
+                  
+                  <form name="Шапка" class="contactForm modal__form" method="post" action="mail/mail.php">
+                    
+                      <div class="form-group">
+                        <input aria-invalid="false" class="form-control modal__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+                      </div>
+                      <div class="form-group">
+                        <input aria-invalid="false" class="form-control modal__input form__phone" placeholder="Ваш телефон" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                      </div>
+                      <div class="form-group">
+                        <input aria-invalid="false" class="form-control modal__input form__mail" placeholder="Ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
+                      </div>
+                      <div class="modal__text">В течении нескольких минут на указаный email прийдет подтверждение о заполненой форме</div>
+                      <div class="text-center">
+                        <button type="submit" class="g-btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Отправить заявку</button>
+                      </div>
+                    </form>
+              
+            </div>
+          </div>
+        </div>
 
     
 

@@ -54,44 +54,80 @@ a:focus
     &:focus
       border-color: $btn_color
       box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(232, 141, 12, 0.8)
+.modal
+  &__size
+    width: 400px
+  &__content
+    +br(0)
+  &__head
+    padding: 35px 30px
+    background: url(../img/modalbg.jpg) no-repeat
+    +cover
+  &__heading
+    font: 500 24px/28px $gpb
+    color: #fff
+    margin-bottom: 30px
+  &__subheading
+    font: 400 14px/18px $os
+    color: #fff       
+  &__form
+    padding: 30px 50px 25px  
+    background-color: $btn_color
+  &__input
+    +br(0)
+    height: auto
+    padding: 10px 25px  
+  &__text  
+    padding: 0 25px
+    font: 400 10px/12px $os
+    color: #222
+    margin-bottom: 15px
+  &__close
+    position: absolute
+    top: -25px
+    right: -25px
+    opacity: 1
+    color: #fff  
+    &:hover,
+    &:focus
+      color: $btn_color
+      opacity: 1
+      text-shadow: none
 +comment("header style")
 .header
   position: relative
   z-index: 15
   background: url(../img/headerbg.png) no-repeat
   +cover(50% 100%)
-  padding: 20px 0 160px
+  padding: 15px 0 30px
   margin-bottom: -130px
 .navbar
   &__logo
     height: auto
     padding: 0
+    position: relative
+    left: 20px  
   &__right
     text-align: right    
     height: 80px
     padding: 0 15px
+    margin: 0
+  &__collapse
+    border: 0 
+    +bs(none) 
+    width: 50%
+    background-color: rgba(0,0,0,0.9)
 .nav
   &__point
     font: 300 14px/16px $os 
     color: #fff 
     padding: 15px
-    &:last-child
-      a
-        &:after
-          content: '' 
     a
       color: inherit
       padding: 0 0 5px !important
-      &:after
-        content: '\f0c8'
-        display: inline-block
-        font-family: $fa
-        font-size: 5px
-        margin: -2px -15px 0 12px 
-      &:hover
-        +bs(0 -1px 0 0 #fff inset)
 .phone
   position: relative
+  display: inline-block
   .fa
     display: inline-block
     color: $btn_color     
@@ -100,14 +136,14 @@ a:focus
   &__link
     display: block 
     color: #fff
-    font: 400 18px/20px $os 
+    font: 400 14px/16px $os 
     &:hover,
     &:focus
       color: #fff
       .fa
         color: $btn_color__hover
     &--small
-      font-size: 14px
+      font-size: 11px
   &__click
     position: relative
     cursor: pointer
@@ -130,15 +166,13 @@ a:focus
     &:hover
       color: $btn_color__hover
 .content
-  padding-top: 75px
   &__heading
     color: #fff
-    font: 400 40px/50px $gpb  
+    font: 400 18px/24px $gpb  
     text-transform: uppercase 
-    margin: 0 0 35px
+    margin: 0 0 10px
     &--text
-      display: inline-block
-      font: 400 30px/32px $gpb  
+      display: inline-block 
       margin-top: 15px
       text-transform: none
       &:after
@@ -160,7 +194,7 @@ a:focus
 .list
   &__item
     list-style-type: none
-    font: 400 20px/22px $os  
+    font: 400 16px/20px $os  
     margin-bottom: 15px
     &:before 
       content: '\f00c'
@@ -425,6 +459,7 @@ a:focus
     width: 50px
     cursor: pointer
     z-index: 15
+    text-align: center
     &--hover
       display: none
   &__info
