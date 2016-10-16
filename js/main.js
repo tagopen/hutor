@@ -10,10 +10,22 @@ $(document).ready(function(){
 // Header numbers click
 $(document).ready(function(){
   $('.phone__group').hover( function () {
-    $('.phone__link .fa').toggleClass('phone__icon--hidden');
+    $('.phone__linke .fa').toggleClass('phone__icon--hidden');
     $('.phone__slide').toggleClass('phone__slide--visibility');
   });
+  $('.phone__group').mouseover( function () {
+   $('.phone__btn').addClass('phone__btn--link');
+  });
+  $('.phone').mouseout( function () {
+   $('.phone__btn').removeClass('phone__btn--link');
+  });
+  $('.phone__btn--link').hover( function () {
+    $(this).parent('.phone__slide').addClass('phone__slide--visibility');
+  });
 });  
+
+$(document).ready(function(){
+  }); 
 // Old browser notification
 $(function() { 
   $.reject({
