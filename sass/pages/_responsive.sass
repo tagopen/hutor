@@ -1,16 +1,45 @@
 +r(768)
   +comment('general style')
+  .g
+    &-title
+      font: 400 22px/26px $gpb
+    &-subtitle
+      font: 400 18px/20px $gp
+      color: #222 
+    &-btn
+      font: 400 17px/20px $os  
+  .modal
+    &__size
+      width: 400px
+    &__close
+      top: -25px
+      right: -25px   
+    &__heading
+      font: 500 24px/28px $gpb
+      margin-bottom: 30px    
+  .form
+    &__input
+      padding: 20px 60px
+      font: 400 18px/20px $os 
+    &__size
+      padding: 0
+      &--tablet
+        padding: 0 15px    
   +comment("header style")
   .header
     padding: 20px 0 160px
+    background: url(../img/headerbg.png) no-repeat
+    +cover(50% 100%)
   .navbar
     &__logo
       position: static
+      margin-left: 30px
     &__collapse
       background: transparent
       width: auto  
   .nav
     &__point
+      padding: 5px
       &:last-child
         a
           &:after
@@ -23,24 +52,250 @@
           display: inline-block
           font-family: $fa
           font-size: 5px
-          margin: -2px -15px 0 12px 
+          margin: 0 -4px 0 4px 
   .phone
     &__link
       font: 400 18px/20px $os 
       &--small
         font-size: 14px    
   .content
-    padding-top: 75px
+    padding-top: 50px
     &__heading
-      font: 400 40px/50px $gpb  
-      margin: 0 0 35px
+      font: 400 24px/30px $gpb  
+      margin: 0 0 10px
       &--text
-        font: 400 30px/32px $gpb  
-        margin-top: 15px   
+        font: 400 20px/22px $gpb
+    &__btn
+      padding: 15px         
   .list
     &__item
       font: 400 20px/22px $os  
-      margin-bottom: 15px      
+      margin-bottom: 15px   
+  +comment("about style")    
+  .about
+    padding: 165px 0 50px
+    &__title
+      margin-bottom: 70px
+    &__point
+      margin-bottom: 20px
+  .point
+    &__name    
+      font: 400 18px/22px $os  
+    &__info
+      font: 400 16px/18px $os   
+  +comment('address style')    
+  .address
+    &__col
+      float: right 
+    &__box
+      padding-top: 50px  
+    &__border
+      padding: 15px 35px  
+    &__text
+      font: 400 18px/22px $os    
+  .location
+    &__info
+      font: 400 16px/18px $os
+      margin-bottom: 10px
+    &__place  
+      font: 600 18px/20px $os 
+  +comment("register style") 
+  .register 
+    padding: 200px 0 140px    
+    &__title
+      margin-bottom: 105px   
+  +comment("project style")  
+  .project
+    &__title
+      margin-bottom: 80px    
+    &__heading
+      margin: 10px 0 25px 
+      font: 400 18px/20px $os
+    &__subheading
+      font: 400 16px/18px $os
+      color: #222
+      margin-bottom: 30px    
+    &__contact  
+      font: 400 16px/20px $os
+      margin-bottom: 40px   
+      text-align: left    
+      margin-bottom: 40px
+  +comment("scheme style")  
+  .scheme        
+    &__box
+      position: absolute    
+      &--1
+        left: 115px
+        top: 225px
+      &--2
+        left: 600px
+        top: 300px  
+      &--3
+        left: 150px
+        top: 400px  
+      &--4
+        right: 100px
+        top: 450px   
+    &__border
+      margin-top: 600px      
+    &__info
+      position: absolute
+      width: 400px
+      padding: 15px 25px
+      font: 400 14px/22px $os
+      color: #222
+      background-color: #fff
+      +br(25px)
+      border: 5px solid $btn_color
+      visibility: hidden
+      opacity: 0
+      +transition(all .5s ease-out)
+      &--left
+        top: 0
+        left: 0
+      &--right
+        top: 0
+        right: 0   
+  +comment("create style")    
+  .create
+    padding: 150px 0
+    &__box
+      padding: 25px 15px
+    &__name
+      font: 400 20px/24px $os  
+      margin-bottom: 10px
+      line-height: 48px
+    &__info
+      font: 400 18px/22px $os 
+    &__caret
+      top: 50%
+      margin: -15px 0 0 0
+      border-top: 20px solid transparent
+      border-left: 30px solid #fff
+      left: auto
+      right: -64px 
+      &--color
+        border-left: 30px solid $btn_color   
+  +comment("plan style")   
+  .plan
+    padding: 180px 0 130px
+    &__title
+      margin-bottom: 70px
+    &__col
+      padding: 120px 0 0 0
+    &__info
+      font: 400 18px/20px $os
+    &__place
+      font: 600 20px/24px $os  
+  +comment("advice style")  
+  .advice 
+    padding: 190px 0 160px
+    &__title
+      margin-bottom: 45px
+    &__subtitle
+      margin-bottom: 90px  
+    &__name
+      font: 400 16px/20px $os   
+  +comment("process style")   
+  .process  
+    &__box
+      padding: 70px 50px
+      font: 400 20px/24px $os      
 +r(992)  
   +comment('general style')
-  +comment("home page style")
+  .g
+    &-title
+      font: 400 36px/40px $gpb
+    &-subtitle
+      font: 400 22px/24px $gp
+  +comment("header page style")  
+  .navbar
+    &__logo
+      margin: 0   
+  .content
+    padding-top: 75px
+    &__heading  
+      font: 400 40px/50px $gpb   
+      &--text
+        font: 400 30px/32px $gpb 
+        margin-bottom: 35px
+  +comment("about style")  
+  .about
+    padding: 165px 0 120px
+    &__point
+      margin-bottom: 40px  
+  .point
+    &__name    
+      font: 400 22px/24px $os  
+    &__info
+      font: 400 18px/24px $os  
+  +comment("address style")   
+  .address
+    &__box
+      padding: 120px 0 0 85px 
+    &__location
+      margin-bottom: 40px   
+  .location
+    &__info
+      font: 400 20px/22px $os
+      margin-bottom: 10px
+    &__place  
+      font: 600 24px/26px $os  
+  +comment("project style")  
+  .project
+    &__title
+      margin-bottom: 80px    
+    &__heading
+      margin: 10px 0 45px 
+      font: 400 24px/30px $os
+    &__subheading
+      font: 400 18px/24px $os
+      color: #222
+      margin-bottom: 55px    
+    &__contact  
+      font: 400 24px/32px $os
+      margin-bottom: 40px   
+      text-align: left    
+      margin-bottom: 40px  
+  +comment("scheme style")  
+  .scheme        
+    &__box   
+      &--1
+        left: 225px
+        top: 225px
+      &--2
+        left: 700px
+        top: 220px  
+      &--3
+        left: 400px
+        top: 450px  
+      &--4
+        right: 100px
+        top: 450px       
+  +comment("plan style")   
+  .plan
+    padding: 180px 0 130px
+    &__col
+      padding: 220px 0 0 85px
+    &__info
+      font: 400 20px/22px $os
+    &__place
+      font: 600 24px/26px $os   
+  +comment("advice style")  
+  .advice 
+    &__list
+      padding-left: 80px   
+  +comment("process style")   
+  .process  
+    &__box
+      padding: 80px 65px
+      font: 400 24px/28px $os                                    
++r(1024)  
+  +comment('general style')
+  +comment("header page style")
+  .nav
+    &__point
+      padding: 15px
+      a
+        &:after
+          margin: -2px -15px 0 12px 

@@ -4198,12 +4198,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  .navbar-collapse.collapse {
-    display: block !important;
-    height: auto !important;
-    padding-bottom: 0;
-    overflow: visible !important;
-  }
   .navbar-collapse.in {
     overflow-y: visible;
   }
@@ -4314,9 +4308,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-top: 4px;
 }
 @media (min-width: 768px) {
-  .navbar-toggle {
-    display: none;
-  }
 }
 .navbar-nav {
   margin: 7.5px -15px;
@@ -5976,6 +5967,15 @@ button.close {
   }
 }
 @media (min-width: 992px) {
+  .navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+  .navbar-toggle {
+    display: none;
+  }
   .modal-lg {
     width: 900px;
   }

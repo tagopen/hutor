@@ -9,23 +9,11 @@ $(document).ready(function(){
 });
 // Header numbers click
 $(document).ready(function(){
-  $('.phone__group').hover( function () {
-    $('.phone__linke .fa').toggleClass('phone__icon--hidden');
+  $('.phone__group').click( function () {
+    $('.phone__link .fa').toggleClass('phone__icon--hidden');
     $('.phone__slide').toggleClass('phone__slide--visibility');
   });
-  $('.phone__group').mouseover( function () {
-   $('.phone__btn').addClass('phone__btn--link');
-  });
-  $('.phone').mouseout( function () {
-   $('.phone__btn').removeClass('phone__btn--link');
-  });
-  $('.phone__btn--link').hover( function () {
-    $(this).parent('.phone__slide').addClass('phone__slide--visibility');
-  });
 });  
-
-$(document).ready(function(){
-  }); 
 // Old browser notification
 $(function() { 
   $.reject({
@@ -65,13 +53,37 @@ $('.project__slider--small').slick({
   nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
 });
 
-// Scheme info animation
+// Slick-slider to certificates
+var $carousel = $('.catalog__slider');
+    if ( $(window).width()  >= 768) { 
+        if($carousel.hasClass('slick-initialized')) {
+            $carousel.unslick();
+        }
+    } else {
+        if(!$carousel.hasClass('slick-initialized')) {
+            $carousel.slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                centerMode: false,
+                focusOnSelect: true,
+                prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
+                nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
+            });
+        }
+    }
 
-$(document).ready ( function() {
-	$('.scheme__icon, .scheme__info').hover( function() {
-		$(this).parent().toggleClass('scheme__btn--active');
-	});
-});
+// Scheme info animation
+  if( $( window ).width() >= 768 ) {
+    $(document).ready ( function() {
+      $('.scheme__icon, .scheme__info').hover( function() {
+        $(this).parent().toggleClass('scheme__btn--active');
+      });
+    });;
+  }
+
+
 
 // Equal Height function
 function setEqualHeight(columns)
@@ -101,4 +113,18 @@ $(window).on('resize', function(){
     setEqualHeight($('.process__box'));
   }
 
+  // Catalog button
+  if( $( window ).width() >= 768 ) {
+    $(document).ready( function () {
+      $('.catalog__hidden').hide();
+      $(document).on("click", ".catalog__click", (function(e) {
+        e.preventDefault();
+        $('.catalog__hidden').show();
+        $('.catalog__click').hide();
+      }));
+    });
+  }
+
 }).trigger('resize');
+
+
