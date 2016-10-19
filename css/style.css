@@ -648,7 +648,7 @@ a:focus {
 
 .modal__size {
   width: 300px;
-  margin: 20px auto;
+  margin: 30px auto 0;
 }
 .modal__content {
   -webkit-border-radius: 0;
