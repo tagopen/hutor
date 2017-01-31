@@ -66,7 +66,8 @@ var $carousel = $('.catalog__slider');
                 slidesToScroll: 1,
                 arrows: true,
                 dots: false,
-                centerMode: true,
+                centerMode: false,
+                initialSlide: 0,
                 focusOnSelect: true,
                 prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
                 nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
@@ -111,6 +112,7 @@ $(window).on('resize', function(){
     setEqualHeight($('.create__name'));
     setEqualHeight($('.create__box'));
     setEqualHeight($('.process__box'));
+    setEqualHeight($('.catalog__name'));
   }
 
   // Catalog button
@@ -125,6 +127,15 @@ $(window).on('resize', function(){
     });
   }
 
+  if( $( window ).width() < 768 ) {
+      $('.catalog__click').remove();
+  }
+
+
+
 }).trigger('resize');
 
 
+$(document).ready(function() { 
+  $("a.fancyimage").fancybox(); 
+}); 

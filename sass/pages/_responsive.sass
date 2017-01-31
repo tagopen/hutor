@@ -11,6 +11,10 @@
   .modal
     &__size
       width: 400px
+      &--big
+        width: 600px
+        .modal__close
+          top: 5px
     &__close
       top: -25px
       right: -25px   
@@ -28,31 +32,14 @@
   +comment("header style")
   .header
     padding: 20px 0 160px
-    background: url(../img/headerbg.png) no-repeat
+    background: url(../img/1ek.png) no-repeat
     +cover(50% 100%)
   .navbar
     &__logo
       position: static
-      margin-left: 30px
+      margin-left: 30px  
     &__collapse
-      background: transparent
-      width: auto  
-  .nav
-    &__point
-      padding: 5px
-      &:last-child
-        a
-          &:after
-            content: '' 
-      a
-        &:hover
-          +bs(0 -1px 0 0 #fff inset)
-        &:after
-          content: '\f0c8'
-          display: inline-block
-          font-family: $fa
-          font-size: 5px
-          margin: 0 -4px 0 4px 
+      margin-left: 15px  
   .phone
     &__link
       font: 400 18px/20px $os 
@@ -120,22 +107,54 @@
       margin-bottom: 40px   
       text-align: left    
       margin-bottom: 40px
+  +comment("catalog style") 
+  .catalog
+    &__caption
+      padding: 12px 50px
+      width: auto
+      min-width: 450px
+      left: 50%
+      margin-left: -225px
+    &__button
+      font: 400 14px/16px $os
+      min-width: 300px
+    &__box
+      padding: 0   
+    &__image
+      img
+        max-height: 360px  
+    &__show
+      padding: 90px 0 0
+  .caption
+    &__name
+      font: 500 18px/20px $gp
+      margin-bottom: 15px   
+  .fancybox
+    &-close
+      right: -25px
+    &-next,
+    &-prev
+      top: 160px
+    &-next
+      right: -32px
+    &-prev
+      left: -32px          
   +comment("scheme style")  
   .scheme        
     &__box
       position: absolute    
       &--1
-        left: 115px
-        top: 225px
+        left: 265px
+        top: 150px
       &--2
         left: 600px
-        top: 300px  
+        top: 450px  
       &--3
         left: 150px
         top: 400px  
       &--4
-        right: 100px
-        top: 450px   
+        right: 145px
+        top: 200px   
     &__border
       margin-top: 600px      
     &__info
@@ -198,9 +217,30 @@
       font: 400 16px/20px $os   
   +comment("process style")   
   .process  
+    margin-bottom: -100px
     &__box
       padding: 70px 50px
-      font: 400 20px/24px $os      
+      font: 400 20px/24px $os    
+  +comment("map style")     
+  .map
+    position: relative
+    z-index: 4
+    padding: 200px 0 0
+    overflow: hidden
+    &__iframe
+      position: absolute
+      height: 105%
+      width: 100%
+      top: -5%
+    &__box
+      margin: 70px 0 120px  
+  +comment("thanks page style")     
+  .thanks
+    background: url(../img/thanksbg.png) no-repeat
+    +cover(50% 100%)
+    height: auto
+    &__box
+      text-align: left     
 +r(992)  
   +comment('general style')
   .g
@@ -209,9 +249,28 @@
     &-subtitle
       font: 400 22px/24px $gp
   +comment("header page style")  
+  .nav
+    &__point
+      padding: 5px
+      &:last-child
+        a
+          &:after
+            content: '' 
+      a
+        &:hover
+          +bs(0 -1px 0 0 #fff inset)
+        &:after
+          content: '\f0c8'
+          display: inline-block
+          font-family: $fa
+          font-size: 5px
+          margin: 0 -4px 0 4px 
   .navbar
     &__logo
       margin: 0   
+    &__collapse
+      background: transparent
+      width: auto
   .content
     padding-top: 75px
     &__heading  
@@ -257,21 +316,32 @@
       margin-bottom: 40px   
       text-align: left    
       margin-bottom: 40px  
+  +comment("catalog style") 
+  .catalog
+    &__box
+      padding: 0 35px    
+    &__image
+      img
+        max-height: 500px
+  .fancybox
+    &-next,
+    &-prev
+      top: 165px         
   +comment("scheme style")  
   .scheme        
     &__box   
       &--1
-        left: 225px
-        top: 225px
-      &--2
-        left: 700px
-        top: 220px  
-      &--3
         left: 400px
-        top: 450px  
+        top: 100px
+      &--2
+        left: 800px
+        top: 200px  
+      &--3
+        left: 250px
+        top: 350px  
       &--4
-        right: 100px
-        top: 450px       
+        right: 200px
+        top: 370px       
   +comment("plan style")   
   .plan
     padding: 180px 0 130px
@@ -289,8 +359,8 @@
   .process  
     &__box
       padding: 80px 65px
-      font: 400 24px/28px $os                                    
-+r(1024)  
+      font: 400 24px/28px $os
++r(1200)  
   +comment('general style')
   +comment("header page style")
   .nav
@@ -299,3 +369,18 @@
       a
         &:after
           margin: -2px -15px 0 12px 
+  +comment("scheme style")  
+  .scheme        
+    &__box   
+      &--1
+        left: 85px
+        top: 280px
+      &--2
+        left: 760px
+        top: 200px  
+      &--3
+        left: 400px
+        top: 450px  
+      &--4
+        right: 200px
+        top: 400px               

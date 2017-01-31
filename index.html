@@ -1,44 +1,1169 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Главная</title>  
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Главная</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	  <meta name="google-site-verification" content="fXLA0JJmlHyBj7gab1bZQxn_a2WRBg-vYip_FEWjd04" />
 
-    <meta http-equiv="Content-Style-Type" content="text/css" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta http-equiv="Content-Language" content="ru" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <meta name="format-detection" content="telephone=no">
-
+    <!-- Meta SEO - Description, Keywords, Title -->
     <meta name="title" content="" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
+    <!-- Multilanguage localization -->
     <link rel="alternate" href="/" hreflang="x-default" />
     <link rel="alternate" href="/en/" hreflang="en" />
     <link rel="alternate" href="/ru/" hreflang="ru" />
+
+    <!-- Mobile viewport optimization -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    <!--[if IEMobile]><meta http-equiv="cleartype" content="on" /><![endif]-->
 
     <!-- Replace favicon.ico and apple-touch-icon.png -->
     <link rel="shortcut icon" type="image/png" href="img/logo/favicon.png" />
     <link rel="apple-touch-icon" type="image/png" href="img/logo/apple-touch-icon.png" />
 
-    <meta name="HandheldFriendly" content="true" />
-    <meta name="MobileOptimized" content="320" />
-    <meta http-equiv="cleartype" content="on" />
+    <!-- Disables automatic  of possible phone numbers and address in Safari on iOS -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no"/>
 
-    <!-- Open Sans  -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=cyrillic" rel="stylesheet">
+    <!-- Microformats Open Graph -->
+    <meta property="og:title" content="Ваше Право"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="img/logo/logo.png"/>
+    <meta property="og:url" content="http://url.com"/>
 
+
+    <style>
+      html {
+        font-family: sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      header,
+      nav,
+      section {
+        display: block;
+      }
+
+      a {
+        background-color: transparent;
+      }
+
+      h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+      }
+
+      img {
+        border: 0;
+      }
+
+      button,
+      input {
+        color: inherit;
+        font: inherit;
+        margin: 0;
+      }
+
+      button {
+        overflow: visible;
+      }
+
+      button {
+        text-transform: none;
+      }
+
+      button {
+        -webkit-appearance: button;
+      }
+
+      button::-moz-focus-inner,
+      input::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+      }
+
+      input {
+        line-height: normal;
+      }
+
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      *:before,
+      *:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 10px;
+      }
+
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #333333;
+        background-color: #ffffff;
+      }
+
+      input,
+      button {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      img {
+        vertical-align: middle;
+      }
+
+      .img-responsive {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+
+      h1,
+      h2 {
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.1;
+        color: inherit;
+      }
+
+      h1,
+      h2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+      p {
+        margin: 0 0 10px;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      ul {
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      .container {
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          width: 750px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .container {
+          width: 970px;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .container {
+          width: 1170px;
+        }
+      }
+
+      .row {
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+
+      .col-md-3,
+      .col-lg-3,
+      .col-xs-6,
+      .col-sm-6,
+      .col-lg-6,
+      .col-md-8,
+      .col-sm-10,
+      .col-xs-12 {
+        position: relative;
+        min-height: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .col-xs-6,
+      .col-xs-12 {
+        float: left;
+      }
+
+      .col-xs-12 {
+        width: 100%;
+      }
+
+      .col-xs-6 {
+        width: 50%;
+      }
+
+      @media (min-width: 768px) {
+        .col-sm-6,
+        .col-sm-10 {
+          float: left;
+        }
+
+        .col-sm-10 {
+          width: 83.33333333%;
+        }
+
+        .col-sm-6 {
+          width: 50%;
+        }
+
+        .col-sm-offset-1 {
+          margin-left: 8.33333333%;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .col-md-3,
+        .col-md-8 {
+          float: left;
+        }
+
+        .col-md-8 {
+          width: 66.66666667%;
+        }
+
+        .col-md-3 {
+          width: 25%;
+        }
+
+        .col-md-offset-2 {
+          margin-left: 16.66666667%;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .col-lg-3,
+        .col-lg-6 {
+          float: left;
+        }
+
+        .col-lg-6 {
+          width: 50%;
+        }
+
+        .col-lg-3 {
+          width: 25%;
+        }
+      }
+
+      .form-control {
+        display: block;
+        width: 100%;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555555;
+        background-color: #ffffff;
+        background-image: none;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      }
+
+      .form-control::-moz-placeholder {
+        color: #999999;
+        opacity: 1;
+      }
+
+      .form-control:-ms-input-placeholder {
+        color: #999999;
+      }
+
+      .form-control::-webkit-input-placeholder {
+        color: #999999;
+      }
+
+      .form-control::-ms-expand {
+        border: 0;
+        background-color: transparent;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .fade {
+        opacity: 0;
+      }
+
+      .collapse {
+        display: none;
+      }
+
+      .nav {
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+
+      .nav > li {
+        position: relative;
+        display: block;
+      }
+
+      .nav > li > a {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+      }
+
+      .navbar {
+        position: relative;
+        min-height: 50px;
+        margin-bottom: 20px;
+      }
+
+      @media (min-width: 768px) {
+        .navbar {
+          border-radius: 4px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .navbar-header {
+          float: left;
+        }
+      }
+
+      .navbar-collapse {
+        overflow-x: visible;
+        padding-right: 15px;
+        padding-left: 15px;
+        border-top: 1px solid transparent;
+        -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        -webkit-overflow-scrolling: touch;
+      }
+
+      @media (min-width: 768px) {
+        .navbar-collapse {
+          width: auto;
+          border-top: 0;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+        }
+      }
+
+      .navbar-brand {
+        float: left;
+        padding: 15px 15px;
+        font-size: 18px;
+        line-height: 20px;
+        height: 50px;
+      }
+
+      .navbar-brand > img {
+        display: block;
+      }
+
+      .navbar-toggle {
+        position: relative;
+        float: left;
+        padding: 5px 0 0 0;
+        margin: 0;
+        background-color: transparent;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+      }
+
+      .navbar-toggle .icon-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 1px;
+      }
+
+      .navbar-toggle .icon-bar + .icon-bar {
+        margin-top: 4px;
+      }
+
+      .navbar-nav {
+        margin: 7.5px -15px;
+      }
+
+      .navbar-nav > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 20px;
+      }
+
+      @media (min-width: 768px) {
+        .navbar-nav {
+          margin: 0;
+        }
+
+        .navbar-nav > li > a {
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+      }
+
+      .close {
+        float: right;
+        font-size: 21px;
+        font-weight: bold;
+        line-height: 1;
+        color: #000000;
+        text-shadow: 0 1px 0 #ffffff;
+        opacity: 0.2;
+        filter: alpha(opacity=20);
+      }
+
+      button.close {
+        padding: 0;
+        background: transparent;
+        border: 0;
+        -webkit-appearance: none;
+      }
+
+      .modal {
+        display: none;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1050;
+        -webkit-overflow-scrolling: touch;
+        outline: 0;
+      }
+
+      .modal.fade .modal-dialog {
+        -webkit-transform: translate(0, -25%);
+        -ms-transform: translate(0, -25%);
+        -o-transform: translate(0, -25%);
+        transform: translate(0, -25%);
+      }
+
+      .modal-dialog {
+        position: relative;
+        width: auto;
+        margin: 10px;
+      }
+
+      .modal-content {
+        position: relative;
+        background-color: #ffffff;
+        border: 1px solid #999999;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        outline: 0;
+      }
+
+      @media (min-width: 768px) {
+        .modal-dialog {
+          width: 600px;
+          margin: 30px auto;
+        }
+
+        .modal-content {
+          -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      @media (min-width: 992px) {
+        .navbar-nav {
+          float: left;
+        }
+
+        .navbar-nav > li {
+          float: left;
+        }
+
+        .navbar-right {
+          float: right !important;
+        }
+
+        .navbar-collapse.collapse {
+          display: block !important;
+          height: auto !important;
+          padding-bottom: 0;
+          overflow: visible !important;
+        }
+
+        .navbar-toggle {
+          display: none;
+        }
+      }
+
+      .clearfix:before,
+      .clearfix:after,
+      .container:before,
+      .container:after,
+      .row:before,
+      .row:after,
+      .nav:before,
+      .nav:after,
+      .navbar:before,
+      .navbar:after,
+      .navbar-header:before,
+      .navbar-header:after,
+      .navbar-collapse:before,
+      .navbar-collapse:after {
+        content: " ";
+        display: table;
+      }
+
+      .clearfix:after,
+      .container:after,
+      .row:after,
+      .nav:after,
+      .navbar:after,
+      .navbar-header:after,
+      .navbar-collapse:after {
+        clear: both;
+      }
+
+      @-ms-viewport {
+        width: device-width;
+      }
+
+      .visible-xs {
+        display: none !important;
+      }
+
+      @media (max-width: 767px) {
+        .visible-xs {
+          display: block !important;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .hidden-xs {
+          display: none !important;
+        }
+      }
+
+      @font-face {
+        font-family: 'FontAwesome';
+        src: url('../font/font-awesome/fontawesome-webfont.eot?v=4.6.3');
+        src: url('../font/font-awesome/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('../font/font-awesome/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('../fonts/font-awesome/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('../font/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      .fa {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .fa-times:before {
+        content: "\f00d";
+      }
+
+      .fa-chevron-down:before {
+        content: "\f078";
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+
+      @charset "UTF-8";
+
+      @font-face {
+        font-family: "GothamPro";
+        src: url("../font/GothamPro/GothamPro.eot");
+        src: url("../font/GothamPro/GothamPro.eot?#iefix") format("embedded-opentype"), url("../font/GothamPro/GothamPro.woff2") format("woff2"), url("../font/GothamPro/GothamPro.woff") format("woff"), url("../font/GothamPro/GothamPro.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "GothamProBold";
+        src: url("../font/GothamProBold/GothamProBold.eot");
+        src: url("../font/GothamProBold/GothamProBold.eot?#iefix") format("embedded-opentype"), url("../font/GothamProBold/GothamProBold.woff2") format("woff2"), url("../font/GothamProBold/GothamProBold.woff") format("woff"), url("../font/GothamProBold/GothamProBold.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      html {
+        overflow-x: hidden;
+        height: 100%;
+      }
+
+      body {
+        padding-right: 0 !important;
+        color: #000;
+      }
+
+      iframe {
+        width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        outline: none;
+      }
+
+      .g-btn {
+        color: #fff;
+        font: 400 14px/16px "Open Sans", sans-serif;
+        padding: 21px 15px;
+        background-color: #e88d0c;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        border-radius: 50px;
+        border: 0;
+        -webkit-box-shadow: 0 -1px 4px 3px #e8560c inset;
+        -moz-box-shadow: 0 -1px 4px 3px #e8560c inset;
+        -ms-box-shadow: 0 -1px 4px 3px #e8560c inset;
+        -o-box-shadow: 0 -1px 4px 3px #e8560c inset;
+        box-shadow: 0 -1px 4px 3px #e8560c inset;
+        width: 100%;
+      }
+
+      .g-title {
+        display: inline-block;
+        font: 400 17px/20px "GothamProBold", sans-serif;
+        color: #222;
+        margin: 0;
+      }
+
+      .modal__size {
+        width: 300px;
+        margin: 30px auto 0;
+      }
+
+      .modal__size--big {
+        margin: 30px auto 0;
+        width: 300px;
+      }
+
+      .modal__size--big .modal__close {
+        top: -25px;
+      }
+
+      .modal__content {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        border-radius: 0;
+      }
+
+      .modal__head {
+        padding: 35px 30px;
+        background: url(../img/modalbg.jpg) no-repeat;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+
+      .modal__heading {
+        font: 500 18px/20px "GothamProBold", sans-serif;
+        color: #fff;
+        margin-bottom: 20px;
+      }
+
+      .modal__subheading {
+        font: 400 14px/18px "Open Sans", sans-serif;
+        color: #fff;
+      }
+
+      .modal__form {
+        padding: 30px 50px 25px;
+        background-color: #e88d0c;
+      }
+
+      .modal__input {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        border-radius: 0;
+        height: auto;
+        padding: 10px 25px;
+      }
+
+      .modal__close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        opacity: 1;
+        color: #fff;
+      }
+
+      .header {
+        position: relative;
+        z-index: 15;
+        background: url(../img/headerbg320.png) no-repeat;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: 35% 100%;
+        padding: 15px 0 30px;
+        margin-bottom: -130px;
+      }
+
+      .navbar__logo {
+        height: auto;
+        padding: 0;
+        position: relative;
+        left: 20px;
+      }
+
+      .navbar__right {
+        text-align: right;
+        height: 80px;
+        padding: 0 15px;
+        margin: 0;
+      }
+
+      .navbar__collapse {
+        border: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        -o-box-shadow: none;
+        box-shadow: none;
+        width: 50%;
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+
+      .nav__point {
+        font: 300 14px/16px "Open Sans", sans-serif;
+        color: #fff;
+        padding: 10px 0 0 10px;
+      }
+
+      .nav__point a {
+        color: inherit;
+        padding: 0 0 5px !important;
+      }
+
+      .phone {
+        position: relative;
+        display: inline-block;
+      }
+
+      .phone .fa {
+        display: inline-block;
+        color: #e88d0c;
+      }
+
+      .phone__link {
+        display: block;
+        color: #fff;
+        font: 400 14px/16px "Open Sans", sans-serif;
+      }
+
+
+
+      .phone__link--small {
+        font-size: 11px;
+      }
+
+      .phone__click {
+        position: relative;
+        display: inline-block;
+      }
+
+      .phone__slide {
+        display: none;
+      }
+
+      .phone__icon--hidden {
+        display: none !important;
+      }
+
+      .phone__btn {
+        font: 400 14px/18px "Open Sans", sans-serif;
+        color: #e88d0c;
+        background: none;
+        border: 0;
+        padding: 0;
+      }
+
+      .content__heading {
+        color: #fff;
+        font: 400 18px/24px "GothamProBold", sans-serif;
+        text-transform: uppercase;
+        margin: 0 0 5px;
+      }
+
+      .content__list {
+        padding-left: 0;
+        margin-bottom: 50px;
+      }
+
+      .content__text {
+        float: left;
+        width: 90%;
+        margin: 0;
+        color: #fff;
+      }
+
+      .content__btn {
+        padding: 15px;
+        width: auto;
+      }
+
+      .list__item {
+        list-style-type: none;
+        font: 400 16px/20px "Open Sans", sans-serif;
+        margin-bottom: 5px;
+      }
+
+      .list__item:before {
+        content: "";
+        font-family: "FontAwesome";
+        float: left;
+        margin-right: 10px;
+        color: #e8560c;
+      }
+
+      .icon__bar {
+        background-color: #fff;
+        width: 36px !important;
+        height: 5px !important;
+        border-radius: 10px;
+      }
+
+      .about {
+        position: relative;
+        z-index: 14;
+        margin-bottom: -130px;
+        padding: 165px 0 30px;
+        background: url(../img/aboutbg.png) no-repeat;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: 50% 100%;
+      }
+
+      .about__title {
+        margin-bottom: 30px;
+      }
+
+      .address__img--hover {
+        display: none;
+      }
+
+      .catalog__caption {
+        background-color: #e88d0c;
+        text-align: center;
+        padding: 15px;
+        position: absolute;
+        left: 0;
+        width: 100%;
+      }
+
+      .catalog__button {
+        font: 400 12px/14px "Open Sans", sans-serif;
+        padding: 20px 10px;
+      }
+
+      .catalog__modal {
+        text-align: center;
+        position: relative;
+      }
+
+      .catalog__image img {
+        display: inline-block;
+        max-height: 240px;
+      }
+
+      .caption__name {
+        color: #fff;
+        font: 500 18px/20px "GothamPro", sans-serif;
+        padding: 0 10px;
+        margin-bottom: 15px;
+      }
+
+      .scheme__icon {
+        position: absolute;
+        left: -20px;
+        top: -20px;
+        background-color: #fff;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        border-radius: 25px;
+        border: 5px solid #e88d0c;
+        height: 50px;
+        width: 50px;
+        z-index: 15;
+        text-align: center;
+      }
+
+      .scheme__icon--hover {
+        display: none;
+      }
+
+      @media only screen and (min-width: 768px) {
+        .g-title {
+          font: 400 22px/26px "GothamProBold", sans-serif;
+        }
+
+        .g-btn {
+          font: 400 17px/20px "Open Sans", sans-serif;
+        }
+
+        .modal__size {
+          width: 400px;
+        }
+
+        .modal__size--big {
+          width: 600px;
+        }
+
+        .modal__size--big .modal__close {
+          top: 5px;
+        }
+
+        .modal__close {
+          top: -25px;
+          right: -25px;
+        }
+
+        .modal__heading {
+          font: 500 24px/28px "GothamProBold", sans-serif;
+          margin-bottom: 30px;
+        }
+
+        .header {
+          padding: 20px 0 160px;
+          background: url(../img/1ek.png) no-repeat;
+          background-repeat: no-repeat;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          background-position: 50% 100%;
+        }
+
+        .navbar__logo {
+          position: static;
+          margin-left: 30px;
+        }
+
+        .navbar__collapse {
+          margin-left: 15px;
+        }
+
+        .phone__link {
+          font: 400 18px/20px "Open Sans", sans-serif;
+        }
+
+        .phone__link--small {
+          font-size: 14px;
+        }
+
+        .content {
+          padding-top: 50px;
+        }
+
+        .content__heading {
+          font: 400 24px/30px "GothamProBold", sans-serif;
+          margin: 0 0 10px;
+        }
+
+        .content__btn {
+          padding: 15px;
+        }
+
+        .list__item {
+          font: 400 20px/22px "Open Sans", sans-serif;
+          margin-bottom: 15px;
+        }
+
+        .about {
+          padding: 165px 0 50px;
+        }
+
+        .about__title {
+          margin-bottom: 70px;
+        }
+
+        .catalog__caption {
+          padding: 12px 50px;
+          width: auto;
+          min-width: 450px;
+          left: 50%;
+          margin-left: -225px;
+        }
+
+        .catalog__button {
+          font: 400 14px/16px "Open Sans", sans-serif;
+          min-width: 300px;
+        }
+
+        .catalog__image img {
+          max-height: 360px;
+        }
+
+        .caption__name {
+          font: 500 18px/20px "GothamPro", sans-serif;
+          margin-bottom: 15px;
+        }
+      }
+
+      @media only screen and (min-width: 992px) {
+        .g-title {
+          font: 400 36px/40px "GothamProBold", sans-serif;
+        }
+
+        .nav__point {
+          padding: 5px;
+        }
+
+        .nav__point:last-child a:after {
+          content: "";
+        }
+
+        .nav__point a:after {
+          content: "";
+          display: inline-block;
+          font-family: "FontAwesome";
+          font-size: 5px;
+          margin: 0 -4px 0 4px;
+        }
+
+        .navbar__logo {
+          margin: 0;
+        }
+
+        .navbar__collapse {
+          background: transparent;
+          width: auto;
+        }
+
+        .content {
+          padding-top: 75px;
+        }
+
+        .content__heading {
+          font: 400 40px/50px "GothamProBold", sans-serif;
+        }
+
+        .about {
+          padding: 165px 0 120px;
+        }
+
+        .catalog__image img {
+          max-height: 500px;
+        }
+      }
+
+      @media only screen and (min-width: 1200px) {
+        .nav__point {
+          padding: 15px;
+        }
+
+        .nav__point a:after {
+          margin: -2px -15px 0 12px;
+        }
+      }
+    </style>
+
+
+  <!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+    <script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
+
+    <!-- Open Sans -->
+    <script>loadCSS( "//fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=cyrillic", false, "all" );</script>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-
+    <script>loadCSS( "css/bootstrap.min.css?ver=1.0.0", false, "all" );</script>
     <!-- Font-Awesome CSS -->
-    <link rel="stylesheet" href="css/font-awesome.css">
-
+    <script>loadCSS( "css/font-awesome.min.css?ver=1.0.0", false, "all" );</script>
+    <!-- FANCYBOX CSS  -->
+     <script>loadCSS( "css/jquery.fancybox.min.css?ver=2.1.5", false, "all" );</script>
     <!-- Custom CSS  -->
-    <link rel="stylesheet" href="css/style.css">
+    <script>loadCSS( "css/style.min.css?ver=1.0.0", false, "all" );</script>
+    <!-- Load CSS End -->
 
+    <!-- Load CSS Compiled without JS -->
+    <noscript>
+      <!-- Open Sans  -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=cyrillic" rel="stylesheet">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- Font-Awesome CSS -->
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <!-- Add fancyBox -->
+      <link rel="stylesheet" href="css/jquery.fancybox.min.css?v=2.1.5" type="text/css" media="screen" />
+      <!-- Custom CSS  -->
+      <link rel="stylesheet" href="css/style.min.css">
+    </noscript>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -52,7 +1177,7 @@
       <div class="container">
         <div class="row">
 
-          <nav class="navbar" role="navigation">
+          <nav class="navbar">
             <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -86,13 +1211,13 @@
                       <span class="phone__link--small">(044)</span> 496 59 18
                     </a>
                   </div>
-                
+
                 </div>
                  <button class="phone__btn" data-toggle="modal" data-target="#header__modal">Заказать звонок</button>
               </div>
 
-            
-              
+
+
             </div>
 
             <div class="collapse navbar-collapse navbar__collapse" id="example-navbar-collapse">
@@ -116,18 +1241,18 @@
             <div class="col-lg-6">
               <div class="content__box">
                 <h1 class="content__heading">“Лелечий Хутір”<br> Коттеджный городок</h1>
-                <span class="content__heading--text"> в 17 км от Киева</span>
                 <ul class="content__list list">
                   <li class="clearfix list__item"><span class="content__text">Экологическая территория;</span></li>
                   <li class="clearfix list__item"><span class="content__text">Единая концепция домов</span></li>
                   <li class="clearfix list__item"><span class="content__text">На всех участках подведены:<br> газ, вода, свет, интернет</span></li>
+                  <li class="clearfix list__item"><span class="content__text">Целевое назначение земельных участков — строительство и обслуживание жилых домов, хозяйственных строений и сооружений.</span></li>
                 </ul>
-                <button class="g-btn content__btn" data-toggle="modal" data-target="#modal_call">Получить каталог коттеджей</button>
+                <button class="g-btn content__btn" data-toggle="modal" data-target="#header__modal2">Получить каталог коттеджей</button>
               </div>
             </div>
           </div>
         </div>
-      </section> 
+      </section>
     </header>
     <!--     ABOUT SECTION BEGIN    -->
     <section class="about">
@@ -149,7 +1274,7 @@
                 </li>
                 <li class="about__point">
                   <div class="point__name">Приятные соседи</div>
-                  <div class="point__info">У всех домолвадельцев единые жизненные ценности – это стремление к спокойному, гоприятному проживанию и комфортному отдыху</div>
+                  <div class="point__info">У всех домовладельцев единые жизненные ценности – это стремление к спокойному, приятному проживанию и комфортному отдыху</div>
                 </li>
                 <li class="about__point">
                   <div class="point__name">Ответственное строительство</div>
@@ -165,12 +1290,12 @@
       </div>
     </section>
     <!--     ADDRESS SECTION BEGIN    -->
-    <section class="address">
+    <div class="address">
       <div class="container">
         <div class="row">
         <div class="col-xs-12 col-sm-7 address__col">
             <div class="address__btn">
-              <a href="" class="address__img">
+              <a class="address__img" data-toggle="modal" href="#address__modal">
                 <img src="img/addressimg.png" alt="" class="img-responsive address__img--static">
                 <img src="img/addressimghover.png" alt="" class="img-responsive address__img--hover">
               </a>
@@ -180,10 +1305,10 @@
            <div class="address__box">
             <div class="address__location location">
               <div class="location__info">Лелечный хутор находится</div>
-              <div class="location__place"><i class="fa fa-map-marker" aria-hidden="true"></i>возле с.Березовка,</div>     
+              <div class="location__place"><i class="fa fa-map-marker" aria-hidden="true"></i>возле с.Березовка,</div>
            </div>
            <div class="address__location location">
-              <div class="location__info">на расстоянии всего 17-ти километров езды от Киева по скоростной трассе</div>
+              <div class="location__info">на расстоянии 35-ти километров езды от станции метро "Житомирская" по скоростной трассе</div>
               <div class="location__place"><i class="fa fa-map-signs" aria-hidden="true"></i>Киев - Житомир</div>
            </div>
            </div>
@@ -198,7 +1323,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
     <!--     REGISTER SECTION BEGIN    -->
     <section class="register">
       <div class="container">
@@ -207,7 +1332,7 @@
             <h2 class="g-title register__title">Запишитесь на просмотр, чтобы<br> увидеть наш городок вживую!</h2>
           </div>
           <div class="col-xs-12 col-lg-8 col-lg-offset-2">
-           <form name="Регистрация" class="clearfix contactForm" method="post" action="mail/mail.php">
+           <form name="Регистрация" class="clearfix contactForm" method="post" action="mail/mail.php" onsubmit="yaCounter40478820.reachGoal ('prosmotr'); ga('send', 'event', 'form', 'submit', 'prosmotr');">
             <div class="form-group col-xs-12 col-sm-6 form__size--tablet">
               <input class="form-control form__input" placeholder="Введите ваш телефон" required="" data-validation-required-message="Please enter your phone number." name="phone" type="tel">
             </div>
@@ -234,38 +1359,38 @@
                 <img src="img/projectslider1.jpg" alt="" class="img-responsive">
               </div>
               <div class="slider__item">
-                <img src="img/projectslider1.jpg" alt="" class="img-responsive">
+                <img src="img/projectslider2.jpg" alt="" class="img-responsive">
               </div>
               <div class="slider__item">
-                <img src="img/projectslider1.jpg" alt="" class="img-responsive">
+                <img src="img/projectslider3.jpg" alt="" class="img-responsive">
               </div>
               <div class="slider__item">
-                <img src="img/projectslider1.jpg" alt="" class="img-responsive">
+                <img src="img/projectslider4.jpg" alt="" class="img-responsive">
               </div>
             </div>
 
             <div class="col-xs-10 col-xs-offset-1 project__slider--small">
               <div class="slider__item--small">
-                <img src="img/projectsliders1.jpg" alt="" class="img-responsive">
-              </div>  
-              <div class="slider__item--small">
-                <img src="img/projectsliders2.jpg" alt="" class="img-responsive">
-              </div>  
-              <div class="slider__item--small">
-                <img src="img/projectsliders3.jpg" alt="" class="img-responsive">
+                <img src="img/projectslider1.jpg" alt="" class="img-responsive">
               </div>
               <div class="slider__item--small">
-                <img src="img/projectsliders2.jpg" alt="" class="img-responsive">
+                <img src="img/projectslider2.jpg" alt="" class="img-responsive">
+              </div>
+              <div class="slider__item--small">
+                <img src="img/projectslider3.jpg" alt="" class="img-responsive">
+              </div>
+              <div class="slider__item--small">
+                <img src="img/projectslider4.jpg" alt="" class="img-responsive">
               </div>
             </div>
           </div>
           <div class="col-xs-12 col-sm-6">
-            <div class="project__heading">Дом построен на участке площадью 0,078га, по проекту "Лилея", общей площадью 17м.кв.</div>
-            <div class="project__subheading">К дому подключено электричество (3 фазы, 15 кВт), водопровод, канализация, интернет. Внешняя отделка завершена. Внутри отделка после строителей, что позволит Вам сделать дизайн 
+            <div class="project__heading">Дом построен на участке площадью 0,078га, по проекту "Лилея", общей площадью 170м.кв.</div>
+            <div class="project__subheading">К дому подключено электричество (3 фазы, 15 кВт), водопровод, канализация, интернет. Внешняя отделка завершена. Внутри отделка после строителей, что позволит Вам сделать дизайн
               по своим требованиями или выбрать из предложенных нами вариантов</div>
-              <div class="project__contact"><div>Оставьте свой эмейл и вам на почту мгновенно придет сообщение</div><span class="project__contact--text">с генпланом дома, техническими характеристиками и ценой!</span><i class="hidden-xs ic ic-arrow"></i>
+              <div class="project__contact"><div>Оставьте свой эмейл и получите мгновенный доступ к файлу</div><span class="project__contact--text">с генпланом дома, техническими характеристиками и ценой!</span><i class="hidden-xs ic ic-arrow"></i>
             </div>
-            <form name="Регистрация" class="clearfix contactForm" method="post" action="mail/mail.php">
+            <form name="Регистрация" class="clearfix contactForm" method="post" action="mail/mail.php" onsubmit="yaCounter40478820.reachGoal ('lileya'); ga('send', 'event', 'form', 'submit', 'lileya');">
               <div class="form-group col-xs-12 col-lg-8 form__size">
                 <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
               </div>
@@ -286,132 +1411,354 @@
             <h3 class="g-subtitle catalog__subtitle">с возможностью строительства по договору подряда</h3>
           </div>
         </div>
-        <div class="row catalog__slider">
+
+        <div class="row">
+
+        <div class="catalog__slider">
+
           <div class="col-sm-4">
             <div class="catalog__box">
-              <a href="" class="catalog__img">
+              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog1">
                 <img src="img/catalog1.jpg" alt="" class="img-responsive">
                 <span class="catalog__link"><i class="ic ic-zoom"></i></span>
               </a>
+              <div id="catalog1" class="catalog__modal" style="display: none;">
+                <div class="catalog__image">
+                  <img src="img/catalog1.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="catalog__caption">
+                  <div class="caption__name">ПРОЕКТ «ЛИЛЕЯ-МИНИ»</div>
+                  <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
+                    <div class="form-group">
+                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
+                    </div>
+                    <div class="text-center">
+                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
               <div class="catalog__info">
-                <div class="catalog__name">Проект «Лилея»1</div>
-                <div class="catalog__about">Площадь дома: 164 м2 </div>
-                <button class="catalog__btn" data-toggle="modal" data-target="#catalog1">Подробнее</button>
+                <div class="catalog__name">Проект «Лилея-Мини»</div>
+                <div class="catalog__about">Площадь дома: 150.54 м2 </div>
+                <a class="fancyimage catalog__btn" href="#catalog1">Подробнее</a>
               </div>
             </div>
           </div>
+
           <div class="col-sm-4">
             <div class="catalog__box">
-              <a href="" class="catalog__img">
+             <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog2">
                 <img src="img/catalog2.jpg" alt="" class="img-responsive">
                 <span class="catalog__link"><i class="ic ic-zoom"></i></span>
               </a>
+               <div id="catalog2" class="catalog__modal" style="display: none;">
+                <div class="catalog__image">
+                  <img src="img/catalog2.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="catalog__caption">
+                  <div class="caption__name">ПРОЕКТ «КУПАВА-МИНИ»</div>
+                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
+                    <div class="form-group">
+                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
+                    </div>
+                    <div class="text-center">
+                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
               <div class="catalog__info">
-                <div class="catalog__name">Проект «Лилея»2</div>
-                <div class="catalog__about">Площадь дома: 164 м2 </div>
-                <button class="catalog__btn" data-toggle="modal" data-target="#catalog2">Подробнее</button>
+                <div class="catalog__name">Проект «Купава-мини»</div>
+                <div class="catalog__about">Площадь дома: 161.76 м2 </div>
+                <a class="fancyimage catalog__btn" href="#catalog2">Подробнее</a>
               </div>
             </div>
           </div>
+
           <div class="col-sm-4">
             <div class="catalog__box">
-              <a href="" class="catalog__img">
+              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog3">
                 <img src="img/catalog3.jpg" alt="" class="img-responsive">
                 <span class="catalog__link"><i class="ic ic-zoom"></i></span>
               </a>
+               <div id="catalog3" class="catalog__modal" style="display: none;">
+                <div class="catalog__image">
+                  <img src="img/catalog3.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="catalog__caption">
+                  <div class="caption__name">ПРОЕКТ «КАЛИНА»</div>
+                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
+                    <div class="form-group">
+                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
+                    </div>
+                    <div class="text-center">
+                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
               <div class="catalog__info">
-                <div class="catalog__name">Проект «Ягодка»3</div>
-                <div class="catalog__about">Площадь дома: 164 м2 </div>
-                <button class="catalog__btn" data-toggle="modal" data-target="#catalog3">Подробнее</button>
+                <div class="catalog__name">Проект «Калина»</div>
+                <div class="catalog__about">Площадь дома: 165.53 м2 </div>
+                <a class="fancyimage catalog__btn" href="#catalog3">Подробнее</a>
               </div>
             </div>
           </div>
-          <div class="col-sm-4">
+
+           <div class="col-sm-4">
             <div class="catalog__box">
-              <a href="" class="catalog__img">
-                <img src="img/catalog1.jpg" alt="" class="img-responsive">
+              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog4">
+                <img src="img/catalog4.jpg" alt="" class="img-responsive">
                 <span class="catalog__link"><i class="ic ic-zoom"></i></span>
               </a>
+              <div id="catalog4" class="catalog__modal" style="display: none;">
+                <div class="catalog__image">
+                  <img src="img/catalog4.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="catalog__caption">
+                  <div class="caption__name">ПРОЕКТ «КУПАВА»</div>
+                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
+                    <div class="form-group">
+                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
+                    </div>
+                    <div class="text-center">
+                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
               <div class="catalog__info">
-                <div class="catalog__name">Проект «Купава»4</div>
-                <div class="catalog__about">Площадь дома: 164 м2 </div>
-                <button class="catalog__btn" data-toggle="modal" data-target="#catalog4">Подробнее</button>
+                <div class="catalog__name">Проект «Купава»</div>
+                <div class="catalog__about">Площадь дома: 206.86 м2 </div>
+                <a class="fancyimage catalog__btn" href="#catalog4">Подробнее</a>
               </div>
             </div>
           </div>
-          <div class="col-sm-4">
+
+           <div class="col-sm-4">
             <div class="catalog__box">
-              <a href="" class="catalog__img">
-                <img src="img/catalog2.jpg" alt="" class="img-responsive">
+              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog5">
+                <img src="img/catalog5.jpg" alt="" class="img-responsive">
                 <span class="catalog__link"><i class="ic ic-zoom"></i></span>
               </a>
+              <div id="catalog5" class="catalog__modal" style="display: none;">
+                <div class="catalog__image">
+                  <img src="img/catalog5.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="catalog__caption">
+                  <div class="caption__name">ПРОЕКТ «ЛИЛЕЯ»</div>
+                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
+                    <div class="form-group">
+                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
+                    </div>
+                    <div class="text-center">
+                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
               <div class="catalog__info">
-                <div class="catalog__name">Проект «Ягодка»5</div>
-                <div class="catalog__about">Площадь дома: 164 м2 </div>
-                <button class="catalog__btn" data-toggle="modal" data-target="#catalog5">Подробнее</button>
+                <div class="catalog__name">Проект «Лилея»</div>
+                <div class="catalog__about">Площадь дома: 170.16 м2 </div>
+                <a class="fancyimage catalog__btn" href="#catalog5">Подробнее</a>
               </div>
             </div>
           </div>
-           <div class="col-sm-4 catalog__click hidden-xs">
-            <div class="catalog__box">
-              <a href="" class="catalog__img catalog__img--hover">
-                <img src="img/catalog3.jpg" alt="" class="img-responsive">
-                <span class="catalog__show">Показать все</span>
-              </a>
-            </div>
-          </div>
+
+
+
           <div class="col-sm-4 catalog__hidden">
             <div class="catalog__box">
-              <a href="" class="catalog__img">
-                <img src="img/catalog3.jpg" alt="" class="img-responsive">
+              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog6">
+                <img src="img/catalog6.jpg" alt="" class="img-responsive">
                 <span class="catalog__link"><i class="ic ic-zoom"></i></span>
               </a>
+              <div id="catalog6" class="catalog__modal" style="display: none;">
+                <div class="catalog__image">
+                  <img src="img/catalog6.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="catalog__caption">
+                  <div class="caption__name">ПРОЕКТ «ЯГОДКА-МИНИ»</div>
+                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
+                    <div class="form-group">
+                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
+                    </div>
+                    <div class="text-center">
+                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
               <div class="catalog__info">
-                <div class="catalog__name">Проект «Купава»6</div>
-                <div class="catalog__about">Площадь дома: 164 м2 </div>
-                <button class="catalog__btn" data-toggle="modal" data-target="#catalog6">Подробнее</button>
+                <div class="catalog__name">Проект «Ягодка-мини»</div>
+                <div class="catalog__about">Площадь дома: 198.41 м2 </div>
+                <a class="fancyimage catalog__btn" href="#catalog6">Подробнее</a>
               </div>
             </div>
           </div>
+
           <div class="col-sm-4 catalog__hidden">
             <div class="catalog__box">
-              <a href="" class="catalog__img">
-                <img src="img/catalog3.jpg" alt="" class="img-responsive">
+              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog7">
+                <img src="img/catalog7.jpg" alt="" class="img-responsive">
                 <span class="catalog__link"><i class="ic ic-zoom"></i></span>
               </a>
+              <div id="catalog7" class="catalog__modal" style="display: none;">
+                <div class="catalog__image">
+                  <img src="img/catalog7.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="catalog__caption">
+                  <div class="caption__name">ПРОЕКТ «ЯГОДКА»</div>
+                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
+                    <div class="form-group">
+                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
+                    </div>
+                    <div class="text-center">
+                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
               <div class="catalog__info">
-                <div class="catalog__name">Проект «Купава»7</div>
-                <div class="catalog__about">Площадь дома: 164 м2 </div>
-                <button class="catalog__btn" data-toggle="modal" data-target="#catalog6">Подробнее</button>
+                <div class="catalog__name">Проект «Ягодка»</div>
+                <div class="catalog__about">Площадь дома: 210.72 м2 </div>
+                <a class="fancyimage catalog__btn" href="#catalog7">Подробнее</a>
               </div>
             </div>
           </div>
+
+         <div class="col-sm-4 catalog__hidden">
+            <div class="catalog__box">
+              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog8">
+                <img src="img/catalog8.jpg" alt="" class="img-responsive">
+                <span class="catalog__link"><i class="ic ic-zoom"></i></span>
+              </a>
+              <div id="catalog8" class="catalog__modal" style="display: none;">
+                <div class="catalog__image">
+                  <img src="img/catalog8.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="catalog__caption">
+                  <div class="caption__name">ПРОЕКТ «КОНВАЛИЯ»</div>
+                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
+                    <div class="form-group">
+                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
+                    </div>
+                    <div class="text-center">
+                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="catalog__info">
+                <div class="catalog__name">Проект «Конвалия»</div>
+                <div class="catalog__about">Площадь дома: 214.12 м2 </div>
+                <a class="fancyimage catalog__btn" href="#catalog8">Подробнее</a>
+              </div>
+            </div>
+          </div>
+
           <div class="col-sm-4 catalog__hidden">
             <div class="catalog__box">
-              <a href="" class="catalog__img">
-                <img src="img/catalog3.jpg" alt="" class="img-responsive">
+              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog9">
+                <img src="img/catalog9.jpg" alt="" class="img-responsive">
                 <span class="catalog__link"><i class="ic ic-zoom"></i></span>
               </a>
+              <div id="catalog9" class="catalog__modal" style="display: none;">
+                <div class="catalog__image">
+                  <img src="img/catalog9.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="catalog__caption">
+                  <div class="caption__name">ПРОЕКТ «МАЛЬВА»</div>
+                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
+                    <div class="form-group">
+                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
+                    </div>
+                    <div class="text-center">
+                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
               <div class="catalog__info">
-                <div class="catalog__name">Проект «Купава»8</div>
-                <div class="catalog__about">Площадь дома: 164 м2 </div>
-                <button class="catalog__btn" data-toggle="modal" data-target="#catalog6">Подробнее</button>
+                <div class="catalog__name">Проект «Мальва»</div>
+                <div class="catalog__about">Площадь дома: 229.27 м2 </div>
+                <a class="fancyimage catalog__btn" href="#catalog9">Подробнее</a>
               </div>
             </div>
           </div>
+
           <div class="col-sm-4 catalog__hidden">
             <div class="catalog__box">
-              <a href="" class="catalog__img">
-                <img src="img/catalog3.jpg" alt="" class="img-responsive">
+              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog10">
+                <img src="img/catalog10.jpg" alt="" class="img-responsive">
                 <span class="catalog__link"><i class="ic ic-zoom"></i></span>
               </a>
+              <div id="catalog10" class="catalog__modal" style="display: none;">
+                <div class="catalog__image">
+                  <img src="img/catalog10.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="catalog__caption">
+                  <div class="caption__name">ПРОЕКТ «ТРОЯНДА»</div>
+                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
+                    <div class="form-group">
+                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
+                    </div>
+                    <div class="text-center">
+                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
               <div class="catalog__info">
-                <div class="catalog__name">Проект «Купава»9</div>
-                <div class="catalog__about">Площадь дома: 164 м2 </div>
-                <button class="catalog__btn" data-toggle="modal" data-target="#catalog6">Подробнее</button>
+                <div class="catalog__name">Проект «Троянда»</div>
+                <div class="catalog__about">Площадь дома: 236.68 м2 </div>
+                <a class="fancyimage catalog__btn" href="#catalog10">Подробнее</a>
               </div>
             </div>
           </div>
+
+          <div class="col-sm-4 catalog__hidden">
+            <div class="catalog__box">
+              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog11">
+                <img src="img/catalog11.jpg" alt="" class="img-responsive">
+                <span class="catalog__link"><i class="ic ic-zoom"></i></span>
+              </a>
+              <div id="catalog11" class="catalog__modal" style="display: none;">
+                <div class="catalog__image">
+                  <img src="img/catalog11.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="catalog__caption">
+                  <div class="caption__name">ПРОЕКТ «БАРВИНОК»</div>
+                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
+                    <div class="form-group">
+                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
+                    </div>
+                    <div class="text-center">
+                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="catalog__info">
+                <div class="catalog__name">Проект «Барвинок»</div>
+                <div class="catalog__about">Площадь дома: 307.65 м2 </div>
+                <a class="fancyimage catalog__btn" href="#catalog11">Подробнее</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-sm-4 catalog__click">
+          <div class="catalog__box">
+            <a href="" class="catalog__img catalog__img--hover">
+              <img src="img/catalog1.jpg" alt="" class="img-responsive">
+              <span class="catalog__show">Показать все</span>
+            </a>
+          </div>
+        </div>
+
         </div>
         <div class="row">
           <div class="text-center col-xs-12 col-sm-10 col-sm-offset-1">
@@ -437,9 +1784,8 @@
             <div class="scheme__btn">
               <i class="ic ic-scheme scheme__icon"></i>
               <i class="scheme__icon scheme__icon--hover">-</i>
-              <div class="scheme__info scheme__info--left">Площадь помещений - 75.07<br>
-                Площади мансардного этажа - 69.68<br>
-                Общая площадь помещений дома - 144.75<br>
+              <div class="scheme__info scheme__info--left">Кровля<br>
+                Битумная черепица, утеплитель 200 мм
               </div>
             </div>
           </div>
@@ -448,9 +1794,7 @@
             <div class="scheme__btn">
               <i class="ic ic-scheme scheme__icon"></i>
               <i class="scheme__icon scheme__icon--hover">-</i>
-              <div class="scheme__info scheme__info--right">Площадь помещений - 75.07<br>
-                Площади мансардного этажа - 69.68<br>
-                Общая площадь помещений дома - 144.75<br>
+               <div class="scheme__info scheme__info--right">Окна<br>Современный 2-камерный ПВХ стеклопакет, 5-камерный профиль, обеспечат максимальное энергосбережение и шумопоглощение
               </div>
             </div>
           </div>
@@ -459,9 +1803,7 @@
             <div class="scheme__btn">
               <i class="ic ic-scheme scheme__icon"></i>
               <i class="scheme__icon scheme__icon--hover">-</i>
-              <div class="scheme__info scheme__info--left">Площадь помещений - 75.07<br>
-                Площади мансардного этажа - 69.68<br>
-                Общая площадь помещений дома - 144.75<br>
+              <div class="scheme__info scheme__info--left">Стены<br>Газобетон пористый. Утепление фасада- пенополистирол М25, 100 мм
               </div>
             </div>
           </div>
@@ -470,9 +1812,8 @@
             <div class="scheme__btn">
               <i class="ic ic-scheme scheme__icon"></i>
               <i class="scheme__icon scheme__icon--hover">-</i>
-              <div class="scheme__info scheme__info--right">Площадь помещений - 75.07<br>
-                Площади мансардного этажа - 69.68<br>
-                Общая площадь помещений дома - 144.75<br>
+              <div class="scheme__info scheme__info--right">Коммуникации<br>
+                Электричество - 15 кВт по трехфазной системе подключения. Электрическая разводка по домовладениям осуществляется по подземным кабельным сетям.
               </div>
             </div>
           </div>
@@ -502,7 +1843,7 @@
           <div class="col-sm-6 create__col--color">
             <div class="create__box create__box--textpos">
               <div class="clearfix create__name">Электричество<i class="ic ic-create1"></i></div>
-              <div class="create__info">15 кВт на дом по трехфазной системе 
+              <div class="create__info">15 кВт на дом по трехфазной системе
               подключения. Электрическая разводка по домовладениям осуществляется по подземным кабельным сетям.</div>
               <div class="create__caret"></div>
             </div>
@@ -510,7 +1851,7 @@
           <div class="col-sm-6 create__col--incolor">
             <div class="create__box">
               <div class="clearfix create__name">Газоснабжение<i class="ic ic-create2"></i></div>
-              <div class="create__info">Мы предлагаем магистральное газоснабжение. Три газораспределительные системы среднего давления (0.3 МПа) осуществляет подачу газу в каждое домовладение.</div>
+              <div class="create__info">Мы предлагаем магистральное газоснабжение. Три газораспределительные системы среднего давления (0.3 МПа) осуществляют подачу газа в каждое домовладение.</div>
             </div>
           </div>
         </div>
@@ -518,7 +1859,7 @@
           <div class="col-sm-6 create__col--incolor">
             <div class="create__box create__box--textpos">
               <div class="clearfix create__name">Центральный водопровод<i class="ic ic-create3"></i></div>
-              <div class="create__info">Водопровод осуществляет забор воды из чистейшего Бучакского водоносного слоя Киевщины. Вода поступает из артезианской скважины глубиною 85м в систему водоподготовки и очистки.
+              <div class="create__info">Водопровод осуществляет забор воды из чистейшего Бучакского водоносного слоя Киевщины. Вода поступает из артезианской скважины глубиною 85м.
               </div>
               <div class="create__caret create__caret--color"></div>
             </div>
@@ -566,25 +1907,31 @@
         <div class="row">
           <div class="text-center col-xs-12 col-sm-8 col-sm-offset-2">
             <h2 class="g-title advice__title">Узнайте как избежать ошибок при покупке дома!</h2>
-            <h3 class="g-subtitle advice__subtitle">Скачайте три статьи с рекомендациями о покупке дома, чтобы стать профессиональным покупателем и не допустить ошибку при выборе жилья:</h3>
+            <h3 class="g-subtitle advice__subtitle">Подпишитесь на нашу рассылку и получайте рекомендации экспертов рынка недвижимости и строителей о том, как выбрать лучшее жилье! В рассылке вы узнаете:</h3>
             <ul class="advice__list">
               <li class="clearfix advice__point">
-                <div class="advice__name">5 советов для выбора идеальной местности для покупки дома</div>
+                <div class="advice__name">На каком расстоянии от города должен быть коттеджный городок</div>
               </li>
               <li class="clearfix advice__point">
-                <div class="advice__name">Из каких материалов должен быть дом, чтобы в нём было комфортно жить</div>
+                <div class="advice__name">На каком расстоянии от города должен быть коттеджный городок</div>
               </li>
               <li class="clearfix advice__point">
-                <div class="advice__name">Как продают дома недобросовестные коттеджные городки</div>
+                <div class="advice__name">Из каких материалов должен быть коттедж</div>
+              </li>
+              <li class="clearfix advice__point">
+                <div class="advice__name">Сравнение различных видов построек</div>
               </li>
             </ul>
-            <button class="g-btn advice__btn" data-toggle="modal" data-target="#advice__modal">Получить рекомендации о покупке дома</button>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
+            <iframe frameborder="0" src="https://secure.esputnik.com.ua/136OMGsfkms" width="100%" height="184" scrolling="no"></iframe>
           </div>
         </div>
       </div>
     </section>
     <!--     PROCESS SECTION BEGIN    -->
-    <section class="process">
+    <div class="process">
       <div class="container">
         <div class="row">
           <div class="col-sm-6 process__col process__col--1">
@@ -609,16 +1956,16 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
     <!--     MAP SECTION BEGIN    -->
    <div class="map">
-   <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.5006815619363!2d30.52515571871267!3d50.45040060547203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce56b2456d3b%3A0xd062ae171b57e947!2z0LLRg9C70LjRhtGPINCl0YDQtdGJ0LDRgtC40LosINCa0LjRl9CyLCDQo9C60YDQsNC40L3QsA!5e0!3m2!1sru!2sru!4v1476375775699" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+   <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m22!1m8!1m3!1d20322.352976996088!2d30.33774916851264!3d50.454247467837604!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d50.4559675!2d30.3649727!4m5!1s0x472b486a5ab4084d%3A0xdbd9a59ebb422fda!2z0JHQtdGA0LXQt9C-0LLQutCwLCDQmtC40LXQstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCDQo9C60YDQsNC40L3QsA!3m2!1d50.428639!2d30.0032027!5e0!3m2!1sru!2sus!4v1477946442054" height="450"  style="border:0" allowfullscreen></iframe>
      <div class="container map__container">
        <div class="row">
-          <div class="col-lg-6 pull-right">
+          <div class="col-sm-10 col-md-8 col-lg-6 pull-right">
            <div class="clearfix map__box">
 
-            <div class="col-lg-6">
+            <div class="col-sm-6">
               <div class="map__heading">Контакты</div>
               <div class="map__contact contact">
                 <div class="clearfix contact__info">
@@ -635,11 +1982,11 @@
                     <a class="contact__link" href="tel:380675009955">
                       (067) 500 99 55
                     </a>
-                    <a class="contact__link" href="tel:380675009955">
-                      (067) 500 99 55
+                    <a class="contact__link" href="tel:380507297280">
+                      (050) 729 72 80
                     </a>
-                    <a class="contact__link" href="tel:380675009955">
-                      (067) 500 99 55
+                    <a class="contact__link" href="tel:380444965918">
+                      (044) 496 59 18
                     </a>
                   </div>
                 </div>
@@ -647,10 +1994,10 @@
               <img src="img/contactimg.jpg" alt="" class="img-responsive">
             </div>
 
-             <div class="col-lg-6">
+             <div class="col-sm-6">
                <div class="map__heading">Форма обратной связи</div>
                <div class="map__subheading">Вы можете оставить свои контактные данные в этой форме и наши менеджеры свяжутся с вами в ближайшее время</div>
-               <form name="Карта_форма" class="clearfix contactForm" method="post" action="mail/mail.php">
+               <form name="Карта_форма" class="clearfix contactForm" method="post" action="mail/mail.php" onsubmit="yaCounter40478820.reachGoal ('mapform'); ga('send', 'event', 'form', 'submit', 'mapform');">
                  <div class="form-group map__group col-xs-12">
                   <input aria-invalid="false" class="form-control form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
                 </div>
@@ -661,9 +2008,9 @@
                   <input aria-invalid="false" class="form-control form__mail" placeholder="Ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
                 </div>
                 <div class="map__subheading--small">В течении нескольких минут на указаный email прийдет подтверждение о заполненой форме</div>
-                
+
                   <button type="submit" class="g-btn map__btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Отправить заявку</button>
-             
+
               </form>
              </div>
 
@@ -686,11 +2033,17 @@
            <a class="phone__link phone__click" href="tel:380675009955">
             <span class="phone__link--small">(067)</span> 500 99 55
           </a>
-          <button class="phone__btn" data-toggle="modal" data-target="#header__modal">Заказать звонок</button>
+          <a class="phone__link phone__click" href="tel:380507297280">
+            <span class="phone__link--small">(050)</span> 729 72 80
+          </a>
+          <a class="phone__link phone__click" href="tel:380444565918">
+            <span class="phone__link--small">(044)</span> 496 59 18
+          </a>
+          <button class="phone__btn" data-toggle="modal" data-target="#footer__modal">Заказать звонок</button>
           </div>
           <div class="text-center col-xs-12 col-sm-6 col-md-8 footer__copy">
-            <a href="">Сделано с душой студией WELL DONE</a>
-          </div>   
+            <a href="http://well-done.com.ua/?utm_source=website&utm_medium=clientfooter&utm_campaign=hutirlanding">Сделано с душой студией WELL DONE</a>
+          </div>
         </div>
       </div>
     </footer>
@@ -701,16 +2054,16 @@
         <div class="modal-dialog modal__size">
 
           <div class="modal-content modal__content">
-            
+
               <button type="button" class="close modal__close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
 
               <div class="modal__head">
                 <p class="modal__heading">Форма обратной связи</p>
-                <span class="modal__subheading">Вы можете оставить свои контактные данные в этой форме и наши менеджеры свяжутся с вами в ближайшее время</span>
+                <span class="modal__subheading">Оставьте свои контактные данные в этой форме и мы свяжемся с вами в ближайшее время</span>
               </div>
-                  
-                  <form name="Шапка" class="contactForm modal__form" method="post" action="mail/mail.php">
-                    
+
+                  <form name="Шапка" class="contactForm modal__form" method="post" action="mail/mail.php" onsubmit="yaCounter40478820.reachGoal ('zvonokheader'); ga('send', 'event', 'form', 'submit', 'zvonokheader');">
+
                       <div class="form-group">
                         <input aria-invalid="false" class="form-control modal__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
                       </div>
@@ -720,40 +2073,119 @@
                       <div class="form-group">
                         <input aria-invalid="false" class="form-control modal__input form__mail" placeholder="Ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
                       </div>
-                      <div class="modal__text">В течении нескольких минут на указаный email прийдет подтверждение о заполненой форме</div>
                       <div class="text-center">
                         <button type="submit" class="g-btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Отправить заявку</button>
                       </div>
                     </form>
-              
+
             </div>
           </div>
         </div>
 
-    
+      <!--   1 SECTION MODAL  -->
 
-    <!-- jQuery -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
-    <script src="js/jquery.js"></script>
+      <div class="modal fade" id="header__modal2" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog modal__size">
 
-    <!-- Bootstrap JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+          <div class="modal-content modal__content">
 
-    <!-- Old browsers reject JavaScript -->
-    <script src="js/jquery.reject.js"></script>
+              <button type="button" class="close modal__close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
 
-    <!-- Navbar-fixed-top JavaScript -->
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.min.js"></script>
+              <div class="modal__head">
+                <span class="modal__subheading">Оставьте свои контакты, чтобы мы отправили вам каталог домов и могли связаться с вами для уточнения деталей</span>
+              </div>
 
-    <!-- Validation Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-    
-    <!-- Slick-Slider JavaScript -->
-    <script src="js/slick.js"></script>
+                  <form name="Первый экран" class="contactForm modal__form" method="post" action="mail/mail.php" onsubmit="yaCounter40478820.reachGoal ('firstscreen'); ga('send', 'event', 'form', 'submit', 'firstscreen');">
 
-    <!-- Custom JavaScript -->
-    <script src="js/main.js"></script>
+                      <div class="form-group">
+                        <input aria-invalid="false" class="form-control modal__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+                      </div>
+                      <div class="form-group">
+                        <input aria-invalid="false" class="form-control modal__input form__phone" placeholder="Ваш телефон" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                      </div>
+                      <div class="form-group">
+                        <input aria-invalid="false" class="form-control modal__input form__mail" placeholder="Ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
+                      </div>
+                      <div class="text-center">
+                        <button type="submit" class="g-btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Получить каталог коттеджей</button>
+                      </div>
+                    </form>
+
+            </div>
+          </div>
+        </div>
+      <!--   ADDRESS MODAL  -->
+      <div class="modal fade" id="address__modal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog modal__size--big">
+          <div class="modal-content modal__content">
+              <button type="button" class="close modal__close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+               <iframe src="https://www.google.com/maps/embed?pb=!1m22!1m8!1m3!1d20322.352976996088!2d30.33774916851264!3d50.454247467837604!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d50.4559675!2d30.3649727!4m5!1s0x472b486a5ab4084d%3A0xdbd9a59ebb422fda!2z0JHQtdGA0LXQt9C-0LLQutCwLCDQmtC40LXQstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCDQo9C60YDQsNC40L3QsA!3m2!1d50.428639!2d30.0032027!5e0!3m2!1sru!2sus!4v1477946442054" height="450"  style="border:0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+         <!--  FOOTER MODAL  -->
+
+      <div class="modal fade" id="footer__modal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog modal__size">
+
+          <div class="modal-content modal__content">
+
+              <button type="button" class="close modal__close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+
+              <div class="modal__head">
+                <p class="modal__heading">Форма обратной связи</p>
+                <span class="modal__subheading">Оставьте свои контактные данные в этой форме и мы свяжемся с вами в ближайшее время</span>
+              </div>
+
+                  <form name="Футер" class="contactForm modal__form" method="post" action="mail/mail.php" onsubmit="yaCounter40478820.reachGoal ('footer'); ga('send', 'event', 'form', 'submit', 'footer');">
+
+                      <div class="form-group">
+                        <input aria-invalid="false" class="form-control modal__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+                      </div>
+                      <div class="form-group">
+                        <input aria-invalid="false" class="form-control modal__input form__phone" placeholder="Ваш телефон" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                      </div>
+                      <div class="form-group">
+                        <input aria-invalid="false" class="form-control modal__input form__mail" placeholder="Ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
+                      </div>
+                      <div class="text-center">
+                        <button type="submit" class="g-btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Отправить заявку</button>
+                      </div>
+                    </form>
+
+            </div>
+          </div>
+        </div>
+
+<!-- Load Scripts Start -->
+<script>var scr = {"scripts":[
+  {"src" : "js/jquery.js", "async" : false},
+  {"src" : "js/bootstrap.min.js", "async" : false},
+  {"src" : "js/jquery.reject.min.js", "async" : false},
+  {"src" : "js/classie.min.js", "async" : false},
+  {"src" : "js/cbpanimatedheader.min.js", "async" : false},
+  {"src" : "js/jqbootstrapvalidation.min.js", "async" : false},
+  {"src" : "js/contact_me.js", "async" : false},
+  {"src" : "js/slick.min.js", "async" : false},
+  {"src" : "js/jquery.fancybox.min.js", "async" : false},
+  {"src" : "js/jquery.fancybox.pack.min.js", "async" : false},
+  {"src" : "js/main.min.js", "async" : false}
+  ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+</script>
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter40478820 = new Ya.Metrika({ id:40478820, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/40478820" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+<!-- GAnalytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39365664-13', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- /GAnalytics -->
+
   </body>
   </html>

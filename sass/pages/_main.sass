@@ -15,6 +15,8 @@ html
 body
   padding-right: 0 !important  
   color: #000
+iframe
+  width: 100%
 a,
 a:hover,
 a:focus
@@ -29,11 +31,11 @@ a:focus
     background-color: $btn_color
     +br(50px)
     border: 0  
-    +bs(0 -4px 0 2px #e8560c inset)
+    +bs(0 -1px 4px 3px #e8560c inset)
     width: 100%
     &:hover
       background-color: $btn_color__hover
-      +bs(0 -4px 0 2px #e88d0c inset)
+      +bs(0 -1px 4px 3px #e88d0c inset)
   &-title
     display: inline-block
     font: 400 17px/20px $gpb
@@ -61,6 +63,11 @@ a:focus
   &__size
     width: 300px
     margin: 30px auto 0
+    &--big
+      margin: 30px auto 0
+      width: 300px
+      .modal__close
+        top: -25px
   &__content
     +br(0)
   &__head
@@ -340,6 +347,7 @@ a:focus
       .slick
         &-slide
           text-align: center
+          padding: 10px 5px 0
           img
             display: inline-block   
         &-arrow
@@ -365,7 +373,8 @@ a:focus
   &__subtitle
     margin-bottom: 70px  
   &__box
-    padding: 0 35px     
+    padding: 0 40px  
+    margin-bottom: 70px   
   &__img
     position: relative
     display: inline-block
@@ -376,13 +385,6 @@ a:focus
         opacity: 1
         visibility: visible
         +transition(all .3s ease-out)
-    &--hover
-      border: 5px solid $btn_color
-      &:hover
-        .catalog__show  
-          opacity: 1
-          visibility: visible
-          +transition(all .3s ease-out)
   &__show
     position: absolute
     top: 0
@@ -390,11 +392,8 @@ a:focus
     width: 100%
     height: 100%  
     background-color: rgba(232,141,12,0.7)  
-    opacity: 0
-    visibility: hidden
-    +transition(all .3s ease-out) 
     text-align: center
-    padding: 120px 0 0
+    padding: 60px 0 0
     font: 400 18px/20px $os 
   &__link
     position: absolute
@@ -418,12 +417,12 @@ a:focus
     color: #858686 
     margin-bottom: 30px
   &__btn
-    margin-bottom: 70px
     border: 1px solid #858686
     +br(25px)
     padding: 5px 20px
     background: transparent
     color: #858686
+    cursor: pointer
     +transition(all .3s ease-out)
     &:hover
       background-color: $btn_color
@@ -442,16 +441,43 @@ a:focus
         &:before
           content: ''
       &-prev
-        left: 30px
+        left: 15px
       &-next
-        right: 30px      
+        right: 15px      
+  &__caption
+    background-color: $btn_color
+    text-align: center  
+    padding: 15px
+    position: absolute
+    left: 0
+    width: 100%
+  &__button
+    display: block
+    font: 400 12px/14px $os 
+    padding: 20px 10px 
+  &__modal
+    text-align: center  
+    position: relative
+  &__image
+    img
+      display: inline-block
+      max-height: 240px     
+.caption
+  &__name
+    color: #fff
+    font: 500 18px/20px $gp
+    padding: 0 10px
+    margin-bottom: 15px    
+.fancybox
+  &-inner
+    overflow: visible !important       
 +comment("scheme style")  
 .scheme    
   position: relative
   z-index: 9
   padding: 180px 0 50px
   margin-bottom: -100px
-  background: url(../img/schemebg.png) no-repeat
+  background: url(../img/schemebg.jpg) no-repeat
   +cover(50% 100%)
   .row
     position: relative
@@ -516,6 +542,7 @@ a:focus
     background-color: #fff
     +br(25px)
     border: 5px solid $btn_color  
+    z-index: 10
 +comment("create style")
 .create
   position: relative
@@ -620,7 +647,7 @@ a:focus
 .process
   position: relative
   z-index: 5 
-  margin-bottom: -100px
+  margin-bottom: -315px
   background: url(../img/processbg.png) no-repeat
   +cover(50% 100%)
   padding: 200px 0 100px
@@ -656,25 +683,17 @@ a:focus
     background-color: $btn_color
     +transition(all .3s ease-out)
 +comment("map style")     
-.map
-  position: relative
-  z-index: 4
-  padding: 200px 0 0
-  overflow: hidden
-  &__iframe
-    position: absolute
-    height: 100%
-    width: 100% 
-  &__container
-    position: relative  
+.map 
   &__box
     background-color: #fff
-    margin: 70px 0 120px
+    margin: 0
     padding: 25px 10px
   &__contact
     padding: 15px 10px
     background-color: #f6f9f9
     margin-bottom: 10px
+  &__iframe
+    height: 600px  
   &__heading
     font: 600 16px/18px $os
     color: #222
@@ -721,3 +740,48 @@ a:focus
   &__copy
     padding-top: 25px
     color: #fff
++comment("thanks page style")     
+.thanks
+  background: url(../img/headerbg320.png) no-repeat
+  +cover(50% 100%)
+  padding: 15px 0 200px
+  height: 100vh
+  &__navbar
+    padding-top: 12px
+  &__box
+    text-align: center  
+  &__btn
+    padding: 21px 45px  
+    color: #fff
+    &:hover,
+    &:focus,
+    &:visited
+      color: #fff
+    .fa
+      margin-right: 15px
+      color: #fff
+  &__heading    
+    position: relative
+    display: inline-block
+    margin-bottom: 25px !important
+    &:before
+      content: '\f00c'
+      color: $btn_color
+      font-family: $fa
+      font-size: 26px
+      line-height: 32px
+      position: absolute
+      top: 5px
+      left: -60px
+      border: 5px solid $btn_color
+      +br(50%)
+      height: 40px
+      width: 40px
+    &:after
+      content: ''
+      display: inline-block
+      width: 65%
+      border-bottom: 3px solid #fff
+  &__item
+    &:before
+      content: ''  
