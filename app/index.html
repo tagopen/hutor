@@ -922,9 +922,6 @@
         background-color: #e88d0c;
         text-align: center;
         padding: 15px;
-        position: absolute;
-        left: 0;
-        width: 100%;
       }
 
       .catalog__button {
@@ -939,7 +936,6 @@
 
       .catalog__image img {
         display: inline-block;
-        max-height: 240px;
       }
 
       .caption__name {
@@ -1056,19 +1052,11 @@
 
         .catalog__caption {
           padding: 12px 50px;
-          width: auto;
-          min-width: 450px;
-          left: 50%;
-          margin-left: -225px;
         }
 
         .catalog__button {
           font: 400 14px/16px "Open Sans", sans-serif;
           min-width: 300px;
-        }
-
-        .catalog__image img {
-          max-height: 360px;
         }
 
         .caption__name {
@@ -1119,9 +1107,6 @@
           padding: 165px 0 120px;
         }
 
-        .catalog__image img {
-          max-height: 500px;
-        }
       }
 
       @media only screen and (min-width: 1200px) {
@@ -1146,9 +1131,9 @@
     <!-- Font-Awesome CSS -->
     <script>loadCSS( "css/font-awesome.min.css?ver=1.0.0", false, "all" );</script>
     <!-- FANCYBOX CSS  -->
-     <script>loadCSS( "css/jquery.fancybox.min.css?ver=2.1.5", false, "all" );</script>
+     <script>loadCSS( "css/jquery.fancybox.css?ver=2.1.5", false, "all" );</script>
     <!-- Custom CSS  -->
-    <script>loadCSS( "css/style.min.css?ver=1.0.0", false, "all" );</script>
+    <script>loadCSS( "css/style.css?ver=1.0.0", false, "all" );</script>
     <!-- Load CSS End -->
 
     <!-- Load CSS Compiled without JS -->
@@ -1160,7 +1145,7 @@
       <!-- Font-Awesome CSS -->
       <link rel="stylesheet" href="css/font-awesome.min.css">
       <!-- Add fancyBox -->
-      <link rel="stylesheet" href="css/jquery.fancybox.min.css?v=2.1.5" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
       <!-- Custom CSS  -->
       <link rel="stylesheet" href="css/style.min.css">
     </noscript>
@@ -1414,8 +1399,6 @@
 
         <div class="row">
 
-        <div class="catalog__slider">
-
           <div class="col-sm-4">
             <div class="catalog__box">
               <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog1">
@@ -1426,22 +1409,6 @@
                 <div class="catalog__image">
                   <img src="img/catalog1.jpg" alt="" class="img-responsive">
                 </div>
-                <div class="catalog__caption">
-                  <div class="caption__name">ПРОЕКТ «ЛИЛЕЯ-МИНИ»</div>
-                  <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
-                    <div class="form-group">
-                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
-                    </div>
-                    <div class="text-center">
-                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="catalog__info">
-                <div class="catalog__name">Проект «Лилея-Мини»</div>
-                <div class="catalog__about">Площадь дома: 150.54 м2 </div>
-                <a class="fancyimage catalog__btn" href="#catalog1">Подробнее</a>
               </div>
             </div>
           </div>
@@ -1456,22 +1423,6 @@
                 <div class="catalog__image">
                   <img src="img/catalog2.jpg" alt="" class="img-responsive">
                 </div>
-                <div class="catalog__caption">
-                  <div class="caption__name">ПРОЕКТ «КУПАВА-МИНИ»</div>
-                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
-                    <div class="form-group">
-                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
-                    </div>
-                    <div class="text-center">
-                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="catalog__info">
-                <div class="catalog__name">Проект «Купава-мини»</div>
-                <div class="catalog__about">Площадь дома: 161.76 м2 </div>
-                <a class="fancyimage catalog__btn" href="#catalog2">Подробнее</a>
               </div>
             </div>
           </div>
@@ -1486,22 +1437,6 @@
                 <div class="catalog__image">
                   <img src="img/catalog3.jpg" alt="" class="img-responsive">
                 </div>
-                <div class="catalog__caption">
-                  <div class="caption__name">ПРОЕКТ «КАЛИНА»</div>
-                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
-                    <div class="form-group">
-                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
-                    </div>
-                    <div class="text-center">
-                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="catalog__info">
-                <div class="catalog__name">Проект «Калина»</div>
-                <div class="catalog__about">Площадь дома: 165.53 м2 </div>
-                <a class="fancyimage catalog__btn" href="#catalog3">Подробнее</a>
               </div>
             </div>
           </div>
@@ -1516,22 +1451,6 @@
                 <div class="catalog__image">
                   <img src="img/catalog4.jpg" alt="" class="img-responsive">
                 </div>
-                <div class="catalog__caption">
-                  <div class="caption__name">ПРОЕКТ «КУПАВА»</div>
-                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
-                    <div class="form-group">
-                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
-                    </div>
-                    <div class="text-center">
-                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="catalog__info">
-                <div class="catalog__name">Проект «Купава»</div>
-                <div class="catalog__about">Площадь дома: 206.86 м2 </div>
-                <a class="fancyimage catalog__btn" href="#catalog4">Подробнее</a>
               </div>
             </div>
           </div>
@@ -1546,29 +1465,13 @@
                 <div class="catalog__image">
                   <img src="img/catalog5.jpg" alt="" class="img-responsive">
                 </div>
-                <div class="catalog__caption">
-                  <div class="caption__name">ПРОЕКТ «ЛИЛЕЯ»</div>
-                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
-                    <div class="form-group">
-                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
-                    </div>
-                    <div class="text-center">
-                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="catalog__info">
-                <div class="catalog__name">Проект «Лилея»</div>
-                <div class="catalog__about">Площадь дома: 170.16 м2 </div>
-                <a class="fancyimage catalog__btn" href="#catalog5">Подробнее</a>
               </div>
             </div>
           </div>
 
 
 
-          <div class="col-sm-4 catalog__hidden">
+          <div class="col-sm-4">
             <div class="catalog__box">
               <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog6">
                 <img src="img/catalog6.jpg" alt="" class="img-responsive">
@@ -1578,27 +1481,11 @@
                 <div class="catalog__image">
                   <img src="img/catalog6.jpg" alt="" class="img-responsive">
                 </div>
-                <div class="catalog__caption">
-                  <div class="caption__name">ПРОЕКТ «ЯГОДКА-МИНИ»</div>
-                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
-                    <div class="form-group">
-                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
-                    </div>
-                    <div class="text-center">
-                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="catalog__info">
-                <div class="catalog__name">Проект «Ягодка-мини»</div>
-                <div class="catalog__about">Площадь дома: 198.41 м2 </div>
-                <a class="fancyimage catalog__btn" href="#catalog6">Подробнее</a>
               </div>
             </div>
           </div>
 
-          <div class="col-sm-4 catalog__hidden">
+          <div class="col-sm-4">
             <div class="catalog__box">
               <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog7">
                 <img src="img/catalog7.jpg" alt="" class="img-responsive">
@@ -1608,27 +1495,11 @@
                 <div class="catalog__image">
                   <img src="img/catalog7.jpg" alt="" class="img-responsive">
                 </div>
-                <div class="catalog__caption">
-                  <div class="caption__name">ПРОЕКТ «ЯГОДКА»</div>
-                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
-                    <div class="form-group">
-                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
-                    </div>
-                    <div class="text-center">
-                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="catalog__info">
-                <div class="catalog__name">Проект «Ягодка»</div>
-                <div class="catalog__about">Площадь дома: 210.72 м2 </div>
-                <a class="fancyimage catalog__btn" href="#catalog7">Подробнее</a>
               </div>
             </div>
           </div>
 
-         <div class="col-sm-4 catalog__hidden">
+         <div class="col-sm-4">
             <div class="catalog__box">
               <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog8">
                 <img src="img/catalog8.jpg" alt="" class="img-responsive">
@@ -1638,27 +1509,11 @@
                 <div class="catalog__image">
                   <img src="img/catalog8.jpg" alt="" class="img-responsive">
                 </div>
-                <div class="catalog__caption">
-                  <div class="caption__name">ПРОЕКТ «КОНВАЛИЯ»</div>
-                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
-                    <div class="form-group">
-                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
-                    </div>
-                    <div class="text-center">
-                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="catalog__info">
-                <div class="catalog__name">Проект «Конвалия»</div>
-                <div class="catalog__about">Площадь дома: 214.12 м2 </div>
-                <a class="fancyimage catalog__btn" href="#catalog8">Подробнее</a>
               </div>
             </div>
           </div>
 
-          <div class="col-sm-4 catalog__hidden">
+          <div class="col-sm-4">
             <div class="catalog__box">
               <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog9">
                 <img src="img/catalog9.jpg" alt="" class="img-responsive">
@@ -1668,27 +1523,11 @@
                 <div class="catalog__image">
                   <img src="img/catalog9.jpg" alt="" class="img-responsive">
                 </div>
-                <div class="catalog__caption">
-                  <div class="caption__name">ПРОЕКТ «МАЛЬВА»</div>
-                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
-                    <div class="form-group">
-                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
-                    </div>
-                    <div class="text-center">
-                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="catalog__info">
-                <div class="catalog__name">Проект «Мальва»</div>
-                <div class="catalog__about">Площадь дома: 229.27 м2 </div>
-                <a class="fancyimage catalog__btn" href="#catalog9">Подробнее</a>
               </div>
             </div>
           </div>
 
-          <div class="col-sm-4 catalog__hidden">
+          <div class="col-sm-4">
             <div class="catalog__box">
               <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog10">
                 <img src="img/catalog10.jpg" alt="" class="img-responsive">
@@ -1698,48 +1537,49 @@
                 <div class="catalog__image">
                   <img src="img/catalog10.jpg" alt="" class="img-responsive">
                 </div>
-                <div class="catalog__caption">
-                  <div class="caption__name">ПРОЕКТ «ТРОЯНДА»</div>
-                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
-                    <div class="form-group">
-                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
-                    </div>
-                    <div class="text-center">
-                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="catalog__info">
-                <div class="catalog__name">Проект «Троянда»</div>
-                <div class="catalog__about">Площадь дома: 236.68 м2 </div>
-                <a class="fancyimage catalog__btn" href="#catalog10">Подробнее</a>
               </div>
             </div>
           </div>
 
-          <div class="col-sm-4 catalog__hidden">
+          <div class="col-sm-4">
             <div class="catalog__box">
               <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog11">
                 <img src="img/catalog11.jpg" alt="" class="img-responsive">
                 <span class="catalog__link"><i class="ic ic-zoom"></i></span>
               </a>
               <div id="catalog11" class="catalog__modal" style="display: none;">
-                <div class="catalog__image">
-                  <img src="img/catalog11.jpg" alt="" class="img-responsive">
-                </div>
-                <div class="catalog__caption">
-                  <div class="caption__name">ПРОЕКТ «БАРВИНОК»</div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6">
+                    <div class="catalog__image catalog--height">
+                      <img src="img/catalog11.jpg" alt="" class="img-responsive">
+                      <div class="catalog-description">
+                        <div class="catalog-description__name">ПРОЕКТ «БАРВИНОК»</div>
+                        <div class="catalog-description__text">Общая площадь: <span class="catalog-description__text--span">144.75м2</span></div>
+                        <div class="catalog-description__text">Срок строительства: <span class="catalog-description__text--span">144.75м2</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6">
+                    <div class="catalog__caption catalog--height">
+                      <div class="catalog__caption--heading">Хотите узнать больше об этом коттедже? </div>
+                      <div class="catalog__caption--subheading">Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.</div>
                    <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
                     <div class="form-group">
-                      <input aria-invalid="false" class="form-control form__input modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
+                      <input aria-invalid="false" class="form-control catalog__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
+                    </div>
+                    <div class="form-group">
+                      <input aria-invalid="false" class="form-control catalog__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
                     </div>
                     <div class="text-center">
-                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Скачать каталог с описанием проектов</button>
+                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Узнать о коттедже</button>
                     </div>
                   </form>
                 </div>
+                  </div>
+                </div>
+                
               </div>
+
               <div class="catalog__info">
                 <div class="catalog__name">Проект «Барвинок»</div>
                 <div class="catalog__about">Площадь дома: 307.65 м2 </div>
@@ -1748,16 +1588,7 @@
             </div>
           </div>
 
-        </div>
-
-        <div class="col-sm-4 catalog__click">
-          <div class="catalog__box">
-            <a href="" class="catalog__img catalog__img--hover">
-              <img src="img/catalog1.jpg" alt="" class="img-responsive">
-              <span class="catalog__show">Показать все</span>
-            </a>
-          </div>
-        </div>
+        
 
         </div>
         <div class="row">
@@ -2169,7 +2000,7 @@
   {"src" : "js/slick.min.js", "async" : false},
   {"src" : "js/jquery.fancybox.min.js", "async" : false},
   {"src" : "js/jquery.fancybox.pack.min.js", "async" : false},
-  {"src" : "js/main.min.js", "async" : false}
+  {"src" : "js/main.js", "async" : false}
   ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
 </script>
 

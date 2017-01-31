@@ -41,7 +41,6 @@
 .fancybox-inner {
 	overflow: hidden;
 	height: auto !important;
-	max-width: 90vw !important;
 	background: none;
 }
 
@@ -104,7 +103,7 @@
 
 .fancybox-nav {
 	position: absolute;
-	top: 58%;
+	top: 316px;
 	width: 32px;
 	height: 32px;
 	cursor: pointer;
@@ -249,5 +248,15 @@
 	#fancybox-loading div {
 		background-image: url('../img/icons/fancybox_loading@2x.gif');
 		background-size: 24px 24px; /*The size of the normal image, half the size of the hi-res image*/
+	}
+}
+@media only screen and (max-width: 768px) {
+	.fancybox-inner{
+		max-width: 680px !important;
+	}
+}
+@media only screen and (min-width: 992px) {
+	.fancybox-inner{
+		max-width: 950px !important;
 	}
 }

@@ -53,27 +53,6 @@ $('.project__slider--small').slick({
   nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
 });
 
-// Slick-slider to certificates
-var $carousel = $('.catalog__slider');
-    if ( $(window).width()  >= 768) { 
-        if($carousel.hasClass('slick-initialized')) {
-            $carousel.unslick();
-        }
-    } else {
-        if(!$carousel.hasClass('slick-initialized')) {
-            $carousel.slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: true,
-                dots: false,
-                centerMode: false,
-                initialSlide: 0,
-                focusOnSelect: true,
-                prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
-                nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
-            });
-        }
-    }
 
 // Scheme info animation
   if( $( window ).width() >= 768 ) {
@@ -107,31 +86,14 @@ $(window).on('resize', function(){
   // For all screen
   //setEqualHeight($(".work-item"));
 
-  // Only 767px-
+  // Only 768+
   if( $( window ).width() >= 768 ) {
     setEqualHeight($('.create__name'));
     setEqualHeight($('.create__box'));
     setEqualHeight($('.process__box'));
     setEqualHeight($('.catalog__name'));
+    setEqualHeight($('.catalog--height'));
   }
-
-  // Catalog button
-  if( $( window ).width() >= 768 ) {
-    $(document).ready( function () {
-      $('.catalog__hidden').hide();
-      $(document).on("click", ".catalog__click", (function(e) {
-        e.preventDefault();
-        $('.catalog__hidden').show();
-        $('.catalog__click').hide();
-      }));
-    });
-  }
-
-  if( $( window ).width() < 768 ) {
-      $('.catalog__click').remove();
-  }
-
-
 
 }).trigger('resize');
 
