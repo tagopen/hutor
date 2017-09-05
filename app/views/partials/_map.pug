@@ -1,0 +1,39 @@
+section.map
+  iframe.map__iframe(src='https://www.google.com/maps/embed?pb=!1m22!1m8!1m3!1d20322.352976996088!2d30.33774916851264!3d50.454247467837604!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d50.4559675!2d30.3649727!4m5!1s0x472b486a5ab4084d%3A0xdbd9a59ebb422fda!2z0JHQtdGA0LXQt9C-0LLQutCwLCDQmtC40LXQstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCDQo9C60YDQsNC40L3QsA!3m2!1d50.428639!2d30.0032027!5e0!3m2!1sru!2sus!4v1477946442054', height='450', style='border:0', allowfullscreen='')
+  .container.map__container
+    .row
+      .col-sm-10.col-md-8.col-lg-6.pull-right
+        .clearfix.map__box
+          .col-sm-6
+            .map__heading Контакты
+            .map__contact.contact
+              .clearfix.contact__info
+                i.fa.fa-map-marker
+                .contact__text с. Березовка
+              .clearfix.contact__info
+                i.fa.fa-envelope(aria-hidden='true')
+                .contact__text l.hutir@gmail.com
+              .clearfix.contact__info
+                i.fa.fa-phone(aria-hidden='true')
+                .contact__text
+                  a.contact__link(href='tel:380675009955')
+                    | (067) 500 99 55
+                  a.contact__link(href='tel:380507297280')
+                    | (050) 729 72 80
+                  a.contact__link(href='tel:380444965918')
+                    | (044) 496 59 18
+            img.img-responsive(src='img/contactimg.jpg', alt='')
+          .col-sm-6
+            .map__heading Форма обратной связи
+            .map__subheading
+              | Вы можете оставить свои контактные данные в этой форме и наши менеджеры свяжутся с вами в ближайшее время
+            form.clearfix.contactForm(name='Карта_форма', method='post', action='mail/mail.php', onsubmit="yaCounter40478820.reachGoal ('mapform'); ga('send', 'event', 'form', 'submit', 'mapform');")
+              .form-group.map__group.col-xs-12
+                input.form-control.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
+              .form-group.map__group.col-xs-12
+                input.form-control.form__phone(aria-invalid='false', placeholder='Ваш номер телефона', required='', data-validation-required-message='Please enter your phone number.', name='phone', type='tel')
+              .form-group.map__group.col-xs-12
+                input.form-control.form__mail(aria-invalid='false', placeholder='Ваш E-mail', required='', data-validation-required-message='Please enter your phone number.', name='email', type='email')
+              .map__subheading--small
+                | В течении нескольких минут на указаный email прийдет подтверждение о заполненой форме
+              button.g-btn.map__btn(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Отправить заявку

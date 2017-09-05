@@ -1,0 +1,41 @@
+- var page = {}
+- var hostname = "http://hutir.kiev.ua/landing/" //- site domen name
+
+- 
+  var content = 
+    {
+      site: {
+        hostname: hostname, //- site domen name
+        author: "Tagopen",
+        meta: {
+          charset: "utf-8",
+          favicon: "favicon.png",
+          appleTouchIcon: "apple-touch-icon.png"
+        },
+      }, //- site
+      index: {
+        hostname: "index.html",
+        title: "Главная страница",
+        meta: {
+          description: "",
+          keywords: "",
+          openGraph: {
+            title: "Лелечий хутiр",
+            siteName: "Лелечий хутiр",
+            description: "Лелечий хутiр - коттеджный городок",
+            type: "website",
+            locale: "ru_RU",
+            image: "microformat.png",
+            imageType: "image/png",
+            url: hostname
+          },
+          twitter: {
+            card: "summary",
+            site: "@flickr",
+            title: "Лелечий хутiр",
+            description: "Лелечий хутiр - коттеджный городок",
+            image: hostname + "/img/logo/microformat.png"
+          }
+        }
+      }, //- index
+    }

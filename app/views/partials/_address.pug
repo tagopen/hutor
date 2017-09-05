@@ -1,0 +1,27 @@
+section.address
+  .container
+    .row
+      .col-xs-12.col-sm-7.address__col
+        .address__btn
+          a.address__img(data-toggle='modal', href='#address__modal')
+            img.img-responsive.address__img--static(src='img/addressimg.png', alt='')
+            img.img-responsive.address__img--hover(src='img/addressimghover.png', alt='')
+      .col-xs-12.col-sm-5
+        .address__box
+          .address__location.location
+            .location__info Лелечный хутор находится
+            .location__place
+              i.fa.fa-map-marker(aria-hidden='true')
+              | возле с.Березовка,
+          .address__location.location
+            .location__info
+              | на расстоянии 29-ти километров езды от станции метро "Житомирская" по скоростной трассе
+            .location__place
+              i.fa.fa-map-signs(aria-hidden='true')
+              | Киев - Житомир
+    .row
+      .text-center.col-xs-12.col-md-10.col-md-offset-1
+        .clearfix.address__border
+          i.col-lg-2.ic.ic-warranty
+          .col-lg-10.address__text
+            | Житомирская трасса безопасна, поскольку имеет три полосы движения в каждую сторону, хорошее качество дорожного покрытия, освещается фонарями, а встречное движение отделено отбойниками

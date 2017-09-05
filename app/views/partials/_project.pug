@@ -1,0 +1,43 @@
+section.project
+  .container
+    .row
+      .text-center.col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+        h2.g-title.project__title
+          | Продается коттедж
+          br
+          |  по проекту «Лилея»
+    .row
+      .col-xs-12.col-sm-6
+        .project__slider.slider
+          .slider__item
+            img.img-responsive(src='img/projectslider1.jpg', alt='')
+          .slider__item
+            img.img-responsive(src='img/projectslider2.jpg', alt='')
+          .slider__item
+            img.img-responsive(src='img/projectslider3.jpg', alt='')
+          .slider__item
+            img.img-responsive(src='img/projectslider4.jpg', alt='')
+        .col-xs-10.col-xs-offset-1.project__slider--small
+          .slider__item--small
+            img.img-responsive(src='img/projectslider1.jpg', alt='')
+          .slider__item--small
+            img.img-responsive(src='img/projectslider2.jpg', alt='')
+          .slider__item--small
+            img.img-responsive(src='img/projectslider3.jpg', alt='')
+          .slider__item--small
+            img.img-responsive(src='img/projectslider4.jpg', alt='')
+      .col-xs-12.col-sm-6
+        .project__heading
+          | Дом построен на участке площадью 0,078га, по проекту "Лилея", общей площадью 170м.кв.
+        .project__subheading
+          | К дому подключено электричество (3 фазы, 15 кВт), водопровод, канализация, интернет. Внешняя отделка завершена. Внутри отделка после строителей, что позволит Вам сделать дизайн
+          | по своим требованиями или выбрать из предложенных нами вариантов
+        .project__contact
+          div Оставьте свой эмейл и получите мгновенный доступ к файлу
+          span.project__contact--text с генпланом дома, техническими характеристиками и ценой!
+          i.hidden-xs.ic.ic-arrow
+        form.clearfix.contactForm(name='Регистрация', method='post', action='mail/mail.php', onsubmit="yaCounter40478820.reachGoal ('lileya'); ga('send', 'event', 'form', 'submit', 'lileya');")
+          .form-group.col-xs-12.col-lg-8.form__size
+            input.form-control.form__input.modal__input.form__mail(aria-invalid='false', placeholder='Введите ваш E-mail', required='', data-validation-required-message='Please enter your phone number.', name='email', type='email')
+          .text-center.col-xs-12.col-lg-8.form__size
+            button.g-btn.project__btn(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Получить подробности о коттедже

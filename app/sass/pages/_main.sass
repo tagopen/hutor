@@ -1,13 +1,6 @@
 +comment('general style')
-+font('GothamPro', 'GothamPro')
-+font('GothamProBold', 'GothamProBold')
-+font('GothamProLight', 'GothamProLight')
-+font('GothamProMedium', 'GothamProMedium')
-+font('GothamProNarrowMedium', 'GothamProNarrowMedium')
 +ic
-@each $ic in logo, warranty, arrow, arrow_fff, zoom, catalogic, scheme, create1, create2, create3, create4
-  .ic-#{$ic}
-    +sb(#{$ic})
+
 +comment("home page style")
 html
   overflow-x: hidden
@@ -26,32 +19,32 @@ a:focus
 .g
   &-btn
     color: #fff
-    font: 400 14px/16px $os
+    font: 400 14px/16px $font-open-sans
     padding: 21px 15px    
     background-color: $btn_color
-    +br(50px)
+    border-radius: 50px
     border: 0  
-    +bs(0 -1px 4px 3px #e8560c inset)
+    box-shadow: 0 -1px 4px 3px #e8560c inset
     width: 100%
     &:hover
       background-color: $btn_color__hover
-      +bs(0 -1px 4px 3px #e88d0c inset)
+      box-shadow: 0 -1px 4px 3px #e88d0c inset
   &-title
     display: inline-block
-    font: 400 17px/20px $gpb
+    font: 700 17px/20px $font-gotham
     color: #222
     margin: 0
   &-subtitle
     display: inline-block
-    font: 400 14px/18px $gp
+    font: 400 14px/18px $font-gotham
     color: #222
     margin: 0  
 .form
   &__input
     padding: 15px 40px
     height: auto    
-    +br(0)
-    font: 400 12px/14px $os
+    border-radius: 0
+    font: 400 12px/14px $font-open-sans
     color: #000
     &:focus
       border-color: $btn_color
@@ -69,28 +62,28 @@ a:focus
       .modal__close
         top: -25px
   &__content
-    +br(0)
+    border-radius: 0
   &__head
     padding: 35px 30px
     background: url(../img/modalbg.jpg) no-repeat
     +cover
   &__heading
-    font: 500 18px/20px $gpb
+    font: 700 18px/20px $font-gotham
     color: #fff
     margin-bottom: 20px
   &__subheading
-    font: 400 14px/18px $os
+    font: 400 14px/18px $font-open-sans
     color: #fff       
   &__form
     padding: 30px 50px 25px  
     background-color: $btn_color
   &__input
-    +br(0)
+    border-radius: 0
     height: auto
     padding: 10px 25px  
   &__text  
     padding: 0 25px
-    font: 400 10px/12px $os
+    font: 400 10px/12px $font-open-sans
     color: #222
     margin-bottom: 15px
   &__close
@@ -125,12 +118,12 @@ a:focus
     margin: 0
   &__collapse
     border: 0 
-    +bs(none) 
+    box-shadow: none
     width: 50%
     background-color: rgba(0,0,0,0.9)
 .nav
   &__point
-    font: 300 14px/16px $os 
+    font: 300 14px/16px $font-open-sans 
     color: #fff 
     padding: 10px 0 0 10px
     a
@@ -147,7 +140,7 @@ a:focus
   &__link
     display: block 
     color: #fff
-    font: 400 14px/16px $os 
+    font: 400 14px/16px $font-open-sans 
     .fa
       cursor: pointer
     &:hover,
@@ -171,7 +164,7 @@ a:focus
     &--hidden
       display: none !important 
   &__btn
-    font: 400 14px/18px $os
+    font: 400 14px/18px $font-open-sans
     color: $btn_color
     background: none
     border: 0
@@ -181,12 +174,12 @@ a:focus
 .content
   &__heading
     color: #fff
-    font: 400 18px/24px $gpb  
+    font: 700 18px/24px $font-gotham
     text-transform: uppercase 
     margin: 0 0 5px
     &--text
       display: inline-block 
-      font: 400 16px/18px $gpb
+      font: 700 16px/18px $font-gotham
       color: #fff
       text-transform: none
       margin-bottom: 20px
@@ -209,7 +202,7 @@ a:focus
 .list
   &__item
     list-style-type: none
-    font: 400 16px/20px $os  
+    font: 400 16px/20px $font-open-sans  
     margin-bottom: 5px
     &:before 
       content: '\f00c'
@@ -246,11 +239,11 @@ a:focus
 .point
   &__name
     display: inline-block    
-    font: 400 16px/18px $os
+    font: 400 16px/18px $font-open-sans
     color: #222  
     margin-bottom: 10px
   &__info
-    font: 400 14px/16px $os 
+    font: 400 14px/16px $font-open-sans 
     color: #222
 +comment("address style") 
 .address
@@ -277,21 +270,21 @@ a:focus
     margin-top: 30px
     padding: 10px 0
     border: 2px dashed $btn_color__hover
-    +br(10px)
+    border-radius: 10px
   &__text
     display: inline-block
-    font: 400 14px/18px $os
+    font: 400 14px/18px $font-open-sans
     padding-top: 20px
     color: #222  
   &__location
     margin-bottom: 10px  
 .location
   &__info
-    font: 400 14px/16px $os
+    font: 400 14px/16px $font-open-sans
     color: #222
     margin-bottom: 10px
   &__place  
-    font: 600 16px/18px $os  
+    font: 600 16px/18px $font-open-sans  
     color: #222
     .fa
       margin-right: 10px  
@@ -318,16 +311,16 @@ a:focus
   &__title
     margin-bottom: 50px
   &__heading
-    font: 400 14px/18px $os
+    font: 400 14px/18px $font-open-sans
     color: #222
     margin: 20px 0 20px
   &__subheading
-    font: 400 12px/14px $os
+    font: 400 12px/14px $font-open-sans
     color: #222
     margin-bottom: 30px   
   &__contact  
     position: relative
-    font: 400 14px/18px $os
+    font: 400 14px/18px $font-open-sans
     color: #222
     text-align: center
     margin-bottom: 20px
@@ -385,10 +378,10 @@ a:focus
       .catalog__link
         opacity: 1
         visibility: visible
-        +transition(all .3s ease-out)
+        transition: all .3s ease-out
         &--small
           color: $btn_color__hover
-          +transition(all .3s ease-out)
+          transition: all .3s ease-out
   &__show
     position: absolute
     top: 0
@@ -398,7 +391,7 @@ a:focus
     background-color: rgba(232,141,12,0.7)  
     text-align: center
     padding: 60px 0 0
-    font: 400 18px/20px $os 
+    font: 400 18px/20px $font-open-sans 
   &__link
     position: absolute
     left: 0
@@ -408,41 +401,41 @@ a:focus
     background-color: rgba(0,0,0,0.5)
     opacity: 0
     visibility: hidden
-    +transition(all .3s ease-out)
+    transition: all .3s ease-out
     text-align: center
     color: #fff
-    font: 500 16px/20px $gp
+    font: 400 16px/20px $font-gotham
     line-height: 110px
     &--small
       position: absolute
       left: 15px
       bottom: 15px
       color: #fff
-      font: 500 18px/20px $gp
+      font: 400 18px/20px $font-gotham
   &__info
     text-align: left
   &__name
-    font: 400 20px/22px $os
+    font: 400 20px/22px $font-open-sans
     text-transform: uppercase
     margin-bottom: 10px
     color: #000
   &__about
-    font: 400 18px/20px $os
+    font: 400 18px/20px $font-open-sans
     color: #858686 
     margin-bottom: 30px
   &__btn
     border: 1px solid #858686
-    +br(25px)
+    border-radius: 25px
     padding: 5px 20px
     background: transparent
     color: #858686
     cursor: pointer
-    +transition(all .3s ease-out)
+    transition: all .3s ease-out
     &:hover
       background-color: $btn_color
       border-color: $btn_color
       color: #fff
-      +transition(all .3s ease-out)
+      transition: all .3s ease-out
   &__slider
     .slick
       &-arrow
@@ -464,15 +457,15 @@ a:focus
     padding: 45px 10px
     &--heading
       color: #fff
-      font: 500 24px/36px $gpb
+      font: 700 24px/36px $font-gotham
       margin-bottom: 5px
     &--subheading
       color: #fff
-      font: 500 12px/18px $gp
+      font: 400 12px/18px $font-gotham
       margin-bottom: 25px
   &__button
     display: block
-    font: 400 12px/14px $os 
+    font: 400 12px/14px $font-open-sans 
     padding: 20px 10px 
     color: #fff
     background-color: #e8560c
@@ -490,24 +483,24 @@ a:focus
     color: #222
     min-height: 132px
     &__name
-      font: 500 18px/20px $gp
+      font: 400 18px/20px $font-gotham
       margin-bottom: 10px
     &__text  
-      font: 500 12px/14px $gp
+      font: 400 12px/14px $font-gotham
       margin-bottom: 10px
       &--span
         font-weight: 400
   &__input
     color: #a3a3a3 
-    font: 500 12px/16px $gp
-    +br(0)    
+    font: 400 12px/16px $font-gotham
+    border-radius: 0 
     text-align: center
     height: auto 
     padding: 10px
 .caption
   &__name
     color: #fff
-    font: 500 18px/20px $gp
+    font: 400 18px/20px $font-gotham
     padding: 0 10px
     margin-bottom: 15px    
 .fancybox
@@ -578,14 +571,14 @@ a:focus
     background-color: #fceeb3 
   &__text   
     display: inline-block
-    font: 400 18px/22px $os
+    font: 400 18px/22px $font-open-sans
     color: #222
   &__border
     margin-top: 50px
     padding: 15px 20px
     background-color: rgba(255,255,255,0.85) 
     border: 2px dashed $btn_color__hover
-    +br(10px)
+    border-radius: 10px
   &__box
     padding: 30px 25px 0
     margin-bottom: 20px
@@ -597,7 +590,7 @@ a:focus
       .scheme__info
         visibility: visible
         opacity: 1
-        +transition(all .5s ease-out)
+        transition: all .5s ease-out
       .scheme__icon
         display: none
         &--hover
@@ -618,7 +611,7 @@ a:focus
     left: -20px
     top: -20px  
     background-color: #fff
-    +br(25px)
+    border-radius: 25px
     border: 5px solid $btn_color
     height: 50px
     width: 50px
@@ -629,10 +622,10 @@ a:focus
       display: none
   &__info
     padding: 15px 25px
-    font: 400 14px/22px $os
+    font: 400 14px/22px $font-open-sans
     color: #222
     background-color: #fff
-    +br(25px)
+    border-radius: 25px
     border: 5px solid $btn_color  
     z-index: 10
 +comment("create style")
@@ -666,10 +659,10 @@ a:focus
       .ic
         float: right
   &__name
-    font: 400 16px/50px $os  
+    font: 400 16px/50px $font-open-sans  
     margin-bottom: 10px
   &__info
-    font: 400 14px/18px $os  
+    font: 400 14px/18px $font-open-sans  
   &__caret
     content: ''
     position: absolute
@@ -696,11 +689,11 @@ a:focus
   &__box
     text-align: center  
   &__info
-    font: 400 14px/16px $os
+    font: 400 14px/16px $font-open-sans
     color: #222
     margin-bottom: 10px
   &__place
-    font: 600 16px/18px $os  
+    font: 600 16px/18px $font-open-sans  
     color: #222
     .fa
       margin-right: 10px  
@@ -731,7 +724,7 @@ a:focus
       color: $btn_color__hover
       float: left
   &__name
-    font: 400 14px/18px $os
+    font: 400 14px/18px $font-open-sans
     color: #222    
   &__btn
     width: auto  
@@ -744,12 +737,12 @@ a:focus
   +cover(50% 100%)
   padding: 200px 0 100px
   &__col
-    +bs(0 0 0 2px #fff inset)
+    box-shadow: 0 0 0 2px #fff inset
     &:hover
-      +bs(0 0 0 5px $btn_color inset)
+      box-shadow: 0 0 0 5px $btn_color inset
       .process__line
         width: 60%
-        +transition(all .3s ease-out)
+        transition: all .3s ease-out
     &--1  
       background: url(../img/process1.jpg) no-repeat
       +cover
@@ -765,7 +758,7 @@ a:focus
   &__box
     padding: 45px 5px
     color: #fff
-    font: 400 16px/18px $os
+    font: 400 16px/18px $font-open-sans
     text-align: center
   &__line
     display: block
@@ -773,7 +766,7 @@ a:focus
     height: 5px
     width: 0
     background-color: $btn_color
-    +transition(all .3s ease-out)
+    transition: all .3s ease-out
 +comment("map style")     
 .map 
   position: relative
@@ -789,15 +782,15 @@ a:focus
   &__iframe
     height: 320px  
   &__heading
-    font: 600 16px/18px $os
+    font: 600 16px/18px $font-open-sans
     color: #222
     margin-bottom: 25px
   &__subheading
-    font: 400 14px/16px $os
+    font: 400 14px/16px $font-open-sans
     color: #222
     margin-bottom: 20px
     &--small
-      font: 400 10px/12px $os
+      font: 400 10px/12px $font-open-sans
       color: #222 
       margin-bottom: 15px 
   &__btn
@@ -868,7 +861,7 @@ a:focus
       top: 5px
       left: -60px
       border: 5px solid $btn_color
-      +br(50%)
+      border-radius: 50%
       height: 40px
       width: 40px
     &:after

@@ -2,12 +2,12 @@
   +comment('general style')
   .g
     &-title
-      font: 400 22px/26px $gpb
+      font: 700 22px/26px $font-gotham
     &-subtitle
-      font: 400 18px/20px $gp
+      font: 400 18px/20px $font-gotham
       color: #222 
     &-btn
-      font: 400 17px/20px $os  
+      font: 400 17px/20px $font-open-sans  
   .modal
     &__size
       width: 400px
@@ -19,12 +19,12 @@
       top: -25px
       right: -25px   
     &__heading
-      font: 500 24px/28px $gpb
+      font: 700 24px/28px $font-gotham
       margin-bottom: 30px    
   .form
     &__input
       padding: 20px 60px
-      font: 400 18px/20px $os 
+      font: 400 18px/20px $font-open-sans 
     &__size
       padding: 0
       &--tablet
@@ -42,21 +42,21 @@
       margin-left: 15px  
   .phone
     &__link
-      font: 400 18px/20px $os 
+      font: 400 18px/20px $font-open-sans 
       &--small
         font-size: 14px    
   .content
     padding-top: 50px
     &__heading
-      font: 400 24px/30px $gpb  
+      font: 700 24px/30px $font-gotham
       margin: 0 0 10px
       &--text
-        font: 400 20px/22px $gpb
+        font: 700 20px/22px $font-gotham
     &__btn
       padding: 15px         
   .list
     &__item
-      font: 400 20px/22px $os  
+      font: 400 20px/22px $font-open-sans  
       margin-bottom: 15px   
   +comment("about style")    
   .about
@@ -67,9 +67,9 @@
       margin-bottom: 20px
   .point
     &__name    
-      font: 400 18px/22px $os  
+      font: 400 18px/22px $font-open-sans  
     &__info
-      font: 400 16px/18px $os   
+      font: 400 16px/18px $font-open-sans   
   +comment('address style')    
   .address
     &__col
@@ -79,13 +79,13 @@
     &__border
       padding: 15px 35px  
     &__text
-      font: 400 18px/22px $os    
+      font: 400 18px/22px $font-open-sans    
   .location
     &__info
-      font: 400 16px/18px $os
+      font: 400 16px/18px $font-open-sans
       margin-bottom: 10px
     &__place  
-      font: 600 18px/20px $os 
+      font: 600 18px/20px $font-open-sans 
   +comment("register style") 
   .register 
     padding: 200px 0 140px    
@@ -97,13 +97,13 @@
       margin-bottom: 80px    
     &__heading
       margin: 10px 0 25px 
-      font: 400 18px/20px $os
+      font: 400 18px/20px $font-open-sans
     &__subheading
-      font: 400 16px/18px $os
+      font: 400 16px/18px $font-open-sans
       color: #222
       margin-bottom: 30px    
     &__contact  
-      font: 400 16px/20px $os
+      font: 400 16px/20px $font-open-sans
       margin-bottom: 40px   
       text-align: left    
       margin-bottom: 40px
@@ -120,7 +120,7 @@
     &--height
       min-height: 500px  
     &__button
-      font: 400 14px/16px $os 
+      font: 400 14px/16px $font-open-sans 
     &__image
       margin-right: -15px
     &__show
@@ -133,7 +133,7 @@
         margin-bottom: 20px     
   .caption
     &__name
-      font: 500 18px/20px $gp
+      font: 400 18px/20px $font-gotham
       margin-bottom: 15px   
   .fancybox
     &-close
@@ -176,14 +176,14 @@
       position: absolute
       width: 400px
       padding: 15px 25px
-      font: 400 14px/22px $os
+      font: 400 14px/22px $font-open-sans
       color: #222
       background-color: #fff
-      +br(25px)
+      border-radius: 25px
       border: 5px solid $btn_color
       visibility: hidden
       opacity: 0
-      +transition(all .5s ease-out)
+      transition: all .5s ease-out
       &--left
         top: 0
         left: 0
@@ -196,11 +196,11 @@
     &__box
       padding: 25px 15px
     &__name
-      font: 400 20px/24px $os  
+      font: 400 20px/24px $font-open-sans  
       margin-bottom: 10px
       line-height: 48px
     &__info
-      font: 400 18px/22px $os 
+      font: 400 18px/22px $font-open-sans 
     &__caret
       top: 50%
       margin: -15px 0 0 0
@@ -218,9 +218,9 @@
     &__col
       padding: 120px 0 0 0
     &__info
-      font: 400 18px/20px $os
+      font: 400 18px/20px $font-open-sans
     &__place
-      font: 600 20px/24px $os  
+      font: 600 20px/24px $font-open-sans  
   +comment("advice style")  
   .advice 
     padding: 190px 0 160px
@@ -229,13 +229,13 @@
     &__subtitle
       margin-bottom: 90px  
     &__name
-      font: 400 16px/20px $os   
+      font: 400 16px/20px $font-open-sans   
   +comment("process style")   
   .process  
     margin-bottom: -100px
     &__box
       padding: 70px 50px
-      font: 400 20px/24px $os    
+      font: 400 20px/24px $font-open-sans    
   +comment("map style")     
   .map
     position: relative
@@ -260,9 +260,9 @@
   +comment('general style')
   .g
     &-title
-      font: 400 36px/40px $gpb
+      font: 700 36px/40px $font-gotham
     &-subtitle
-      font: 400 22px/24px $gp
+      font: 400 22px/24px $font-gotham
   +comment("header page style")  
   .nav
     &__point
@@ -273,7 +273,7 @@
             content: '' 
       a
         &:hover
-          +bs(0 -1px 0 0 #fff inset)
+          box-shadow: 0 -1px 0 0 #fff inset
         &:after
           content: '\f0c8'
           display: inline-block
@@ -289,9 +289,9 @@
   .content
     padding-top: 75px
     &__heading  
-      font: 400 40px/50px $gpb   
+      font: 700 40px/50px $font-gotham
       &--text
-        font: 400 30px/32px $gpb 
+        font: 700 30px/32px $font-gotham
         margin-bottom: 35px
   +comment("about style")  
   .about
@@ -300,9 +300,9 @@
       margin-bottom: 40px  
   .point
     &__name    
-      font: 400 22px/24px $os  
+      font: 400 22px/24px $font-open-sans  
     &__info
-      font: 400 18px/24px $os  
+      font: 400 18px/24px $font-open-sans  
   +comment("address style")   
   .address
     &__box
@@ -311,23 +311,23 @@
       margin-bottom: 40px   
   .location
     &__info
-      font: 400 20px/22px $os
+      font: 400 20px/22px $font-open-sans
       margin-bottom: 10px
     &__place  
-      font: 600 24px/26px $os  
+      font: 600 24px/26px $font-open-sans  
   +comment("project style")  
   .project
     &__title
       margin-bottom: 80px    
     &__heading
       margin: 10px 0 45px 
-      font: 400 24px/30px $os
+      font: 400 24px/30px $font-open-sans
     &__subheading
-      font: 400 18px/24px $os
+      font: 400 18px/24px $font-open-sans
       color: #222
       margin-bottom: 55px    
     &__contact  
-      font: 400 24px/32px $os
+      font: 400 24px/32px $font-open-sans
       margin-bottom: 40px   
       text-align: left    
       margin-bottom: 40px  
@@ -336,9 +336,9 @@
     &-description
       padding: 35px 60px 20px
       &__name
-        font: 500 24px/36px $gpb 
+        font: 700 24px/36px $font-gotham
       &__text  
-        font: 500 14px/18px $gpb 
+        font: 700 14px/18px $font-gotham
         &--span
           font-weight: 400
     &--height
@@ -346,9 +346,9 @@
     &__caption
       padding: 35px
       &--heading  
-        font: 500 30px/45px $gpb
+        font: 700 30px/45px $font-gotham
       &--subheading    
-        font: 500 16px/20px $gp   
+        font: 400 16px/20px $font-gotham
   .fancybox
     &-next,
     &-prev
@@ -399,9 +399,9 @@
     &__col
       padding: 220px 0 0 85px
     &__info
-      font: 400 20px/22px $os
+      font: 400 20px/22px $font-open-sans
     &__place
-      font: 600 24px/26px $os   
+      font: 600 24px/26px $font-open-sans   
   +comment("advice style")  
   .advice 
     &__list
@@ -410,7 +410,7 @@
   .process  
     &__box
       padding: 80px 65px
-      font: 400 24px/28px $os
+      font: 400 24px/28px $font-open-sans
 +r(1200)  
   +comment('general style')
   +comment("header page style")
