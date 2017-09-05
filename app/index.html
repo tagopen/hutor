@@ -1056,7 +1056,6 @@
 
         .catalog__button {
           font: 400 14px/16px "Open Sans", sans-serif;
-          min-width: 300px;
         }
 
         .caption__name {
@@ -1131,9 +1130,9 @@
     <!-- Font-Awesome CSS -->
     <script>loadCSS( "css/font-awesome.min.css?ver=1.0.0", false, "all" );</script>
     <!-- FANCYBOX CSS  -->
-     <script>loadCSS( "css/jquery.fancybox.css?ver=2.1.5", false, "all" );</script>
+     <script>loadCSS( "css/jquery.fancybox.min.css?ver=2.1.5", false, "all" );</script>
     <!-- Custom CSS  -->
-    <script>loadCSS( "css/style.css?ver=1.0.0", false, "all" );</script>
+    <script>loadCSS( "css/style.min.css?ver=1.0.0", false, "all" );</script>
     <!-- Load CSS End -->
 
     <!-- Load CSS Compiled without JS -->
@@ -1293,7 +1292,7 @@
               <div class="location__place"><i class="fa fa-map-marker" aria-hidden="true"></i>возле с.Березовка,</div>
            </div>
            <div class="address__location location">
-              <div class="location__info">на расстоянии 35-ти километров езды от станции метро "Житомирская" по скоростной трассе</div>
+              <div class="location__info">на расстоянии 29-ти километров езды от станции метро "Житомирская" по скоростной трассе</div>
               <div class="location__place"><i class="fa fa-map-signs" aria-hidden="true"></i>Киев - Житомир</div>
            </div>
            </div>
@@ -1319,7 +1318,7 @@
           <div class="col-xs-12 col-lg-8 col-lg-offset-2">
            <form name="Регистрация" class="clearfix contactForm" method="post" action="mail/mail.php" onsubmit="yaCounter40478820.reachGoal ('prosmotr'); ga('send', 'event', 'form', 'submit', 'prosmotr');">
             <div class="form-group col-xs-12 col-sm-6 form__size--tablet">
-              <input class="form-control form__input" placeholder="Введите ваш телефон" required="" data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+              <input class="form-control form__input" placeholder="Введите ваш телефон" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
             </div>
             <div class="text-center col-xs-12 col-sm-6 form__size--tablet">
               <button type="submit" class="g-btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Записаться на просмотр коттеджей</button>
@@ -1396,166 +1395,431 @@
             <h3 class="g-subtitle catalog__subtitle">с возможностью строительства по договору подряда</h3>
           </div>
         </div>
-
+        <!--     ROW   -->
         <div class="row">
-
-          <div class="col-sm-4">
-            <div class="catalog__box">
-              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog1">
-                <img src="img/catalog1.jpg" alt="" class="img-responsive">
-                <span class="catalog__link"><i class="ic ic-zoom"></i></span>
-              </a>
-              <div id="catalog1" class="catalog__modal" style="display: none;">
-                <div class="catalog__image">
-                  <img src="img/catalog1.jpg" alt="" class="img-responsive">
+          <div class="col-xs-12 col-sm-9 col-md-8">
+            <div class="row">
+              <div class="col-xs-12 col-sm-8 col-md-9">
+                <div class="gallery__item gallery__item--1">
+                  <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog1">
+                    <span class="catalog__link">Подробнее</span>
+                    <span class="catalog__link--small">150.54 м<sup>2</sup></span>
+                  </a>
+                  <div id="catalog1" class="catalog__modal" style="display: none;">
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-6">
+                        <div class="catalog__image catalog--height">
+                          <img src="img/catalog1.jpg" alt="" class="img-responsive">
+                          <div class="catalog-description">
+                            <div class="catalog-description__name">Проект «Лилея-Мини»</div>
+                            <div class="catalog-description__text">Общая площадь: <span class="catalog-description__text--span">150.54 м<sup>2</sup></span></div>
+                            <div class="catalog-description__text">Срок строительства: <span class="catalog-description__text--span">5-7 месяцев</span></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-6">
+                        <div class="catalog__caption catalog--height">
+                          <div class="catalog__caption--heading">Хотите узнать больше об этом коттедже? </div>
+                          <div class="catalog__caption--subheading">Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.</div>
+                          <form name="Каталог" class="row contactForm" method="post" action="mail/mail.php">
+                            <div class="col-xs-9">
+                              <div class="form-group">
+                                <input aria-invalid="false" class="form-control catalog__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+                              </div>
+                              <div class="form-group">
+                              <input aria-invalid="false" class="form-control catalog__input form__phone" placeholder="Ваш телефон" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                              </div>
+                              <div class="text-center">
+                                <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Узнать о коттедже</button>
+                              </div>
+                            </div>
+                            <div class="col-xs-3">
+                              <i class="ic ic-arrow_fff"></i>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3">
+                <div class="gallery__item gallery__item--2">
+                  <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog2">
+                    <span class="catalog__link">Подробнее</span>
+                    <span class="catalog__link--small">161.76 м<sup>2</sup></span>
+                  </a>
+                  <div id="catalog2" class="catalog__modal" style="display: none;">
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-6">
+                        <div class="catalog__image catalog--height">
+                          <img src="img/catalog2.jpg" alt="" class="img-responsive">
+                          <div class="catalog-description">
+                            <div class="catalog-description__name">Проект «Купава-мини»</div>
+                            <div class="catalog-description__text">Общая площадь: <span class="catalog-description__text--span">161.76 м<sup>2</sup></span></div>
+                            <div class="catalog-description__text">Срок строительства: <span class="catalog-description__text--span">5-7 месяцев</span></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-6">
+                        <div class="catalog__caption catalog--height">
+                          <div class="catalog__caption--heading">Хотите узнать больше об этом коттедже? </div>
+                          <div class="catalog__caption--subheading">Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.</div>
+                          <form name="Каталог" class="row contactForm" method="post" action="mail/mail.php">
+                            <div class="col-xs-9">
+                              <div class="form-group">
+                                <input aria-invalid="false" class="form-control catalog__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+                              </div>
+                              <div class="form-group">
+                              <input aria-invalid="false" class="form-control catalog__input form__phone" placeholder="Ваш телефон" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                              </div>
+                              <div class="text-center">
+                                <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Узнать о коттедже</button>
+                              </div>
+                            </div>
+                            <div class="col-xs-3">
+                              <i class="ic ic-arrow_fff"></i>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3">
+                <div class="gallery__item gallery__item--3">
+                    <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog3">
+                      <span class="catalog__link">Подробнее</span>
+                      <span class="catalog__link--small">165.53 м<sup>2</sup></span>
+                    </a>
+                    <div id="catalog3" class="catalog__modal" style="display: none;">
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="catalog__image catalog--height">
+                            <img src="img/catalog3.jpg" alt="" class="img-responsive">
+                            <div class="catalog-description">
+                              <div class="catalog-description__name">Проект «Калина»</div>
+                              <div class="catalog-description__text">Общая площадь: <span class="catalog-description__text--span">165.53 м<sup>2</sup></span></div>
+                              <div class="catalog-description__text">Срок строительства: <span class="catalog-description__text--span">5-7 месяцев</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="catalog__caption catalog--height">
+                            <div class="catalog__caption--heading">Хотите узнать больше об этом коттедже? </div>
+                            <div class="catalog__caption--subheading">Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.</div>
+                            <form name="Каталог" class="row contactForm" method="post" action="mail/mail.php">
+                              <div class="col-xs-9">
+                              <div class="form-group">
+                                <input aria-invalid="false" class="form-control catalog__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+                              </div>
+                              <div class="form-group">
+                              <input aria-invalid="false" class="form-control catalog__input form__phone" placeholder="Ваш телефон" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                              </div>
+                              <div class="text-center">
+                                <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Узнать о коттедже</button>
+                              </div>
+                            </div>
+                              <div class="col-xs-3">
+                                <i class="ic ic-arrow_fff"></i>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="col-sm-4">
-            <div class="catalog__box">
-             <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog2">
-                <img src="img/catalog2.jpg" alt="" class="img-responsive">
-                <span class="catalog__link"><i class="ic ic-zoom"></i></span>
-              </a>
-               <div id="catalog2" class="catalog__modal" style="display: none;">
-                <div class="catalog__image">
-                  <img src="img/catalog2.jpg" alt="" class="img-responsive">
+          <div class="col-xs-12 col-sm-3 col-md-4 col-right">
+            <div class="row">
+              <div class="col-xs-6 col-sm-12 col-md-12">
+                <div class="gallery__item gallery__item--4">
+                    <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog4">
+                      <span class="catalog__link">Подробнее</span>
+                      <span class="catalog__link--small">206.86 м<sup>2</sup></span>
+                    </a>
+                    <div id="catalog4" class="catalog__modal" style="display: none;">
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="catalog__image catalog--height">
+                            <img src="img/catalog4.jpg" alt="" class="img-responsive">
+                            <div class="catalog-description">
+                              <div class="catalog-description__name">Проект «Купава»</div>
+                              <div class="catalog-description__text">Общая площадь: <span class="catalog-description__text--span">206.86 м<sup>2</sup></span></div>
+                              <div class="catalog-description__text">Срок строительства: <span class="catalog-description__text--span">5-7 месяцев</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="catalog__caption catalog--height">
+                            <div class="catalog__caption--heading">Хотите узнать больше об этом коттедже? </div>
+                            <div class="catalog__caption--subheading">Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.</div>
+                            <form name="Каталог" class="row contactForm" method="post" action="mail/mail.php">
+                              <div class="col-xs-9">
+                              <div class="form-group">
+                                <input aria-invalid="false" class="form-control catalog__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+                              </div>
+                              <div class="form-group">
+                              <input aria-invalid="false" class="form-control catalog__input form__phone" placeholder="Ваш телефон" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                              </div>
+                              <div class="text-center">
+                                <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Узнать о коттедже</button>
+                              </div>
+                            </div>
+                              <div class="col-xs-3">
+                                <i class="ic ic-arrow_fff"></i>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-12 col-md-12">
+                <div class="gallery__item gallery__item--5">
+                    <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog5">
+                      <span class="catalog__link">Подробнее</span>
+                      <span class="catalog__link--small">170.16 м<sup>2</sup></span>
+                    </a>
+                    <div id="catalog5" class="catalog__modal" style="display: none;">
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="catalog__image catalog--height">
+                            <img src="img/catalog5.jpg" alt="" class="img-responsive">
+                            <div class="catalog-description">
+                              <div class="catalog-description__name">Проект «Лилея»</div>
+                              <div class="catalog-description__text">Общая площадь: <span class="catalog-description__text--span">170.16 м<sup>2</sup></span></div>
+                              <div class="catalog-description__text">Срок строительства: <span class="catalog-description__text--span">5-7 месяцев</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="catalog__caption catalog--height">
+                            <div class="catalog__caption--heading">Хотите узнать больше об этом коттедже? </div>
+                            <div class="catalog__caption--subheading">Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.</div>
+                            <form name="Каталог" class="row contactForm" method="post" action="mail/mail.php">
+                              <div class="col-xs-9">
+                              <div class="form-group">
+                                <input aria-invalid="false" class="form-control catalog__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+                              </div>
+                              <div class="form-group">
+                              <input aria-invalid="false" class="form-control catalog__input form__phone" placeholder="Ваш телефон" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                              </div>
+                              <div class="text-center">
+                                <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Узнать о коттедже</button>
+                              </div>
+                            </div>
+                              <div class="col-xs-3">
+                                <i class="ic ic-arrow_fff"></i>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="col-sm-4">
-            <div class="catalog__box">
-              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog3">
-                <img src="img/catalog3.jpg" alt="" class="img-responsive">
-                <span class="catalog__link"><i class="ic ic-zoom"></i></span>
-              </a>
-               <div id="catalog3" class="catalog__modal" style="display: none;">
-                <div class="catalog__image">
-                  <img src="img/catalog3.jpg" alt="" class="img-responsive">
+          <div class="col-xs-6 col-sm-6 col-md-5">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="gallery__item gallery__item--6">
+                    <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog6">
+                      <span class="catalog__link">Подробнее</span>
+                      <span class="catalog__link--small">198.41 м<sup>2</sup></span>
+                    </a>
+                    <div id="catalog6" class="catalog__modal" style="display: none;">
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="catalog__image catalog--height">
+                            <img src="img/catalog6.jpg" alt="" class="img-responsive">
+                            <div class="catalog-description">
+                              <div class="catalog-description__name">Проект «Ягодка-мини»</div>
+                              <div class="catalog-description__text">Общая площадь: <span class="catalog-description__text--span">198.41 м<sup>2</sup></span></div>
+                              <div class="catalog-description__text">Срок строительства: <span class="catalog-description__text--span">5-7 месяцев</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="catalog__caption catalog--height">
+                            <div class="catalog__caption--heading">Хотите узнать больше об этом коттедже? </div>
+                            <div class="catalog__caption--subheading">Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.</div>
+                            <form name="Каталог" class="row contactForm" method="post" action="mail/mail.php">
+                              <div class="col-xs-9">
+                              <div class="form-group">
+                                <input aria-invalid="false" class="form-control catalog__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+                              </div>
+                              <div class="form-group">
+                              <input aria-invalid="false" class="form-control catalog__input form__phone" placeholder="Ваш телефон" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                              </div>
+                              <div class="text-center">
+                                <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Узнать о коттедже</button>
+                              </div>
+                            </div>
+                              <div class="col-xs-3">
+                                <i class="ic ic-arrow_fff"></i>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-8">
+                <div class="gallery__item gallery__item--7">
+                    <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog7">
+                      <span class="catalog__link">Подробнее</span>
+                      <span class="catalog__link--small">210.72 м<sup>2</sup></span>
+                    </a>
+                    <div id="catalog7" class="catalog__modal" style="display: none;">
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="catalog__image catalog--height">
+                            <img src="img/catalog7.jpg" alt="" class="img-responsive">
+                            <div class="catalog-description">
+                              <div class="catalog-description__name">Проект «Ягодка»</div>
+                              <div class="catalog-description__text">Общая площадь: <span class="catalog-description__text--span">210.72 м<sup>2</sup></span></div>
+                              <div class="catalog-description__text">Срок строительства: <span class="catalog-description__text--span">5-7 месяцев</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="catalog__caption catalog--height">
+                            <div class="catalog__caption--heading">Хотите узнать больше об этом коттедже? </div>
+                            <div class="catalog__caption--subheading">Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.</div>
+                            <form name="Каталог" class="row contactForm" method="post" action="mail/mail.php">
+                             <div class="col-xs-9">
+                              <div class="form-group">
+                                <input aria-invalid="false" class="form-control catalog__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+                              </div>
+                              <div class="form-group">
+                              <input aria-invalid="false" class="form-control catalog__input form__phone" placeholder="Ваш телефон" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                              </div>
+                              <div class="text-center">
+                                <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Узнать о коттедже</button>
+                              </div>
+                            </div>
+                              <div class="col-xs-3">
+                                <i class="ic ic-arrow_fff"></i>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="gallery__item gallery__item--8">
+                    <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog8">
+                      <span class="catalog__link">Подробнее</span>
+                      <span class="catalog__link--small">214.12 м<sup>2</sup></span>
+                    </a>
+                    <div id="catalog8" class="catalog__modal" style="display: none;">
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="catalog__image catalog--height">
+                            <img src="img/catalog8.jpg" alt="" class="img-responsive">
+                            <div class="catalog-description">
+                              <div class="catalog-description__name">Проект «Конвалия»</div>
+                              <div class="catalog-description__text">Общая площадь: <span class="catalog-description__text--span">214.12 м<sup>2</sup></span></div>
+                              <div class="catalog-description__text">Срок строительства: <span class="catalog-description__text--span">5-7 месяцев</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="catalog__caption catalog--height">
+                            <div class="catalog__caption--heading">Хотите узнать больше об этом коттедже? </div>
+                            <div class="catalog__caption--subheading">Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.</div>
+                            <form name="Каталог" class="row contactForm" method="post" action="mail/mail.php">
+                              <div class="col-xs-9">
+                              <div class="form-group">
+                                <input aria-invalid="false" class="form-control catalog__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+                              </div>
+                              <div class="form-group">
+                              <input aria-invalid="false" class="form-control catalog__input form__phone" placeholder="Ваш телефон" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                              </div>
+                              <div class="text-center">
+                                <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Узнать о коттедже</button>
+                              </div>
+                            </div>
+                              <div class="col-xs-3">
+                                <i class="ic ic-arrow_fff"></i>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                 </div>
               </div>
             </div>
           </div>
-
-           <div class="col-sm-4">
-            <div class="catalog__box">
-              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog4">
-                <img src="img/catalog4.jpg" alt="" class="img-responsive">
-                <span class="catalog__link"><i class="ic ic-zoom"></i></span>
-              </a>
-              <div id="catalog4" class="catalog__modal" style="display: none;">
-                <div class="catalog__image">
-                  <img src="img/catalog4.jpg" alt="" class="img-responsive">
+          <div class="col-xs-6 col-sm-6 col-md-3">
+            <div class="gallery__item gallery__item--9">
+                <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog9">
+                  <span class="catalog__link">Подробнее</span>
+                  <span class="catalog__link--small">229.27 м<sup>2</sup></span>
+                </a>
+                <div id="catalog9" class="catalog__modal" style="display: none;">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="catalog__image catalog--height">
+                        <img src="img/catalog9.jpg" alt="" class="img-responsive">
+                        <div class="catalog-description">
+                          <div class="catalog-description__name">Проект «Мальва»</div>
+                          <div class="catalog-description__text">Общая площадь: <span class="catalog-description__text--span">229.27 м<sup>2</sup></span></div>
+                          <div class="catalog-description__text">Срок строительства: <span class="catalog-description__text--span">5-7 месяцев</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="catalog__caption catalog--height">
+                        <div class="catalog__caption--heading">Хотите узнать больше об этом коттедже? </div>
+                        <div class="catalog__caption--subheading">Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.</div>
+                        <form name="Каталог" class="row contactForm" method="post" action="mail/mail.php">
+                          <div class="col-xs-9">
+                              <div class="form-group">
+                                <input aria-invalid="false" class="form-control catalog__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+                              </div>
+                              <div class="form-group">
+                              <input aria-invalid="false" class="form-control catalog__input form__phone" placeholder="Ваш телефон" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                              </div>
+                              <div class="text-center">
+                                <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Узнать о коттедже</button>
+                              </div>
+                            </div>
+                          <div class="col-xs-3">
+                            <i class="ic ic-arrow_fff"></i>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
             </div>
           </div>
-
-           <div class="col-sm-4">
-            <div class="catalog__box">
-              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog5">
-                <img src="img/catalog5.jpg" alt="" class="img-responsive">
-                <span class="catalog__link"><i class="ic ic-zoom"></i></span>
-              </a>
-              <div id="catalog5" class="catalog__modal" style="display: none;">
-                <div class="catalog__image">
-                  <img src="img/catalog5.jpg" alt="" class="img-responsive">
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="col-sm-4">
-            <div class="catalog__box">
-              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog6">
-                <img src="img/catalog6.jpg" alt="" class="img-responsive">
-                <span class="catalog__link"><i class="ic ic-zoom"></i></span>
-              </a>
-              <div id="catalog6" class="catalog__modal" style="display: none;">
-                <div class="catalog__image">
-                  <img src="img/catalog6.jpg" alt="" class="img-responsive">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-4">
-            <div class="catalog__box">
-              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog7">
-                <img src="img/catalog7.jpg" alt="" class="img-responsive">
-                <span class="catalog__link"><i class="ic ic-zoom"></i></span>
-              </a>
-              <div id="catalog7" class="catalog__modal" style="display: none;">
-                <div class="catalog__image">
-                  <img src="img/catalog7.jpg" alt="" class="img-responsive">
-                </div>
-              </div>
-            </div>
-          </div>
-
-         <div class="col-sm-4">
-            <div class="catalog__box">
-              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog8">
-                <img src="img/catalog8.jpg" alt="" class="img-responsive">
-                <span class="catalog__link"><i class="ic ic-zoom"></i></span>
-              </a>
-              <div id="catalog8" class="catalog__modal" style="display: none;">
-                <div class="catalog__image">
-                  <img src="img/catalog8.jpg" alt="" class="img-responsive">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-4">
-            <div class="catalog__box">
-              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog9">
-                <img src="img/catalog9.jpg" alt="" class="img-responsive">
-                <span class="catalog__link"><i class="ic ic-zoom"></i></span>
-              </a>
-              <div id="catalog9" class="catalog__modal" style="display: none;">
-                <div class="catalog__image">
-                  <img src="img/catalog9.jpg" alt="" class="img-responsive">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-4">
-            <div class="catalog__box">
+          <div class="col-xs-6 col-sm-3 col-md-3">
+            <div class="gallery__item gallery__item--10">
               <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog10">
-                <img src="img/catalog10.jpg" alt="" class="img-responsive">
-                <span class="catalog__link"><i class="ic ic-zoom"></i></span>
+                <span class="catalog__link">Подробнее</span>
+                <span class="catalog__link--small">236.68 м<sup>2</sup></span>
               </a>
               <div id="catalog10" class="catalog__modal" style="display: none;">
-                <div class="catalog__image">
-                  <img src="img/catalog10.jpg" alt="" class="img-responsive">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-4">
-            <div class="catalog__box">
-              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog11">
-                <img src="img/catalog11.jpg" alt="" class="img-responsive">
-                <span class="catalog__link"><i class="ic ic-zoom"></i></span>
-              </a>
-              <div id="catalog11" class="catalog__modal" style="display: none;">
                 <div class="row">
                   <div class="col-xs-12 col-sm-6">
                     <div class="catalog__image catalog--height">
-                      <img src="img/catalog11.jpg" alt="" class="img-responsive">
+                      <img src="img/catalog10.jpg" alt="" class="img-responsive">
                       <div class="catalog-description">
-                        <div class="catalog-description__name">ПРОЕКТ «БАРВИНОК»</div>
-                        <div class="catalog-description__text">Общая площадь: <span class="catalog-description__text--span">144.75м2</span></div>
-                        <div class="catalog-description__text">Срок строительства: <span class="catalog-description__text--span">144.75м2</span></div>
+                        <div class="catalog-description__name">Проект «Троянда»</div>
+                        <div class="catalog-description__text">Общая площадь: <span class="catalog-description__text--span">236.68 м<sup>2</sup> </span></div>
+                        <div class="catalog-description__text">Срок строительства: <span class="catalog-description__text--span">5-7 месяцев</span></div>
                       </div>
                     </div>
                   </div>
@@ -1563,34 +1827,74 @@
                     <div class="catalog__caption catalog--height">
                       <div class="catalog__caption--heading">Хотите узнать больше об этом коттедже? </div>
                       <div class="catalog__caption--subheading">Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.</div>
-                   <form name="Каталог" class="clearfix contactForm" method="post" action="mail/mail.php">
-                    <div class="form-group">
-                      <input aria-invalid="false" class="form-control catalog__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
+                      <form name="Каталог" class="row contactForm" method="post" action="mail/mail.php">
+                        <div class="col-xs-9">
+                              <div class="form-group">
+                                <input aria-invalid="false" class="form-control catalog__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+                              </div>
+                              <div class="form-group">
+                              <input aria-invalid="false" class="form-control catalog__input form__phone" placeholder="Ваш телефон" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                              </div>
+                              <div class="text-center">
+                                <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Узнать о коттедже</button>
+                              </div>
+                            </div>
+                        <div class="col-xs-3">
+                          <i class="ic ic-arrow_fff"></i>
+                        </div>
+                      </form>
                     </div>
-                    <div class="form-group">
-                      <input aria-invalid="false" class="form-control catalog__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
-                    </div>
-                    <div class="text-center">
-                    <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Узнать о коттедже</button>
-                    </div>
-                  </form>
-                </div>
                   </div>
                 </div>
-                
-              </div>
-
-              <div class="catalog__info">
-                <div class="catalog__name">Проект «Барвинок»</div>
-                <div class="catalog__about">Площадь дома: 307.65 м2 </div>
-                <a class="fancyimage catalog__btn" href="#catalog11">Подробнее</a>
               </div>
             </div>
           </div>
-
-        
-
+          <div class="col-xs-6 col-sm-3 col-md-4">
+            <div class="gallery__item gallery__item--11">
+              <a class="fancyimage catalog__img" data-fancybox-group="group" href="#catalog11">
+                <span class="catalog__link">Подробнее</span>
+                <span class="catalog__link--small">307.65 м<sup>2</sup></span>
+              </a>
+              <div id="catalog11" class="catalog__modal" style="display: none;">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6">
+                    <div class="catalog__image catalog--height">
+                      <img src="img/catalog11.jpg" alt="" class="img-responsive">
+                      <div class="catalog-description">
+                        <div class="catalog-description__name">Проект «Барвинок»</div>
+                        <div class="catalog-description__text">Общая площадь: <span class="catalog-description__text--span">307.65 м<sup>2</sup></span></div>
+                        <div class="catalog-description__text">Срок строительства: <span class="catalog-description__text--span">5-7 месяцев</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6">
+                    <div class="catalog__caption catalog--height">
+                      <div class="catalog__caption--heading">Хотите узнать больше об этом коттедже? </div>
+                      <div class="catalog__caption--subheading">Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.</div>
+                      <form name="Каталог" class="row contactForm" method="post" action="mail/mail.php">
+                        <div class="col-xs-9">
+                              <div class="form-group">
+                                <input aria-invalid="false" class="form-control catalog__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+                              </div>
+                              <div class="form-group">
+                              <input aria-invalid="false" class="form-control catalog__input form__phone" placeholder="Ваш телефон" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                              </div>
+                              <div class="text-center">
+                                <button type="submit" class="g-btn catalog__button" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Узнать о коттедже</button>
+                              </div>
+                            </div>
+                        <div class="col-xs-3">
+                          <i class="ic ic-arrow_fff"></i>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <!--     ROW  End -->
         <div class="row">
           <div class="text-center col-xs-12 col-sm-10 col-sm-offset-1">
             <div class="clearfix address__border">
@@ -1716,7 +2020,7 @@
         <div class="row">
           <div class="col-xs-12 col-sm-7">
             <div class="plan__img">
-              <img src="img/plan.png" alt="" class="img-responsive">
+              <img src="img/plan.jpg" alt="" class="img-responsive">
             </div>
           </div>
           <div class="col-xs-12 col-sm-5 plan__col">
@@ -2000,7 +2304,7 @@
   {"src" : "js/slick.min.js", "async" : false},
   {"src" : "js/jquery.fancybox.min.js", "async" : false},
   {"src" : "js/jquery.fancybox.pack.min.js", "async" : false},
-  {"src" : "js/main.js", "async" : false}
+  {"src" : "js/main.min.js", "async" : false}
   ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
 </script>
 

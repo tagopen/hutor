@@ -5,7 +5,7 @@
 +font('GothamProMedium', 'GothamProMedium')
 +font('GothamProNarrowMedium', 'GothamProNarrowMedium')
 +ic
-@each $ic in logo, warranty, arrow, zoom, catalogic, scheme, create1, create2, create3, create4
+@each $ic in logo, warranty, arrow, arrow_fff, zoom, catalogic, scheme, create1, create2, create3, create4
   .ic-#{$ic}
     +sb(#{$ic})
 +comment("home page style")
@@ -274,6 +274,7 @@ a:focus
     &--hover
       display: none           
   &__border
+    margin-top: 30px
     padding: 10px 0
     border: 2px dashed $btn_color__hover
     +br(10px)
@@ -372,19 +373,22 @@ a:focus
     margin-bottom: 30px
   &__subtitle
     margin-bottom: 70px  
-  &__box
-    padding: 0 40px  
-    margin-bottom: 70px   
+  &__box 
+    margin-bottom: 30px  
   &__img
     position: relative
-    display: inline-block
-    margin-bottom: 15px 
+    display: block
     overflow: hidden
+    height: 100%
+    width: 100%
     &:hover
       .catalog__link
         opacity: 1
         visibility: visible
         +transition(all .3s ease-out)
+        &--small
+          color: $btn_color__hover
+          +transition(all .3s ease-out)
   &__show
     position: absolute
     top: 0
@@ -397,14 +401,24 @@ a:focus
     font: 400 18px/20px $os 
   &__link
     position: absolute
-    right: -15px
-    bottom: -15px  
-    background-color: $btn_color
-    padding: 50px
-    +br(100% 25% 0 25%)
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0,0.5)
     opacity: 0
     visibility: hidden
     +transition(all .3s ease-out)
+    text-align: center
+    color: #fff
+    font: 500 16px/20px $gp
+    line-height: 110px
+    &--small
+      position: absolute
+      left: 15px
+      bottom: 15px
+      color: #fff
+      font: 500 18px/20px $gp
   &__info
     text-align: left
   &__name
@@ -466,6 +480,7 @@ a:focus
     text-align: center  
     position: relative
   &__image
+    background-color: #fff
     img
       display: inline-block   
   &-description
@@ -473,6 +488,7 @@ a:focus
     padding: 10px 45px
     text-align: left
     color: #222
+    min-height: 132px
     &__name
       font: 500 18px/20px $gp
       margin-bottom: 10px
@@ -496,7 +512,57 @@ a:focus
     margin-bottom: 15px    
 .fancybox
   &-inner
-    overflow: visible !important       
+    overflow: visible !important  
+.gallery
+  &__item
+    width: 100%
+    margin-bottom: 20px
+    &--1     
+      height: 255px
+      background: url(../img/catalog1.jpg) no-repeat
+      +cover
+      .catalog__link
+        line-height: 250px
+    &--2
+      height: 115px
+      background: url(../img/catalog2.jpg) no-repeat
+      +cover
+    &--3
+      height: 115px
+      background: url(../img/catalog3.jpg) no-repeat
+      +cover
+    &--4
+      height: 115px
+      background: url(../img/catalog4.jpg) no-repeat
+      +cover
+    &--5
+      height: 115px
+      background: url(../img/catalog5.jpg) no-repeat
+      +cover
+    &--6
+      height: 115px
+      background: url(../img/catalog6.jpg) no-repeat
+      +cover
+    &--7
+      height: 115px
+      background: url(../img/catalog7.jpg) no-repeat
+      +cover
+    &--8
+      height: 115px
+      background: url(../img/catalog8.jpg) no-repeat
+      +cover
+    &--9
+      height: 115px
+      background: url(../img/catalog9.jpg) no-repeat
+      +cover
+    &--10
+      height: 115px
+      background: url(../img/catalog10.jpg) no-repeat
+      +cover
+    &--11 
+      height: 115px
+      background: url(../img/catalog11.jpg) no-repeat
+      +cover   
 +comment("scheme style")  
 .scheme    
   position: relative
@@ -710,6 +776,8 @@ a:focus
     +transition(all .3s ease-out)
 +comment("map style")     
 .map 
+  position: relative
+  z-index: 10
   &__box
     background-color: #fff
     margin: 0
@@ -719,7 +787,7 @@ a:focus
     background-color: #f6f9f9
     margin-bottom: 10px
   &__iframe
-    height: 600px  
+    height: 320px  
   &__heading
     font: 600 16px/18px $os
     color: #222

@@ -92,7 +92,6 @@ $(window).on('resize', function(){
     setEqualHeight($('.create__box'));
     setEqualHeight($('.process__box'));
     setEqualHeight($('.catalog__name'));
-    setEqualHeight($('.catalog--height'));
   }
 
 }).trigger('resize');

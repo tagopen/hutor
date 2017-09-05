@@ -42,6 +42,7 @@
 	overflow: hidden;
 	height: auto !important;
 	background: none;
+	margin: 0 auto;
 }
 
 .fancybox-type-iframe .fancybox-inner {
@@ -103,7 +104,7 @@
 
 .fancybox-nav {
 	position: absolute;
-	top: 316px;
+	top: 330px;
 	width: 32px;
 	height: 32px;
 	cursor: pointer;
@@ -250,6 +251,26 @@
 		background-size: 24px 24px; /*The size of the normal image, half the size of the hi-res image*/
 	}
 }
+@media only screen and (min-width: 400px) {
+	.fancybox-nav{
+		top: 385px;
+	}
+}
+@media only screen and (min-width: 480px) {
+	.fancybox-nav{
+		top: 435px;
+	}
+}
+@media only screen and (min-width: 520px) {
+	.fancybox-nav{
+		top: 460px;
+	}
+}
+@media only screen and (min-width: 600px) {
+	.fancybox-nav{
+		top: 510px;
+	}
+}
 @media only screen and (max-width: 768px) {
 	.fancybox-inner{
 		max-width: 680px !important;
@@ -257,6 +278,6 @@
 }
 @media only screen and (min-width: 992px) {
 	.fancybox-inner{
-		max-width: 950px !important;
+		max-width: 900px !important;
 	}
 }
