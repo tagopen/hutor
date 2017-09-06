@@ -33,7 +33,7 @@ const path = {
     sass:           dirs.src + '/sass/',
     pug:            dirs.src + '/views/',
     fonts:          dirs.src + '/fonts/',
-    sprite:         dirs.src + '/sass/utils/'
+    sprite:         dirs.src + '/sass/utils'
   },
   watch: {
     html:           dirs.src + '/*.html',
@@ -124,14 +124,18 @@ gulp.task('sprite', function() {
  gulp.src(path.watch.spritePng)
    .pipe($.plumber())
    .pipe($.spritesmith({
-     imgName: '../../img/sprite.png',
+     imgName: 'sprite.png',
+     //imgPath: 'app/img/sprite.png',
      //retinaSrcFilter: ['app/img/icons/*@2x.png'],
      //retinaImgName: 'sprite@2x.png',
      cssName: '_sprite.sass',
      cssFormat: 'sass',
      padding: 10
    }))
-   .pipe($.if('*.+(css|scss|sass)', 
+   .pipe($.if('*.png', 
+     gulp.dest(path.src.img)
+   ))
+   .pipe($.if('*.css', 
      $.replace(/^\.icon-/gm, '.ic--'), 
      gulp.dest(path.src.sprite)
    ));

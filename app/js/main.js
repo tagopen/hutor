@@ -100,3 +100,14 @@ $(window).on('resize', function(){
 $(document).ready(function() { 
   $("a.fancyimage").fancybox(); 
 }); 
+
+$(document).ready(function() { 
+
+  var interval = 20 * 1000;
+
+  var theInterval = setTimeout(function () {
+    $('#popup').modal('show');
+  }, interval);
+
+  console.log(theInterval);
+}); 
