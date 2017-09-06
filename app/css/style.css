@@ -759,9 +759,7 @@ a:focus {
 .modal__head {
   padding: 35px 30px;
   background: url(../img/modalbg.jpg) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
 }
 
 .modal__heading {
@@ -833,7 +831,6 @@ a:focus {
   position: relative;
   z-index: 15;
   background: url(../img/headerbg320.png) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: 35% 100%;
   padding: 15px 0 30px;
@@ -1013,7 +1010,6 @@ a:focus {
   margin-bottom: -130px;
   padding: 165px 0 30px;
   background: url(../img/aboutbg.png) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 100%;
 }
@@ -1060,7 +1056,6 @@ a:focus {
   z-index: 13;
   margin-bottom: -130px;
   background: url(../img/addressbg.png) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 100%;
 }
@@ -1126,7 +1121,6 @@ a:focus {
   padding: 160px 0 60px;
   margin-bottom: -110px;
   background: url(../img/registerbg.png) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 100%;
 }
@@ -1145,7 +1139,6 @@ a:focus {
   margin-bottom: -130px;
   padding: 170px 0 100px;
   background: url(../img/projectbg.png) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 100%;
 }
@@ -1234,7 +1227,6 @@ a:focus {
   margin-bottom: -130px;
   padding: 200px 0 100px;
   background: url(../img/catalogbg.png) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 100%;
 }
@@ -1534,9 +1526,7 @@ a:focus {
 .gallery__item--1 {
   height: 115px;
   background: url(../img/catalog1.jpg) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
 }
 
 .gallery__item--1 .catalog__link {
@@ -1546,89 +1536,67 @@ a:focus {
 .gallery__item--2 {
   height: 115px;
   background: url(../img/catalog2.jpg) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
 }
 
 .gallery__item--3 {
   height: 115px;
   background: url(../img/catalog3.jpg) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
 }
 
 .gallery__item--4 {
   height: 115px;
   background: url(../img/catalog4.jpg) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
 }
 
 .gallery__item--5 {
   height: 115px;
   background: url(../img/catalog5.jpg) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
 }
 
 .gallery__item--6 {
   height: 115px;
   background: url(../img/catalog6.jpg) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
 }
 
 .gallery__item--7 {
   height: 115px;
   background: url(../img/catalog7.jpg) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
 }
 
 .gallery__item--8 {
   height: 115px;
   background: url(../img/catalog8.jpg) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
 }
 
 .gallery__item--9 {
   height: 115px;
   background: url(../img/catalog9.jpg) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
 }
 
 .gallery__item--10 {
   height: 115px;
   background: url(../img/catalog10.jpg) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
 }
 
 .gallery__item--11 {
   height: 115px;
   background: url(../img/catalog11.jpg) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
 }
 
 .gallery__item--12 {
   height: 115px;
   background: url(../img/catalog12.jpg) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
 }
 
 /* ---------------------------------------- */
@@ -1640,7 +1608,6 @@ a:focus {
   padding: 180px 0 50px;
   margin-bottom: -100px;
   background: url(../img/schemebg.jpg) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 100%;
 }
@@ -1747,7 +1714,6 @@ a:focus {
   padding: 150px 0 30px;
   margin-bottom: -130px;
   background: url(../img/createbg.png) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 100%;
 }
@@ -1823,7 +1789,6 @@ a:focus {
   z-index: 7;
   margin-bottom: -130px;
   background: url(../img/planbg.png) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 100%;
   padding: 180px 0 50px;
@@ -1870,7 +1835,6 @@ a:focus {
   z-index: 6;
   margin-bottom: -130px;
   background: url(../img/advicebg.png) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 100%;
   padding: 170px 0 40px;
@@ -1920,7 +1884,6 @@ a:focus {
   z-index: 5;
   margin-bottom: -315px;
   background: url(../img/processbg.png) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 100%;
   padding: 200px 0 100px;
@@ -1944,30 +1907,22 @@ a:focus {
 
 .process__col--1 {
   background: url(../img/process1.jpg) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
 }
 
 .process__col--2 {
   background: url(../img/process2.jpg) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
 }
 
 .process__col--3 {
   background: url(../img/process3.jpg) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
 }
 
 .process__col--4 {
   background: url(../img/process4.jpg) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
 }
 
 .process__box {
@@ -2075,9 +2030,7 @@ a:focus {
   position: relative;
   z-index: 8;
   background: url(../img/footerbg.png) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
   padding: 180px 0 30px;
   margin-top: -150px;
 }
@@ -2092,7 +2045,6 @@ a:focus {
 /* ---------------------------------------- */
 .thanks {
   background: url(../img/headerbg320.png) no-repeat;
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 100%;
   padding: 15px 0 200px;
@@ -2210,7 +2162,6 @@ a:focus {
   .header {
     padding: 20px 0 160px;
     background: url(../img/1ek.png) no-repeat;
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 100%;
   }
@@ -2536,7 +2487,6 @@ a:focus {
   /* ---------------------------------------- */
   .thanks {
     background: url(../img/thanksbg.png) no-repeat;
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 100%;
     height: auto;

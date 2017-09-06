@@ -1,0 +1,64 @@
+%svg-common {
+	background: url("svg/sprite.view-e21fe190.svg") no-repeat;
+}
+
+.svg-arrow__left {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-arrow__left-dims {
+	width: 16.91px;
+	height: 32px;
+}
+
+.svg-arrow__right {
+	@extend %svg-common;
+	background-position: 22.823592927520583% 0;
+}
+
+.svg-arrow__right-dims {
+	width: 16.91px;
+	height: 32px;
+}
+
+.svg-building {
+	@extend %svg-common;
+	background-position: 50.79365079365079% 94.11764705882354%;
+}
+
+.svg-building-dims {
+	width: 28px;
+	height: 29px;
+}
+
+.svg-lock {
+	@extend %svg-common;
+	background-position: 50.79603484529889% 0;
+}
+
+.svg-lock-dims {
+	width: 24.42px;
+	height: 32px;
+}
+
+.svg-populated {
+	@extend %svg-common;
+	background-position: 98.71186440677967% 0;
+}
+
+.svg-populated-dims {
+	width: 32px;
+	height: 32px;
+}
+
+.svg-selling {
+	@extend %svg-common;
+	background-position: 0 97.47182455071581%;
+}
+
+.svg-selling-dims {
+	width: 32px;
+	height: 30.17px;
+}
+

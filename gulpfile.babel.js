@@ -33,14 +33,15 @@ const path = {
     sass:           dirs.src + '/sass/',
     pug:            dirs.src + '/views/',
     fonts:          dirs.src + '/fonts/',
-    sprite:         dirs.src + '/sass/utils'
+    sprite:         dirs.src + '/sass/utils/',
+    svgTemplate:    dirs.src + '/sass/utils/_sprite-svg-template.scss',
   },
   watch: {
     html:           dirs.src + '/*.html',
     js:             dirs.src + '/js/**/*.js',
     sass:           dirs.src + '/sass/**/*.+(scss|sass)',
     template:       dirs.src + '/views/**/*',
-    pug:            dirs.src + '/views/*.pug',
+    pug:            dirs.src + '/views/**/[^_]*.pug',
     img:            dirs.src + '/img/**/*.*',
     spritePng:      dirs.src + '/img/icons/**/*.png',
     spriteSvg:      dirs.src + '/img/icons/svg/**/*.svg',
@@ -77,7 +78,6 @@ gulp.task('scripts', () => {
     //'node_modules/bootstrap-slider/dist/bootstrap-slider.js',
     'node_modules/slick-carousel/slick/slick.js',
     //'node_modules/select2/dist/js/select2.js',
-    //'node_modules/tooltipster/dist/js/tooltipster.bundle.js',
     //'node_modules/jquery-tags-input/src/jquery.tagsinput.js',
     //'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js',
     //'node_modules/bootstrap-datepicker/dist/locales/*'
@@ -125,7 +125,6 @@ gulp.task('sprite', function() {
    .pipe($.plumber())
    .pipe($.spritesmith({
      imgName: 'sprite.png',
-     //imgPath: 'app/img/sprite.png',
      //retinaSrcFilter: ['app/img/icons/*@2x.png'],
      //retinaImgName: 'sprite@2x.png',
      cssName: '_sprite.sass',
@@ -141,61 +140,60 @@ gulp.task('sprite', function() {
    ));
 });
 
-
-gulp.task('svgstore', () => {
-  return gulp.src(path.watch.spriteSvg)
-    .pipe($.svgmin())
-    .pipe($.svgstore({
-      fileName: 'sprite.svg',
-      inlineSvg: true
+gulp.task('svg', function () {
+ return gulp.src(path.watch.spriteSvg)
+    .pipe($.plumber())
+    .pipe($.svgmin({
+      js2svg: {
+        pretty: true
+      }
     }))
-    .pipe($.rename({basename: 'sprite'}))
-    .pipe(gulp.dest(path.src.img));
-});
-
-gulp.task('browser-sync',  ['pug', 'sass'], function() {
-  browserSync({
-    server: {
-      baseDir: dirs.src
+    .pipe($.cheerio({
+      run: function ($) {
+        $('[fill]').removeAttr('fill');
+        $('[stroke]').removeAttr('stroke');
+        $('[style]').removeAttr('style');
+      },
+      parserOptions: {xmlMode: true}
+    }))
+    .pipe($.replace('&gt;', '>'))
+    // build svg sprite
+   .pipe($.svgSprite({
+    shape: {
+      spacing: {
+        padding: 0,
+      },
+      dimension   : {     // Set maximum dimensions
+        maxWidth  : 32,
+        maxHeight : 32,
+      },
     },
-    notify: false
-  });
+    mode: {
+      view: {
+        render: {
+          scss  : true
+        },
+      },
+      symbol: {
+        dest: "./",
+        layout: "packed",
+        sprite: "sprite.svg",
+        bust: false,
+        render: {
+          scss: {
+            dest: "../sass/utils/_spriteSvg.scss",
+            template: path.src.svgTemplate
+          }
+        }
+      },
+      inline: true,
+    },
+    variables: {
+      mapname: "icons"
+    }
+  }))
+   .pipe(gulp.dest(path.src.img));
 });
-
-//gulp.task('svgSprite', function () {
-//  return gulp.src('app/img/icons/**/*.svg')
-//    .pipe($.svgmin({
-//      js2svg: {
-//        pretty: true
-//      }
-//    }))
-//    .pipe($.cheerio({
-//      run: function ($) {
-//        $('[fill]').removeAttr('fill');
-//        $('[stroke]').removeAttr('stroke');
-//        $('[style]').removeAttr('style');
-//      },
-//      parserOptions: {xmlMode: true}
-//    }))
-//    .pipe($.replace('&gt;', '>'))
-//    // build svg sprite
-//    .pipe($.svgSprites({
-//      preview: false,
-//      selector: "ic--%f",
-//      mode: {
-//        symbol: {
-//          sprite: "../sprite.svg",
-//          render: {
-//            scss: {
-//              dest:'../../../sass/_sprite.scss',
-//              template: '../sass/base/_sprite_template.scss'
-//            }
-//          }
-//        }
-//      }
-//    }))
-//    .pipe(gulp.dest('app/img'));
-//});
 
 gulp.task('server', function() {
   browserSync({
@@ -281,7 +279,7 @@ gulp.task('watch', function(){
     });
 
     $.watch([path.watch.spriteSvg], function(event, cb) {
-        gulp.start('svgstore');
+        gulp.start('svg');
     });
 
     $.watch([path.watch.sass], function(event, cb) {
@@ -375,12 +373,12 @@ gulp.task('dev', ['clean', 'pug', 'fonts', 'sprite', 'img', 'sass', 'scripts'], 
 
 gulp.task('build', [
     'sprite',
-    'svgstore',
+    'svg',
     'scripts',
     'pug',
     'sass',
     'fonts',
-    'img',
+    //'img',
 ]);
 
 gulp.task('default', ['build', 'watch', 'server']);

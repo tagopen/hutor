@@ -1,0 +1,59 @@
+// arrow__left
+$svg-arrow__left-name: "arrow__left";
+$svg-arrow__left-width: em(16.91);
+$svg-arrow__left-height: em(32);
+$svg-arrow__left-offset-x: px;
+$svg-arrow__left-offset-y: px;
+$svg-arrow__left-image: "../img/sprite.svg";
+$svg-arrow__left: ( "arrow__left", em(16.91), em(32), px, px, "../img/sprite.svg" );
+
+// arrow__right
+$svg-arrow__right-name: "arrow__right";
+$svg-arrow__right-width: em(16.91);
+$svg-arrow__right-height: em(32);
+$svg-arrow__right-offset-x: px;
+$svg-arrow__right-offset-y: px;
+$svg-arrow__right-image: "../img/sprite.svg";
+$svg-arrow__right: ( "arrow__right", em(16.91), em(32), px, px, "../img/sprite.svg" );
+
+// building
+$svg-building-name: "building";
+$svg-building-width: em(28);
+$svg-building-height: em(29);
+$svg-building-offset-x: px;
+$svg-building-offset-y: px;
+$svg-building-image: "../img/sprite.svg";
+$svg-building: ( "building", em(28), em(29), px, px, "../img/sprite.svg" );
+
+// lock
+$svg-lock-name: "lock";
+$svg-lock-width: em(24.42);
+$svg-lock-height: em(32);
+$svg-lock-offset-x: px;
+$svg-lock-offset-y: px;
+$svg-lock-image: "../img/sprite.svg";
+$svg-lock: ( "lock", em(24.42), em(32), px, px, "../img/sprite.svg" );
+
+// populated
+$svg-populated-name: "populated";
+$svg-populated-width: em(32);
+$svg-populated-height: em(32);
+$svg-populated-offset-x: px;
+$svg-populated-offset-y: px;
+$svg-populated-image: "../img/sprite.svg";
+$svg-populated: ( "populated", em(32), em(32), px, px, "../img/sprite.svg" );
+
+// selling
+$svg-selling-name: "selling";
+$svg-selling-width: em(32);
+$svg-selling-height: em(30.17);
+$svg-selling-offset-x: px;
+$svg-selling-offset-y: px;
+$svg-selling-image: "../img/sprite.svg";
+$svg-selling: ( "selling", em(32), em(30.17), px, px, "../img/sprite.svg" );
+
+
+$svg-spritesheet-width: px;
+$svg-spritesheet-height: px;
+$svg-spritesheet-image: "../img/sprite.svg";
+$svg-spritesheet-sprites: ( $svg-arrow__left,  $svg-arrow__right,  $svg-building,  $svg-lock,  $svg-populated,  $svg-selling,  );
