@@ -6,28 +6,29 @@ mixin itemgallery(i)
       span.catalog__link--small!= item.size
     .catalog__modal(style='display: none;', id="catalog" + i)
       .row
-        .col-24.col-md-12
+        .col-12.col-sm-6
           .catalog__image.catalog--height
-            img.img-fluid(src=item.img.src, alt=item.img.alt)
+            .catalog__photo
+              img.img-fluid(src=item.img.src, alt=item.img.alt)
             .catalog-description
               .catalog-description__name!= item.name
               .catalog-description__text!= item.descr.name
                 span.catalog-description__text--span!= item.descr.value
               .catalog-description__text!= item.term.name
                 span.catalog-description__text--span!= item.term.value
-        .col-24.col-md-12
+        .col-12.col-sm-6
           .catalog__caption.catalog--height
             .catalog__caption--heading!= item.caption.heading
             .catalog__caption--subheading!= item.caption.subheading
             form.row.contactForm( method='post', action='mail/mail.php')
-              .col-18
+              .col-xs-9
                 .form-group
                   input.form-control.catalog__input.form__name(aria-invalid='false', placeholder='Ваше имя', required, name='name', type='text')
                 .form-group
                   input.form-control.catalog__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required, name='phone', type='tel')
                 .text-center
                   button.g-btn.catalog__button(name='Каталог - ' + i, type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать о коттедже
-              .col-6
+              .col-xs-3
                 i.ic.ic-arrow_fff
 section.catalog
   .container

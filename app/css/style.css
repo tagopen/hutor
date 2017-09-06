@@ -521,6 +521,26 @@
   vertical-align: middle;
 }
 
+.svg--building {
+  width: 1.75em;
+  height: 1.8125em;
+}
+
+.svg--selling {
+  width: 2.1875em;
+  height: 2.0625em;
+}
+
+.svg--lock {
+  width: 1.8125em;
+  height: 2.375em;
+}
+
+.svg--populated {
+  width: 2.1875em;
+  height: 2.1875em;
+}
+
 /* ---------------------------------------- */
 /* H O M E    P A G E    S T Y L E          */
 /* ---------------------------------------- */
@@ -1115,6 +1135,11 @@ a:focus {
   transition: all .3s ease-out;
 }
 
+.catalog__photo {
+  max-height: 300px;
+  overflow: hidden;
+}
+
 .catalog__show {
   position: absolute;
   top: 0;
@@ -1604,6 +1629,7 @@ a:focus {
 }
 
 .plan__box {
+  margin-bottom: 15px;
   text-align: center;
 }
 
@@ -1621,6 +1647,10 @@ a:focus {
 .plan__place .fa {
   margin-right: 10px;
   color: #e8560c;
+}
+
+.plan-item {
+  margin: 20px 0;
 }
 
 /* ---------------------------------------- */
@@ -2218,7 +2248,7 @@ a:focus {
     margin-bottom: 70px;
   }
   .plan__col {
-    padding: 120px 0 0 0;
+    padding: 40px 0 0 0;
   }
   .plan__info {
     font: 400 18px/20px "Open Sans", sans-serif;
@@ -2472,7 +2502,7 @@ a:focus {
     padding: 180px 0 130px;
   }
   .plan__col {
-    padding: 220px 0 0 85px;
+    padding: 100px 0 0 85px;
   }
   .plan__info {
     font: 400 20px/22px "Open Sans", sans-serif;
@@ -2526,5 +2556,11 @@ a:focus {
   .scheme__box--4 {
     right: 200px;
     top: 400px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .plan__col {
+    padding: 164px 0 0 85px;
   }
 }

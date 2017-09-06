@@ -371,6 +371,7 @@ gulp.task('dev', ['clean', 'pug', 'fonts', 'sprite', 'img', 'sass', 'scripts'], 
 
 gulp.task('build', [
     'sprite',
+    'svgstore',
     'scripts',
     'pug',
     'sass',

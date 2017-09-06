@@ -1,6 +1,18 @@
 +comment('general style')
 +ic
-
+.svg
+  &--building
+    width: em(28)
+    height: em(29)
+  &--selling
+    width: em(35)
+    height: em(33)
+  &--lock
+    width: em(29)
+    height: em(38)
+  &--populated
+    width: em(35)
+    height: em(35)
 +comment("home page style")
 html
   overflow-x: hidden
@@ -382,6 +394,9 @@ a:focus
         &--small
           color: $btn_color__hover
           transition: all .3s ease-out
+  &__photo
+    max-height: 300px
+    overflow: hidden
   &__show
     position: absolute
     top: 0
@@ -691,6 +706,7 @@ a:focus
   &__col
     padding: 25px
   &__box
+    margin-bottom: 15px
     text-align: center  
   &__info
     font: 400 14px/16px $font-open-sans
@@ -702,6 +718,8 @@ a:focus
     .fa
       margin-right: 10px  
       color: $btn_color__hover
+.plan-item
+  margin: 20px 0
 +comment("advice style")  
 .advice    
   position: relative

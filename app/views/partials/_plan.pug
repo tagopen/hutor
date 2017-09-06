@@ -6,7 +6,7 @@ section.plan
     .row
       .col-xs-12.col-sm-7
         .plan__img
-          img.img-responsive(src='img/plan.jpg', alt='')
+          img.img-responsive(src='img/plan.jpg', alt='План')
       .col-xs-12.col-sm-5.plan__col
         .plan__box
           .plan__info на территории в 9 га генпланом предусмотрено
@@ -17,4 +17,22 @@ section.plan
           .plan__info на участках площадью
           span.plan__place
             i.fa.fa-hashtag(aria-hidden='true')
-            | от 8 до 12,5 сотки
+                | от 8 до 12,5 сотки
+        .row
+          .col-xs-6.text-center
+            .plan__box.plan-item
+              +svg("plan__icon", "building")
+              .plan__info Строительство
+          .col-xs-6.text-center
+            .plan__box.plan-item
+              +svg("plan__icon", "selling")
+              .plan__info Строительство
+          .col-xs-6.text-center
+            .plan__box.plan-item
+              +svg("plan__icon", "lock")
+              .plan__info Строительство
+          .col-xs-6.text-center
+            .plan__box.plan-item
+              +svg("plan__icon", "populated")
+              .plan__info Строительство
+
