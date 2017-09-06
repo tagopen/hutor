@@ -891,6 +891,7 @@ a:focus {
 }
 
 .phone__link .fa {
+  margin-right: 10px;
   cursor: pointer;
 }
 
