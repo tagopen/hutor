@@ -89,7 +89,6 @@ $(window).on('resize', function(){
   // Only 768+
   if( $( window ).width() >= 768 ) {
     setEqualHeight($('.create__name'));
-    setEqualHeight($('.create__box'));
     setEqualHeight($('.process__box'));
     setEqualHeight($('.catalog__name'));
   }

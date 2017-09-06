@@ -1,0 +1,19 @@
+header.thanks__header.thanks
+  .container
+    .row
+      include ../components/_nav.pug
+  section.content
+    .container
+      .row.justify-content-end
+        .col-24.col-md-12.col-xl-10
+          .thanks__box
+            h1.content__heading.thanks__heading
+              | Ваша заявка
+              br
+              |  принята!
+            ul.content__list.list
+              li.clearfix.list__item.thanks__item
+                span.content__text Мы свяжемся с вами в ближайшее время
+            a.g-btn.thanks__btn(href='index.html')
+              i.fa.fa-arrow-left(aria-hidden='true')
+              | Вернуться на сайт

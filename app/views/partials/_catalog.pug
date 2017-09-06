@@ -1,426 +1,72 @@
+mixin itemgallery(i)
+  - var item = page.catalog.items[i - 1]
+  .gallery__item(class="gallery__item--" + i)
+    a.fancyimage.catalog__img(data-fancybox-group='group', href='#catalog' + i)
+      span.catalog__link!= item.link.text
+      span.catalog__link--small!= item.size
+    .catalog__modal(style='display: none;', id="catalog" + i)
+      .row
+        .col-24.col-md-12
+          .catalog__image.catalog--height
+            img.img-fluid(src=item.img.src, alt=item.img.alt)
+            .catalog-description
+              .catalog-description__name!= item.name
+              .catalog-description__text!= item.descr.name
+                span.catalog-description__text--span!= item.descr.value
+              .catalog-description__text!= item.term.name
+                span.catalog-description__text--span!= item.term.value
+        .col-24.col-md-12
+          .catalog__caption.catalog--height
+            .catalog__caption--heading!= item.caption.heading
+            .catalog__caption--subheading!= item.caption.subheading
+            form.row.contactForm( method='post', action='mail/mail.php')
+              .col-18
+                .form-group
+                  input.form-control.catalog__input.form__name(aria-invalid='false', placeholder='Ваше имя', required, name='name', type='text')
+                .form-group
+                  input.form-control.catalog__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required, name='phone', type='tel')
+                .text-center
+                  button.g-btn.catalog__button(name='Каталог - ' + i, type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать о коттедже
+              .col-6
+                i.ic.ic-arrow_fff
 section.catalog
   .container
+    .row.justify-content-center
+      .text-center.col-24.col-md-20.col-lg-16
+        h2.g-title.catalog__title!= page.catalog.heading
+        h3.g-subtitle.catalog__subtitle!= page.catalog.descr
     .row
-      .text-center.col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
-        h2.g-title.catalog__title Каталог проектов
-        h3.g-subtitle.catalog__subtitle с возможностью строительства по договору подряда
-    .row
-      .col-xs-12.col-sm-9.col-md-8
+      .col-24.col-md-18.col-lg-16
         .row
-          .col-xs-12.col-sm-8.col-md-9
-            .gallery__item.gallery__item--1
-              a.fancyimage.catalog__img(data-fancybox-group='group', href='#catalog1')
-                span.catalog__link Подробнее
-                span.catalog__link--small
-                  | 150.54 м
-                  sup 2
-              #catalog1.catalog__modal(style='display: none;')
-                .row
-                  .col-xs-12.col-sm-6
-                    .catalog__image.catalog--height
-                      img.img-responsive(src='img/catalog1.jpg', alt='')
-                      .catalog-description
-                        .catalog-description__name Проект «Лилея-Мини»
-                        .catalog-description__text
-                          | Общая площадь: 
-                          span.catalog-description__text--span
-                            | 150.54 м
-                            sup 2
-                        .catalog-description__text
-                          | Срок строительства: 
-                          span.catalog-description__text--span 5-7 месяцев
-                  .col-xs-12.col-sm-6
-                    .catalog__caption.catalog--height
-                      .catalog__caption--heading Хотите узнать больше об этом коттедже? 
-                      .catalog__caption--subheading
-                        | Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.
-                      form.row.contactForm(name='Каталог', method='post', action='mail/mail.php')
-                        .col-xs-9
-                          .form-group
-                            input.form-control.catalog__input.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
-                          .form-group
-                            input.form-control.catalog__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required='', data-validation-required-message='Please enter your phone number.', name='phone', type='tel')
-                          .text-center
-                            button.g-btn.catalog__button(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать о коттедже
-                        .col-xs-3
-                          i.ic.ic-arrow_fff
-          .col-xs-6.col-sm-4.col-md-3
-            .gallery__item.gallery__item--2
-              a.fancyimage.catalog__img(data-fancybox-group='group', href='#catalog2')
-                span.catalog__link Подробнее
-                span.catalog__link--small
-                  | 161.76 м
-                  sup 2
-              #catalog2.catalog__modal(style='display: none;')
-                .row
-                  .col-xs-12.col-sm-6
-                    .catalog__image.catalog--height
-                      img.img-responsive(src='img/catalog2.jpg', alt='')
-                      .catalog-description
-                        .catalog-description__name Проект «Купава-мини»
-                        .catalog-description__text
-                          | Общая площадь: 
-                          span.catalog-description__text--span
-                            | 161.76 м
-                            sup 2
-                        .catalog-description__text
-                          | Срок строительства: 
-                          span.catalog-description__text--span 5-7 месяцев
-                  .col-xs-12.col-sm-6
-                    .catalog__caption.catalog--height
-                      .catalog__caption--heading Хотите узнать больше об этом коттедже? 
-                      .catalog__caption--subheading
-                        | Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.
-                      form.row.contactForm(name='Каталог', method='post', action='mail/mail.php')
-                        .col-xs-9
-                          .form-group
-                            input.form-control.catalog__input.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
-                          .form-group
-                            input.form-control.catalog__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required='', data-validation-required-message='Please enter your phone number.', name='phone', type='tel')
-                          .text-center
-                            button.g-btn.catalog__button(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать о коттедже
-                        .col-xs-3
-                          i.ic.ic-arrow_fff
-          .col-xs-6.col-sm-4.col-md-3
-            .gallery__item.gallery__item--3
-              a.fancyimage.catalog__img(data-fancybox-group='group', href='#catalog3')
-                span.catalog__link Подробнее
-                span.catalog__link--small
-                  | 165.53 м
-                  sup 2
-              #catalog3.catalog__modal(style='display: none;')
-                .row
-                  .col-xs-12.col-sm-6
-                    .catalog__image.catalog--height
-                      img.img-responsive(src='img/catalog3.jpg', alt='')
-                      .catalog-description
-                        .catalog-description__name Проект «Калина»
-                        .catalog-description__text
-                          | Общая площадь: 
-                          span.catalog-description__text--span
-                            | 165.53 м
-                            sup 2
-                        .catalog-description__text
-                          | Срок строительства: 
-                          span.catalog-description__text--span 5-7 месяцев
-                  .col-xs-12.col-sm-6
-                    .catalog__caption.catalog--height
-                      .catalog__caption--heading Хотите узнать больше об этом коттедже? 
-                      .catalog__caption--subheading
-                        | Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.
-                      form.row.contactForm(name='Каталог', method='post', action='mail/mail.php')
-                        .col-xs-9
-                          .form-group
-                            input.form-control.catalog__input.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
-                          .form-group
-                            input.form-control.catalog__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required='', data-validation-required-message='Please enter your phone number.', name='phone', type='tel')
-                          .text-center
-                            button.g-btn.catalog__button(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать о коттедже
-                        .col-xs-3
-                          i.ic.ic-arrow_fff
-      .col-xs-12.col-sm-3.col-md-4.col-right
+          .col-24.col-md-16.col-lg-18
+            +itemgallery(1)
+          .col-12.col-md-8.col-lg-6
+            +itemgallery(2)
+          .col-12.col-md-8.col-lg-6
+            +itemgallery(3)
+      .col-24.col-md-6.col-lg-8.col-right
         .row
-          .col-xs-6.col-sm-12.col-md-12
-            .gallery__item.gallery__item--4
-              a.fancyimage.catalog__img(data-fancybox-group='group', href='#catalog4')
-                span.catalog__link Подробнее
-                span.catalog__link--small
-                  | 206.86 м
-                  sup 2
-              #catalog4.catalog__modal(style='display: none;')
-                .row
-                  .col-xs-12.col-sm-6
-                    .catalog__image.catalog--height
-                      img.img-responsive(src='img/catalog4.jpg', alt='')
-                      .catalog-description
-                        .catalog-description__name Проект «Купава»
-                        .catalog-description__text
-                          | Общая площадь: 
-                          span.catalog-description__text--span
-                            | 206.86 м
-                            sup 2
-                        .catalog-description__text
-                          | Срок строительства: 
-                          span.catalog-description__text--span 5-7 месяцев
-                  .col-xs-12.col-sm-6
-                    .catalog__caption.catalog--height
-                      .catalog__caption--heading Хотите узнать больше об этом коттедже? 
-                      .catalog__caption--subheading
-                        | Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.
-                      form.row.contactForm(name='Каталог', method='post', action='mail/mail.php')
-                        .col-xs-9
-                          .form-group
-                            input.form-control.catalog__input.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
-                          .form-group
-                            input.form-control.catalog__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required='', data-validation-required-message='Please enter your phone number.', name='phone', type='tel')
-                          .text-center
-                            button.g-btn.catalog__button(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать о коттедже
-                        .col-xs-3
-                          i.ic.ic-arrow_fff
-          .col-xs-6.col-sm-12.col-md-12
-            .gallery__item.gallery__item--5
-              a.fancyimage.catalog__img(data-fancybox-group='group', href='#catalog5')
-                span.catalog__link Подробнее
-                span.catalog__link--small
-                  | 170.16 м
-                  sup 2
-              #catalog5.catalog__modal(style='display: none;')
-                .row
-                  .col-xs-12.col-sm-6
-                    .catalog__image.catalog--height
-                      img.img-responsive(src='img/catalog5.jpg', alt='')
-                      .catalog-description
-                        .catalog-description__name Проект «Лилея»
-                        .catalog-description__text
-                          | Общая площадь: 
-                          span.catalog-description__text--span
-                            | 170.16 м
-                            sup 2
-                        .catalog-description__text
-                          | Срок строительства: 
-                          span.catalog-description__text--span 5-7 месяцев
-                  .col-xs-12.col-sm-6
-                    .catalog__caption.catalog--height
-                      .catalog__caption--heading Хотите узнать больше об этом коттедже? 
-                      .catalog__caption--subheading
-                        | Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.
-                      form.row.contactForm(name='Каталог', method='post', action='mail/mail.php')
-                        .col-xs-9
-                          .form-group
-                            input.form-control.catalog__input.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
-                          .form-group
-                            input.form-control.catalog__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required='', data-validation-required-message='Please enter your phone number.', name='phone', type='tel')
-                          .text-center
-                            button.g-btn.catalog__button(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать о коттедже
-                        .col-xs-3
-                          i.ic.ic-arrow_fff
-      .col-xs-6.col-sm-6.col-md-5
+          .col-12.col-md-24
+            +itemgallery(4)
+          .col-12.col-md-24
+            +itemgallery(5)
+      .col-12.col-lg-10
         .row
-          .col-xs-12.col-sm-12.col-md-12
-            .gallery__item.gallery__item--6
-              a.fancyimage.catalog__img(data-fancybox-group='group', href='#catalog6')
-                span.catalog__link Подробнее
-                span.catalog__link--small
-                  | 198.41 м
-                  sup 2
-              #catalog6.catalog__modal(style='display: none;')
-                .row
-                  .col-xs-12.col-sm-6
-                    .catalog__image.catalog--height
-                      img.img-responsive(src='img/catalog6.jpg', alt='')
-                      .catalog-description
-                        .catalog-description__name Проект «Ягодка-мини»
-                        .catalog-description__text
-                          | Общая площадь: 
-                          span.catalog-description__text--span
-                            | 198.41 м
-                            sup 2
-                        .catalog-description__text
-                          | Срок строительства: 
-                          span.catalog-description__text--span 5-7 месяцев
-                  .col-xs-12.col-sm-6
-                    .catalog__caption.catalog--height
-                      .catalog__caption--heading Хотите узнать больше об этом коттедже? 
-                      .catalog__caption--subheading
-                        | Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.
-                      form.row.contactForm(name='Каталог', method='post', action='mail/mail.php')
-                        .col-xs-9
-                          .form-group
-                            input.form-control.catalog__input.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
-                          .form-group
-                            input.form-control.catalog__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required='', data-validation-required-message='Please enter your phone number.', name='phone', type='tel')
-                          .text-center
-                            button.g-btn.catalog__button(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать о коттедже
-                        .col-xs-3
-                          i.ic.ic-arrow_fff
-          .col-xs-12.col-sm-6.col-md-8
-            .gallery__item.gallery__item--7
-              a.fancyimage.catalog__img(data-fancybox-group='group', href='#catalog7')
-                span.catalog__link Подробнее
-                span.catalog__link--small
-                  | 210.72 м
-                  sup 2
-              #catalog7.catalog__modal(style='display: none;')
-                .row
-                  .col-xs-12.col-sm-6
-                    .catalog__image.catalog--height
-                      img.img-responsive(src='img/catalog7.jpg', alt='')
-                      .catalog-description
-                        .catalog-description__name Проект «Ягодка»
-                        .catalog-description__text
-                          | Общая площадь: 
-                          span.catalog-description__text--span
-                            | 210.72 м
-                            sup 2
-                        .catalog-description__text
-                          | Срок строительства: 
-                          span.catalog-description__text--span 5-7 месяцев
-                  .col-xs-12.col-sm-6
-                    .catalog__caption.catalog--height
-                      .catalog__caption--heading Хотите узнать больше об этом коттедже? 
-                      .catalog__caption--subheading
-                        | Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.
-                      form.row.contactForm(name='Каталог', method='post', action='mail/mail.php')
-                        .col-xs-9
-                          .form-group
-                            input.form-control.catalog__input.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
-                          .form-group
-                            input.form-control.catalog__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required='', data-validation-required-message='Please enter your phone number.', name='phone', type='tel')
-                          .text-center
-                            button.g-btn.catalog__button(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать о коттедже
-                        .col-xs-3
-                          i.ic.ic-arrow_fff
-          .col-xs-12.col-sm-6.col-md-4
-            .gallery__item.gallery__item--8
-              a.fancyimage.catalog__img(data-fancybox-group='group', href='#catalog8')
-                span.catalog__link Подробнее
-                span.catalog__link--small
-                  | 214.12 м
-                  sup 2
-              #catalog8.catalog__modal(style='display: none;')
-                .row
-                  .col-xs-12.col-sm-6
-                    .catalog__image.catalog--height
-                      img.img-responsive(src='img/catalog8.jpg', alt='')
-                      .catalog-description
-                        .catalog-description__name Проект «Конвалия»
-                        .catalog-description__text
-                          | Общая площадь: 
-                          span.catalog-description__text--span
-                            | 214.12 м
-                            sup 2
-                        .catalog-description__text
-                          | Срок строительства: 
-                          span.catalog-description__text--span 5-7 месяцев
-                  .col-xs-12.col-sm-6
-                    .catalog__caption.catalog--height
-                      .catalog__caption--heading Хотите узнать больше об этом коттедже? 
-                      .catalog__caption--subheading
-                        | Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.
-                      form.row.contactForm(name='Каталог', method='post', action='mail/mail.php')
-                        .col-xs-9
-                          .form-group
-                            input.form-control.catalog__input.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
-                          .form-group
-                            input.form-control.catalog__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required='', data-validation-required-message='Please enter your phone number.', name='phone', type='tel')
-                          .text-center
-                            button.g-btn.catalog__button(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать о коттедже
-                        .col-xs-3
-                          i.ic.ic-arrow_fff
-      .col-xs-6.col-sm-6.col-md-3
-        .gallery__item.gallery__item--9
-          a.fancyimage.catalog__img(data-fancybox-group='group', href='#catalog9')
-            span.catalog__link Подробнее
-            span.catalog__link--small
-              | 229.27 м
-              sup 2
-          #catalog9.catalog__modal(style='display: none;')
-            .row
-              .col-xs-12.col-sm-6
-                .catalog__image.catalog--height
-                  img.img-responsive(src='img/catalog9.jpg', alt='')
-                  .catalog-description
-                    .catalog-description__name Проект «Мальва»
-                    .catalog-description__text
-                      | Общая площадь: 
-                      span.catalog-description__text--span
-                        | 229.27 м
-                        sup 2
-                    .catalog-description__text
-                      | Срок строительства: 
-                      span.catalog-description__text--span 5-7 месяцев
-              .col-xs-12.col-sm-6
-                .catalog__caption.catalog--height
-                  .catalog__caption--heading Хотите узнать больше об этом коттедже? 
-                  .catalog__caption--subheading
-                    | Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.
-                  form.row.contactForm(name='Каталог', method='post', action='mail/mail.php')
-                    .col-xs-9
-                      .form-group
-                        input.form-control.catalog__input.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
-                      .form-group
-                        input.form-control.catalog__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required='', data-validation-required-message='Please enter your phone number.', name='phone', type='tel')
-                      .text-center
-                        button.g-btn.catalog__button(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать о коттедже
-                    .col-xs-3
-                      i.ic.ic-arrow_fff
-      .col-xs-6.col-sm-3.col-md-3
-        .gallery__item.gallery__item--10
-          a.fancyimage.catalog__img(data-fancybox-group='group', href='#catalog10')
-            span.catalog__link Подробнее
-            span.catalog__link--small
-              | 236.68 м
-              sup 2
-          #catalog10.catalog__modal(style='display: none;')
-            .row
-              .col-xs-12.col-sm-6
-                .catalog__image.catalog--height
-                  img.img-responsive(src='img/catalog10.jpg', alt='')
-                  .catalog-description
-                    .catalog-description__name Проект «Троянда»
-                    .catalog-description__text
-                      | Общая площадь: 
-                      span.catalog-description__text--span
-                        | 236.68 м
-                        sup 2
-                    .catalog-description__text
-                      | Срок строительства: 
-                      span.catalog-description__text--span 5-7 месяцев
-              .col-xs-12.col-sm-6
-                .catalog__caption.catalog--height
-                  .catalog__caption--heading Хотите узнать больше об этом коттедже? 
-                  .catalog__caption--subheading
-                    | Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.
-                  form.row.contactForm(name='Каталог', method='post', action='mail/mail.php')
-                    .col-xs-9
-                      .form-group
-                        input.form-control.catalog__input.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
-                      .form-group
-                        input.form-control.catalog__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required='', data-validation-required-message='Please enter your phone number.', name='phone', type='tel')
-                      .text-center
-                        button.g-btn.catalog__button(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать о коттедже
-                    .col-xs-3
-                      i.ic.ic-arrow_fff
-      .col-xs-6.col-sm-3.col-md-4
-        .gallery__item.gallery__item--11
-          a.fancyimage.catalog__img(data-fancybox-group='group', href='#catalog11')
-            span.catalog__link Подробнее
-            span.catalog__link--small
-              | 307.65 м
-              sup 2
-          #catalog11.catalog__modal(style='display: none;')
-            .row
-              .col-xs-12.col-sm-6
-                .catalog__image.catalog--height
-                  img.img-responsive(src='img/catalog11.jpg', alt='')
-                  .catalog-description
-                    .catalog-description__name Проект «Барвинок»
-                    .catalog-description__text
-                      | Общая площадь: 
-                      span.catalog-description__text--span
-                        | 307.65 м
-                        sup 2
-                    .catalog-description__text
-                      | Срок строительства: 
-                      span.catalog-description__text--span 5-7 месяцев
-              .col-xs-12.col-sm-6
-                .catalog__caption.catalog--height
-                  .catalog__caption--heading Хотите узнать больше об этом коттедже? 
-                  .catalog__caption--subheading
-                    | Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.
-                  form.row.contactForm(name='Каталог', method='post', action='mail/mail.php')
-                    .col-xs-9
-                      .form-group
-                        input.form-control.catalog__input.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
-                      .form-group
-                        input.form-control.catalog__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required='', data-validation-required-message='Please enter your phone number.', name='phone', type='tel')
-                      .text-center
-                        button.g-btn.catalog__button(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать о коттедже
-                    .col-xs-3
-                      i.ic.ic-arrow_fff
-    .row
-      .text-center.col-xs-12.col-sm-10.col-sm-offset-1
-        .clearfix.address__border
-          i.col-lg-2.ic.ic-catalogic
-          .col-lg-10.address__text
-            | Специально для поселка "Лелечий Хутор" мы привлекли архитектора и разработали неповторимую линейку проектов домов в единой концепци площадью от 158 до 299 кв.м.
+          .col-24
+            +itemgallery(6)
+          .col-24.col-md-12.col-lg-16
+            +itemgallery(7)
+          .col-24.col-md-12.col-lg-8
+            +itemgallery(8)
+      .col-12.col-lg-6
+        +itemgallery(9)
+      .col-12.col-lg-6
+        +itemgallery(10)
+      .col-12.col-md-6.col-lg-8
+        +itemgallery(11)
+    .row.justify-content-center
+      .text-center.col24.col-md-20
+        .address__border
+          .row
+            i.col-xl-4(class=page.catalog.address.icon)
+            .col-xl-20.address__text!= page.catalog.address.text

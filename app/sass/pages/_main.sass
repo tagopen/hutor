@@ -1,7 +1,29 @@
 +comment('general style')
 +ic
++cm('form')
+.text-danger
+  color: $text-danger
+  text-align: left
+.form-group.has-error
+  .form-control
+    border-color: $form-control-error-border-color
+[type=submit]:disabled
+  animation: progress-bar-stripes 2s linear infinite
+  background-image: $btn-submit-loading-bg
+  background-size: 40px 40px
+@keyframes progress-bar-stripes
+  from
+    background-position: 40px 0
+  to
+    background-position: 0 0
++cm('main')
+.body
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+.main
+  flex: 1
 
-+comment("home page style")
 html
   overflow-x: hidden
   height: 100%
@@ -9,13 +31,23 @@ body
   padding-right: 0 !important  
   color: #000
 iframe
-  width: 100%
+  width: 100% 
+.body
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+.main
+  flex: 1
 a,
 a:hover,
 a:focus
   color: inherit
   text-decoration: none
   outline: none  
+button
+  &:hover,
+  &:focus
+    outline: none 
 .g
   &-btn
     color: #fff
@@ -97,6 +129,15 @@ a:focus
       color: $btn_color
       opacity: 1
       text-shadow: none
+.modal
+  -webkit-overflow-scrolling: touch
+  transform: translateZ(0)
+.modal.show 
+  display: flex !important
+  align-items: center
+.modal-dialog
+  position: relative
+  margin: auto
 +comment("header style")
 .header
   position: relative
@@ -774,7 +815,7 @@ a:focus
   &__box
     background-color: #fff
     margin: 0
-    padding: 25px 10px
+    padding: 25px
   &__contact
     padding: 15px 10px
     background-color: #f6f9f9
@@ -822,11 +863,15 @@ a:focus
   z-index: 8
   background: url(../img/footerbg.png) no-repeat
   +cover   
-  padding: 180px 0 30px
+  padding: 190px 0 30px
   margin-top: -150px
   &__copy
     padding-top: 25px
     color: #fff
++r(992)
+  .footer
+    padding: 160px 0 30px
+
 +comment("thanks page style")     
 .thanks
   background: url(../img/headerbg320.png) no-repeat

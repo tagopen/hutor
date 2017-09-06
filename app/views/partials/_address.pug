@@ -1,12 +1,12 @@
 section.address
   .container
-    .row
-      .col-xs-12.col-sm-7.address__col
+    .row.flex-md-row-reverse
+      .col-24.col-md-14.address__col
         .address__btn
           a.address__img(data-toggle='modal', href='#address__modal')
-            img.img-responsive.address__img--static(src='img/addressimg.png', alt='')
-            img.img-responsive.address__img--hover(src='img/addressimghover.png', alt='')
-      .col-xs-12.col-sm-5
+            img.img-fluid.address__img--static(src='img/addressimg.png', alt='')
+            img.img-fluid.address__img--hover(src='img/addressimghover.png', alt='')
+      .col-24.col-md-10
         .address__box
           .address__location.location
             .location__info Лелечный хутор находится
@@ -19,9 +19,9 @@ section.address
             .location__place
               i.fa.fa-map-signs(aria-hidden='true')
               | Киев - Житомир
-    .row
-      .text-center.col-xs-12.col-md-10.col-md-offset-1
+    .row.justify-content-center
+      .text-center.col-24.col-lg-20
         .clearfix.address__border
-          i.col-lg-2.ic.ic-warranty
-          .col-lg-10.address__text
+          i.col-xs-4.ic.ic-warranty
+          .col-xl-20.address__text
             | Житомирская трасса безопасна, поскольку имеет три полосы движения в каждую сторону, хорошее качество дорожного покрытия, освещается фонарями, а встречное движение отделено отбойниками

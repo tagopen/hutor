@@ -1,11 +1,11 @@
 footer.footer
   .container
-    .row
-      .col-xs-6.col-sm-3.col-md-2
+    .row.justify-content-between.align-items-center
+      .col-12.col-md-6.col-lg-4
         a.navbar-brand.navbar__logo(href='')
-          img.visible-xs.logo__img(src='img/logo/logo320.png', alt='')
-          img.hidden-xs.logo__img(src='img/logo/logo.png', alt='')
-      .col-xs-6.col-sm-3.col-md-2.pull-right
+          img.hidden-md-up.logo__img(src='img/logo/logo320.png', alt='')
+          img.hidden-sm-down.logo__img(src='img/logo/logo.png', alt='')
+      .col-12.col-md-6.col-lg-4.flex-md-last
         a.phone__link.phone__click(href='tel:380675009955')
           span.phone__link--small (067)
           |  500 99 55
@@ -16,5 +16,5 @@ footer.footer
           span.phone__link--small (044)
           |  496 59 18
         button.phone__btn(data-toggle='modal', data-target='#footer__modal') Заказать звонок
-      .text-center.col-xs-12.col-sm-6.col-md-8.footer__copy
+      .text-center.col-24.col-md-12.col-lg-16.footer__copy
         a(href='http://well-done.com.ua/?utm_source=website&utm_medium=clientfooter&utm_campaign=hutirlanding') Сделано с душой студией WELL DONE

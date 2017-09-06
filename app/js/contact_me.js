@@ -1,69 +1,97 @@
 $(function() {
+  $('.contactForm').validator({focus: false}).on('submit', function (e) {
+    var $form = $(this);
+    if (e.isDefaultPrevented()) {
+      // handle the invalid form...
+    } else {
+      e.preventDefault();
+      $form.find("[type=submit]").prop("disabled", true).button('loading'); //prevent submit behaviour and display preloading
 
-    $(".contactForm input,.contactForm textarea").jqBootstrapValidation({
-        preventSubmit: true,
-        submitError: function($form, event, errors) {
-            // additional error messages or events
+       // get values from FORM
+      var form               = $form.find('[type=submit]').val(),
+          name               = $form.find('[name=name]').val(),
+          email              = $form.find('[name=email]').val(),
+          phone              = $form.find('[name=phone]').val(),
+          message            = $form.find('[name=message]').val(),
+          time               = $form.find('[name=time]').val(),
+          method             = $form.find('[name=method]').val(),
+          range1             = $form.find('[name=range1]').val(),
+          range2             = $form.find('[name=range2]').val(),
+          question           = $form.find('[name=question]').val(),
+          period             = new Array(),
+          material           = new Array();
+
+      $form.find("[name^=\"period\"]:checked").each(function() {
+        if ($(this).prop("checked")) {
+          var radioText = $(this).siblings().text();
+
+          period.push($.trim(radioText));
+        }
+      });
+
+      $form.find("[name^=\"material\"]:checked").each(function() {
+        if ($(this).prop("checked")) {
+          var radioText = $(this).siblings().text();
+
+          material.push($.trim(radioText));
+        }
+      });
+
+      $.ajax({
+        url: "./mail/mail.php",
+        type: "POST",
+        data: {
+          form: $.trim(form),
+          name: $.trim(name),
+          phone: $.trim(phone),
+          email: $.trim(email),
+          method: $.trim(method),
+          message: $.trim(message),
+          time: $.trim(time),
+          question: $.trim(question),
+          period: period,
+          material: material,
+          range1: range1,
+          range2: range2,
         },
-        submitSuccess: function($form, event) {
-            event.preventDefault(); // prevent default submit behaviour
-            $("[type=submit]").prop("disabled", true).button('loading'); //prevent submit behaviour
-            // get values from FORM
-            var form = $form.attr('name');
-            var name = $form.find("[name=name]").val();
-            var email = $form.find("[name=email]").val();
-            var phone = $form.find("[name=phone]").val();
-            var message = $form.find("[name=message]").val();
-            var firstName = name; // For Success/Failure Message
-            // Check for white space in name for Success/Fail message
-            $.ajax({
-                url: "./mail/mail.php",
-                type: "POST",
-                data: {
-                    form: form,
-                    name: name,
-                    phone: phone,
-                    email: email,  
-                    message: message
-                },
-                cache: false,
-                success: function() {
-                    // Redirect success
-                    if ( (form == "Регистрация") || (form == "Каталог") ) {
-                      document.location.href="./pdf.html";
-                    } else {
-                      document.location.href="./thanks.html";
-                    }
-                    // remove prevent submit behaviour
-                    $("[type=submit]").prop("disabled", false).button('loading');  
+        cache: false,
+        success: function(response) {
+          // Success message
 
-                    //clear all fields
-                    $('.contactForm').trigger("reset");
-                },
-                error: function() {
-                    // Fail message
-
-                    // remove prevent submit behaviour
-                    $("[type=submit]").prop("disabled", false).button('loading'); 
-
-                    //clear all fields
-                    $('.contactForm').trigger("reset");
-                },
-            })
+          if ( (form == "Регистрация") || (form == "Каталог") ) {
+            document.location.href="./pdf.html";
+          } else {
+            document.location.href="./thanks.html";
+          }
+          
+          $form.find('.success').html("<div class='alert alert-success'>");
+          $form.find('.success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+            .append("</button>");
+          $form.find('.success > .alert-success')
+            .append("<strong>Cообщение успешно отправлено.</strong>");
+          $form.find('.success > .alert-success')
+            .append('</div>');
+          // remove prevent submit behaviour and disable preloading
+          $form.find("[type=submit]").prop("disabled", false).button('reset');  
+          document.location.href="./success.html";
+          //clear all fields
+          $form.trigger("reset");
         },
-        filter: function() {
-            return $(this).is(":visible");
+        error: function() {
+          // Fail message
+          $form.find('.success').html("<div class='alert alert-danger'>");
+          $form.find('.success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+            .append("</button>");
+          $form.find('.success > .alert-danger').append("<strong>Письмо не отправлено. Пожалуйста, проверьте ваше интернет соединения и попробуйте еще раз!");
+          $form.find('.success > .alert-danger').append('</div>');
+
+          // remove prevent submit behaviour and disable preloading
+          $form.find("[type=submit]").prop("disabled", false).button('reset'); 
+
+          //clear all fields
+          //$form.trigger("reset");
         },
-    });
-
-    $("a[data-toggle=\"tab\"]").click(function(e) {
-        e.preventDefault();
-        $(this).tab("show");
-    });
-});
-
-
-/*When clicking on Full hide fail/success boxes */
-$('#name').focus(function() {
-    $('.success').html('');
+      });
+    }
+  }); 
 });
