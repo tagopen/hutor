@@ -1298,7 +1298,7 @@ a:focus {
 }
 
 .gallery__item--1 {
-  height: 255px;
+  height: 115px;
   background: url(../img/catalog1.jpg) no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1384,6 +1384,14 @@ a:focus {
 .gallery__item--11 {
   height: 115px;
   background: url(../img/catalog11.jpg) no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.gallery__item--12 {
+  height: 115px;
+  background: url(../img/catalog12.jpg) no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -2112,11 +2120,17 @@ a:focus {
   .gallery__item {
     width: 100%;
   }
-  .gallery__item--1, .gallery__item--6, .gallery__item--9 {
+  .gallery__item--1 {
+    height: 115px;
+  }
+  .gallery__item--6, .gallery__item--9 {
     height: 250px;
   }
-  .gallery__item--1 .catalog__link, .gallery__item--6 .catalog__link, .gallery__item--9 .catalog__link {
+  .gallery__item--6 .catalog__link, .gallery__item--9 .catalog__link {
     line-height: 250px;
+  }
+  .gallery__item--12 {
+    height: 115px;
   }
   /* ---------------------------------------- */
   /* S C H E M E    S T Y L E                 */
@@ -2425,6 +2439,12 @@ a:focus {
   }
   .gallery__item--10 .catalog__link, .gallery__item--11 .catalog__link {
     line-height: 165px;
+  }
+  .gallery__item--12 {
+    height: 165px;
+  }
+  .gallery__item--12 .catalog__link {
+    line-height: 160px;
   }
   /* ---------------------------------------- */
   /* S C H E M E    S T Y L E                 */
