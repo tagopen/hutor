@@ -1036,6 +1036,38 @@
         </div>
       </div>
     </div>
+    <div class="modal fade show in" id="popup" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal__size modal__size--wide">
+        <div class="modal-content modal__content">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <div class="catalog__image catalog--height catalog__image--sky catalog-image"><i class="ic ic--125 catalog-image__icon catalog-image__icon--1"></i><i class="ic ic--house catalog-image__icon catalog-image__icon--2"></i></div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <div class="catalog__caption catalog--height">
+                <div class="catalog__caption--heading">Хотите узнать больше об этом коттедже?</div>
+                <div class="catalog__caption--subheading">Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.</div>
+                <form class="row contactForm" method="post" action="mail/mail.php">
+                  <div class="col-xs-9">
+                    <div class="form-group">
+                      <input class="form-control catalog__input form__name" aria-invalid="false" placeholder="Ваше имя" required="" name="name" type="text">
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control catalog__input form__phone" aria-invalid="false" placeholder="Ваш телефон" required="" name="phone" type="tel">
+                    </div>
+                    <div class="text-center">
+                      <button class="g-btn catalog__button" name="Каталог - 1" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Узнать о коттедже</button>
+                    </div>
+                  </div>
+                  <div class="col-xs-3"><i class="ic ic-arrow_fff"></i></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- build:js js/bundle.min.js-->
     <!-- jQuery-->
     <script src="js/jquery.js"></script>

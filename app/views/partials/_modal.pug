@@ -60,3 +60,30 @@
           input.form-control.modal__input.form__mail(aria-invalid='false', placeholder='Ваш E-mail', required='', data-validation-required-message='Please enter your phone number.', name='email', type='email')
         .text-center
           button.g-btn(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Отправить заявку
+
+#popup.modal.fade.show.in(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__size.modal__size--wide
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .row
+        .col-12.col-sm-6
+          .catalog__image.catalog--height.catalog__image--sky.catalog-image
+            i.ic.ic--125.catalog-image__icon.catalog-image__icon--1
+            i.ic.ic--house.catalog-image__icon.catalog-image__icon--2
+        .col-12.col-sm-6
+          .catalog__caption.catalog--height
+            .catalog__caption--heading Хотите узнать больше об этом коттедже?
+            .catalog__caption--subheading
+              | Укажите ваше имя и телефон, и в течении 24 часов с Вами свяжется наш специалист. Он расскажет Вам о всех деталях наших коттеджей. И честно даст ответы на все интересующие Вас вопросы, даже самые неудобные.
+            form.row.contactForm(method='post', action='mail/mail.php')
+              .col-xs-9
+                .form-group
+                  input.form-control.catalog__input.form__name(aria-invalid='false', placeholder='Ваше имя', required='', name='name', type='text')
+                .form-group
+                  input.form-control.catalog__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required='', name='phone', type='tel')
+                .text-center
+                  button.g-btn.catalog__button(name='Каталог - 1', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать о коттедже
+              .col-xs-3
+                i.ic.ic-arrow_fff
+

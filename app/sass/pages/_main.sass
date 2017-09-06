@@ -1,5 +1,10 @@
 +comment('general style')
 +ic
+
+@each $sprite in $spritesheet-sprites
+  .ic-#{nth($sprite, 10)}
+    &:before
+      +bs($sprite)
 .svg
   &--building
     width: em(28)
@@ -68,6 +73,9 @@ a:focus
   &__size
     width: 300px
     margin: 30px auto 0
+    &--wide
+      max-width: 900px
+      width: 90%
     &--big
       margin: 30px auto 0
       width: 300px

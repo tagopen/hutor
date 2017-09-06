@@ -521,6 +521,96 @@
   vertical-align: middle;
 }
 
+.ic-arrow:before {
+  width: 72px;
+  height: 182px;
+  background: url(../img/sprite.png) 0px 0px no-repeat;
+}
+
+.ic-arrow_fff:before {
+  width: 39px;
+  height: 120px;
+  background: url(../img/sprite.png) 0px -192px no-repeat;
+}
+
+.ic-catalogic:before {
+  width: 105px;
+  height: 92px;
+  background: url(../img/sprite.png) -82px 0px no-repeat;
+}
+
+.ic-create1:before {
+  width: 32px;
+  height: 45px;
+  background: url(../img/sprite.png) -86px -192px no-repeat;
+}
+
+.ic-create2:before {
+  width: 27px;
+  height: 54px;
+  background: url(../img/sprite.png) -49px -192px no-repeat;
+}
+
+.ic-create3:before {
+  width: 31px;
+  height: 43px;
+  background: url(../img/sprite.png) -136px -102px no-repeat;
+}
+
+.ic-create4:before {
+  width: 44px;
+  height: 43px;
+  background: url(../img/sprite.png) -82px -102px no-repeat;
+}
+
+.ic-fancybox_overlay:before {
+  width: 10px;
+  height: 10px;
+  background: url(../img/sprite.png) -307px -162px no-repeat;
+}
+
+.ic-fancybox_sprite:before {
+  width: 44px;
+  height: 152px;
+  background: url(../img/sprite.png) -284px 0px no-repeat;
+}
+
+.ic-fancyclose:before {
+  width: 13px;
+  height: 13px;
+  background: url(../img/sprite.png) -284px -162px no-repeat;
+}
+
+.ic-left:before {
+  width: 32px;
+  height: 32px;
+  background: url(../img/sprite.png) -128px -192px no-repeat;
+}
+
+.ic-right:before {
+  width: 32px;
+  height: 32px;
+  background: url(../img/sprite.png) -170px -192px no-repeat;
+}
+
+.ic-scheme:before {
+  width: 10px;
+  height: 29px;
+  background: url(../img/sprite.png) -263px -114px no-repeat;
+}
+
+.ic-warranty:before {
+  width: 77px;
+  height: 104px;
+  background: url(../img/sprite.png) -197px 0px no-repeat;
+}
+
+.ic-zoom:before {
+  width: 56px;
+  height: 57px;
+  background: url(../img/sprite.png) -197px -114px no-repeat;
+}
+
 .svg--building {
   width: 1.75em;
   height: 1.8125em;
@@ -621,6 +711,11 @@ a:focus {
 .modal__size {
   width: 300px;
   margin: 30px auto 0;
+}
+
+.modal__size--wide {
+  max-width: 900px;
+  width: 90%;
 }
 
 .modal__size--big {
@@ -1967,6 +2062,9 @@ a:focus {
   }
   .modal__size--big .modal__close {
     top: 5px;
+  }
+  .modal__size--wide {
+    width: 90%;
   }
   .modal__close {
     top: -25px;
