@@ -1,43 +1,5 @@
 header.header
   .container
     .row
-      nav.navbar
-        .col-xs-6.col-sm-6.col-md-3.col-lg-3.navbar-header
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#example-navbar-collapse')
-            span.sr-only Toggle navigation
-            span.icon-bar.icon__bar
-            span.icon-bar.icon__bar
-            span.icon-bar.icon__bar
-          a.navbar-brand.navbar__logo(href='')
-            img.visible-xs.logo__img(src='img/logo/logo320.png', alt='')
-            img.hidden-xs.logo__img(src='img/logo/logo.png', alt='')
-        .nav.navbar-nav.navbar-right.navbar__right
-          .phone
-            .phone__group
-              .phone__link
-                i.fa.fa-chevron-down(aria-hidden='true')
-                i.fa.fa-times.phone__icon--hidden(aria-hidden='true')
-                a.phone__link.phone__click(href='tel:380675009955')
-                  span.phone__link--small (067)
-                  |  500 99 55
-              .phone__slide
-                a.phone__link(href='tel:380507297280')
-                  span.phone__link--small (050)
-                  |  729 72 80
-                a.phone__link(href='tel:380444965918')
-                  span.phone__link--small (044)
-                  |  496 59 18
-            button.phone__btn(data-toggle='modal', data-target='#header__modal') Заказать звонок
-        #example-navbar-collapse.collapse.navbar-collapse.navbar__collapse
-          ul.nav.navbar-nav
-            li.nav__point.active
-              a(href='.address') Расположение
-            li.nav__point
-              a(href='.catalog') Каталог домов
-            li.nav__point
-              a(href='.plan') Генплан
-            li.nav__point
-              a(href='.create') Инженерные сети
-            li.nav__point
-              a(href='.about') Преимущества
+      include ../components/_nav.pug
   include _content.pug
