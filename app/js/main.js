@@ -108,6 +108,22 @@ $(document).ready(function() {
   var theInterval = setTimeout(function () {
     $('#popup').modal('show');
   }, interval);
-
-  console.log(theInterval);
 }); 
+
+$(function() {
+  $(".fancyimage").fancybox({
+    beforeShow: function() {
+      $('.catalog__slider').slick('setPosition');
+    }
+  });
+
+  $('.catalog__slider').not('.slick-initialized').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    infinite: false,
+    dots: false,
+    prevArrow: '<button type="button" data-role="none" class="slick-prev arrow-group" aria-label="Previous" tabindex="0" role="button"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
+    nextArrow: '<button type="button" data-role="none" class="slick-next arrow-group" aria-label="Next" tabindex="0" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
+  });
+});

@@ -393,12 +393,217 @@ a:focus
             color: $btn_color
           &:before
             content: ''    
+
++comment("section new style")
+.new
+  margin-bottom: -130px
+  padding: 130px 0 80px
+  background: url(../img/new.png) no-repeat
+  background-position: 50% 100%
+  background-size: cover
+  &__title
+    display: block
+    margin-bottom: 25px
+    text-align: center
+  &__subtitle
+    display: block
+    text-align: center
+  &__items
+    margin: 20px 0
+.nw-item
+  position: relative
+  height: 225px
+  width: 100%
+  background-repeat: no-repeat
+  background-size: cover
+  color: #fff
+  &--1
+    background-image: url(../img/new1.jpg)
+  &--2
+    background-image: url(../img/new2.jpg)
+  &__box
+    display: inline-block
+    width: 100%
+    height: 100%
+    padding: 20px
+    transition: all .3s ease-out
+    &:before
+      content: ''
+      +coverdiv
+      background-image: repeating-linear-gradient(to bottom,rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.14) 0%,rgba(0, 0, 0, 0.16) 48.2%,rgba(0, 0, 0, 0.83) 100%)
+    &:hover,
+    &:active
+      &:before
+        background-image: repeating-linear-gradient(to bottom,rgba(0, 0, 0, 0.16) 0%,rgba(0, 0, 0, 0.16) 0%)
+      color: #e88d0c
+      .nw-item__hover
+        visibility: visible
+        opacity: 1
+  &__content
+    margin-top: 160px
+  &__name
+    position: relative
+    font: 700 14px/16px $font-open-sans
+    z-index: 4
+  &__value
+    position: relative
+    font: 400 14px/16px $font-open-sans
+    z-index: 4
+  &__hover
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    visibility: hidden
+    opacity: 0
+    background: rgba(0, 0, 0, .5)
+    transition: all .3s ease-out
+    z-index: 1
+  &__icon
+    &--left,
+    &--right
+      position: absolute
+      top: 0
+      height: 100%
+      width: 25px
+      &:before,
+      &:after
+        content: ''
+        position: absolute
+        display: block
+        width: 25px
+        height: 25px
+        border: 1px solid #e88d0c
+      &:before
+        top: 10px
+      &:after
+        bottom: 10px
+    &--left
+      left: 10px
+      &:before
+        border:
+          right: none
+          bottom: none
+      &:after
+        border:
+          top: none
+          right: none
+    &--right
+      right: 10px
+      &:before
+        border:
+          left: none
+          bottom: none
+      &:after
+        border:
+          top: none
+          left: none
+  &__content-hover
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    font: 700 14px/16px $font-open-sans
+    color: #fff
+    text-transform: uppercase
+.arrow-group
+  display: block
+  width: 40px !important
+  height: 40px !important
+  border-radius: 50%
+  top: 50% !important
+  transform: translateY(-50%)
+  font-size: 20px !important
+  background-color: #e88d0c
+  color: #fff !important
+  transition: all .3s ease-out
+  &:hover,
+  &:focus
+    background-color: #e88d0c
+    opacity: .8
+  &.slick-disabled
+    background: #fff
+    color: #000  !important
+    &:hover,
+    &:focus
+      opacity: 1
++r(768)
+  .new
+    padding: 150px 0
+    &__items
+      margin: 60px 0
+  .nw-item
+    height: 325px
+    &__box
+      padding: 30px
+    &__content
+      margin-top: 235px
+    &__name
+      font-size: 18px
+      line-height: 20px
+    &__value
+      font-size: 18px
+      line-height: 20px
+    &__icon
+      &--left,
+      &--right
+        width: 35px
+        &:before,
+        &:after
+          width: 35px
+          height: 35px
+          border-width: 2px
+        &:before
+          top: 15px
+        &:after
+          bottom: 15px
+      &--left
+        left: 15px
+      &--right
+        right: 15px
+    &__content-hover
+      font-size: 18px
+      line-height: 20px
++r(992)
+  .nw-item
+    height: 400px
+    &__box
+      padding: 60px
+    &__content
+      margin-top: 255px
+    &__name
+      font-size: 24px
+      line-height: 26px
+    &__value
+      font-size: 24px
+      line-height: 26px
+    &__icon
+      &--left,
+      &--right
+        width: 50px
+        &:before,
+        &:after
+          width: 50px
+          height: 50px
+          border-width: 3px
+        &:before
+          top: 20px
+        &:after
+          bottom: 20px
+      &--left
+        left: 20px
+      &--right
+        right: 20px
+    &__content-hover
+      font-size: 24px
+      line-height: 26px
 +comment("catalog style")
 .catalog
   position: relative
   z-index: 10
   margin-bottom: -130px
-  padding: 200px 0 100px 
+  padding: 60px 0 100px 
   background: url(../img/catalogbg.png) no-repeat
   background-size: cover
   background-position: 50% 100%
@@ -526,13 +731,20 @@ a:focus
       display: inline-block   
   &-description
     background-color: #fff     
-    padding: 10px 45px
+    padding: 10px 30px
     text-align: left
     color: #222
     min-height: 132px
     &__name
       font: 400 18px/20px $font-gotham
       margin-bottom: 10px
+    &__label
+      padding: 5px 10px
+      float: right
+      border-radius: 20px
+      background-color: #e88d0c
+      font: 700 12px/10px $font-open-sans
+      color: #fff
     &__text  
       font: 400 12px/14px $font-gotham
       margin-bottom: 10px
@@ -545,10 +757,6 @@ a:focus
     text-align: center
     height: auto 
     padding: 10px
-    &--up
-      width: 44%
-      padding-right: 18px
-      line-height: 23px
 .catalog-image
   &__icon
     &--1
@@ -564,6 +772,19 @@ a:focus
       bottom: -25px
       z-index: 2
 +r(768)
+  .catalog
+    padding: 140px 0 100px
+    &-description
+      padding: 10px 45px
+      &__label
+        padding: 9px 14px
+        font-size: 16px
+        line-height: 18px
+    &__input
+      &--up
+        width: 44%
+        padding-right: 18px
+        line-height: 23px
   .catalog-image
     &__icon
       &--1
@@ -574,6 +795,7 @@ a:focus
         bottom: -72px
         left: -200px
         transform: scale(.8)
+
 +r(992)
   .catalog-image
     &__icon

@@ -1,0 +1,54 @@
+mixin itemgallery(i)
+  - var item = page.new.items[i - 1]
+  .nw-item.new__items(class="nw-item--" + i)
+    a.fancyimage.nw-item__box(href="#new" + i)
+      .nw-item__content
+        .row
+          .col-xs-6.col-sm-4
+            span.nw-item__name!= item.size
+          .col-xs-6.col-sm-8.text-right
+            span.nw-item__value!= item.name
+      .nw-item__hover
+        i.nw-item__icon.nw-item__icon--left
+        i.nw-item__icon.nw-item__icon--right
+        span.nw-item__content-hover!= item.link.text
+  .catalog__modal(style='display: none;', id="new" + i)
+    .row
+      .col-12.col-sm-6
+        .catalog__image.catalog--height
+          .catalog__slider
+            each slide in item.slider.items
+              .catalog__photo
+                img.img-responsive(src=slide.src, alt=slide.alt)
+          .catalog-description
+            .catalog-description__name!= item.name
+              span.catalog-description__label!= item.label
+            p.catalog-description__text--span!= item.descr.text1
+            p.catalog-description__text--span!= item.descr.text2
+            .catalog-description__text!= item.descr.text3
+      .col-12.col-sm-6
+        .catalog__caption.catalog--height
+          .catalog__caption--heading!= item.caption.heading
+          .catalog__caption--subheading!= item.caption.subheading
+          form.row.contactForm( method='post', action='mail/mail.php')
+            .col-xs-9
+              .form-group
+                input.form-control.catalog__input.form__name(aria-invalid='false', placeholder='Ваше имя', required, name='name', type='text')
+              .form-group
+                input.form-control.catalog__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required, name='phone', type='tel')
+              .text-center
+                button.g-btn.catalog__button(name='Каталог - ' + i, type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать о коттедже
+            .col-xs-3
+              i.ic.ic-arrow_fff
+section.new
+  .container
+    .row
+      .col-xs-12
+        h2.g-title.new__title!= page.new.heading
+        h3.g-subtitle.new__subtitle!= page.new.descr
+    .row
+      .col-xs-12.col-sm-6
+        +itemgallery(1)
+      .col-xs-12.col-sm-6
+        +itemgallery(2)
+

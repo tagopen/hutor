@@ -9,7 +9,7 @@ mixin itemgallery(i)
         .col-12.col-sm-6
           .catalog__image.catalog--height
             .catalog__photo
-              img.img-fluid(src=item.img.src, alt=item.img.alt)
+              img.img-responsive(src=item.img.src, alt=item.img.alt)
             .catalog-description
               .catalog-description__name!= item.name
               .catalog-description__text!= item.descr.name

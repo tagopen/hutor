@@ -1220,13 +1220,309 @@ a:focus {
 }
 
 /* ---------------------------------------- */
+/* S E C T I O N    N E W    S T Y L E      */
+/* ---------------------------------------- */
+.new {
+  margin-bottom: -130px;
+  padding: 130px 0 80px;
+  background: url(../img/new.png) no-repeat;
+  background-position: 50% 100%;
+  background-size: cover;
+}
+
+.new__title {
+  display: block;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.new__subtitle {
+  display: block;
+  text-align: center;
+}
+
+.new__items {
+  margin: 20px 0;
+}
+
+.nw-item {
+  position: relative;
+  height: 225px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.nw-item--1 {
+  background-image: url(../img/new1.jpg);
+}
+
+.nw-item--2 {
+  background-image: url(../img/new2.jpg);
+}
+
+.nw-item__box {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.nw-item__box:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-repeating-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.16) 48.2%, rgba(0, 0, 0, 0.83) 100%);
+  background-image: repeating-linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.16) 48.2%, rgba(0, 0, 0, 0.83) 100%);
+}
+
+.nw-item__box:hover, .nw-item__box:active {
+  color: #e88d0c;
+}
+
+.nw-item__box:hover:before, .nw-item__box:active:before {
+  background-image: -webkit-repeating-linear-gradient(top, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0.16) 0%);
+  background-image: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0.16) 0%);
+}
+
+.nw-item__box:hover .nw-item__hover, .nw-item__box:active .nw-item__hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nw-item__content {
+  margin-top: 160px;
+}
+
+.nw-item__name {
+  position: relative;
+  font: 700 14px/16px "Open Sans", sans-serif;
+  z-index: 4;
+}
+
+.nw-item__value {
+  position: relative;
+  font: 400 14px/16px "Open Sans", sans-serif;
+  z-index: 4;
+}
+
+.nw-item__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  z-index: 1;
+}
+
+.nw-item__icon--left, .nw-item__icon--right {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 25px;
+}
+
+.nw-item__icon--left:before, .nw-item__icon--left:after, .nw-item__icon--right:before, .nw-item__icon--right:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #e88d0c;
+}
+
+.nw-item__icon--left:before, .nw-item__icon--right:before {
+  top: 10px;
+}
+
+.nw-item__icon--left:after, .nw-item__icon--right:after {
+  bottom: 10px;
+}
+
+.nw-item__icon--left {
+  left: 10px;
+}
+
+.nw-item__icon--left:before {
+  border-right: none;
+  border-bottom: none;
+}
+
+.nw-item__icon--left:after {
+  border-top: none;
+  border-right: none;
+}
+
+.nw-item__icon--right {
+  right: 10px;
+}
+
+.nw-item__icon--right:before {
+  border-left: none;
+  border-bottom: none;
+}
+
+.nw-item__icon--right:after {
+  border-top: none;
+  border-left: none;
+}
+
+.nw-item__content-hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font: 700 14px/16px "Open Sans", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.arrow-group {
+  display: block;
+  width: 40px !important;
+  height: 40px !important;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  top: 50% !important;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 20px !important;
+  background-color: #e88d0c;
+  color: #fff !important;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.arrow-group:hover, .arrow-group:focus {
+  background-color: #e88d0c;
+  opacity: .8;
+}
+
+.arrow-group.slick-disabled {
+  background: #fff;
+  color: #000  !important;
+}
+
+.arrow-group.slick-disabled:hover, .arrow-group.slick-disabled:focus {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .new {
+    padding: 150px 0;
+  }
+  .new__items {
+    margin: 60px 0;
+  }
+  .nw-item {
+    height: 325px;
+  }
+  .nw-item__box {
+    padding: 30px;
+  }
+  .nw-item__content {
+    margin-top: 235px;
+  }
+  .nw-item__name {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .nw-item__value {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .nw-item__icon--left, .nw-item__icon--right {
+    width: 35px;
+  }
+  .nw-item__icon--left:before, .nw-item__icon--left:after, .nw-item__icon--right:before, .nw-item__icon--right:after {
+    width: 35px;
+    height: 35px;
+    border-width: 2px;
+  }
+  .nw-item__icon--left:before, .nw-item__icon--right:before {
+    top: 15px;
+  }
+  .nw-item__icon--left:after, .nw-item__icon--right:after {
+    bottom: 15px;
+  }
+  .nw-item__icon--left {
+    left: 15px;
+  }
+  .nw-item__icon--right {
+    right: 15px;
+  }
+  .nw-item__content-hover {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .nw-item {
+    height: 400px;
+  }
+  .nw-item__box {
+    padding: 60px;
+  }
+  .nw-item__content {
+    margin-top: 255px;
+  }
+  .nw-item__name {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  .nw-item__value {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  .nw-item__icon--left, .nw-item__icon--right {
+    width: 50px;
+  }
+  .nw-item__icon--left:before, .nw-item__icon--left:after, .nw-item__icon--right:before, .nw-item__icon--right:after {
+    width: 50px;
+    height: 50px;
+    border-width: 3px;
+  }
+  .nw-item__icon--left:before, .nw-item__icon--right:before {
+    top: 20px;
+  }
+  .nw-item__icon--left:after, .nw-item__icon--right:after {
+    bottom: 20px;
+  }
+  .nw-item__icon--left {
+    left: 20px;
+  }
+  .nw-item__icon--right {
+    right: 20px;
+  }
+  .nw-item__content-hover {
+    font-size: 24px;
+    line-height: 26px;
+  }
+}
+
+/* ---------------------------------------- */
 /* C A T A L O G    S T Y L E               */
 /* ---------------------------------------- */
 .catalog {
   position: relative;
   z-index: 10;
   margin-bottom: -130px;
-  padding: 200px 0 100px;
+  padding: 60px 0 100px;
   background: url(../img/catalogbg.png) no-repeat;
   background-size: cover;
   background-position: 50% 100%;
@@ -1412,7 +1708,7 @@ a:focus {
 
 .catalog-description {
   background-color: #fff;
-  padding: 10px 45px;
+  padding: 10px 30px;
   text-align: left;
   color: #222;
   min-height: 132px;
@@ -1421,6 +1717,16 @@ a:focus {
 .catalog-description__name {
   font: 400 18px/20px "GothamPro", sans-serif;
   margin-bottom: 10px;
+}
+
+.catalog-description__label {
+  padding: 5px 10px;
+  float: right;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  background-color: #e88d0c;
+  font: 700 12px/10px "Open Sans", sans-serif;
+  color: #fff;
 }
 
 .catalog-description__text {
@@ -1440,12 +1746,6 @@ a:focus {
   text-align: center;
   height: auto;
   padding: 10px;
-}
-
-.catalog__input--up {
-  width: 44%;
-  padding-right: 18px;
-  line-height: 23px;
 }
 
 .catalog-image__icon--1 {
@@ -1469,6 +1769,22 @@ a:focus {
 }
 
 @media only screen and (min-width: 768px) {
+  .catalog {
+    padding: 140px 0 100px;
+  }
+  .catalog-description {
+    padding: 10px 45px;
+  }
+  .catalog-description__label {
+    padding: 9px 14px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .catalog__input--up {
+    width: 44%;
+    padding-right: 18px;
+    line-height: 23px;
+  }
   .catalog-image__icon--1 {
     left: -85px;
     top: 50%;
@@ -2600,7 +2916,7 @@ a:focus {
   /* C A T A L O G    S T Y L E               */
   /* ---------------------------------------- */
   .catalog-description {
-    padding: 35px 60px 20px;
+    padding: 35px 55px 20px;
   }
   .catalog-description__name {
     font: 700 24px/36px "GothamPro", sans-serif;
