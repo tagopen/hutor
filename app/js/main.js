@@ -121,7 +121,7 @@ $(function() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    infinite: false,
+    infinite: true,
     dots: false,
     prevArrow: '<button type="button" data-role="none" class="slick-prev arrow-group" aria-label="Previous" tabindex="0" role="button"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
     nextArrow: '<button type="button" data-role="none" class="slick-next arrow-group" aria-label="Next" tabindex="0" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
