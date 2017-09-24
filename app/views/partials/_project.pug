@@ -36,8 +36,8 @@ section.project
           div Оставьте свой эмейл и получите мгновенный доступ к файлу
           span.project__contact--text с генпланом дома, техническими характеристиками и ценой!
           i.hidden-xs.ic.ic-arrow
-        form.clearfix.contactForm(name='Регистрация', method='post', action='mail/mail.php', onsubmit="yaCounter40478820.reachGoal ('lileya'); ga('send', 'event', 'form', 'submit', 'lileya');")
+        form.clearfix.contactForm(method='post', action='mail/mail.php', onsubmit="yaCounter40478820.reachGoal ('lileya'); ga('send', 'event', 'form', 'submit', 'lileya');")
           .form-group.col-xs-12.col-lg-8.form__size
             input.form-control.form__input.modal__input.form__mail(aria-invalid='false', placeholder='Введите ваш E-mail', required='', data-validation-required-message='Please enter your phone number.', name='email', type='email')
           .text-center.col-xs-12.col-lg-8.form__size
-            button.g-btn.project__btn(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Получить подробности о коттедже
+            button.g-btn.project__btn(type='submit', name='form', value='Регистрация' data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Получить подробности о коттедже

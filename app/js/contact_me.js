@@ -9,7 +9,7 @@ $(function() {
             event.preventDefault(); // prevent default submit behaviour
             $("[type=submit]").prop("disabled", true).button('loading'); //prevent submit behaviour
             // get values from FORM
-            var form = $form.attr('name');
+            var form = $form.find("[name=form]").val();
             var name = $form.find("[name=name]").val();
             var email = $form.find("[name=email]").val();
             var phone = $form.find("[name=phone]").val();

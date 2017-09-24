@@ -7,8 +7,8 @@ section.register
           br
           |  увидеть наш городок вживую!
       .col-xs-12.col-lg-8.col-lg-offset-2
-        form.clearfix.contactForm(name='Регистрация', method='post', action='mail/mail.php', onsubmit="yaCounter40478820.reachGoal ('prosmotr'); ga('send', 'event', 'form', 'submit', 'prosmotr');")
+        form.clearfix.contactForm(method='post', action='mail/mail.php', onsubmit="yaCounter40478820.reachGoal ('prosmotr'); ga('send', 'event', 'form', 'submit', 'prosmotr');")
           .form-group.col-xs-12.col-sm-6.form__size--tablet
             input.form-control.form__input(placeholder='Введите ваш телефон', required='', data-validation-required-message='Please enter your phone number.', name='phone', type='tel')
           .text-center.col-xs-12.col-sm-6.form__size--tablet
-            button.g-btn(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Записаться на просмотр коттеджей
+            button.g-btn(type='submit', name='form', value='Регистрация' data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Записаться на просмотр коттеджей

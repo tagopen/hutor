@@ -7,7 +7,7 @@
         p.modal__heading Форма обратной связи
         span.modal__subheading
           | Оставьте свои контактные данные в этой форме и мы свяжемся с вами в ближайшее время
-      form.contactForm.modal__form(name='Шапка', method='post', action='mail/mail.php', onsubmit="yaCounter40478820.reachGoal ('zvonokheader'); ga('send', 'event', 'form', 'submit', 'zvonokheader');")
+      form.contactForm.modal__form(method='post', action='mail/mail.php', onsubmit="yaCounter40478820.reachGoal ('zvonokheader'); ga('send', 'event', 'form', 'submit', 'zvonokheader');")
         .form-group
           input.form-control.modal__input.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
         .form-group
@@ -15,7 +15,7 @@
         .form-group
           input.form-control.modal__input.form__mail(aria-invalid='false', placeholder='Ваш E-mail', required='', data-validation-required-message='Please enter your phone number.', name='email', type='email')
         .text-center
-          button.g-btn(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Отправить заявку
+          button.g-btn(type='submit', name='form', value='Шапка', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Отправить заявку
 
 #header__modal2.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
   .modal-dialog.modal__size
@@ -25,7 +25,7 @@
       .modal__head
         span.modal__subheading
           | Оставьте свои контакты, чтобы мы отправили вам каталог домов и могли связаться с вами для уточнения деталей
-      form.contactForm.modal__form(name='Первый экран', method='post', action='mail/mail.php', onsubmit="yaCounter40478820.reachGoal ('firstscreen'); ga('send', 'event', 'form', 'submit', 'firstscreen');")
+      form.contactForm.modal__form(method='post', action='mail/mail.php', onsubmit="yaCounter40478820.reachGoal ('firstscreen'); ga('send', 'event', 'form', 'submit', 'firstscreen');")
         .form-group
           input.form-control.modal__input.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
         .form-group
@@ -33,7 +33,7 @@
         .form-group
           input.form-control.modal__input.form__mail(aria-invalid='false', placeholder='Ваш E-mail', required='', data-validation-required-message='Please enter your phone number.', name='email', type='email')
         .text-center
-          button.g-btn(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Получить каталог коттеджей
+          button.g-btn(type='submit', name='form', value='Первый экран' data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Получить каталог коттеджей
 
 #address__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
   .modal-dialog.modal__size--big
@@ -51,7 +51,7 @@
         p.modal__heading Форма обратной связи
         span.modal__subheading
           | Оставьте свои контактные данные в этой форме и мы свяжемся с вами в ближайшее время
-      form.contactForm.modal__form(name='Футер', method='post', action='mail/mail.php', onsubmit="yaCounter40478820.reachGoal ('footer'); ga('send', 'event', 'form', 'submit', 'footer');")
+      form.contactForm.modal__form(method='post', action='mail/mail.php', onsubmit="yaCounter40478820.reachGoal ('footer'); ga('send', 'event', 'form', 'submit', 'footer');")
         .form-group
           input.form-control.modal__input.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
         .form-group
@@ -59,7 +59,7 @@
         .form-group
           input.form-control.modal__input.form__mail(aria-invalid='false', placeholder='Ваш E-mail', required='', data-validation-required-message='Please enter your phone number.', name='email', type='email')
         .text-center
-          button.g-btn(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Отправить заявку
+          button.g-btn(type='submit', name='form', value='Футер' data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Отправить заявку
 
 #popup.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
   .modal-dialog.modal__size.modal__size--wide
@@ -88,7 +88,7 @@
                   input.form-control.catalog__input.catalog__input--up.form__phone(placeholder='Ваш номер телефона', required, name='phone', type='tel')
 
                 .text-center
-                  button.g-btn.catalog__button.catalog__button--up(name='Пожелания услышаны', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать детали о новых коттеджах
+                  button.g-btn.catalog__button.catalog__button--up(name='form', value='Пожелания услышаны' type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать детали о новых коттеджах
             .notify
               | Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с 
               a.notify__link(href="#") Политикой конфиденциальности

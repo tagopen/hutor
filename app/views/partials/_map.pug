@@ -27,7 +27,7 @@ section.map
             .map__heading Форма обратной связи
             .map__subheading
               | Вы можете оставить свои контактные данные в этой форме и наши менеджеры свяжутся с вами в ближайшее время
-            form.clearfix.contactForm(name='Карта_форма', method='post', action='mail/mail.php', onsubmit="yaCounter40478820.reachGoal ('mapform'); ga('send', 'event', 'form', 'submit', 'mapform');")
+            form.clearfix.contactForm(method='post', action='mail/mail.php', onsubmit="yaCounter40478820.reachGoal ('mapform'); ga('send', 'event', 'form', 'submit', 'mapform');")
               .form-group.map__group.col-xs-12
                 input.form-control.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
               .form-group.map__group.col-xs-12
@@ -36,4 +36,4 @@ section.map
                 input.form-control.form__mail(aria-invalid='false', placeholder='Ваш E-mail', required='', data-validation-required-message='Please enter your phone number.', name='email', type='email')
               .map__subheading--small
                 | В течении нескольких минут на указаный email прийдет подтверждение о заполненой форме
-              button.g-btn.map__btn(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Отправить заявку
+              button.g-btn.map__btn(type='submit', name='form', value='Карта_форма' data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Отправить заявку
