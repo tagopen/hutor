@@ -75,7 +75,8 @@
       prevArrow: '<button type="button" data-role="none" class="slick-prev arrow-group" aria-label="Previous" tabindex="0" role="button"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
       nextArrow: '<button type="button" data-role="none" class="slick-next arrow-group" aria-label="Next" tabindex="0" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
     });
-     $(window).resize(function() {
+
+    $(window).resize(function() {
       $('.catalog__slider').slick('resize');
     });
   });
@@ -133,8 +134,8 @@
     $("a.fancyimage").fancybox({
       scrolling : 'no',
       closeBtn : false,
-      beforeLoad: function () {
-        $('.slick-slider').slick('resize');
+      afterShow: function() {
+        $('.slick-slider').slick('reinit');
       },
     }); 
 
