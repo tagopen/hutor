@@ -5,6 +5,8 @@ mixin itemgallery(i)
       span.catalog__link!= item.link.text
       span.catalog__link--small!= item.size
     .catalog__modal(style='display: none;', id="catalog" + i)
+      button.close.close--fancybox(type='button')
+        i.fa.fa-times
       .row
         .col-12.col-sm-6
           .catalog__image.catalog--height

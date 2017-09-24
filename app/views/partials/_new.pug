@@ -13,6 +13,8 @@ mixin itemgallery(i)
         i.nw-item__icon.nw-item__icon--right
         span.nw-item__content-hover!= item.link.text
   .catalog__modal(style='display: none;', id="new" + i)
+    button.close.close--fancybox(type='button')
+      i.fa.fa-times
     .row
       .col-12.col-sm-6
         .catalog__image.catalog--height

@@ -28,11 +28,14 @@ body
 iframe
   width: 100%
 a,
+button,
 a:hover,
-a:focus
+button:hover,
+a:focus,
+button:focus
   color: inherit
   text-decoration: none
-  outline: none  
+  outline: none
 .g
   &-btn
     color: #fff
@@ -69,6 +72,19 @@ a:focus
   &__size  
     &--tablet
       padding: 0
+.close
+  &--fancybox
+    position: absolute
+    top: 5px
+    right: 5px
+    opacity: 1
+    color: #fff
+    z-index: 10
++r(768)
+  .close
+    &--fancybox
+      top: -25px
+      right: -25px
 .modal
   &__size
     width: 300px
@@ -603,6 +619,7 @@ a:focus
 .catalog
   position: relative
   z-index: 10
+  margin-top: 50px
   margin-bottom: -130px
   padding: 60px 0 100px 
   background: url(../img/catalogbg.png) no-repeat
@@ -774,6 +791,7 @@ a:focus
       z-index: 2
 +r(768)
   .catalog
+    margin-top: 0
     padding: 140px 0 100px
     &-description
       padding: 10px 45px

@@ -530,7 +530,7 @@
 .ic-arrow_fff:before {
   width: 39px;
   height: 120px;
-  background: url(../img/sprite.png) -630px -354px no-repeat;
+  background: url(../img/sprite.png) -630px -192px no-repeat;
 }
 
 .ic-catalogic:before {
@@ -542,43 +542,31 @@
 .ic-create1:before {
   width: 32px;
   height: 45px;
-  background: url(../img/sprite.png) -571px -418px no-repeat;
+  background: url(../img/sprite.png) -667px -442px no-repeat;
 }
 
 .ic-create2:before {
   width: 27px;
   height: 54px;
-  background: url(../img/sprite.png) -557px -339px no-repeat;
+  background: url(../img/sprite.png) -630px -442px no-repeat;
 }
 
 .ic-create3:before {
   width: 31px;
   height: 43px;
-  background: url(../img/sprite.png) -87px -542px no-repeat;
+  background: url(../img/sprite.png) -491px -339px no-repeat;
 }
 
 .ic-create4:before {
   width: 44px;
   height: 43px;
-  background: url(../img/sprite.png) -630px -484px no-repeat;
-}
-
-.ic-fancybox_overlay:before {
-  width: 10px;
-  height: 10px;
-  background: url(../img/sprite.png) -684px -254px no-repeat;
-}
-
-.ic-fancybox_sprite:before {
-  width: 44px;
-  height: 152px;
-  background: url(../img/sprite.png) -630px -192px no-repeat;
+  background: url(../img/sprite.png) -630px -389px no-repeat;
 }
 
 .ic-fancyclose:before {
   width: 13px;
   height: 13px;
-  background: url(../img/sprite.png) -684px -231px no-repeat;
+  background: url(../img/sprite.png) -679px -231px no-repeat;
 }
 
 .ic-house-xs:before {
@@ -596,13 +584,13 @@
 .ic-left:before {
   width: 32px;
   height: 32px;
-  background: url(../img/sprite.png) -128px -542px no-repeat;
+  background: url(../img/sprite.png) -532px -339px no-repeat;
 }
 
 .ic-right:before {
   width: 32px;
   height: 32px;
-  background: url(../img/sprite.png) -170px -542px no-repeat;
+  background: url(../img/sprite.png) -574px -339px no-repeat;
 }
 
 .ic-s-125-xs:before {
@@ -620,7 +608,7 @@
 .ic-scheme:before {
   width: 10px;
   height: 29px;
-  background: url(../img/sprite.png) -684px -192px no-repeat;
+  background: url(../img/sprite.png) -679px -192px no-repeat;
 }
 
 .ic-warranty:before {
@@ -632,7 +620,7 @@
 .ic-zoom:before {
   width: 56px;
   height: 57px;
-  background: url(../img/sprite.png) -491px -339px no-repeat;
+  background: url(../img/sprite.png) -630px -322px no-repeat;
 }
 
 .svg--building {
@@ -673,8 +661,11 @@ iframe {
 }
 
 a,
+button,
 a:hover,
-a:focus {
+button:hover,
+a:focus,
+button:focus {
   color: inherit;
   text-decoration: none;
   outline: none;
@@ -730,6 +721,22 @@ a:focus {
 
 .form__size--tablet {
   padding: 0;
+}
+
+.close--fancybox {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  opacity: 1;
+  color: #fff;
+  z-index: 10;
+}
+
+@media only screen and (min-width: 768px) {
+  .close--fancybox {
+    top: -25px;
+    right: -25px;
+  }
 }
 
 .modal__size {
@@ -1522,6 +1529,7 @@ a:focus {
 .catalog {
   position: relative;
   z-index: 10;
+  margin-top: 50px;
   margin-bottom: -130px;
   padding: 60px 0 100px;
   background: url(../img/catalogbg.png) no-repeat;
@@ -1771,6 +1779,7 @@ a:focus {
 
 @media only screen and (min-width: 768px) {
   .catalog {
+    margin-top: 0;
     padding: 140px 0 100px;
   }
   .catalog-description {

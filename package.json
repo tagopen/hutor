@@ -60,8 +60,10 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "fancybox": "^3.0.0",
     "font-awesome": "^4.7.0",
     "jquery": "^1.12.4",
+    "jquery-match-height": "^0.7.2",
     "slick-carousel": "^1.7.1"
   }
 }

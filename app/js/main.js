@@ -1,129 +1,157 @@
-// Menu anchor scroll
-$(document).ready(function(){
-    $(".navbar").on("click",".nav__point a", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top -$('.navbar').outerHeight()+180}, 1500);
+(function($) {
+  "use strict"; // Start of use strict
+
+  // Old browser notification
+  $(function() { 
+    $.reject({
+      reject: {
+        msie: 9
+      },
+      imagePath: 'img/icons/jReject/',
+      display: [ 'chrome','firefox','safari','opera' ],
+      closeCookie: true,
+      cookieSettings: {
+        expires: 60*60*24*365
+      },
+      header: 'Ваш браузер устарел!',
+      paragraph1: 'Вы пользуетесь устаревшим браузером, который не поддерживает современные веб-стандарты и представляет угрозу вашей безопасности.',
+      paragraph2: 'Пожалуйста, установите современный браузер:',
+      closeMessage: 'Закрывая это уведомление вы соглашаетесь с тем, что сайт в вашем браузере может отображаться некорректно.',
+      closeLink: 'Закрыть это уведомление',
     });
-});
-// Header numbers click
-$(document).ready(function(){
-  $('.phone__group').click( function () {
-    $('.phone__link .fa').toggleClass('phone__icon--hidden');
-    $('.phone__slide').toggleClass('phone__slide--visibility');
   });
-});  
-// Old browser notification
-$(function() { 
-  $.reject({
-    reject: {
-      msie: 9
-    },
-    imagePath: 'img/icons/jReject/',
-    display: [ 'chrome','firefox','safari','opera' ],
-    closeCookie: true,
-    cookieSettings: {
-      expires: 60*60*24*365
-    },
-    header: 'Ваш браузер устарел!',
-    paragraph1: 'Вы пользуетесь устаревшим браузером, который не поддерживает современные веб-стандарты и представляет угрозу вашей безопасности.',
-    paragraph2: 'Пожалуйста, установите современный браузер:',
-    closeMessage: 'Закрывая это уведомление вы соглашаетесь с тем, что сайт в вашем браузере может отображаться некорректно.',
-    closeLink: 'Закрыть это уведомление',
+
+  // Menu anchor scroll
+  $(function() {
+    $(".navbar").on("click",".nav__point a", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+      top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top -$('.navbar').outerHeight()+180}, 1500);
+    });
   });
-});
 
-$('.project__slider').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  asNavFor: '.project__slider--small'
-});
-$('.project__slider--small').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  asNavFor: '.project__slider',
-  dots: false,
-  arrows: true,
-  centerPadding: '10',
-  centerMode: true,
-  focusOnSelect: true,
-  prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
-  nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
-});
+  // Header numbers click
+  $(function() {
+    $('.phone__group').click( function () {
+      $('.phone__link .fa').toggleClass('phone__icon--hidden');
+      $('.phone__slide').toggleClass('phone__slide--visibility');
+    });
+  });  
 
+  // Slick slider initialize
+  $(function() {
 
-// Scheme info animation
-  if( $( window ).width() >= 768 ) {
-    $(document).ready ( function() {
+    $('.project__slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      adaptiveHeight: true,
+      swipeToSlide: '15',
+      asNavFor: '.project__slider--small'
+    });
+
+    $('.project__slider--small').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: '.project__slider',
+      dots: false,
+      arrows: true,
+      centerPadding: '10',
+      centerMode: true,
+      focusOnSelect: true,
+      prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
+      nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
+    });
+
+    $('.catalog__slider').not('.slick-initialized').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      infinite: true,
+      dots: false,
+      swipeToSlide: '15',
+      adaptiveHeight: true,
+      prevArrow: '<button type="button" data-role="none" class="slick-prev arrow-group" aria-label="Previous" tabindex="0" role="button"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
+      nextArrow: '<button type="button" data-role="none" class="slick-next arrow-group" aria-label="Next" tabindex="0" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
+    });
+     $(window).resize(function() {
+      $('.catalog__slider').slick('resize');
+    });
+  });
+ 
+  // Scheme info animation
+  $(function() {
+    if( $( window ).width() >= 768 ) {
       $('.scheme__icon, .scheme__info').hover( function() {
         $(this).parent().toggleClass('scheme__btn--active');
       });
-    });;
-  }
-
-
-
-// Equal Height function
-function setEqualHeight(columns)
-{
-	var tallestcolumn = 0;
-	columns.each(
-		function()
-		{
-			currentHeight = $(this).height();
-			if(currentHeight > tallestcolumn)
-			{
-				tallestcolumn = currentHeight;
-			}
-		}
-		);
-	columns.height(tallestcolumn);
-}
-// Set equal height
-$(window).on('resize', function(){
-  // For all screen
-  //setEqualHeight($(".work-item"));
-
-  // Only 768+
-  if( $( window ).width() >= 768 ) {
-    setEqualHeight($('.create__name'));
-    setEqualHeight($('.create__box'));
-    setEqualHeight($('.process__box'));
-    setEqualHeight($('.catalog__name'));
-  }
-
-}).trigger('resize');
-
-
-$(document).ready(function() { 
-  $("a.fancyimage").fancybox(); 
-}); 
-
-$(document).ready(function() { 
-
-  var interval = 20 * 1000;
-
-  var theInterval = setTimeout(function () {
-    $('#popup').modal('show');
-  }, interval);
-}); 
-
-$(function() {
-  $(".fancyimage").fancybox({
-    beforeShow: function() {
-      $('.catalog__slider').slick('setPosition');
     }
   });
 
-  $('.catalog__slider').not('.slick-initialized').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    infinite: true,
-    dots: false,
-    prevArrow: '<button type="button" data-role="none" class="slick-prev arrow-group" aria-label="Previous" tabindex="0" role="button"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
-    nextArrow: '<button type="button" data-role="none" class="slick-next arrow-group" aria-label="Next" tabindex="0" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
+  // Match Height
+  $(function() {
+
+    $('.work').matchHeight({
+      byRow: true,
+      property: 'height',
+      target: null,
+      remove: false
+    });
+
+    if( $( window ).width() >= 760 ) {
+
+      $('.create__name').matchHeight({
+        byRow: true,
+        property: 'height',
+        target: null,
+        remove: false
+      });
+      $('.create__box').matchHeight({
+        byRow: true,
+        property: 'height',
+        target: null,
+        remove: false
+      });
+      $('.process__box').matchHeight({
+        byRow: false,
+        property: 'height',
+        target: null,
+        remove: false
+      });
+      $('.catalog__name').matchHeight({
+        byRow: true,
+        property: 'height',
+        target: null,
+        remove: false
+      });
+    }
   });
-});
+
+  // Fancybox
+  $(function() { 
+    $("a.fancyimage").fancybox({
+      scrolling : 'no',
+      closeBtn : false,
+      beforeShow: function () {
+        $('.slick-slider').slick('resize');
+      },
+    }); 
+
+    $('.close--fancybox').click(function(e){
+        e.preventDefault();
+        $.fancybox.close();
+    });
+  }); 
+
+  // Sibassa modal
+  $(function() { 
+    var interval = 20 * 1000,
+        theInterval;
+
+    theInterval = setTimeout(function() {
+      $('#popup').modal('show');
+    }, interval);
+  }); 
+
+})(jQuery); // End of use strict
