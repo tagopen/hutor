@@ -88,18 +88,24 @@ gulp.task('scripts', () => {
 });
 
 gulp.task('pug', () => {
- return gulp.src(path.watch.pug)
- .pipe($.plumber())
- .pipe($.data(function (file) {
-   return {
-     relativePath: file.history[0].replace(file.base, '').split(".")[0]
-   }
- }))
- .pipe($.pug({
-   basedir:     dirs.src,
-   pretty:      true
- }))
- .pipe(gulp.dest(path.src.html));
+  const htmlVersionOptions = {
+    paramName: 'v',
+    paramType: 'timestamp',
+  }
+
+  return gulp.src(path.watch.pug)
+  .pipe($.plumber())
+  .pipe($.data(function (file) {
+    return {
+      relativePath: file.history[0].replace(file.base, '').split(".")[0]
+    }
+  }))
+  .pipe($.pug({
+    basedir:     dirs.src,
+    pretty:      true
+  }))
+  .pipe($.htmlVersion(htmlVersionOptions))
+  .pipe(gulp.dest(path.src.html));
 });
 
 // create a task that ensures the `js` task is complete before

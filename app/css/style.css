@@ -581,18 +581,6 @@
   background: url(../img/sprite.png) 0px 0px no-repeat;
 }
 
-.ic-left:before {
-  width: 32px;
-  height: 32px;
-  background: url(../img/sprite.png) -532px -339px no-repeat;
-}
-
-.ic-right:before {
-  width: 32px;
-  height: 32px;
-  background: url(../img/sprite.png) -574px -339px no-repeat;
-}
-
 .ic-s-125-xs:before {
   width: 241px;
   height: 86px;
@@ -1679,7 +1667,7 @@ button:focus {
 .catalog__caption {
   background-color: #e88d0c;
   text-align: center;
-  padding: 45px 10px;
+  padding: 60px 10px 45px;
 }
 
 .catalog__caption--heading {
@@ -1720,7 +1708,6 @@ button:focus {
   padding: 10px 30px;
   text-align: left;
   color: #222;
-  min-height: 132px;
 }
 
 .catalog-description__name {

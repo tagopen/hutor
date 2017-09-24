@@ -133,7 +133,7 @@
     $("a.fancyimage").fancybox({
       scrolling : 'no',
       closeBtn : false,
-      beforeShow: function () {
+      beforeLoad: function () {
         $('.slick-slider').slick('resize');
       },
     }); 

@@ -202,9 +202,7 @@
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
     #fancybox-loading,
-    .fancybox-close,
-    .fancybox-next span,
-    .fancybox-prev span {
+    .fancybox-close {
         background-image: url(../img/icons/fancybox_sprite@2x.png);
         background-size: 44px 152px
     }
