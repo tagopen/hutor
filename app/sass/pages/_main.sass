@@ -1427,3 +1427,29 @@ body
     &__text
       font: 400 18px/27px $font-open-sans 
       padding-left: 35px
++comment("map page style")      
+.map
+  &__border
+    position: relative
+    z-index: 25
++r(768)
+  .map
+    &__border
+      margin-top: 160px
+    &__pos
+      position: absolute
+      top: -220px
+      left: 0
++r(992)  
+  .map
+    &__boxe
+      padding: 60px 0 0 50px !important
+    &__border
+      margin-top: 100px
+    &__pos
+      top: -200px
+      left: -100px    
++r(1200)
+  .map
+    &__boxe
+      padding: 120px 0 0 85px !important

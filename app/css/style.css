@@ -2750,6 +2750,44 @@ body {
   }
 }
 
+/* ---------------------------------------- */
+/* M A P    P A G E    S T Y L E            */
+/* ---------------------------------------- */
+.map__border {
+  position: relative;
+  z-index: 25;
+}
+
+@media only screen and (min-width: 768px) {
+  .map__border {
+    margin-top: 160px;
+  }
+  .map__pos {
+    position: absolute;
+    top: -220px;
+    left: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .map__boxe {
+    padding: 60px 0 0 50px !important;
+  }
+  .map__border {
+    margin-top: 100px;
+  }
+  .map__pos {
+    top: -200px;
+    left: -100px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .map__boxe {
+    padding: 120px 0 0 85px !important;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   /* ---------------------------------------- */
   /* G E N E R A L    S T Y L E               */

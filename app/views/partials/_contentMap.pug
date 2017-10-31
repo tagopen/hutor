@@ -1,0 +1,35 @@
+.contento.contento--map
+  .container
+    .row
+      .col-xs-12
+        .contento__text!=content.map.text
+    .row
+      .col-xs-12.col-sm-7.address__col
+        .address__btn
+          a.address__img(data-toggle='modal', href='#address__modal')
+            img.img-responsive.address__img--static(src='img/addressimg.png', alt='')
+            img.img-responsive.address__img--hover(src='img/addressimghover.png', alt='')
+      .col-xs-12.col-sm-5
+        .address__box.map__boxe
+          .address__location.location
+            .location__info Лелечный хутор находится
+            .location__place
+              i.fa.fa-map-marker(aria-hidden='true')
+              | в Макаровском районе, на границе с Киево-Святошинским районом
+          .address__location.location
+            .location__place
+              i.fa.fa-map-signs(aria-hidden='true')
+              | в с. Колонщина
+            .location__info
+              | (въезд серез с. Березовка)  
+    .row
+      .col-xs-12.text-center.visible-xs
+        img.map__pos--img(src='img/pos320.png', alt='')
+      .text-center.col-xs-12.col-md-10.col-md-offset-1
+        .clearfix.address__border.map__border
+          .map__pos
+            img.hidden-xs.map__pos--img(src='img/pos.png', alt='')
+          i.col-sm-2.ic.ic-warranty
+          .col-sm-10.address__text
+            | Житомирская трасса безопасна, поскольку имеет три полосы движения в каждую сторону, хорошее качество дорожного покрытия, освещается фонарями, а встречное движение отделено отбойниками
+    
