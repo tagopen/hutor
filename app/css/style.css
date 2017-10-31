@@ -611,6 +611,12 @@
   background: url(../img/sprite.png) -630px -322px no-repeat;
 }
 
+.ic-zoomorange:before {
+  width: 35px;
+  height: 35px;
+  background: url(../img/sprite.png) -532px -339px no-repeat;
+}
+
 .svg--building {
   width: 1.75em;
   height: 1.8125em;
@@ -2424,6 +2430,196 @@ button:focus {
   padding: 15px 0;
   font: 400 10px/15px "Open Sans", sans-serif;
   color: #fff;
+}
+
+/* ----------------------------------------------------- */
+/* I N S I D E    P A G E S    G L O B A L    S T Y L E  */
+/* ----------------------------------------------------- */
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+.headerIn {
+  padding: 20px 0;
+}
+
+.headerIn__title {
+  padding: 50px 0;
+  background-position: center;
+  background: url(../img/topbg.jpg) no-repeat;
+  background-size: cover;
+}
+
+.headerIn__title--text {
+  color: #fff;
+  font: 900 32px/40px "GothamPro", sans-serif;
+  text-transform: uppercase;
+}
+
+.navbar__collapse {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.icon__bar--dark {
+  background-color: #212121;
+}
+
+.phone__link--dark {
+  color: #212121;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.phone__link--dark:hover, .phone__link--dark:focus {
+  color: #e88d0c;
+}
+
+.contento {
+  padding: 45px 0 200px;
+}
+
+.contento__text {
+  font: 400 18px/27px "Open Sans", sans-serif;
+  margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .headerIn__title--text {
+    font: 900 40px/50px "GothamPro", sans-serif;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .nav__point--dark {
+    color: #212121;
+  }
+  .nav__point--dark a {
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+  .nav__point--dark a:hover, .nav__point--dark a:focus {
+    color: #e88d0c;
+    -webkit-box-shadow: 0 -1px 0 0 #e88d0c inset !important;
+            box-shadow: 0 -1px 0 0 #e88d0c inset !important;
+  }
+}
+
+.footerIn {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: url(../img/footerbglight.png) no-repeat;
+  background-size: cover;
+}
+
+.footer {
+  background-position: center;
+}
+
+.footer__copy--dark {
+  color: #212121;
+}
+
+/* ---------------------------------------- */
+/* G A L L E R Y    P A G E    S T Y L E    */
+/* ---------------------------------------- */
+.gallery__column {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.gallery__column--hidden {
+  visibility: visible;
+  opacity: 0;
+  display: none;
+}
+
+.contento__show {
+  position: relative;
+  z-index: 25;
+}
+
+.contento--gallery {
+  background: url(../img/gallerycontentobg.png) no-repeat;
+  background-size: cover;
+}
+
+.nw-item--gallery {
+  margin: 0 0 30px;
+  height: 264px;
+}
+
+.nw-item__box--gallery {
+  padding: 0;
+}
+
+.nw-item__box--gallery1 {
+  background: url(../img/gallery1.jpg) no-repeat;
+  background-size: cover;
+}
+
+.nw-item__box--gallery2 {
+  background: url(../img/gallery1.jpg) no-repeat;
+  background-size: cover;
+}
+
+.nw-item__box--gallery3 {
+  background: url(../img/gallery1.jpg) no-repeat;
+  background-size: cover;
+}
+
+.nw-item__box--gallery4 {
+  background: url(../img/gallery1.jpg) no-repeat;
+  background-size: cover;
+}
+
+.nw-item__box--gallery5 {
+  background: url(../img/gallery1.jpg) no-repeat;
+  background-size: cover;
+}
+
+.nw-item__box--gallery6 {
+  background: url(../img/gallery1.jpg) no-repeat;
+  background-size: cover;
+}
+
+.nw-item__box--gallery7 {
+  background: url(../img/gallery1.jpg) no-repeat;
+  background-size: cover;
+}
+
+.nw-item__box--gallery8 {
+  background: url(../img/gallery1.jpg) no-repeat;
+  background-size: cover;
+}
+
+.nw-item__box--gallery9 {
+  background: url(../img/gallery1.jpg) no-repeat;
+  background-size: cover;
+}
+
+.nw-item__box--gallery10 {
+  background: url(../img/gallery1.jpg) no-repeat;
+  background-size: cover;
+}
+
+.nw-item__box--gallery11 {
+  background: url(../img/gallery1.jpg) no-repeat;
+  background-size: cover;
+}
+
+.nw-item__box--gallery12 {
+  background: url(../img/gallery1.jpg) no-repeat;
+  background-size: cover;
+}
+
+.ic-zoomorange {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -18px 0 0 -18px;
 }
 
 @media only screen and (min-width: 768px) {

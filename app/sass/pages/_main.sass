@@ -1222,3 +1222,126 @@ button:focus
   padding: 15px 0
   font: 400 10px/15px $font-open-sans
   color: #fff
++comment("inside pages global style")
+body
+  position: relative
+  min-height: 100vh
+.headerIn
+  padding: 20px 0
+  &__title
+    padding: 50px 0
+    background-position: center
+    background: url(../img/topbg.jpg) no-repeat
+    background-size: cover
+    &--text
+      color: #fff
+      font: 900 32px/40px $font-gotham
+      text-transform: uppercase
+.navbar
+  &__collapse
+    width: 100%    
+    margin: 0 !important
+.icon
+  &__bar
+    &--dark
+      background-color: #212121    
+.phone
+  &__link
+    &--dark
+      color: #212121
+      transition: all .3s ease 
+      &:hover,
+      &:focus
+        color: #e88d0c  
+.contento
+  padding: 45px 0 200px
+  &__text
+    font: 400 18px/27px $font-open-sans  
+    margin-bottom: 30px      
++r(768)        
+  .headerIn
+    &__title
+      &--text
+        font: 900 40px/50px $font-gotham   
++r(992)
+  .nav
+    &__point  
+      &--dark
+        color: #212121
+        a
+          transition: all .3s ease
+          &:hover,
+          &:focus
+            color: #e88d0c
+            box-shadow: 0 -1px 0 0 #e88d0c inset !important
+.footerIn
+  position: absolute
+  width: 100%
+  bottom: 0       
+  background: url(../img/footerbglight.png) no-repeat
+  background-size: cover     
+.footer
+  background-position: center
+  &__copy
+    &--dark
+      color: #212121 
++comment("gallery page style")
+.gallery
+  &__column
+    transition: all .3s ease
+    &--hidden
+      visibility: visible
+      opacity: 0
+      display: none
+.contento__show
+  position: relative
+  z-index: 25      
+.contento--gallery
+  background: url(../img/gallerycontentobg.png) no-repeat
+  background-size: cover         
+.nw-item--gallery
+  margin: 0 0 30px
+  height: 264px
+.nw-item__box--gallery
+  padding: 0  
+  &1
+    background: url(../img/gallery1.jpg) no-repeat
+    background-size: cover
+  &2
+    background: url(../img/gallery1.jpg) no-repeat
+    background-size: cover
+  &3
+    background: url(../img/gallery1.jpg) no-repeat
+    background-size: cover
+  &4
+    background: url(../img/gallery1.jpg) no-repeat
+    background-size: cover 
+  &5
+    background: url(../img/gallery1.jpg) no-repeat
+    background-size: cover  
+  &6
+    background: url(../img/gallery1.jpg) no-repeat
+    background-size: cover  
+  &7
+    background: url(../img/gallery1.jpg) no-repeat
+    background-size: cover  
+  &8
+    background: url(../img/gallery1.jpg) no-repeat
+    background-size: cover  
+  &9
+    background: url(../img/gallery1.jpg) no-repeat
+    background-size: cover  
+  &10
+    background: url(../img/gallery1.jpg) no-repeat
+    background-size: cover  
+  &11
+    background: url(../img/gallery1.jpg) no-repeat
+    background-size: cover  
+  &12
+    background: url(../img/gallery1.jpg) no-repeat
+    background-size: cover                       
+.ic-zoomorange
+  position: absolute
+  left: 50%
+  top: 50%
+  margin: -18px 0 0 -18px    

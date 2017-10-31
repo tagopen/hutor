@@ -1,0 +1,27 @@
+mixin personalCols(count)
+  if (count < 8)
+    .col-xs-12.col-sm-6.col-md-4.col-lg-3.gallery__column
+      if (block)
+        block     
+  else
+    .col-xs-12.col-sm-6.col-md-4.col-lg-3.gallery__column.gallery__column--hidden
+      if (block)
+        block
+.contento.contento--gallery
+  .container
+    .row
+      .col-xs-12
+        .contento__text!=content.gallery.text
+    .row
+      .col-xs-12.col-sm-10.col-sm-offset-1.col-md-12.col-md-offset-0
+        .row
+          each item, i in content.gallery.items
+            +personalCols(i)
+              .nw-item.new__items.nw-item--gallery
+                a.fancyimage.nw-item__box.nw-item__box--gallery(href=item.href, rel="groupGallery", class="nw-item__box--gallery"+(i+1))
+                  .nw-item__hover
+                    i.nw-item__icon.nw-item__icon--left
+                    i.nw-item__icon.nw-item__icon--right
+                    i.ic.ic-zoomorange
+      .col-xs-12.col-sm-6.col-sm-offset-3.col-lg-4.col-lg-offset-4.text-center
+        button.g-btn.contento__show Показать все              

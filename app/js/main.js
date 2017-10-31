@@ -155,4 +155,10 @@
     }, interval);
   }); 
 
+  // Gallery Btn show all 
+  $('.contento__show').on('click', function () {
+    $('.gallery__column').removeClass('gallery__column--hidden');
+    $('.contento__show').hide();
+  }); 
+
 })(jQuery); // End of use strict
