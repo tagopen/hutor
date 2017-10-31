@@ -1293,12 +1293,12 @@ body
       visibility: visible
       opacity: 0
       display: none
-.contento__show
-  position: relative
-  z-index: 25      
 .contento--gallery
   background: url(../img/gallerycontentobg.png) no-repeat
-  background-size: cover         
+  background-size: cover 
+  &__show
+    position: relative
+    z-index: 25            
 .nw-item--gallery
   margin: 0 0 30px
   height: 264px
@@ -1345,3 +1345,79 @@ body
   left: 50%
   top: 50%
   margin: -18px 0 0 -18px    
++comment("faq page style")
+.contento--faq
+  background: url(../img/faqcontentobg.png) no-repeat
+  background-size: cover 
+.panel
+  box-shadow: none
+  background: transparent
+  margin-bottom: 30px !important
+  &-group
+    position: relative
+    z-index: 25
+  &__heading
+    padding: 12px 25px
+    border: 0 !important
+    border-radius: 35px
+    background-color: #f9f9f9 !important
+    box-shadow: 1.5px 4.8px 20px rgba(0, 0, 0, 0.1) !important
+  &__body
+    border: 0 !important  
+  &__link
+    position: relative
+    display: block
+    color: #222
+    font: 600 18px/26px $font-open-sans  
+  &__text  
+    color: #222
+    font: 400 16px/24px $font-open-sans 
+    padding-left: 10px
+  &__icon
+    display: inline-block
+    height: 30px
+    width: 30px 
+    border: 2px solid #e88d0c
+    border-radius: 50%
+    background: transparent
+  &__ic
+    position: relative
+    top: 5px
+    left: 5px
+    width: 16px
+    height: 16px
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      background-color: #e88d0c
+      transition: transform 0.25s ease-out
+    /* Vertical line */
+    &:before
+      top: 0
+      left: 50%
+      width: 2px
+      height: 100%
+      margin-left: -1px
+    /* horizontal line */
+    &:after
+      top: 50%
+      left: 0
+      width: 100%
+      height: 2px
+      margin-top: -2px
+    &.minus
+      cursor: pointer
+      &:before 
+        transform: rotate(90deg)
+      &:after 
+        transform: rotate(180deg)
++r(768)
+  .panel
+    &__heading
+      padding: 20px 50px  
+    &__link    
+      font: 600 22px/26px $font-open-sans      
+    &__text
+      font: 400 18px/27px $font-open-sans 
+      padding-left: 35px

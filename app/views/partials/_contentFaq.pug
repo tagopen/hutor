@@ -1,0 +1,19 @@
+.contento.contento--faq
+  .container
+    .row
+      .col-xs-12
+        #accordion.panel-group
+          each item, i in content.faq.items
+            .panel
+              .panel-heading.panel__heading
+                h4.panel-title.panel__title
+                  a.panel__link(data-toggle="collapse", data-parent="#accordion", href="#collapse"+(i+1))
+                    .row
+                      .col-xs-10
+                        !=item.answer
+                      .col-xs-2.text-right
+                        .panel__icon
+                          .panel__ic
+              .panel-collapse.collapse(id="collapse"+(i+1))
+                .panel-body.panel__body
+                  p.panel__text=item.text
