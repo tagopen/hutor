@@ -2660,7 +2660,8 @@ body {
   position: relative;
   display: block;
   color: #222;
-  font: 600 18px/26px "Open Sans", sans-serif;
+  font: 600 18px/24px "Open Sans", sans-serif;
+  padding-right: 30px;
 }
 
 .panel__text {
@@ -2670,6 +2671,10 @@ body {
 }
 
 .panel__icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -15px;
   display: inline-block;
   height: 30px;
   width: 30px;
@@ -2737,6 +2742,7 @@ body {
   }
   .panel__link {
     font: 600 22px/26px "Open Sans", sans-serif;
+    padding-right: 0;
   }
   .panel__text {
     font: 400 18px/27px "Open Sans", sans-serif;

@@ -1368,12 +1368,17 @@ body
     position: relative
     display: block
     color: #222
-    font: 600 18px/26px $font-open-sans  
+    font: 600 18px/24px $font-open-sans  
+    padding-right: 30px
   &__text  
     color: #222
     font: 400 16px/24px $font-open-sans 
     padding-left: 10px
   &__icon
+    position: absolute
+    right: 0
+    top: 50%
+    margin-top: -15px
     display: inline-block
     height: 30px
     width: 30px 
@@ -1418,6 +1423,7 @@ body
       padding: 20px 50px  
     &__link    
       font: 600 22px/26px $font-open-sans      
+      padding-right: 0
     &__text
       font: 400 18px/27px $font-open-sans 
       padding-left: 35px
