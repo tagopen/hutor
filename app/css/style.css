@@ -542,31 +542,37 @@
 .ic-create1:before {
   width: 32px;
   height: 45px;
-  background: url(../img/sprite.png) -667px -442px no-repeat;
+  background: url(../img/sprite.png) -87px -542px no-repeat;
 }
 
 .ic-create2:before {
   width: 27px;
   height: 54px;
-  background: url(../img/sprite.png) -630px -442px no-repeat;
+  background: url(../img/sprite.png) -571px -418px no-repeat;
 }
 
 .ic-create3:before {
   width: 31px;
   height: 43px;
-  background: url(../img/sprite.png) -491px -339px no-repeat;
+  background: url(../img/sprite.png) -545px -339px no-repeat;
 }
 
 .ic-create4:before {
   width: 44px;
   height: 43px;
-  background: url(../img/sprite.png) -630px -389px no-repeat;
+  background: url(../img/sprite.png) -491px -339px no-repeat;
 }
 
 .ic-fancyclose:before {
   width: 13px;
   height: 13px;
   background: url(../img/sprite.png) -679px -231px no-repeat;
+}
+
+.ic-fb:before {
+  width: 45px;
+  height: 45px;
+  background: url(../img/sprite.png) -630px -444px no-repeat;
 }
 
 .ic-house-xs:before {
@@ -579,6 +585,12 @@
   width: 620px;
   height: 227px;
   background: url(../img/sprite.png) 0px 0px no-repeat;
+}
+
+.ic-meget:before {
+  width: 45px;
+  height: 45px;
+  background: url(../img/sprite.png) -630px -389px no-repeat;
 }
 
 .ic-s-125-xs:before {
@@ -614,7 +626,7 @@
 .ic-zoomorange:before {
   width: 35px;
   height: 35px;
-  background: url(../img/sprite.png) -532px -339px no-repeat;
+  background: url(../img/sprite.png) -129px -542px no-repeat;
 }
 
 .svg--building {
@@ -1254,6 +1266,7 @@ button:focus {
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
+  z-index: 25;
 }
 
 .nw-item--1 {
@@ -2541,7 +2554,7 @@ body {
   background-size: cover;
 }
 
-.contento--gallery__show {
+.contento__show {
   position: relative;
   z-index: 25;
 }
@@ -2785,6 +2798,151 @@ body {
 @media only screen and (min-width: 1200px) {
   .map__boxe {
     padding: 120px 0 0 85px !important;
+  }
+}
+
+/* ---------------------------------------- */
+/* C O N T A C T    P A G E    S T Y L E    */
+/* ---------------------------------------- */
+.contento--contact {
+  position: relative;
+  z-index: 25;
+}
+
+.contact__map-box {
+  padding: 35px;
+  background-color: white;
+  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  margin: 0 !important;
+}
+
+.contact__box {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact__box .fa {
+  display: inline-block;
+  color: #e8560c;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.contact__box .fa.fa-phone {
+  position: relative;
+  top: 5px;
+  vertical-align: top;
+}
+
+.contact__texto {
+  display: inline-block;
+  font: 400 17px/27px "Open Sans", sans-serif;
+  color: #222;
+}
+
+.contact__linke {
+  display: block;
+  font: 400 18px/27px "Open Sans", sans-serif;
+  color: #222;
+  text-align: center;
+}
+
+.contact__texte {
+  display: inline-block;
+}
+
+.contact__social {
+  padding-top: 15px;
+  text-align: center;
+}
+
+.contact__social--link {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.map__contacte {
+  margin-bottom: 0;
+}
+
+.map__heading--big {
+  font: 600 18px/18px "Open Sans", sans-serif;
+}
+
+.map__subheading--big {
+  font: 400 16px/18px "Open Sans", sans-serif;
+}
+
+#contactmap {
+  height: 300px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .contento--contact {
+    padding-bottom: 260px;
+  }
+  #contactmap {
+    height: 274px;
+  }
+  .contact__box {
+    text-align: left;
+  }
+  .contact__box .fa-phone {
+    display: table-cell;
+    padding-right: 10px;
+  }
+  .contact__texte {
+    display: table-cell;
+  }
+  .contact__social {
+    padding-top: 0;
+    position: relative;
+    top: -15px;
+  }
+  .map__heading--big {
+    font: 600 20px/24px "Open Sans", sans-serif;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .contact__texto {
+    font: 400 18px/27px "Open Sans", sans-serif;
+  }
+  .contact__social {
+    padding-top: 15px;
+  }
+  .contact__social--link {
+    margin-bottom: 10px;
+  }
+  .contact__map-box {
+    padding: 50px 35px;
+  }
+  .map__heading--big {
+    font: 600 23px/28px "Open Sans", sans-serif;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #contactmap {
+    height: 312px;
+  }
+  .map__contacte {
+    padding: 15px 40px;
+  }
+  .contact__texte {
+    display: inline-block;
+  }
+  .contact__box .fa-phone {
+    display: inline-block;
+    padding-right: 0;
+  }
+  .contact__social {
+    padding-top: 35px;
+  }
+  .contact__social--link {
+    margin-bottom: 0;
   }
 }
 

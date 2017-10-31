@@ -434,6 +434,7 @@ button:focus
   background-repeat: no-repeat
   background-size: cover
   color: #fff
+  z-index: 25
   &--1
     background-image: url(../img/new1.jpg)
   &--2
@@ -1296,9 +1297,10 @@ body
 .contento--gallery
   background: url(../img/gallerycontentobg.png) no-repeat
   background-size: cover 
+.contento  
   &__show
     position: relative
-    z-index: 25            
+    z-index: 25              
 .nw-item--gallery
   margin: 0 0 30px
   height: 264px
@@ -1453,3 +1455,106 @@ body
   .map
     &__boxe
       padding: 120px 0 0 85px !important
++comment("contact page style")        
+.contento--contact
+  position: relative
+  z-index: 25  
+.contact
+  &__map-box
+    padding: 35px 
+    background-color: white
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2)
+    margin: 0 !important
+  &__box
+    text-align: center
+    margin-bottom: 10px
+    .fa
+      display: inline-block
+      color: #e8560c  
+      margin-right: 10px
+      font-size: 20px
+      &.fa-phone
+        position: relative
+        top: 5px
+        vertical-align: top
+  &__texto
+    display: inline-block    
+    font: 400 17px/27px $font-open-sans  
+    color: #222
+  &__linke 
+    display: block   
+    font: 400 18px/27px $font-open-sans  
+    color: #222
+    text-align: center
+  &__texte
+    display: inline-block  
+  &__social
+    padding-top: 15px
+    text-align: center
+    &--link
+      margin-right: 10px  
+      display: inline-block
+.map
+  &__contacte
+    margin-bottom: 0
+  &__heading
+    &--big
+      font: 600 18px/18px $font-open-sans   
+  &__subheading
+    &--big 
+      font: 400 16px/18px $font-open-sans  
+#contactmap
+  height: 300px
+  width: 100%              
++r(768)
+  .contento--contact
+    padding-bottom: 260px
+  #contactmap
+    height: 274px
+  .contact
+    &__box
+      text-align: left    
+      .fa-phone
+        display: table-cell
+        padding-right: 10px
+    &__texte
+      display: table-cell  
+    &__social
+      padding-top: 0
+      position: relative
+      top: -15px
+  .map
+    &__heading
+      &--big
+        font: 600 20px/24px $font-open-sans       
++r(992)      
+  .contact
+    &__texto
+      font: 400 18px/27px $font-open-sans 
+    &__social
+      padding-top: 15px
+      &--link
+        margin-bottom: 10px  
+    &__map-box
+      padding: 50px 35px 
+  .map
+    &__heading
+      &--big
+        font: 600 23px/28px $font-open-sans          
++r(1200)
+  #contactmap
+    height: 312px
+  .map
+    &__contacte
+      padding: 15px 40px
+  .contact      
+    &__texte
+      display: inline-block
+    &__box
+      .fa-phone
+        display: inline-block    
+        padding-right: 0
+    &__social
+      padding-top: 35px
+      &--link
+        margin-bottom: 0    

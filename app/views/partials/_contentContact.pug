@@ -1,0 +1,60 @@
+.contento.contento--contact
+  .container
+    .row
+      .col-sm-12.col-sm-5.col-lg-4
+        .map__box.contact__map-box
+          .map__heading.map__heading--big Форма обратной связи
+          .map__subheading.map__subheading--big
+            | Вы можете оставить свои контактные данные в этой форме и наши менеджеры свяжутся с вами в ближайшее время
+          form.clearfix.contactForm(method='post', action='mail/mail.php', onsubmit="yaCounter40478820.reachGoal ('mapform'); ga('send', 'event', 'form', 'submit', 'mapform');")
+            .form-group.map__group.col-xs-12
+              input.form-control.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
+            .form-group.map__group.col-xs-12
+              input.form-control.form__phone(aria-invalid='false', placeholder='Ваш номер телефона', required='', data-validation-required-message='Please enter your phone number.', name='phone', type='tel')
+            .form-group.map__group.col-xs-12
+              input.form-control.form__mail(aria-invalid='false', placeholder='Ваш E-mail', required='', data-validation-required-message='Please enter your phone number.', name='email', type='email')
+            button.g-btn.map__btn(type='submit', name='form', value='Карта_форма' data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Отправить заявку
+      .col-xs-12.col-sm-7.col-lg-offset-1
+        .map__contact.contact.map__contacte
+          .row
+            .col-xs-10.col-xs-offset-1.col-sm-6.col-md-5.col-sm-offset-0
+              .contact__box
+                i.fa.fa-map-marker
+                .contact__texto с. Березовка
+              .contact__box   
+                i.fa.fa-envelope(aria-hidden='true')
+                .contact__texto l.hutir@gmail.com  
+            .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-0.col-md-5.col-lg-4
+              .contact__box
+                i.fa.fa-phone(aria-hidden='true')
+                .contact__texte
+                  a.contact__linke(href='tel:380675009955')
+                    | (067) 500 99 55
+                  a.contact__linke(href='tel:380507297280')
+                    | (050) 729 72 80
+                  a.contact__linke(href='tel:380444965918')
+                    | (044) 496 59 18        
+            .col-xs-12.col-sm-6.col-md-2.col-lg-3
+              .contact__social                
+                a.contact__social--link
+                  i.ic.ic-fb
+                a.contact__social--link
+                  i.ic.ic-meget  
+        #contactmap
+          script.
+            function initMap() {
+              var uluru = {lat: 50.428639, lng: 30.0032027};
+              var map = new google.maps.Map(document.getElementById('contactmap'), {
+                zoom: 15,
+                mapTypeControl: false,
+                scrollwheel: false,
+                streetViewControl: false,
+                center: uluru
+              });
+              var marker = new google.maps.Marker({
+                position: uluru,
+                map: map,
+                icon: 'img/marker.png'
+              });
+            }
+          script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDMiE1FSNLDqeWHjoHH6cZBlhl6NITkw2w&callback=initMap')          
