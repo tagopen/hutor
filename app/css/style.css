@@ -2471,6 +2471,10 @@ body {
   min-height: 100vh;
 }
 
+.nav--in {
+  height: auto;
+}
+
 .headerIn {
   padding: 20px 0;
 }
@@ -2486,6 +2490,10 @@ body {
   color: #fff;
   font: 900 32px/40px "GothamPro", sans-serif;
   text-transform: uppercase;
+}
+
+.navbar--in {
+  margin-bottom: 10px;
 }
 
 .navbar__collapse {
@@ -2508,7 +2516,7 @@ body {
 }
 
 .contento {
-  padding: 45px 0 200px;
+  padding: 30px 0 200px;
 }
 
 .contento__text {
@@ -2828,8 +2836,6 @@ body {
 /* C O N T A C T    P A G E    S T Y L E    */
 /* ---------------------------------------- */
 .contento--contact {
-  position: relative;
-  z-index: 25;
   background: url(../img/contactcontentobg.png) no-repeat;
   background-size: cover;
 }
@@ -2902,6 +2908,8 @@ body {
 #contactmap {
   height: 300px;
   width: 100%;
+  position: relative;
+  z-index: 25;
 }
 
 @media only screen and (min-width: 768px) {

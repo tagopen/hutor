@@ -1227,6 +1227,8 @@ button:focus
 body
   position: relative
   min-height: 100vh
+.nav--in
+  height: auto  
 .headerIn
   padding: 20px 0
   &__title
@@ -1239,6 +1241,8 @@ body
       font: 900 32px/40px $font-gotham
       text-transform: uppercase
 .navbar
+  &--in
+    margin-bottom: 10px
   &__collapse
     width: 100%    
     margin: 0 !important
@@ -1255,7 +1259,7 @@ body
       &:focus
         color: #e88d0c  
 .contento
-  padding: 45px 0 200px
+  padding: 30px 0 200px
   &__text
     font: 400 18px/27px $font-open-sans  
     margin-bottom: 30px      
@@ -1460,8 +1464,6 @@ body
       padding: 120px 0 0 85px !important
 +comment("contact page style")        
 .contento--contact
-  position: relative
-  z-index: 25
   background: url(../img/contactcontentobg.png) no-repeat
   background-size: cover    
 .contact
@@ -1510,7 +1512,9 @@ body
       font: 400 16px/18px $font-open-sans  
 #contactmap
   height: 300px
-  width: 100%              
+  width: 100%     
+  position: relative
+  z-index: 25         
 +r(768)
   .contento--contact
     padding-bottom: 260px
