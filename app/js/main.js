@@ -126,6 +126,12 @@
         target: null,
         remove: false
       });
+      $('.genplan__icon').matchHeight({
+        byRow: true,
+        property: 'height',
+        target: null,
+        remove: false
+      });
     }
   });
 
@@ -180,6 +186,7 @@ $('.tooltipstered').tooltipster({
   contentCloning: true,
   theme: 'tooltipster-shadow',
   animation: 'fade',
+  interactive: true,
   delay: 25,
   side: 'top',
   maxWidth: 200,

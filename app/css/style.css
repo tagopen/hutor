@@ -530,7 +530,7 @@
 .ic-arrow_fff:before {
   width: 39px;
   height: 120px;
-  background: url(../img/sprite.png) -630px -192px no-repeat;
+  background: url(../img/sprite.png) -712px -114px no-repeat;
 }
 
 .ic-catalogic:before {
@@ -542,37 +542,55 @@
 .ic-create1:before {
   width: 32px;
   height: 45px;
-  background: url(../img/sprite.png) -87px -542px no-repeat;
+  background: url(../img/sprite.png) -712px -474px no-repeat;
 }
 
 .ic-create2:before {
   width: 27px;
   height: 54px;
-  background: url(../img/sprite.png) -571px -418px no-repeat;
+  background: url(../img/sprite.png) -761px -114px no-repeat;
 }
 
 .ic-create3:before {
   width: 31px;
   height: 43px;
-  background: url(../img/sprite.png) -545px -339px no-repeat;
+  background: url(../img/sprite.png) -754px -474px no-repeat;
 }
 
 .ic-create4:before {
   width: 44px;
   height: 43px;
-  background: url(../img/sprite.png) -491px -339px no-repeat;
+  background: url(../img/sprite.png) -712px -421px no-repeat;
 }
 
 .ic-fancyclose:before {
   width: 13px;
   height: 13px;
-  background: url(../img/sprite.png) -679px -231px no-repeat;
+  background: url(../img/sprite.png) -761px -217px no-repeat;
 }
 
 .ic-fb:before {
   width: 45px;
   height: 45px;
-  background: url(../img/sprite.png) -630px -444px no-repeat;
+  background: url(../img/sprite.png) -712px -366px no-repeat;
+}
+
+.ic-genic1:before {
+  width: 95px;
+  height: 78px;
+  background: url(../img/sprite.png) 0px -694px no-repeat;
+}
+
+.ic-genic2:before {
+  width: 146px;
+  height: 67px;
+  background: url(../img/sprite.png) 0px -617px no-repeat;
+}
+
+.ic-genic3:before {
+  width: 252px;
+  height: 65px;
+  background: url(../img/sprite.png) 0px -542px no-repeat;
 }
 
 .ic-house-xs:before {
@@ -590,7 +608,7 @@
 .ic-meget:before {
   width: 45px;
   height: 45px;
-  background: url(../img/sprite.png) -630px -389px no-repeat;
+  background: url(../img/sprite.png) -712px -311px no-repeat;
 }
 
 .ic-s-125-xs:before {
@@ -608,25 +626,25 @@
 .ic-scheme:before {
   width: 10px;
   height: 29px;
-  background: url(../img/sprite.png) -679px -192px no-repeat;
+  background: url(../img/sprite.png) -761px -178px no-repeat;
 }
 
 .ic-warranty:before {
   width: 77px;
   height: 104px;
-  background: url(../img/sprite.png) 0px -542px no-repeat;
+  background: url(../img/sprite.png) -712px 0px no-repeat;
 }
 
 .ic-zoom:before {
   width: 56px;
   height: 57px;
-  background: url(../img/sprite.png) -630px -322px no-repeat;
+  background: url(../img/sprite.png) -712px -244px no-repeat;
 }
 
 .ic-zoomorange:before {
   width: 35px;
   height: 35px;
-  background: url(../img/sprite.png) -129px -542px no-repeat;
+  background: url(../img/sprite.png) -712px -529px no-repeat;
 }
 
 .svg--building {
@@ -2771,6 +2789,11 @@ body {
   z-index: 25;
 }
 
+.contento--map {
+  background: url(../img/mapcontentobg.png) no-repeat;
+  background-size: cover;
+}
+
 @media only screen and (min-width: 768px) {
   .map__border {
     margin-top: 160px;
@@ -2807,6 +2830,8 @@ body {
 .contento--contact {
   position: relative;
   z-index: 25;
+  background: url(../img/contactcontentobg.png) no-repeat;
+  background-size: cover;
 }
 
 .contact__map-box {
@@ -2949,6 +2974,50 @@ body {
 /* ---------------------------------------- */
 /* P L A N    P A G E    S T Y L E          */
 /* ---------------------------------------- */
+.tooltip__content {
+  display: none;
+}
+
+.tooltip__box {
+  color: #222;
+  font: 400 12px/18px "Open Sans", sans-serif;
+}
+
+.tooltip__name a {
+  color: #463dff;
+  text-decoration: underline;
+}
+
+.genplan__group {
+  position: relative;
+  z-index: 25;
+  padding-top: 100px;
+}
+
+.genplan__btn {
+  display: block;
+  text-align: center;
+}
+
+.genplan__box {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.genplan__box .ic-genic3 {
+  position: relative;
+  top: 3px;
+}
+
+.contento--plan {
+  background: url(../img/plancontentobg.png) no-repeat;
+  background-size: cover;
+}
+
+.plan__box--margin {
+  margin: 12px 0;
+}
+
 .plan__image {
   display: inline-block;
 }
@@ -2962,20 +3031,905 @@ body {
 .plan__hover {
   position: absolute;
   display: block;
-  height: 30px;
-  width: 30px;
+  height: 6vw;
+  width: 6vw;
   background: red;
+  opacity: 0.3;
   cursor: pointer;
 }
 
 .plan__hover--1 {
-  left: 0;
-  top: 0;
+  top: 8.2%;
+  left: 9.4vw;
 }
 
 .plan__hover--2 {
+  top: 8.2%;
+  left: 18.6%;
+  width: 5.6vw;
+}
+
+.plan__hover--3 {
+  top: 8.2%;
+  left: 26%;
+  width: 5.6vw;
+}
+
+.plan__hover--4 {
+  top: 8.2%;
+  left: 33%;
+  width: 5.6vw;
+}
+
+.plan__hover--5 {
+  top: 8.2%;
+  left: 40%;
+  width: 5.6vw;
+}
+
+.plan__hover--6 {
+  top: 8.2%;
+  left: 47%;
+  width: 5.6vw;
+}
+
+.plan__hover--7 {
+  top: 8.2%;
+  left: 53.5%;
+  width: 5.6vw;
+}
+
+.plan__hover--8 {
+  top: 8.2%;
+  left: 60.1%;
+  width: 5.6vw;
+}
+
+.plan__hover--9 {
+  top: 8.2%;
+  left: 67.3%;
+  width: 5.6vw;
+}
+
+.plan__hover--10 {
+  top: 8.2%;
+  left: 74%;
+  width: 5.6vw;
+}
+
+.plan__hover--11 {
+  top: 18.7%;
+  left: 14.2%;
+  width: 5.6vw;
+}
+
+.plan__hover--12 {
+  top: 18.7%;
+  left: 21%;
+  width: 5.6vw;
+}
+
+.plan__hover--13 {
+  top: 18.7%;
+  left: 28%;
+  width: 5.6vw;
+}
+
+.plan__hover--14 {
+  top: 18.7%;
+  left: 34%;
+  width: 5.6vw;
+}
+
+.plan__hover--15 {
+  top: 18.7%;
+  left: 41%;
+  width: 5.6vw;
+}
+
+.plan__hover--16 {
+  top: 18.7%;
+  left: 47.5%;
+  width: 5.6vw;
+}
+
+.plan__hover--17 {
+  top: 18.7%;
+  left: 54%;
+  width: 5.6vw;
+}
+
+.plan__hover--18 {
+  top: 18.7%;
+  left: 60.7%;
+  width: 5.6vw;
+}
+
+.plan__hover--19 {
+  top: 18.7%;
+  left: 67.4%;
+  width: 5.6vw;
+}
+
+.plan__hover--20 {
+  top: 18.7%;
+  left: 74%;
+  width: 5.6vw;
+}
+
+.plan__hover--21 {
+  top: 26%;
+  left: 74%;
+  width: 5.6vw;
+}
+
+.plan__hover--22 {
+  top: 26%;
+  left: 67.5%;
+  width: 5.6vw;
+}
+
+.plan__hover--23 {
+  top: 26%;
+  left: 60.7%;
+  width: 5.6vw;
+}
+
+.plan__hover--24 {
+  top: 26%;
+  left: 54%;
+  width: 5.6vw;
+}
+
+.plan__hover--25 {
+  top: 26%;
+  left: 47.4%;
+  width: 5.6vw;
+}
+
+.plan__hover--26 {
+  top: 26%;
+  left: 41.4%;
+  width: 5.6vw;
+}
+
+.plan__hover--27 {
+  top: 26%;
+  left: 34.5%;
+  width: 5.6vw;
+}
+
+.plan__hover--28 {
+  top: 26%;
+  left: 27.5%;
+  width: 5.6vw;
+}
+
+.plan__hover--29 {
+  top: 26%;
+  left: 21.1%;
+  width: 5.6vw;
+}
+
+.plan__hover--30 {
   top: 0;
-  left: 50px;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+.plan__hover--31 {
+  top: 36.6%;
+  left: 14.5%;
+  width: 5.6vw;
+  height: 4vw;
+}
+
+.plan__hover--32 {
+  top: 36.6%;
+  left: 21.1%;
+  width: 5.6vw;
+}
+
+.plan__hover--33 {
+  top: 36.6%;
+  left: 27.7%;
+  width: 5.6vw;
+}
+
+.plan__hover--34 {
+  top: 36.6%;
+  left: 34.5%;
+  width: 5.6vw;
+}
+
+.plan__hover--35 {
+  top: 36.6%;
+  left: 41.2%;
+  width: 5.6vw;
+}
+
+.plan__hover--36 {
+  top: 36.6%;
+  left: 47.6%;
+  width: 5.6vw;
+}
+
+.plan__hover--37 {
+  top: 36.6%;
+  left: 54.3%;
+  width: 5.6vw;
+}
+
+.plan__hover--38 {
+  top: 36.6%;
+  left: 61%;
+  width: 5.6vw;
+}
+
+.plan__hover--39 {
+  top: 36.6%;
+  left: 67.6%;
+  width: 5.6vw;
+}
+
+.plan__hover--40 {
+  top: 36.6%;
+  left: 74.1%;
+  width: 5.6vw;
+}
+
+.plan__hover--41 {
+  top: 44%;
+  left: 72.2%;
+  width: 5vw;
+}
+
+.plan__hover--42 {
+  top: 44%;
+  left: 65.8%;
+  width: 5.6vw;
+}
+
+.plan__hover--43 {
+  top: 44%;
+  left: 59.2%;
+  width: 5.6vw;
+}
+
+.plan__hover--44 {
+  top: 44%;
+  left: 52.5%;
+  width: 5.6vw;
+}
+
+.plan__hover--45 {
+  top: 44%;
+  left: 45.9%;
+  width: 5.6vw;
+}
+
+.plan__hover--46 {
+  top: 44%;
+  left: 39.4%;
+  width: 5.6vw;
+}
+
+.plan__hover--47 {
+  top: 44%;
+  left: 32.6%;
+  width: 5.6vw;
+}
+
+.plan__hover--48 {
+  top: 44%;
+  left: 25.9%;
+  width: 5.6vw;
+}
+
+.plan__hover--49 {
+  top: 44%;
+  left: 19.3%;
+  width: 5.6vw;
+}
+
+.plan__hover--50 {
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+}
+
+.plan__hover--51 {
+  top: 54%;
+  left: 39.1%;
+  width: 5.6vw;
+}
+
+.plan__hover--52 {
+  top: 54%;
+  left: 45.7%;
+  width: 5.6vw;
+}
+
+.plan__hover--53 {
+  top: 54%;
+  left: 52.2%;
+  width: 5.6vw;
+}
+
+.plan__hover--54 {
+  top: 54%;
+  left: 59%;
+  width: 5.6vw;
+}
+
+.plan__hover--55 {
+  top: 54%;
+  left: 65.3%;
+  width: 5.6vw;
+}
+
+.plan__hover--56 {
+  top: 61.4%;
+  left: 62.3%;
+  width: 7vw;
+}
+
+.plan__hover--57 {
+  top: 61.4%;
+  left: 54.6%;
+  width: 5.6vw;
+}
+
+.plan__hover--58 {
+  top: 61.4%;
+  left: 47%;
+  width: 5.6vw;
+}
+
+.plan__hover--59 {
+  top: 61.4%;
+  left: 39.6%;
+  width: 5.6vw;
+}
+
+.plan__hover--60 {
+  top: 12%;
+  left: 83%;
+  width: 6.2vw;
+}
+
+.plan__hover--61 {
+  top: 19.1%;
+  left: 83%;
+  width: 6.2vw;
+}
+
+.plan__hover--62 {
+  top: 26%;
+  left: 83.1%;
+  width: 6.2vw;
+}
+
+.plan__hover--63 {
+  top: 33%;
+  left: 83.1%;
+  width: 6.2vw;
+}
+
+.plan__hover--64 {
+  top: 40%;
+  left: 83.1%;
+  width: 6.2vw;
+  height: 7vw;
+}
+
+.plan__hover--65 {
+  top: 49%;
+  left: 79.6%;
+  width: 9.2vw;
+  height: 7vw;
+  -webkit-transform: rotate(32deg);
+      -ms-transform: rotate(32deg);
+          transform: rotate(32deg);
+}
+
+.plan__hover--66 {
+  top: 55.8%;
+  left: 75%;
+  width: 9.2vw;
+  height: 7vw;
+  -webkit-transform: rotate(32deg);
+      -ms-transform: rotate(32deg);
+          transform: rotate(32deg);
+}
+
+.plan__hover--67 {
+  top: 63.8%;
+  left: 73%;
+  width: 6.8vw;
+  height: 7vw;
+  -webkit-transform: rotate(8deg);
+      -ms-transform: rotate(8deg);
+          transform: rotate(8deg);
+}
+
+.plan__hover--68 {
+  top: 71.8%;
+  left: 71.6%;
+  width: 6.8vw;
+  height: 9vw;
+  -webkit-transform: rotate(8deg);
+      -ms-transform: rotate(8deg);
+          transform: rotate(8deg);
+}
+
+.plan__hover--69 {
+  top: 81.8%;
+  left: 68.2%;
+  width: 8.8vw;
+  height: 6vw;
+  -webkit-transform: rotate(6deg);
+      -ms-transform: rotate(6deg);
+          transform: rotate(6deg);
+}
+
+.plan__hover--70 {
+  top: 76.9%;
+  left: 62.2%;
+  width: 5vw;
+  height: 9.5vw;
+  -webkit-transform: rotate(8deg);
+      -ms-transform: rotate(8deg);
+          transform: rotate(8deg);
+}
+
+.plan__hover--71 {
+  top: 76%;
+  left: 56%;
+  width: 5vw;
+  height: 9.5vw;
+  -webkit-transform: rotate(8deg);
+      -ms-transform: rotate(8deg);
+          transform: rotate(8deg);
+}
+
+.plan__hover--72 {
+  top: 75.1%;
+  left: 49.8%;
+  width: 5vw;
+  height: 9.5vw;
+  -webkit-transform: rotate(8deg);
+      -ms-transform: rotate(8deg);
+          transform: rotate(8deg);
+}
+
+.plan__hover--73 {
+  top: 74.1%;
+  left: 43.3%;
+  width: 5.3vw;
+  height: 9.5vw;
+  -webkit-transform: rotate(8deg);
+      -ms-transform: rotate(8deg);
+          transform: rotate(8deg);
+}
+
+.plan__hover--74 {
+  top: 73.2%;
+  left: 36.3%;
+  width: 6vw;
+  height: 9.5vw;
+  -webkit-transform: rotate(8deg);
+      -ms-transform: rotate(8deg);
+          transform: rotate(8deg);
+}
+
+@media only screen and (min-width: 768px) {
+  .genplan__group {
+    padding-top: 120px;
+  }
+  .genplan__box {
+    margin-bottom: 120px;
+  }
+  .genplan__icon {
+    position: relative;
+  }
+  .genplan__icon .ic {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+  }
+  .genplan__icon .ic-genic1 {
+    margin-left: -47px;
+  }
+  .genplan__icon .ic-genic2 {
+    margin-left: -73px;
+  }
+  .genplan__icon .ic-genic3 {
+    top: auto;
+    bottom: -3px;
+    margin-left: -126px;
+  }
+  .plan__hover {
+    height: 40px;
+    width: 40px;
+  }
+  .plan__hover--1 {
+    top: 54px;
+    left: 69px;
+  }
+  .plan__hover--2 {
+    top: 54px;
+    left: 126px;
+  }
+  .plan__hover--3 {
+    top: 54px;
+    left: 173px;
+  }
+  .plan__hover--4 {
+    top: 54px;
+    left: 220px;
+  }
+  .plan__hover--5 {
+    top: 54px;
+    left: 266px;
+  }
+  .plan__hover--6 {
+    top: 54px;
+    left: 313px;
+  }
+  .plan__hover--7 {
+    top: 54px;
+    left: 358px;
+  }
+  .plan__hover--8 {
+    top: 54px;
+    left: 404px;
+  }
+  .plan__hover--9 {
+    top: 54px;
+    left: 450px;
+  }
+  .plan__hover--10 {
+    top: 54px;
+    left: 496px;
+  }
+  .plan__hover--11 {
+    top: 129px;
+    left: 98px;
+  }
+  .plan__hover--12 {
+    top: 129px;
+    left: 142px;
+  }
+  .plan__hover--13 {
+    top: 129px;
+    left: 186px;
+  }
+  .plan__hover--14 {
+    top: 129px;
+    left: 231px;
+  }
+  .plan__hover--15 {
+    top: 129px;
+    left: 276px;
+  }
+  .plan__hover--16 {
+    top: 129px;
+    left: 320px;
+  }
+  .plan__hover--17 {
+    top: 129px;
+    left: 364px;
+  }
+  .plan__hover--18 {
+    top: 129px;
+    left: 408px;
+  }
+  .plan__hover--19 {
+    top: 128px;
+    left: 452px;
+  }
+  .plan__hover--20 {
+    top: 128px;
+    left: 497px;
+  }
+  .plan__hover--21 {
+    top: 178px;
+    left: 497px;
+  }
+  .plan__hover--22 {
+    top: 178px;
+    left: 453px;
+  }
+  .plan__hover--23 {
+    top: 178px;
+    left: 409px;
+  }
+  .plan__hover--24 {
+    top: 178px;
+    left: 365px;
+  }
+  .plan__hover--25 {
+    top: 178px;
+    left: 320px;
+  }
+  .plan__hover--26 {
+    top: 178px;
+    left: 276px;
+  }
+  .plan__hover--27 {
+    top: 178px;
+    left: 231px;
+  }
+  .plan__hover--28 {
+    top: 178px;
+    left: 187px;
+  }
+  .plan__hover--29 {
+    top: 178px;
+    left: 142px;
+  }
+  .plan__hover--30 {
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+  }
+  .plan__hover--31 {
+    top: 247px;
+    left: 98px;
+    height: 30px;
+  }
+  .plan__hover--32 {
+    top: 247px;
+    left: 142px;
+  }
+  .plan__hover--33 {
+    top: 247px;
+    left: 187px;
+  }
+  .plan__hover--34 {
+    top: 247px;
+    left: 232px;
+  }
+  .plan__hover--35 {
+    top: 247px;
+    left: 276px;
+  }
+  .plan__hover--36 {
+    top: 247px;
+    left: 321px;
+  }
+  .plan__hover--37 {
+    top: 247px;
+    left: 365px;
+  }
+  .plan__hover--38 {
+    top: 247px;
+    left: 409px;
+  }
+  .plan__hover--39 {
+    top: 247px;
+    left: 454px;
+  }
+  .plan__hover--40 {
+    top: 247px;
+    left: 499px;
+  }
+  .plan__hover--41 {
+    width: 30px;
+    top: 296px;
+    left: 486px;
+  }
+  .plan__hover--42 {
+    top: 296px;
+    left: 442px;
+  }
+  .plan__hover--43 {
+    top: 296px;
+    left: 397px;
+  }
+  .plan__hover--44 {
+    top: 296px;
+    left: 353px;
+  }
+  .plan__hover--45 {
+    top: 297px;
+    left: 308px;
+  }
+  .plan__hover--46 {
+    top: 298px;
+    left: 264px;
+  }
+  .plan__hover--47 {
+    top: 298px;
+    left: 219px;
+  }
+  .plan__hover--48 {
+    top: 298px;
+    left: 174px;
+  }
+  .plan__hover--49 {
+    top: 298px;
+    left: 130px;
+  }
+  .plan__hover--50 {
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+  }
+  .plan__hover--51 {
+    top: 364px;
+    left: 262px;
+  }
+  .plan__hover--52 {
+    top: 364px;
+    left: 306px;
+  }
+  .plan__hover--53 {
+    top: 364px;
+    left: 351px;
+  }
+  .plan__hover--54 {
+    top: 364px;
+    left: 395px;
+  }
+  .plan__hover--55 {
+    top: 364px;
+    left: 440px;
+    width: 37px;
+  }
+  .plan__hover--56 {
+    top: 413px;
+    left: 417px;
+    width: 53px;
+  }
+  .plan__hover--57 {
+    top: 413px;
+    left: 366px;
+    width: 45px;
+  }
+  .plan__hover--58 {
+    top: 413px;
+    left: 316px;
+  }
+  .plan__hover--59 {
+    top: 413px;
+    left: 266px;
+  }
+  .plan__hover--60 {
+    top: 83px;
+    left: 558px;
+    width: 44px;
+  }
+  .plan__hover--61 {
+    top: 128px;
+    left: 558px;
+    width: 44px;
+  }
+  .plan__hover--62 {
+    top: 175px;
+    left: 558px;
+    width: 44px;
+  }
+  .plan__hover--63 {
+    top: 222px;
+    left: 559px;
+    width: 44px;
+  }
+  .plan__hover--64 {
+    top: 270px;
+    left: 559px;
+    width: 44px;
+    height: 46px;
+  }
+  .plan__hover--65 {
+    top: 333px;
+    left: 533px;
+    width: 65px;
+    height: 44px;
+    -webkit-transform: rotate(32deg);
+        -ms-transform: rotate(32deg);
+            transform: rotate(32deg);
+  }
+  .plan__hover--66 {
+    top: 377px;
+    left: 505px;
+    width: 65px;
+    height: 47px;
+    -webkit-transform: rotate(32deg);
+        -ms-transform: rotate(32deg);
+            transform: rotate(32deg);
+  }
+  .plan__hover--67 {
+    top: 431px;
+    left: 490px;
+    width: 49px;
+    height: 48px;
+    -webkit-transform: rotate(8deg);
+        -ms-transform: rotate(8deg);
+            transform: rotate(8deg);
+  }
+  .plan__hover--67:before {
+    content: '';
+    width: 54px;
+    height: 24px;
+    display: block;
+    background: red;
+    -webkit-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+            transform: rotate(20deg);
+    top: 13px;
+    left: -7px;
+    margin-top: -8px;
+    margin-left: 1px;
+  }
+  .plan__hover--68 {
+    top: 484px;
+    left: 481px;
+    width: 49px;
+    height: 62px;
+    -webkit-transform: rotate(8deg);
+        -ms-transform: rotate(8deg);
+            transform: rotate(8deg);
+  }
+  .plan__hover--69 {
+    top: 549px;
+    left: 458px;
+    width: 62px;
+    height: 45px;
+    -webkit-transform: rotate(7deg);
+        -ms-transform: rotate(7deg);
+            transform: rotate(7deg);
+  }
+  .plan__hover--70 {
+    top: 517px;
+    left: 418px;
+    width: 38px;
+    height: 68px;
+    -webkit-transform: rotate(7deg);
+        -ms-transform: rotate(7deg);
+            transform: rotate(7deg);
+  }
+  .plan__hover--71 {
+    top: 511px;
+    left: 375px;
+    width: 38px;
+    height: 68px;
+    -webkit-transform: rotate(8deg);
+        -ms-transform: rotate(8deg);
+            transform: rotate(8deg);
+  }
+  .plan__hover--72 {
+    top: 505px;
+    left: 333px;
+    width: 38px;
+    height: 67px;
+    -webkit-transform: rotate(8deg);
+        -ms-transform: rotate(8deg);
+            transform: rotate(8deg);
+  }
+  .plan__hover--73 {
+    top: 500px;
+    left: 291px;
+    width: 39px;
+    height: 64px;
+    -webkit-transform: rotate(8deg);
+        -ms-transform: rotate(8deg);
+            transform: rotate(8deg);
+  }
+  .plan__hover--74 {
+    top: 494px;
+    left: 247px;
+    width: 39px;
+    height: 64px;
+    -webkit-transform: rotate(8deg);
+        -ms-transform: rotate(8deg);
+            transform: rotate(8deg);
+  }
 }
 
 @media only screen and (min-width: 768px) {

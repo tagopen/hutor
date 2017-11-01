@@ -12,7 +12,7 @@
               .plan__hover.tooltipstered(class="plan__hover--"+(i+1), data-tooltip-content="#tooltip"+(i+1)) 
       .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
         .row
-          .col-xs-12.col-sm-6
+          .col-xs-12.col-sm-5.col-md-6
             .plan__box
               .plan__info на территории в 9 га генпланом предусмотрено
               span.plan__place
@@ -23,21 +23,40 @@
               span.plan__place
                 i.fa.fa-hashtag(aria-hidden='true')
                 | от 8 до 12,5 сотки
-          .col-xs-12.col-sm-6      
+          .col-xs-12.col-sm-7.col-md-6  
             .row
               .col-xs-6.text-center
-                .plan__box.plan-item
+                .plan__box.plan-item.plan__box--margin
                   +svg("plan__icon", "building")
                   .plan__info Строительство
               .col-xs-6.text-center
-                .plan__box.plan-item
+                .plan__box.plan-item.plan__box--margin
                   +svg("plan__icon", "selling")
                   .plan__info Продажа дома 
               .col-xs-6.text-center
-                .plan__box.plan-item
+                .plan__box.plan-item.plan__box--margin
                   +svg("plan__icon", "lock")
                   .plan__info Забронирован
               .col-xs-6.text-center
-                .plan__box.plan-item
+                .plan__box.plan-item.plan__box--margin
                   +svg("plan__icon", "populated")
                   .plan__info Заселен
+    .row
+      .col-xs-12.col-lg-10.col-lg-offset-1
+        .genplan__group
+          .row
+            .col-xs-12.col-sm-5.col-lg-4
+              .genplan__box
+                .genplan__icon
+                  i.ic.ic-genic1
+                button.g-btn.genplan__btn(data-toggle="modal" data-target="#header__modal2") Записаться на просмотр
+            .col-xs-12.col-sm-5.col-sm-offset-2.col-lg-4.col-lg-offset-0
+              .genplan__box
+                .genplan__icon
+                  i.ic.ic-genic2
+                button.g-btn.genplan__btn(data-toggle="modal" data-target="#header__modal2") Получить каталог проектов
+            .col-xs-12.col-sm-6.col-sm-offset-3.col-lg-4.col-lg-offset-0
+              .genplan__box 
+                .genplan__icon
+                  i.ic.ic-genic3
+                a.g-btn.genplan__btn(href="#") Посмотреть все проекты 
