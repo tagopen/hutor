@@ -1291,6 +1291,20 @@ body
     &--dark
       color: #212121 
 +comment("gallery page style")
+.fancybox-item
+  width: auto 
+  height: 25px
+  &:hover,
+  &:focus
+    &:before
+      color: #e88d0c
+  &:before
+    content: "\f00d"
+    font-family: "FontAwesome"
+    font-size: 24px
+    line-height: 24px
+    color: #fff
+
 .gallery
   &__column
     transition: all .3s ease
