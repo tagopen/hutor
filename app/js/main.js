@@ -176,5 +176,15 @@ $(document).ready(function(){
   });
 });
 
+$('.tooltipstered').tooltipster({
+  contentCloning: true,
+  theme: 'tooltipster-shadow',
+  animation: 'fade',
+  delay: 25,
+  side: 'top',
+  maxWidth: 200,
+  trigger: 'click'
+});
+
 
 })(jQuery); // End of use strict

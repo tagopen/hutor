@@ -1,0 +1,43 @@
+.contento.contento--plan
+  .container
+    .row
+      .col-xs-12
+        .contento__text!=content.plan.text
+    .row
+      .col-xs-12
+        .plan__img.text-center
+          .plan__img-box
+            img.img-responsive.plan__image(src='img/plan.jpg', alt='План')
+            each item, i in content.plan.items
+              .plan__hover.tooltipstered(class="plan__hover--"+(i+1), data-tooltip-content="#tooltip"+(i+1)) 
+      .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+        .row
+          .col-xs-12.col-sm-6
+            .plan__box
+              .plan__info на территории в 9 га генпланом предусмотрено
+              span.plan__place
+                i.fa.fa-home(aria-hidden='true')
+                | 75 коттеджей
+            .plan__box
+              .plan__info на участках площадью
+              span.plan__place
+                i.fa.fa-hashtag(aria-hidden='true')
+                | от 8 до 12,5 сотки
+          .col-xs-12.col-sm-6      
+            .row
+              .col-xs-6.text-center
+                .plan__box.plan-item
+                  +svg("plan__icon", "building")
+                  .plan__info Строительство
+              .col-xs-6.text-center
+                .plan__box.plan-item
+                  +svg("plan__icon", "selling")
+                  .plan__info Продажа дома 
+              .col-xs-6.text-center
+                .plan__box.plan-item
+                  +svg("plan__icon", "lock")
+                  .plan__info Забронирован
+              .col-xs-6.text-center
+                .plan__box.plan-item
+                  +svg("plan__icon", "populated")
+                  .plan__info Заселен

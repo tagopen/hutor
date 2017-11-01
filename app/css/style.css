@@ -2946,6 +2946,38 @@ body {
   }
 }
 
+/* ---------------------------------------- */
+/* P L A N    P A G E    S T Y L E          */
+/* ---------------------------------------- */
+.plan__image {
+  display: inline-block;
+}
+
+.plan__img-box {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.plan__hover {
+  position: absolute;
+  display: block;
+  height: 30px;
+  width: 30px;
+  background: red;
+  cursor: pointer;
+}
+
+.plan__hover--1 {
+  left: 0;
+  top: 0;
+}
+
+.plan__hover--2 {
+  top: 0;
+  left: 50px;
+}
+
 @media only screen and (min-width: 768px) {
   /* ---------------------------------------- */
   /* G E N E R A L    S T Y L E               */

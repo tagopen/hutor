@@ -1,0 +1,7 @@
+.tooltip__content
+  each elem, i in content.plan.items
+    .tooltip__item(id="tooltip"+(i+1))
+      .tooltip__box
+        .tooltip__number!=elem.number
+        .tooltip__size!=elem.size
+        .tooltip__name!=elem.name    
