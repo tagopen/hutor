@@ -145,6 +145,12 @@
       },
     }); 
 
+
+    $("a.fancyimage2").fancybox({
+      scrolling : 'no',
+      closeBtn : true,
+    }); 
+
     $('.close--fancybox').click(function(e){
         e.preventDefault();
         $.fancybox.close();
