@@ -38,15 +38,15 @@
     <meta name="twitter:image" content="http://hutir.kiev.ua/landing//img/logo/microformat.png"/>
     <!-- build:css css/bundle.min.css-->
     <!-- Fonts CSS-->
-    <link rel="stylesheet" href="css/fonts.css?v=1509570538223">
+    <link rel="stylesheet" href="css/fonts.css?v=1509639112875">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="css/bootstrap.css?v=1509570538223">
+    <link rel="stylesheet" href="css/bootstrap.css?v=1509639112875">
     <!-- Font-Awesome CSS-->
-    <link rel="stylesheet" href="css/font-awesome.css?v=1509570538223">
+    <link rel="stylesheet" href="css/font-awesome.css?v=1509639112875">
     <!-- Tooltip CSS-->
-    <link rel="stylesheet" href="css/tooltipster.bundle.css?v=1509570538223">
-    <link rel="stylesheet" href="css/tooltipster-sideTip-shadow.min.css?v=1509570538223">
+    <link rel="stylesheet" href="css/tooltipster.bundle.css?v=1509639112875">
+    <link rel="stylesheet" href="css/tooltipster-sideTip-shadow.min.css?v=1509639112875">
     <!-- Add fancyBox-->
     <link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.5">
     <!-- Custom CSS -->
@@ -122,10 +122,10 @@
               <div class="map__contact contact map__contacte">
                 <div class="row">
                   <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-md-5 col-sm-offset-0">
-                    <div class="contact__box"><i class="fa fa-map-marker"></i>
-                      <div class="contact__texto">с. Березовка</div>
+                    <div class="contact__box"><i class="fa fa-map-marker contacte__icon"></i>
+                      <div class="contact__texto">Киевская область, Макаровский район, с. Колонщина (въезд через с. Березовка)</div>
                     </div>
-                    <div class="contact__box">  <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <div class="contact__box">  <i class="fa fa-envelope contacte__icon" aria-hidden="true"></i>
                       <div class="contact__texto">l.hutir@gmail.com  </div>
                     </div>
                   </div>
@@ -152,8 +152,7 @@
                     });
                     var marker = new google.maps.Marker({
                       position: uluru,
-                      map: map,
-                      icon: 'img/marker.png'
+                      map: map
                     });
                   }
                 </script>
@@ -199,36 +198,6 @@
         </div>
       </div>
     </div>
-    <div class="modal fade" id="header__modal2" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal__size">
-        <div class="modal-content modal__content">
-          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
-          <div class="modal__head"><span class="modal__subheading">Оставьте свои контакты, чтобы мы отправили вам каталог домов и могли связаться с вами для уточнения деталей</span></div>
-          <form class="contactForm modal__form" method="post" action="mail/mail.php" onsubmit="yaCounter40478820.reachGoal ('firstscreen'); ga('send', 'event', 'form', 'submit', 'firstscreen');">
-            <div class="form-group">
-              <input class="form-control modal__input form__name" aria-invalid="false" placeholder="Ваше имя" required="" data-validation-required-message="Please enter your name." name="name" type="text">
-            </div>
-            <div class="form-group">
-              <input class="form-control modal__input form__phone" aria-invalid="false" placeholder="Ваш телефон" required="" data-validation-required-message="Please enter your phone number." name="phone" type="tel">
-            </div>
-            <div class="form-group">
-              <input class="form-control modal__input form__mail" aria-invalid="false" placeholder="Ваш E-mail" required="" data-validation-required-message="Please enter your phone number." name="email" type="email">
-            </div>
-            <div class="text-center">
-              <button class="g-btn" type="submit" name="form" value="Первый экран" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Получить каталог коттеджей</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="address__modal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal__size--big">
-        <div class="modal-content modal__content">
-          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m22!1m8!1m3!1d20322.352976996088!2d30.33774916851264!3d50.454247467837604!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d50.4559675!2d30.3649727!4m5!1s0x472b486a5ab4084d%3A0xdbd9a59ebb422fda!2z0JHQtdGA0LXQt9C-0LLQutCwLCDQmtC40LXQstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCDQo9C60YDQsNC40L3QsA!3m2!1d50.428639!2d30.0032027!5e0!3m2!1sru!2sus!4v1477946442054" height="450" style="border:0;" allowfullscreen=""></iframe>
-        </div>
-      </div>
-    </div>
     <div class="modal fade" id="footer__modal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal__size">
         <div class="modal-content modal__content">
@@ -250,35 +219,6 @@
               <button class="g-btn" type="submit" name="form" value="Футер" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Отправить заявку</button>
             </div>
           </form>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal__size modal__size--wide">
-        <div class="modal-content modal__content">
-          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
-          <div class="row">
-            <div class="col-12 col-sm-6">
-              <div class="catalog__image catalog--height catalog__image--sky catalog-image"><i class="ic ic-s-125 hidden-xs catalog-image__icon catalog-image__icon--1"></i><i class="ic ic-s-125-xs visible-xs catalog-image__icon catalog-image__icon--1"></i><i class="ic ic-house-xs visible-xs catalog-image__icon catalog-image__icon--2"></i><i class="ic ic-house hidden-xs catalog-image__icon catalog-image__icon--2"></i></div>
-            </div>
-            <div class="col-12 col-sm-6">
-              <div class="catalog__caption catalog--height">
-                <div class="catalog__caption--heading">Ваши пожелания услышаны!</div>
-                <div class="catalog__caption--subheading">В продаже появились три эксклюзивных коттеджа площадью <b>125 м<sup>2</sup>! </b>Все дома имеют террасу с волшебным видом на сосновый лес. Чтобы узнать подробную информацию, оставьте ваш номер телефона и мы ответим на все ваши вопросы!</div>
-                <form class="row contactForm" method="post" action="mail/mail.php">
-                  <div class="col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0">
-                    <div class="form-group">
-                      <input class="form-control catalog__input catalog__input--up form__phone" placeholder="Ваш номер телефона" required name="phone" type="tel">
-                    </div>
-                    <div class="text-center">
-                      <button class="g-btn catalog__button catalog__button--up" name="form" value="Пожелания услышаны" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Узнать детали о новых коттеджах</button>
-                    </div>
-                  </div>
-                </form>
-                <div class="notify">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a class="notify__link" href="#">Политикой конфиденциальности</a></div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -311,7 +251,7 @@
     <!-- Yandex.Metrika counter-->
     <script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter40478820 = new Ya.Metrika({ id:40478820, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script>
     <noscript>
-      <div><img src="https://mc.yandex.ru/watch/40478820" style="position:absolute; left:-9999px;" alt="&v=1509570538223"></div>
+      <div><img src="https://mc.yandex.ru/watch/40478820" style="position:absolute; left:-9999px;" alt="&v=1509639112875"></div>
     </noscript>
     <!-- /Yandex.Metrika counter-->
     <!-- GAnalytics-->

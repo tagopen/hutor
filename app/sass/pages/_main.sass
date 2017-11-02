@@ -1479,7 +1479,7 @@ body
 +comment("contact page style")        
 .contento--contact
   background: url(../img/contactcontentobg.png) no-repeat
-  background-size: cover    
+  background-size: cover 
 .contact
   &__map-box
     padding: 35px 
@@ -1487,12 +1487,11 @@ body
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.2)
     margin: 0 !important
   &__box
+    position: relative
     text-align: center
     margin-bottom: 10px
     .fa
-      display: inline-block
       color: #e8560c  
-      margin-right: 10px
       font-size: 20px
       &.fa-phone
         position: relative
@@ -1530,6 +1529,10 @@ body
   position: relative
   z-index: 25         
 +r(768)
+  .contacte__icon
+    position: absolute
+    left: -5px   
+    top: 3px 
   .contento--contact
     padding-bottom: 260px
   #contactmap
@@ -1542,15 +1545,18 @@ body
         padding-right: 10px
     &__texte
       display: table-cell  
+    &__texto
+      padding-left: 20px  
     &__social
-      padding-top: 0
       position: relative
       top: -15px
   .map
     &__heading
       &--big
         font: 600 20px/24px $font-open-sans       
-+r(992)      
++r(992)    
+  .contacte__icon
+    left: -5px     
   .contact
     &__texto
       font: 400 18px/27px $font-open-sans 
@@ -1565,6 +1571,11 @@ body
       &--big
         font: 600 23px/28px $font-open-sans          
 +r(1200)
+  .contacte__icon
+    left: -30px   
+  .contact
+    &__texto
+      padding-left: 0  
   #contactmap
     height: 312px
   .map
@@ -1592,6 +1603,9 @@ body
     a
       color: #463dff
       text-decoration: underline   
+.modal__head--plan    
+  background: url(../img/planmodalbg.jpg) no-repeat
+  background-size: cover  
 .genplan
   &__group
     position: relative

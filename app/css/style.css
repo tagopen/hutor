@@ -2866,14 +2866,13 @@ body {
 }
 
 .contact__box {
+  position: relative;
   text-align: center;
   margin-bottom: 10px;
 }
 
 .contact__box .fa {
-  display: inline-block;
   color: #e8560c;
-  margin-right: 10px;
   font-size: 20px;
 }
 
@@ -2930,6 +2929,11 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+  .contacte__icon {
+    position: absolute;
+    left: -5px;
+    top: 3px;
+  }
   .contento--contact {
     padding-bottom: 260px;
   }
@@ -2946,8 +2950,10 @@ body {
   .contact__texte {
     display: table-cell;
   }
+  .contact__texto {
+    padding-left: 20px;
+  }
   .contact__social {
-    padding-top: 0;
     position: relative;
     top: -15px;
   }
@@ -2957,6 +2963,9 @@ body {
 }
 
 @media only screen and (min-width: 992px) {
+  .contacte__icon {
+    left: -5px;
+  }
   .contact__texto {
     font: 400 18px/27px "Open Sans", sans-serif;
   }
@@ -2975,6 +2984,12 @@ body {
 }
 
 @media only screen and (min-width: 1200px) {
+  .contacte__icon {
+    left: -30px;
+  }
+  .contact__texto {
+    padding-left: 0;
+  }
   #contactmap {
     height: 312px;
   }
@@ -3011,6 +3026,11 @@ body {
 .tooltip__name a {
   color: #463dff;
   text-decoration: underline;
+}
+
+.modal__head--plan {
+  background: url(../img/planmodalbg.jpg) no-repeat;
+  background-size: cover;
 }
 
 .genplan__group {
