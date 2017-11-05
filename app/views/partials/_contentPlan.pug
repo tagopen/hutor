@@ -2,13 +2,13 @@
   .container
     .row
       .col-xs-12
-        .contento__text!=content.plan.text
+        .contento__text!=content.genplan.text
     .row
       .col-xs-12
         .plan__img.text-center
           .plan__img-box
             img.img-responsive.plan__image(src='img/plan.jpg', alt='План')
-            each item, i in content.plan.items
+            each item, i in content.genplan.items
               .plan__hover.tooltipstered(class="plan__hover--"+(i+1), data-tooltip-content="#tooltip"+(i+1)) 
       .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
         .row

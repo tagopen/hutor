@@ -23,7 +23,7 @@
 
   // Menu anchor scroll
   $(function() {
-    $(".navbar").on("click",".nav__point a", function (event) {
+    $(".navbar").on("click",".nav__point--anchor a", function (event) {
       event.preventDefault();
       var id  = $(this).attr('href'),
       top = $(id).offset().top;

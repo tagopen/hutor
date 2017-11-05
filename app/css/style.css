@@ -2490,6 +2490,7 @@ body {
   color: #fff;
   font: 900 32px/40px "GothamPro", sans-serif;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .navbar--in {
@@ -3078,8 +3079,7 @@ body {
   display: block;
   height: 6vw;
   width: 6vw;
-  background: red;
-  opacity: 0.3;
+  background: transparent;
   cursor: pointer;
 }
 
@@ -3379,10 +3379,10 @@ body {
 }
 
 .plan__hover--50 {
-  top: 0;
-  left: 0;
-  height: 0;
-  width: 0;
+  top: 46.8%;
+  left: 13.6%;
+  width: 5.1vw;
+  height: 4.2vw;
 }
 
 .plan__hover--51 {
@@ -3568,6 +3568,13 @@ body {
   -webkit-transform: rotate(8deg);
       -ms-transform: rotate(8deg);
           transform: rotate(8deg);
+}
+
+.plan__hover--75 {
+  top: 41.5%;
+  left: 13.6%;
+  width: 5.1vw;
+  height: 5vw;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3801,10 +3808,10 @@ body {
     left: 130px;
   }
   .plan__hover--50 {
-    top: 0;
-    left: 0;
-    height: 0;
-    width: 0;
+    height: 30px;
+    width: 34px;
+    top: 315px;
+    left: 92px;
   }
   .plan__hover--51 {
     top: 364px;
@@ -3903,7 +3910,7 @@ body {
     width: 54px;
     height: 24px;
     display: block;
-    background: red;
+    background: transparent;
     -webkit-transform: rotate(20deg);
         -ms-transform: rotate(20deg);
             transform: rotate(20deg);
@@ -3974,6 +3981,12 @@ body {
     -webkit-transform: rotate(8deg);
         -ms-transform: rotate(8deg);
             transform: rotate(8deg);
+  }
+  .plan__hover--75 {
+    height: 34px;
+    width: 31px;
+    top: 280px;
+    left: 96px;
   }
 }
 
