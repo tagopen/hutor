@@ -1714,6 +1714,13 @@ button:focus {
   border-left: none;
 }
 
+.nw-item__zoom {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -18px 0 0 -18px;
+}
+
 .nw-item__content-hover {
   position: absolute;
   top: 50%;
@@ -3034,13 +3041,6 @@ body {
 .nw-item__box--gallery12 {
   background: url(../img/gallery1.jpg) no-repeat;
   background-size: cover;
-}
-
-.ic-zoomorange {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: -18px 0 0 -18px;
 }
 
 /* ---------------------------------------- */
