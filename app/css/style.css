@@ -1454,31 +1454,41 @@ button:focus {
   width: 100%;
   height: 100%;
   padding: 20px;
-  background-repeat: no-repeat;
-  background-size: cover;
   -webkit-transition: color .3s ease-out;
   transition: color .3s ease-out;
 }
 
-.nw-item__box:before {
+.nw-item__box:before, .nw-item__box:after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: opacity .3s ease-out;
+  transition: opacity .3s ease-out;
+}
+
+.nw-item__box:after {
+  opacity: 0;
 }
 
 .nw-item__box:hover, .nw-item__box:active {
   color: #e88d0c;
 }
 
-.nw-item__box:hover:before, .nw-item__box:active:before {
-  color: currentColor;
-}
-
 .nw-item__box:hover .nw-item__hover, .nw-item__box:active .nw-item__hover {
   visibility: visible;
+  opacity: 1;
+}
+
+.nw-item__box:hover:before, .nw-item__box:active:before {
+  opacity: 0;
+}
+
+.nw-item__box:hover:after, .nw-item__box:active:after {
   opacity: 1;
 }
 
@@ -1510,99 +1520,99 @@ button:focus {
   background-image: url(../img/new2.jpg);
 }
 
-.nw-item__box--projects-1 {
+.nw-item__box--projects-1:before {
   background-image: url(../img/projects-1.jpg);
 }
 
-.nw-item__box--projects-1:hover {
+.nw-item__box--projects-1:hover:after {
   background-image: url(../img/projects-1-hover.jpg);
 }
 
-.nw-item__box--projects-2 {
+.nw-item__box--projects-2:before {
   background-image: url(../img/projects-2.jpg);
 }
 
-.nw-item__box--projects-2:hover {
+.nw-item__box--projects-2:hover:after {
   background-image: url(../img/projects-2-hover.jpg);
 }
 
-.nw-item__box--projects-3 {
+.nw-item__box--projects-3:before {
   background-image: url(../img/projects-3.jpg);
 }
 
-.nw-item__box--projects-3:hover {
+.nw-item__box--projects-3:hover:after {
   background-image: url(../img/projects-3-hover.jpg);
 }
 
-.nw-item__box--projects-4 {
+.nw-item__box--projects-4:before {
   background-image: url(../img/projects-4.jpg);
 }
 
-.nw-item__box--projects-4:hover {
+.nw-item__box--projects-4:hover:after {
   background-image: url(../img/projects-4-hover.jpg);
 }
 
-.nw-item__box--projects-5 {
+.nw-item__box--projects-5:before {
   background-image: url(../img/projects-5.jpg);
 }
 
-.nw-item__box--projects-5:hover {
+.nw-item__box--projects-5:hover:after {
   background-image: url(../img/projects-5-hover.jpg);
 }
 
-.nw-item__box--projects-6 {
+.nw-item__box--projects-6:before {
   background-image: url(../img/projects-6.jpg);
 }
 
-.nw-item__box--projects-6:hover {
+.nw-item__box--projects-6:hover:after {
   background-image: url(../img/projects-6-hover.jpg);
 }
 
-.nw-item__box--projects-7 {
+.nw-item__box--projects-7:before {
   background-image: url(../img/projects-7.jpg);
 }
 
-.nw-item__box--projects-7:hover {
+.nw-item__box--projects-7:hover:after {
   background-image: url(../img/projects-7-hover.jpg);
 }
 
-.nw-item__box--projects-8 {
+.nw-item__box--projects-8:before {
   background-image: url(../img/projects-8.jpg);
 }
 
-.nw-item__box--projects-8:hover {
+.nw-item__box--projects-8:hover:after {
   background-image: url(../img/projects-8-hover.jpg);
 }
 
-.nw-item__box--projects-9 {
+.nw-item__box--projects-9:before {
   background-image: url(../img/projects-9.jpg);
 }
 
-.nw-item__box--projects-9:hover {
+.nw-item__box--projects-9:hover:after {
   background-image: url(../img/projects-9-hover.jpg);
 }
 
-.nw-item__box--projects-10 {
+.nw-item__box--projects-10:before {
   background-image: url(../img/projects-10.jpg);
 }
 
-.nw-item__box--projects-10:hover {
+.nw-item__box--projects-10:hover:after {
   background-image: url(../img/projects-10-hover.jpg);
 }
 
-.nw-item__box--projects-11 {
+.nw-item__box--projects-11:before {
   background-image: url(../img/projects-11.jpg);
 }
 
-.nw-item__box--projects-11:hover {
+.nw-item__box--projects-11:hover:after {
   background-image: url(../img/projects-11-hover.jpg);
 }
 
-.nw-item__box--projects-12 {
+.nw-item__box--projects-12:before {
   background-image: url(../img/projects-12.jpg);
 }
 
-.nw-item__box--projects-12:hover {
+.nw-item__box--projects-12:hover:after {
   background-image: url(../img/projects-12-hover.jpg);
 }
 
