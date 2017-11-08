@@ -434,7 +434,7 @@ button:focus
 
 +comment("section new style")
 .new
-  margin-bottom: -130px
+  margin-bottom: -80px
   padding: 130px 0 80px
   background: url(../img/new.png) no-repeat
   background-position: 50% 100%
@@ -1207,11 +1207,10 @@ button:focus
 .process
   position: relative
   z-index: 5 
-  margin-bottom: -315px
   background: url(../img/processbg.png) no-repeat
   background-size: cover
   background-position: 50% 100%
-  padding: 200px 0 100px
+  padding: 200px 0 240px
   &__col
     box-shadow: 0 0 0 2px #fff inset
     transition: box-shadow .3s ease-out
@@ -1244,6 +1243,9 @@ button:focus
     width: 0
     background-color: $btn_color
     transition: all .3s ease-out
++r(768)
+  .process
+    margin-bottom: 0    
 +comment("map style")     
 .map 
   position: relative
