@@ -12,13 +12,24 @@
   @each $sprite in $svg-spritesheet-sprites
     .svg--#{nth($sprite, 1)}
       +svgi($sprite)
-+comment("home page style")
+
 html
   overflow-x: hidden
-  height: 100%
 body
   padding-right: 0 !important  
   color: #000
+
+html, 
+body
+  display: flex
+  margin: 0
+body
+  flex-direction: column
+  flex: 0 0 100%
+  max-width: 100%
+  min-height: 100vh
+.main
+  flex-grow: 1
 iframe
   width: 100%
 a,
@@ -149,6 +160,9 @@ button:focus
   display: inline-block
   text-align: left
   vertical-align: middle
+
++comment("page home style")
+
 +comment("header style")
 .header
   position: relative
@@ -1335,7 +1349,6 @@ button:focus
     display: block
 +comment("footer style") 
 .footer
-  position: relative
   z-index: 8
   background: url(../img/footerbg.png) no-repeat
   background-size: cover
@@ -1451,10 +1464,7 @@ body
           &:focus
             color: #e88d0c
             box-shadow: 0 -1px 0 0 #e88d0c inset !important
-.footerIn
-  position: absolute
-  width: 100%
-  bottom: 0       
+.footer--in
   background: url(../img/footerbglight.png) no-repeat
   background-size: cover     
 .footer
