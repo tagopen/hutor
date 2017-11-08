@@ -58,8 +58,8 @@ section.contento
                   .sw-list.ds-info__list
                     i.ic.ic--list.sw-list__icon.hidden-xs
                     h3.sw-list__heading!= item.list.heading
-                    .row
-                      each list, j in item.list.items
+                    each list, j in item.list.items
+                      .row
                         +column(j)
                           .sw-list__item.tr-item
                             .tr-item__item.tr-item__item--left
