@@ -29,8 +29,8 @@ section.contento
     .row
       .col-xs-12.col-sm-10.col-sm-offset-1.col-md-12.col-md-offset-0
         .ds-project
-          .row
-            each item, i in page.projects.items
+          each item, i in page.projects.items
+            .row
               .col-xs-12.col-lg-6
                 .ds-project__item(id="projects" + (i + 1))
                   .gl-gallery.ds-project__gallery
@@ -58,8 +58,8 @@ section.contento
                   .sw-list.ds-info__list
                     i.ic.ic--list.sw-list__icon.hidden-xs
                     h3.sw-list__heading!= item.list.heading
-                    each list, j in item.list.items
-                      .row
+                    .row
+                      each list, j in item.list.items
                         +column(j)
                           .sw-list__item.tr-item
                             .tr-item__item.tr-item__item--left
