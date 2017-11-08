@@ -1158,6 +1158,9 @@ button:focus {
     background-size: cover;
     background-position: 50% 100%;
   }
+  .content__thanks {
+    padding-top: 75px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1712,6 +1715,13 @@ button:focus {
 .nw-item__icon--right:after {
   border-top: none;
   border-left: none;
+}
+
+.nw-item__zoom {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -18px 0 0 -18px;
 }
 
 .nw-item__content-hover {
@@ -3034,13 +3044,6 @@ body {
 .nw-item__box--gallery12 {
   background: url(../img/gallery1.jpg) no-repeat;
   background-size: cover;
-}
-
-.ic-zoomorange {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: -18px 0 0 -18px;
 }
 
 /* ---------------------------------------- */
@@ -4543,7 +4546,6 @@ body {
 }
 
 .cbutton .ic {
-  margin-left: 7px;
   margin-top: -3px;
 }
 
@@ -4753,14 +4755,11 @@ body {
   .fancybox-close {
     right: -25px;
   }
-  .fancybox-next, .fancybox-prev {
-    top: 200px;
-  }
   .fancybox-next {
-    right: -32px;
+    right: -50px;
   }
   .fancybox-prev {
-    left: -32px;
+    left: -50px;
   }
   .gallery__item {
     width: 100%;
@@ -5050,9 +5049,6 @@ body {
   }
   .catalog__caption--subheading {
     font: 400 16px/20px "GothamPro", sans-serif;
-  }
-  .fancybox-next, .fancybox-prev {
-    top: 228px;
   }
   .col-right {
     float: right;
