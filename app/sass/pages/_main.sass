@@ -161,6 +161,20 @@ button:focus
   text-align: left
   vertical-align: middle
 
+.fancybox-close
+  top: -35px
+  background: none !important
+.fancybox-next, 
+.fancybox-prev
+  top: 50%
+  transform: translateY(-50%)
+.fancybox-prev
+  left: 15px
+.fancybox-next
+  right: 15px
++r(768)
+  .fancybox-close
+    top: -25px
 +comment("page home style")
 
 +comment("header style")
@@ -2548,13 +2562,6 @@ body
   .sw-list
     padding: 30px
 
-
-+comment("Пофиксь стрелки пожалуйста на странице Gallery")
-+r(992)
-  .fancybox-next, 
-  .fancybox-prev
-    top: 50%
-    transform: translateY(-50%)
 .cbutton
   position: fixed
   bottom: 30px

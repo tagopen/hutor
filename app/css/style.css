@@ -1007,6 +1007,33 @@ button:focus {
   vertical-align: middle;
 }
 
+.fancybox-close {
+  top: -35px;
+  background: none !important;
+}
+
+.fancybox-next,
+.fancybox-prev {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.fancybox-prev {
+  left: 15px;
+}
+
+.fancybox-next {
+  right: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .fancybox-close {
+    top: -25px;
+  }
+}
+
 /* ---------------------------------------- */
 /* P A G E    H O M E    S T Y L E          */
 /* ---------------------------------------- */
@@ -4537,19 +4564,6 @@ body {
   }
   .sw-list {
     padding: 30px;
-  }
-}
-
-/* ---------------------------------------- */
-/* П о ф и к с ь    с т р е л к и    п о ж а л у й с т а    н а    с т р а н и ц е    G A L L E R Y  */
-/* ---------------------------------------- */
-@media only screen and (min-width: 992px) {
-  .fancybox-next,
-  .fancybox-prev {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
   }
 }
 
