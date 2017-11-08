@@ -1,0 +1,36 @@
+#header__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__size
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal__head
+        p.modal__heading Форма обратной связи
+        span.modal__subheading
+          | Оставьте свои контактные данные в этой форме и мы свяжемся с вами в ближайшее время
+      form.contactForm.modal__form(method='post', action='mail/mail.php', onsubmit="yaCounter40478820.reachGoal ('zvonokheader'); ga('send', 'event', 'form', 'submit', 'zvonokheader');")
+        .form-group
+          input.form-control.modal__input.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
+        .form-group
+          input.form-control.modal__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required='', data-validation-required-message='Please enter your phone number.', name='phone', type='tel')
+        .form-group
+          input.form-control.modal__input.form__mail(aria-invalid='false', placeholder='Ваш E-mail', required='', data-validation-required-message='Please enter your phone number.', name='email', type='email')
+        .text-center
+          button.g-btn(type='submit', name='form', value='Шапка', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Отправить заявку
+#footer__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__size
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal__head
+        p.modal__heading Форма обратной связи
+        span.modal__subheading
+          | Оставьте свои контактные данные в этой форме и мы свяжемся с вами в ближайшее время
+      form.contactForm.modal__form(method='post', action='mail/mail.php', onsubmit="yaCounter40478820.reachGoal ('footer'); ga('send', 'event', 'form', 'submit', 'footer');")
+        .form-group
+          input.form-control.modal__input.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
+        .form-group
+          input.form-control.modal__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required='', data-validation-required-message='Please enter your phone number.', name='phone', type='tel')
+        .form-group
+          input.form-control.modal__input.form__mail(aria-invalid='false', placeholder='Ваш E-mail', required='', data-validation-required-message='Please enter your phone number.', name='email', type='email')
+        .text-center
+          button.g-btn(type='submit', name='form', value='Футер' data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Отправить заявку

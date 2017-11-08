@@ -1197,6 +1197,9 @@ button:focus {
     min-height: 800px;
     padding: 160px 0 260px;
   }
+  .content__thanks {
+    padding-top: 150px;
+  }
 }
 
 .list__item {
