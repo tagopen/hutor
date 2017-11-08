@@ -31,7 +31,7 @@ mixin itemgallery(i)
                 .text-center
                   button.g-btn.catalog__button(name='form', value='Каталог - ' + i, type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать о коттедже
               .col-xs-3
-                i.ic.ic-arrow_fff
+                i.ic.ic--arrow_fff
 section.catalog
   .container
     .row
@@ -73,5 +73,5 @@ section.catalog
       .text-center.col-xs-12.col-sm-10.col-sm-offset-1
         .address__border
           .row
-            i.col-lg-2.ic.ic-catalogic(class=page.catalog.address.icon)
+            i.col-lg-2.ic.ic--catalogic(class=page.catalog.address.icon)
             .col-lg-10.address__text!= page.catalog.address.text

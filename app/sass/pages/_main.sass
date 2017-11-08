@@ -1,23 +1,17 @@
 +comment('general style')
-+ic
 
-@each $sprite in $spritesheet-sprites
-  .ic-#{nth($sprite, 10)}
-    &:before
-      +bs($sprite)
-.svg
-  &--building
-    width: em(28)
-    height: em(29)
-  &--selling
-    width: em(35)
-    height: em(33)
-  &--lock
-    width: em(29)
-    height: em(38)
-  &--populated
-    width: em(35)
-    height: em(35)
++cm('png icons')
++ic
+@if (global-variable-exists(spritesheet-sprites))
+  @each $sprite in $spritesheet-sprites
+    .ic--#{nth($sprite, 10)}
+      &:before
+        +bs($sprite)
++svg
+@if (global-variable-exists(svg-spritesheet-sprites))
+  @each $sprite in $svg-spritesheet-sprites
+    .svg--#{nth($sprite, 1)}
+      +svgi($sprite)
 +comment("home page style")
 html
   overflow-x: hidden
@@ -46,9 +40,17 @@ button:focus
     border: 0  
     box-shadow: 0 -1px 4px 3px #e8560c inset
     width: 100%
+    transition: all .3s ease-out
     &:hover
       background-color: $btn_color__hover
       box-shadow: 0 -1px 4px 3px #e88d0c inset
+    &__icon
+      margin-right: 10px
+    &--narrow
+      padding: 15px    
+      width: auto
+      box-shadow: 0 0 15px rgba(232, 86, 12, 0.5)
+      background-color: #e88d0c
   &-title
     display: inline-block
     font: 700 17px/20px $font-gotham
@@ -429,36 +431,108 @@ button:focus
     margin: 20px 0
 .nw-item
   position: relative
+  margin: 15px 0
   height: 225px
   width: 100%
-  background-repeat: no-repeat
-  background-size: cover
+  overflow: hidden
   color: #fff
   z-index: 25
-  &--1
-    background-image: url(../img/new1.jpg)
-  &--2
-    background-image: url(../img/new2.jpg)
+  &--md
+    height: 250px
+    max-width: 340px
+    margin:
+      left: auto
+      right: auto
   &__box
     display: inline-block
     width: 100%
     height: 100%
     padding: 20px
-    transition: all .3s ease-out
+    background-repeat: no-repeat
+    background-size: cover
+    transition: color .3s ease-out
     &:before
       content: ''
       +coverdiv
-      background-image: repeating-linear-gradient(to bottom,rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.14) 0%,rgba(0, 0, 0, 0.16) 48.2%,rgba(0, 0, 0, 0.83) 100%)
     &:hover,
     &:active
-      &:before
-        background-image: repeating-linear-gradient(to bottom,rgba(0, 0, 0, 0.16) 0%,rgba(0, 0, 0, 0.16) 0%)
       color: #e88d0c
+      &:before
+        color: currentColor
       .nw-item__hover
         visibility: visible
         opacity: 1
+    &--dark-bg
+      &:before
+        content: ''
+        +coverdiv
+        background-image: repeating-linear-gradient(to bottom,rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.14) 0%,rgba(0, 0, 0, 0.16) 48.2%,rgba(0, 0, 0, 0.83) 100%)
+      &:hover,
+      &:active
+        &:before
+          background-image: repeating-linear-gradient(to bottom,rgba(0, 0, 0, 0.16) 0%,rgba(0, 0, 0, 0.16) 0%)
+    &--yellow-bg
+     .nw-item__hover
+       background: rgba(226, 140, 35, 0.5)
+    &--new-1
+      background-image: url(../img/new1.jpg)
+    &--new-2
+      background-image: url(../img/new2.jpg)
+    &--projects-1
+      background-image: url(../img/projects-1.jpg)
+      &:hover
+        background-image: url(../img/projects-1-hover.jpg)
+    &--projects-2
+      background-image: url(../img/projects-2.jpg)
+      &:hover
+        background-image: url(../img/projects-2-hover.jpg)
+    &--projects-3
+      background-image: url(../img/projects-3.jpg)
+      &:hover
+        background-image: url(../img/projects-3-hover.jpg)
+    &--projects-4
+      background-image: url(../img/projects-4.jpg)
+      &:hover
+        background-image: url(../img/projects-4-hover.jpg)
+    &--projects-5
+      background-image: url(../img/projects-5.jpg)
+      &:hover
+        background-image: url(../img/projects-5-hover.jpg)
+    &--projects-6
+      background-image: url(../img/projects-6.jpg)
+      &:hover
+        background-image: url(../img/projects-6-hover.jpg)
+    &--projects-7
+      background-image: url(../img/projects-7.jpg)
+      &:hover
+        background-image: url(../img/projects-7-hover.jpg)
+    &--projects-8
+      background-image: url(../img/projects-8.jpg)
+      &:hover
+        background-image: url(../img/projects-8-hover.jpg)
+    &--projects-9
+      background-image: url(../img/projects-9.jpg)
+      &:hover
+        background-image: url(../img/projects-9-hover.jpg)
+    &--projects-10
+      background-image: url(../img/projects-10.jpg)
+      &:hover
+        background-image: url(../img/projects-10-hover.jpg)
+    &--projects-11
+      background-image: url(../img/projects-11.jpg)
+      &:hover
+        background-image: url(../img/projects-11-hover.jpg)
+    &--projects-12
+      background-image: url(../img/projects-12.jpg)
+      &:hover
+        background-image: url(../img/projects-12-hover.jpg)
   &__content
     margin-top: 160px
+    &--fluid
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 10px
   &__name
     position: relative
     font: 700 14px/16px $font-open-sans
@@ -476,7 +550,7 @@ button:focus
     visibility: hidden
     opacity: 0
     background: rgba(0, 0, 0, .5)
-    transition: all .3s ease-out
+    transition: background, opacity .3s ease-out
     z-index: 1
   &__icon
     &--left,
@@ -492,7 +566,7 @@ button:focus
         display: block
         width: 25px
         height: 25px
-        border: 1px solid #e88d0c
+        border: 1px solid currentColor
       &:before
         top: 10px
       &:after
@@ -525,6 +599,24 @@ button:focus
     font: 700 14px/16px $font-open-sans
     color: #fff
     text-transform: uppercase
+
+.n-label
+  display: block
+  width: 100%
+  margin: 2px 0 3px
+  &__text
+    display: inline-block
+    padding: 10px 13px
+    min-width: 155px
+    background-color: #e88d0c
+    border-radius: 0
+    font: 900 14px/16px $font-gotham
+    color: #fff
+    text-transform: uppercase
+  &--left
+    float: left
+  &--right
+    float: left
 .arrow-group
   display: block
   width: 40px !important
@@ -552,7 +644,10 @@ button:focus
     &__items
       margin: 60px 0
   .nw-item
+    max-width: none
     height: 325px
+    &--md
+      height: 220px
     &__box
       padding: 30px
     &__content
@@ -586,6 +681,8 @@ button:focus
 +r(992)
   .nw-item
     height: 400px
+    &--md
+      height: 340px
     &__box
       padding: 60px
     &__content
@@ -616,6 +713,15 @@ button:focus
     &__content-hover
       font-size: 24px
       line-height: 26px
++r(1200)
+  .nw-item
+    &__content
+      bottom: 25px
+  .n-label
+    width: auto
+    text-align: center
+    &--right
+      float: right
 +comment("catalog style")
 .catalog
   position: relative
@@ -748,13 +854,14 @@ button:focus
     background-color: #fff
     img
       display: inline-block   
+  &__description
+    padding: 10px 30px
   &-description
     background-color: #fff     
-    padding: 10px 30px
     text-align: left
     color: #222
     &__name
-      font: 400 18px/20px $font-gotham
+      font: 700 18px/20px $font-gotham
       margin-bottom: 10px
     &__label
       padding: 5px 10px
@@ -793,8 +900,9 @@ button:focus
   .catalog
     margin-top: 0
     padding: 140px 0 100px
+    &__description
+      padding: 40px 55px 70px 
     &-description
-      padding: 10px 45px
       &__label
         padding: 9px 14px
         font-size: 16px
@@ -816,6 +924,9 @@ button:focus
         transform: scale(.8)
 
 +r(992)
+  .catalog
+    &__description
+      padding: 35px 55px 20px
   .catalog-image
     &__icon
       &--1
@@ -1084,6 +1195,7 @@ button:focus
   padding: 200px 0 100px
   &__col
     box-shadow: 0 0 0 2px #fff inset
+    transition: box-shadow .3s ease-out
     &:hover
       box-shadow: 0 0 0 5px $btn_color inset
       .process__line
@@ -2271,4 +2383,108 @@ body
         height: 34px
         width: 31px
         top: 280px
-        left: 96px 
+        left: 96px
++comment("page projects style")
+
+.gl-gallery
+  position: relative
+  text-align: center
+  &__arrow
+    top: 50%
+    transform: translateY(-50%)
+  &__btn
+    transform: translateY(-50%)
+.gl-arrow
+  position: absolute
+  width: 60px
+  height: 120px
+  overflow: hidden
+  font-size: 20px
+  color: #fff
+  text-align: center
+  cursor: pointer
+  &:before
+    content: ''
+    position: absolute
+    display: block
+    margin: auto
+    width: 120px
+    height: 120px
+    top: 0
+    bottom: 0
+    border: 4px solid currentColor
+    border-radius: 50%
+    background-color: transparent
+  &--left
+    left: 0
+    &:before
+      right: 0
+  &--left &
+    &__icon
+      right: 35px
+  &--right
+    right: 0
+    &:before
+      left: 0
+  &--right &
+    &__icon
+      left: 35px
+  &--active
+    color: #e88d0c
+    &:before
+      background-color: currentColor
+  &--active &
+    &__icon
+      color: #000
+  &__icon
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+
+.ds-info
+  &__list
+    background-color: #f6f9f9
+.mr-option
+  font: 400 18px/20px $font-open-sans
+  color: #222222
+  &__text
+    margin-bottom: 14px
+.sw-list
+  position: relative
+  padding: 10pxs
+  &__icon
+    position: absolute
+    top: -114px
+    right: 26px 
+  &__heading
+    margin-bottom: 23px
+    font: 600 18px/20px $font-open-sans
+    color: #222222
+.tr-item
+  display: table
+  margin: 10px 0
+  &__item
+    display: table-cell
+    vertical-align: middle
+    &--left
+      width: 50px
+  &__icon
+    color: #e88d0c
+  &__text
+    margin: 0
+    font: 300 14px/16px $font-open-sans
+    color: #222222
++r(768)
+  .ds-info
+    &__description
+      padding-left: 20px
+  .sw-list
+    padding: 30px
+
+
++comment("Пофиксь стрелки пожалуйста на странице Gallery")
++r(992)
+  .fancybox-next, 
+  .fancybox-prev
+    top: 50%
+    transform: translateY(-50%)

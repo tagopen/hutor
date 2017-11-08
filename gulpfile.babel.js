@@ -147,59 +147,59 @@ gulp.task('sprite', function() {
    ));
 });
 
-gulp.task('svg', function () {
- return gulp.src(path.watch.spriteSvg)
+
+gulp.task('svg', function() {
+  return gulp.src(path.watch.spriteSvg)
     .pipe($.plumber())
+    .pipe($.plumberNotifier())
     .pipe($.svgmin({
       js2svg: {
         pretty: true
       }
     }))
     .pipe($.cheerio({
-      run: function ($) {
+      run: function($) {
         $('[fill]').removeAttr('fill');
         $('[stroke]').removeAttr('stroke');
         $('[style]').removeAttr('style');
       },
-      parserOptions: {xmlMode: true}
+      parserOptions: {
+        xmlMode: true
+      }
     }))
     .pipe($.replace('&gt;', '>'))
     // build svg sprite
-   .pipe($.svgSprite({
-    shape: {
-      spacing: {
-        padding: 0,
-      },
-      dimension   : {     // Set maximum dimensions
-        maxWidth  : 32,
-        maxHeight : 32,
-      },
-    },
-    mode: {
-      view: {
-        render: {
-          scss  : true
+    .pipe($.svgSprite({
+      shape: {
+        spacing: {
+          padding: 0,
+        },
+        dimension: { // Set maximum dimensions
+          maxWidth: 32,
+          maxHeight: 32,
         },
       },
-      symbol: {
-        dest: "./",
-        layout: "packed",
-        sprite: "sprite.svg",
-        bust: false,
-        render: {
-          scss: {
-            dest: "../sass/utils/_spriteSvg.scss",
-            template: path.src.svgTemplate
+      mode: {
+        view: false,
+        symbol: {
+          dest: "./",
+          layout: "packed",
+          sprite: "sprite.svg",
+          bust: false,
+          render: {
+            scss: {
+              dest: "../sass/utils/_sprite-svg.scss",
+              template: path.src.svgTemplate
+            }
           }
-        }
+        },
+        inline: true,
       },
-      inline: true,
-    },
-    variables: {
-      mapname: "icons"
-    }
-  }))
-   .pipe(gulp.dest(path.src.img));
+      variables: {
+        mapname: "icons"
+      }
+    }))
+    .pipe(gulp.dest(path.src.img));
 });
 
 gulp.task('server', function() {

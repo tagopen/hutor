@@ -42,6 +42,7 @@
     "gulp-javascript-obfuscator": "^1.1.2",
     "gulp-load-plugins": "^1.5.0",
     "gulp-plumber": "^1.1.0",
+    "gulp-plumber-notifier": "0.0.3",
     "gulp-pug": "^3.3.0",
     "gulp-pxtorem": "^3.0.0",
     "gulp-rcs": "^1.0.1",

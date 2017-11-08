@@ -1,0 +1,70 @@
+mixin column(i)
+  if (i % 2 === 0)
+    .col-xs-12.col-sm-6
+      block
+  else
+    .col-xs-12.col-sm-6
+      block
+
+section.contento
+  .container
+    .row
+      .col-xs-12
+        .contento__text!=page.descr
+    .row
+      each item, i in page.gallery.items
+        .col-xs-12.col-sm-6.col-md-4
+          .nw-item.nw-item--md
+            a.nw-item__box.nw-item__box--yellow-bg.js-scroll-trigger(href='#projects' + (i + 1), class="nw-item__box--projects-" + (i + 1))
+              .clearfix.nw-item__content.nw-item__content--fluid
+                if (item.label)
+                  .n-label.n-label--left
+                    .n-label__text!= item.label.left
+                  .n-label.n-label--right
+                    .n-label__text!= item.label.right
+              .nw-item__hover
+                i.nw-item__icon.nw-item__icon--left
+                i.nw-item__icon.nw-item__icon--right
+                span.nw-item__content-hover Подробнее
+    .row
+      .col-xs-12.col-sm-10.col-sm-offset-1.col-md-12.col-md-offset-0
+        .ds-project
+          .row
+            each item, i in page.projects.items
+              .col-xs-12.col-lg-6
+                .ds-project__item(id="projects" + (i + 1))
+                  .gl-gallery.ds-project__gallery
+                    //-.gl-arrow.gl-arrow--left.gl-gallery__arrow
+                    //-  i.fa.fa-chevron-left.gl-arrow__icon
+                    //-.gl-arrow.gl-arrow--active.gl-arrow--right.gl-gallery__arrow
+                    //-  i.fa.fa-chevron-right.gl-arrow__icon
+                    .gl-gallery__group
+                      each img, count in item.images
+                        a.fancyimage2.gl-gallery__link(class={"hidden" : count > 0}, rel="projects-group-" + (i + 1), href=img.href)
+                          if (img.src)
+                            img.img-responsive.gl-gallery__img(src=img.src, alt=img.alt)
+                    button.g-btn.g-btn--narrow.gl-gallery__btn(data-toggle="modal", data-target="#more")
+                      +svg("g-btn__icon", item.btn.icon) 
+                      != item.btn.text
+              .col-xs-12.col-lg-6
+                .ds-project__group.ds-info
+                  .catalog-description.ds-info__description
+                    h3.catalog-description__name!= item.heading
+                      span.catalog-description__label!= item.label
+                    .mr-option.ds-info__option
+                      each option in item.options
+                        p.mr-option__text!= option.key
+                          b.mr-option__value!= option.value
+                  .sw-list.ds-info__list
+                    i.ic.ic--list.sw-list__icon.hidden-xs
+                    h3.sw-list__heading!= item.list.heading
+                    .row
+                      each list, j in item.list.items
+                        +column(j)
+                          .sw-list__item.tr-item
+                            .tr-item__item.tr-item__item--left
+                              +svg("tr-item__icon", list.icon)
+                            .tr-item__item.tr-item__item--right
+                              p.tr-item__text!= list.text
+
+            

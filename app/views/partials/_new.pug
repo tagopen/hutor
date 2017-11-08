@@ -1,7 +1,7 @@
 mixin itemgallery(i)
   - var item = page.new.items[i - 1]
-  .nw-item.new__items(class="nw-item--" + i)
-    a.fancyimage.nw-item__box(href="#new" + i)
+  .nw-item.new__items
+    a.fancyimage.nw-item__box.nw-item__box--dark-bg(href="#new" + i, class="nw-item__box--new-" + i)
       .nw-item__content
         .row
           .col-xs-6.col-sm-4
@@ -22,7 +22,7 @@ mixin itemgallery(i)
             each slide in item.slider.items
               .catalog__photo
                 img.img-responsive(src=slide.src, alt=slide.alt)
-          .catalog-description
+          .catalog-description.catalog__description
             .catalog-description__name!= item.name
               span.catalog-description__label!= item.label
             p.catalog-description__text--span!= item.descr.text1
@@ -41,7 +41,7 @@ mixin itemgallery(i)
               .text-center
                 button.g-btn.catalog__button(name='form', value='Каталог - ' + i, type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать о коттедже
             .col-xs-3
-              i.ic.ic-arrow_fff
+              i.ic.ic--arrow_fff
 section.new
   .container
     .row
