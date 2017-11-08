@@ -44,7 +44,7 @@ section.contento
                         a.fancyimage2.gl-gallery__link(class={"hidden" : count > 0}, rel="projects-group-" + (i + 1), href=img.href)
                           if (img.src)
                             img.img-responsive.gl-gallery__img(src=img.src, alt=img.alt)
-                    button.g-btn.g-btn--narrow.gl-gallery__btn(data-toggle="modal", data-target="#more")
+                    button.g-btn.g-btn--narrow.gl-gallery__btn(data-toggle="modal", data-target="#header__modal")
                       +svg("g-btn__icon", item.btn.icon) 
                       != item.btn.text
               .col-xs-12.col-lg-6
