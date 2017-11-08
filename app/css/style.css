@@ -4297,6 +4297,10 @@ body {
 /* ---------------------------------------- */
 /* P A G E    P R O J E C T S    S T Y L E  */
 /* ---------------------------------------- */
+.ds-project {
+  margin: 35px 0;
+}
+
 .gl-gallery {
   position: relative;
   text-align: center;
