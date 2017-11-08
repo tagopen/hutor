@@ -988,6 +988,10 @@ button:focus {
   margin-bottom: -130px;
 }
 
+.header--white {
+  background-color: #fff;
+}
+
 .navbar__logo {
   height: auto;
   padding: 0;
