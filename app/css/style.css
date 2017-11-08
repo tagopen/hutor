@@ -1187,6 +1187,9 @@ button:focus {
     background-size: cover;
     background-position: 50% 100%;
   }
+  .content__thanks {
+    padding-top: 75px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -4568,7 +4571,6 @@ body {
 }
 
 .cbutton .ic {
-  margin-left: 7px;
   margin-top: -3px;
 }
 
