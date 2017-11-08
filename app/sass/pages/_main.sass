@@ -474,9 +474,10 @@ button:focus
       +coverdiv
       background-repeat: no-repeat
       background-size: cover
-      transition: opacity .3s ease-out
+      transition: all .4s ease-out
     &:after
       opacity: 0
+      transform: rotate(-180deg) scale(.1)
     &:hover,
     &:active
       color: #e88d0c
@@ -487,6 +488,8 @@ button:focus
         opacity: 0
       &:after
         opacity: 1
+        transform: rotate(0) scale(1)
+        transform-origin: 50% 50%
     &--dark-bg
       &:before
         content: ''

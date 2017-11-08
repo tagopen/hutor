@@ -1467,12 +1467,15 @@ button:focus {
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-transition: opacity .3s ease-out;
-  transition: opacity .3s ease-out;
+  -webkit-transition: all .4s ease-out;
+  transition: all .4s ease-out;
 }
 
 .nw-item__box:after {
   opacity: 0;
+  -webkit-transform: rotate(-180deg) scale(0.1);
+      -ms-transform: rotate(-180deg) scale(0.1);
+          transform: rotate(-180deg) scale(0.1);
 }
 
 .nw-item__box:hover, .nw-item__box:active {
@@ -1490,6 +1493,12 @@ button:focus {
 
 .nw-item__box:hover:after, .nw-item__box:active:after {
   opacity: 1;
+  -webkit-transform: rotate(0) scale(1);
+      -ms-transform: rotate(0) scale(1);
+          transform: rotate(0) scale(1);
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
 }
 
 .nw-item__box--dark-bg:before {
