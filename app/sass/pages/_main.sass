@@ -228,6 +228,13 @@ button:focus
     &:hover
       color: $btn_color__hover
 .content
+  position: relative
+  z-index: 15
+  background: url(../img/headerbg320.png) no-repeat
+  background-size: cover
+  background-position: 35% 100%
+  padding: 15px 0 30px
+  margin-bottom: -130px
   &__heading
     color: #fff
     font: 700 18px/24px $font-gotham
@@ -255,6 +262,16 @@ button:focus
   &__btn
     padding: 15px   
     width: auto 
++r(768)
+  .content
+    padding: 140px 0 200px
+    background: url(../img/1ek.png) no-repeat
+    background-size: cover
+    background-position: 50% 100% 
++r(1200)
+  .content
+    min-height: 800px
+    padding: 160px 0 260px   
 .list
   &__item
     list-style-type: none
