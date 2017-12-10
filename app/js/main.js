@@ -189,30 +189,48 @@
   }); 
 
 
-$(document).ready(function(){
-  // Add minus icon for collapse element which is open by default
-  $(".collapse.in").each(function(){
-    $(this).siblings(".panel-heading").find(".panel__ic").addClass("minus");
+  $(function() {
+    // Add minus icon for collapse element which is open by default
+    $(".collapse.in").each(function(){
+      $(this).siblings(".panel-heading").find(".panel__ic").addClass("minus");
+    });
+
+    // Toggle plus minus icon on show hide of collapse element
+    $(".collapse").on('show.bs.collapse', function(){
+      $(this).parent().find(".panel__ic").addClass("minus");
+    }).on('hide.bs.collapse', function(){
+      $(this).parent().find(".panel__ic").removeClass("minus");
+    });
+  });
+
+  $('.tooltipstered').tooltipster({
+    contentCloning: true,
+    theme: 'tooltipster-shadow',
+    animation: 'fade',
+    interactive: true,
+    delay: 25,
+    side: 'top',
+    maxWidth: 200,
+    trigger: 'click'
   });
   
-  // Toggle plus minus icon on show hide of collapse element
-  $(".collapse").on('show.bs.collapse', function(){
-    $(this).parent().find(".panel__ic").addClass("minus");
-  }).on('hide.bs.collapse', function(){
-    $(this).parent().find(".panel__ic").removeClass("minus");
+  // scroll document to top
+  $(function() {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 200) {
+        $('.js-back-to-top').fadeIn()
+      } else {
+        $('.js-back-to-top').fadeOut()
+      }
+    });
+
+    $('.js-back-to-top').hide().on("click", function () {
+      $('html, body').animate({
+        scrollTop: 0
+      },
+      800);
+      return false
+    });
   });
-});
-
-$('.tooltipstered').tooltipster({
-  contentCloning: true,
-  theme: 'tooltipster-shadow',
-  animation: 'fade',
-  interactive: true,
-  delay: 25,
-  side: 'top',
-  maxWidth: 200,
-  trigger: 'click'
-});
-
 
 })(jQuery); // End of use strict
