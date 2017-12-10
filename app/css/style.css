@@ -3217,11 +3217,14 @@ body {
 
 @media only screen and (min-width: 768px) {
   .panel__heading {
-    padding: 20px 50px;
+    padding: 20px 70px 20px 40px;
   }
   .panel__link {
     font: 600 22px/26px "Open Sans", sans-serif;
     padding-right: 0;
+  }
+  .panel__icon {
+    right: -35px;
   }
   .panel__text {
     font: 400 18px/27px "Open Sans", sans-serif;
