@@ -147,6 +147,12 @@
         target: null,
         remove: false
       });
+      $('.gorodok__item').matchHeight({
+        byRow: true,
+        property: 'height',
+        target: null,
+        remove: false
+      });
     }
   });
 
