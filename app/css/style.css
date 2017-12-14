@@ -1236,6 +1236,13 @@ button:focus {
   color: #e8560c;
 }
 
+@media only screen and (min-width: 992px) {
+  .phone .fa {
+    position: absolute;
+    left: -30px;
+  }
+}
+
 .content {
   position: relative;
   z-index: 15;
@@ -3048,6 +3055,10 @@ body {
   .nav__point--dark a {
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
+  }
+  .nav__point--dark a:after {
+    height: 5px;
+    height: 20px;
   }
   .nav__point--dark a:hover, .nav__point--dark a:focus {
     color: #e88d0c;
