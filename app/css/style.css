@@ -3049,6 +3049,10 @@ body {
 }
 
 @media only screen and (min-width: 992px) {
+  .nav__point {
+    position: relative;
+    padding: 10px 8px !important;
+  }
   .nav__point--dark {
     color: #212121;
   }
@@ -3057,13 +3061,23 @@ body {
     transition: all .3s ease;
   }
   .nav__point--dark a:after {
-    height: 5px;
-    height: 20px;
+    position: absolute;
+    margin: 0 !important;
+    right: -9px;
   }
   .nav__point--dark a:hover, .nav__point--dark a:focus {
     color: #e88d0c;
     -webkit-box-shadow: 0 -1px 0 0 #e88d0c inset !important;
             box-shadow: 0 -1px 0 0 #e88d0c inset !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .nav__point {
+    padding: 15px !important;
+  }
+  .nav__point--dark a:after {
+    right: -15px;
   }
 }
 

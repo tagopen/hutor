@@ -1479,17 +1479,28 @@ body
 +r(992)
   .nav
     &__point  
+      position: relative
+      padding: 10px 8px !important
       &--dark
         color: #212121
         a
           transition: all .3s ease
           &:after
-            height: 5px
-            height: 20px
+            position: absolute
+            margin: 0 !important
+            right: -9px
           &:hover,
           &:focus
             color: #e88d0c
             box-shadow: 0 -1px 0 0 #e88d0c inset !important
++r(1200)
+  .nav
+    &__point
+      padding: 15px !important
+      &--dark
+        a
+          &:after
+            right: -15px            
 .footer--in
   background: url(../img/footerbglight.png) no-repeat
   background-size: cover     
