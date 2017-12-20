@@ -18,9 +18,10 @@ section.contento
           .nw-item.nw-item--md
             a.nw-item__box.nw-item__box--yellow-bg.js-scroll-trigger(href='#projects' + (i + 1), class="nw-item__box--projects-" + (i + 1))
               .clearfix.nw-item__content.nw-item__content--fluid
-                if (item.label)
+                if (typeof item.label !== "undefined") && item.label.left 
                   .n-label.n-label--left
                     .n-label__text!= item.label.left
+                if (typeof item.label !== "undefined") && item.label.right    
                   .n-label.n-label--right
                     .n-label__text!= item.label.right
               .nw-item__hover
