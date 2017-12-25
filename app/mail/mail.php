@@ -175,7 +175,7 @@
   $mail->SetFrom($from, HOST_NAME);
   //$mail->AddAddress("Artem2431@gmail.com");
   //$mail->AddAddress("Marchik88@rambler.ru");
-  $mail->AddAddress("forzennn@gmail.com");
+  $mail->AddAddress("lexis19950107@gmail.com");
   $mail->AddAddress("hutir.kiev@gmail.com");
   $mail->isHTML(true);
   $mail->Subject      = HOST_NAME;
